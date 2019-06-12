@@ -1,4 +1,7 @@
-# 20190612: `git pull --rebase`
-In `git pull --help`:
+# 20190612: `git pull --rebase` is equivalent to `git rebase`
 
-> With `--rebase`, it runs git rebase instead of git merge 
+Reasoning: 
+
+In `git pull --help`, the following sentence is found:
+
+> With `--rebase`, it runs `git rebase` instead of `git merge`
