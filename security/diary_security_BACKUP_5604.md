@@ -1,0 +1,7 @@
+<<<<<<< d8f5e5b5fb6439ee108c3d71d457cf4893dd6c09
+# 20190619
+Reference: [Difference between SSO and LDAP](http://www.differencebetween.net/technology/protocols-formats/difference-between-sso-and-ldap/)
+=======
+# Configure Port Forwarding in 192.168.1.1
+`ifconfig` to get your internet connections device, and then find the *inet address* of this device. This *inet address* can be something like `192.168.1.102`. Then forword the port to this address in 192.168.1.1 with `admin` user
+>>>>>>> diary for security added
