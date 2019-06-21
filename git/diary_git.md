@@ -32,5 +32,6 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 
 Reference: [Don't Mess With the Master Working with Branches in `git` and *github*](https://thenewstack.io/dont-mess-with-the-master-working-with-branches-in-git-and-github/)
 
-# 20190619
-
+# 20190621
+# Git States Control Flow
+![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
