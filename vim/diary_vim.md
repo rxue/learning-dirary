@@ -1,2 +1,2 @@
-# 20190622: Insert a new line after the cursor in view mode
-* ESC + o
+# 20190622: 
+* Insert a new line below the current line in normal mode: o
