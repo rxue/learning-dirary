@@ -5,3 +5,4 @@ public class TestClass {
   public static final String CONST_1 = AnotherClass.getValueFromProperties();
 }
 ```
+Another question is about the command pattern
