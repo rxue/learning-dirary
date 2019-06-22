@@ -9,8 +9,6 @@ https://www.youtube.com/watch?v=HRR8xcTmpe4
 
 # 20190614: Revert the Last Commit
 
-`git reset --hard HEAD`
-
 Reference: 
 * [How to delete a git commit from log like it had never existed](https://stackoverflow.com/questions/8901542/how-to-delete-a-git-commit-from-log-like-it-had-never-existed)
 * [Deleting a git commit](https://www.clock.co.uk/insight/deleting-a-git-commit)
@@ -28,7 +26,7 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 
 ## How to discard all the changes on the current branch
 1. `git fetch origin`
-2. `git reset --hard origin/master`
+2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
 
 Reference: [Don't Mess With the Master Working with Branches in `git` and *github*](https://thenewstack.io/dont-mess-with-the-master-working-with-branches-in-git-and-github/)
 
