@@ -43,3 +43,5 @@ Reference: [Don't Mess With the Master Working with Branches in `git` and *githu
 Question:
 * what is `git reset --hard origin/master`
 * `git fetch origin` does not sync local content from the remoate origin yet
+
+`merge` a *conflict* does not generate an automatic *commit* message
