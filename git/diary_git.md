@@ -43,3 +43,4 @@ Reference: [Don't Mess With the Master Working with Branches in `git` and *githu
 Question:
 * what is `git reset --hard origin/master`
 * going to test what is `git fetch origin` doing
+This line will be deleted by merge
