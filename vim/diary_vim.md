@@ -1,2 +1,2 @@
-# Insert a New Line in View Mode
+# 20190622: Insert a new line after the cursor in view mode
 * ESC + o
