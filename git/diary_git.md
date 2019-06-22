@@ -42,4 +42,4 @@ Reference: [Don't Mess With the Master Working with Branches in `git` and *githu
 [`git reset`](https://www.youtube.com/watch?v=QEuqlpMOL9E&list=PLXO45tsB95cKysjmSNln65YoUt9lwEl7-&index=6) (中文)
 Question:
 * what is `git reset --hard origin/master`
-* going to test what is `git fetch origin` doing
+* `git fetch origin` does not sync local content from the remoate origin yet
