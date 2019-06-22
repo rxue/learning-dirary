@@ -44,3 +44,5 @@ Question:
 * what is `git reset --hard origin/master`
 
 `git fetch origin` does not sync local content from the remoate origin yet, will continue to research on how this is working
+
+`merge` a *conflict* does not generate an automatic *commit* message
