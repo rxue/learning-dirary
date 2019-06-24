@@ -13,8 +13,7 @@ Reference:
 * [How to delete a git commit from log like it had never existed](https://stackoverflow.com/questions/8901542/how-to-delete-a-git-commit-from-log-like-it-had-never-existed)
 * [Deleting a git commit](https://www.clock.co.uk/insight/deleting-a-git-commit)
 
-# 20190618: **Git in Practice**: Working on a Local Branch Created from Master
-
+# 20190618:
 ## Command to Create new Branch
 `git checkout -b <new_branch>`
 NOTE! This command also switches to the created branch automatically
@@ -50,3 +49,8 @@ Question:
 `git rev-parse HEAD`
 ## Understanding on `rebase`
 Assuming the current branch is `dev`, `git rebase master` will make all the commits on the current branch be based on the master branch. As a result, all the commits of the `dev` will be after all the commits of master 
+## **Practical Work Approach in a Development Team with Several Developers**: 
+1. working on a local branch created from master
+2. switch to the local master branch to *sync* it from the *remote*
+3. `git rebase master` in the current branch
+4. `git push origin HEAD:refs/remote/master`
