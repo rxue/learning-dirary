@@ -45,5 +45,8 @@ Question:
 
 `merge` a *conflict* does not generate an automatic *commit* message
 
-# 20190624: Display the current HEAD
+# 20190624: 
+## Display the current HEAD
 `git rev-parse HEAD`
+## Understanding on `rebase`
+Assuming the current branch is `dev`, `git rebase master` will make all the commits on the current branch be based on the master branch. As a result, all the commits of the `dev` will be after all the commits of master 
