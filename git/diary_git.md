@@ -44,3 +44,6 @@ Question:
 `git fetch origin` does not sync local content from the remoate origin yet, will continue to research on how this is working
 
 `merge` a *conflict* does not generate an automatic *commit* message
+
+# 20190624: Display the current HEAD
+`git rev-parse HEAD`
