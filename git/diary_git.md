@@ -59,3 +59,9 @@ Assuming the current branch is `dev`, `git rebase master` will make all the comm
 
 # 20190625
 Add only modified files: `git add -u`
+
+## push a local branch to a remote `origin` branch with another name
+Example: `git push origin change_20190624:master` - push the local branch `change_20190624` to remote origin `master`
+
+# List remote
+`git ls-remote`
