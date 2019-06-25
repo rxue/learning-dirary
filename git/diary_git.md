@@ -55,7 +55,7 @@ Assuming the current branch is `dev`, `git rebase master` will make all the comm
 1. work on a local branch created from master, commit on the local branch
 2. switch to the local master branch to *sync* it from the *remote*
 3. `git rebase master` in the current branch
-4. `git push origin master` or with *refspec* `git push origin HEAD:refs/remote/master` on the current branch
+4. `git push origin master` or with *refspec* `git push origin HEAD:refs/heads/master` on the current branch
 
 # 20190625
 Add only modified files: `git add -u`
@@ -63,5 +63,8 @@ Add only modified files: `git add -u`
 ## push a local branch to a remote `origin` branch with another name
 Example: `git push origin change_20190624:master` - push the local branch `change_20190624` to remote origin `master`
 
-# List remote
+## List remote
 `git ls-remote`
+
+## Delete a remote *refspec* 
+`git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
