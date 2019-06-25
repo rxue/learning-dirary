@@ -47,10 +47,15 @@ Question:
 # 20190624: 
 ## Display the current HEAD
 `git rev-parse HEAD`
+
 ## Understanding on `rebase`
 Assuming the current branch is `dev`, `git rebase master` will make all the commits on the current branch be based on the master branch. As a result, all the commits of the `dev` will be after all the commits of master 
+
 ## **Practical Work Approach in a Development Team with multiple Developers Working on Merely One Branch - Master**: 
 1. work on a local branch created from master, commit on the local branch
 2. switch to the local master branch to *sync* it from the *remote*
 3. `git rebase master` in the current branch
 4. `git push origin master` or with *refspec* `git push origin HEAD:refs/remote/master` on the current branch
+
+# 20190625
+Add only modified files: `git add -u`
