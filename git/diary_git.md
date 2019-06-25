@@ -63,5 +63,8 @@ Add only modified files: `git add -u`
 ## push a local branch to a remote `origin` branch with another name
 Example: `git push origin change_20190624:master` - push the local branch `change_20190624` to remote origin `master`
 
-# List remote
+## List remote
 `git ls-remote`
+
+## Delete a remote *refspec* 
+`git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
