@@ -68,3 +68,10 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 
 ## Delete a remote *refspec* 
 `git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
+
+# 20190626
+## List *references*
+### List references available in a remote repository
+`git ls-remote`
+### List references available in a local repository 
+`git show-ref`
