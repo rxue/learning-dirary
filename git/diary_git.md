@@ -57,9 +57,6 @@ Assuming the current branch is `dev`, `git rebase master` will make all the comm
 3. `git rebase master` in the current branch
 4. `git push origin master` or with *refspec* `git push origin HEAD:refs/heads/master` on the current branch
 
-# 20190625
-Add only modified files: `git add -u`
-
 ## push a local branch to a remote `origin` branch with another name
 Example: `git push origin change_20190624:master` - push the local branch `change_20190624` to remote origin `master`
 
@@ -75,3 +72,8 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 `git ls-remote`
 ### List references available in a local repository 
 `git show-ref`
+
+# 20190627
+* add only modified files, meaning untracked files will not be added: `git add -u`
+* add all files: `git add -A`
+
