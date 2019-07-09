@@ -54,7 +54,7 @@ Assuming the current branch is `dev`, `git rebase master` will make all the comm
 ## **Practical Work Approach in a Development Team with multiple Developers Working on Merely One Branch - Master**: 
 1. work on a local branch created from master, commit on the local branch
 2. switch to the local master branch to *sync* it from the *remote*
-3. `git rebase master` in the current branch
+3. switch back to the local branch and `git rebase master`
 4. `git push origin master` or with *refspec* `git push origin HEAD:refs/heads/master` on the current branch
 
 ## push a local branch to a remote `origin` branch with another name
