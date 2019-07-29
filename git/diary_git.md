@@ -16,10 +16,6 @@ Reference:
 # 20190618:
 ## HEADs Indicates a Local Branch You are Currently on
 
-## How to discard all the changes on the current branch
-1. `git fetch origin`
-2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
-
 Reference: [Don't Mess With the Master Working with Branches in `git` and *github*](https://thenewstack.io/dont-mess-with-the-master-working-with-branches-in-git-and-github/)
 
 # 20190621
@@ -82,3 +78,11 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 ## Reload a Single File from a Remote Branch
 `git checkout <branch> -- <paths>`
 
+# 20190729
+## `git fetch`
+
+### `git pull` is shorthand for `git fetch` followed by `git merge FETCH_HEAD`
+
+### How to discard all the changes on the current branch
+1. `git fetch origin`
+2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
