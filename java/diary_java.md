@@ -17,3 +17,15 @@ By means of `javax.persistence` API, the entry point when bootstrapping Hibernat
 * `javax.persistence.sql-load-script-source` - the SQL scripts used to import data. In the Hibernate implementation, the default value is `import.sql` in the `resources` directory. So if this property is not defined in the `persistence-unit` but the `import.sql` are defined already in the `resources` directory, the `import.sql` will be executed  
 
 reference: https://docs.oracle.com/javaee/7/tutorial/persistence-intro005.htm
+
+# 20190729
+## Coding Convention
+### cameralCase against snake_case
+Avoid use of snake_case, esp. when naming the package
+
+#### Proof 
+There is no package named with underscore in the Core Java api documentation page. Even in case of package named with multiple words, there is no underscore, either. For instance, 
+
+* `java.beans.beancontext`
+* `javax.management.modelmbean`
+
