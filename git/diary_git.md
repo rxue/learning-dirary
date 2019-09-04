@@ -86,3 +86,8 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 ### How to discard all the changes on the current branch
 1. `git fetch origin`
 2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
+
+# 20190904
+## Question: How to recover the `stash`ed changes
+`git stash apply`
+
