@@ -78,8 +78,6 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 ## Reload a Single File from a Remote Branch
 `git checkout <branch> -- <paths>`
 
-# 20190729
-## `git fetch`
 
 ### `git pull` is shorthand for `git fetch` followed by `git merge FETCH_HEAD`
 
@@ -90,4 +88,12 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 # 20190904
 ## Question: How to recover the `stash`ed changes
 `git stash apply`
+
+# 20191006
+## `git fetch` for Sync
+Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
+
+## Show logs in graphs:
+`git log --pretty=format:'%h%d [%an/%ai] %s' --all --graph`
+
 
