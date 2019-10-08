@@ -66,19 +66,6 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 * add only modified files, meaning untracked files will not be added: `git add -u`
 * add all files: `git add -A`
 
-# 20190710
-## `git checkout`
-### Command to Create new Branch
-`git checkout -b <new_branch>`
-NOTE! This command also switches to the created branch automatically
-Then stage, aka. `add`, and `commit` new files will go to the new branch
-**Git in Practice**: The name of the branch should be descriptive, for instance, it can be the name of the task you are working on. Moreover, if you have multiple tasks, you can create multiple branches as per tasks  
-## Command to Go to Another Branch
-`git checkout <another_branch>`
-## Reload a Single File from a Remote Branch
-`git checkout <branch> -- <paths>`
-
-
 ### `git pull` is shorthand for `git fetch` followed by `git merge FETCH_HEAD`
 
 ### How to discard all the changes on the current branch
@@ -96,4 +83,14 @@ Before listing all branches on both local and *remote*, i.e. `git branch -a`/`gi
 ## Show logs in graphs:
 `git log --pretty=format:'%h%d [%an/%ai] %s' --all --graph`
 
-
+# 20190710
+## `git checkout`
+### Command to Create new Branch
+`git checkout -b <new_branch>`
+NOTE! This command also switches to the created branch automatically
+Then stage, aka. `add`, and `commit` new files will go to the new branch
+**Git in Practice**: The name of the branch should be descriptive, for instance, it can be the name of the task you are working on. Moreover, if you have multiple tasks, you can create multiple branches as per tasks  
+## Command to Go to Another Branch
+`git checkout <another_branch>`
+## Reload/sync a Single File from a Remote Branch (20191008)
+`git checkout <branch> -- <paths>`
