@@ -18,12 +18,6 @@ Reference:
 
 Reference: [Don't Mess With the Master Working with Branches in `git` and *github*](https://thenewstack.io/dont-mess-with-the-master-working-with-branches-in-git-and-github/)
 
-# 20190621
-## [Git States Control Flow](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
-![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
-## `git diff` Compares the *Unmodified* Files with *Modified* Files
-## `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
-
 # 20190622
 [`git reset`](https://www.youtube.com/watch?v=QEuqlpMOL9E&list=PLXO45tsB95cKysjmSNln65YoUt9lwEl7-&index=6) (中文)
 Question:
@@ -94,3 +88,11 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 `git checkout <another_branch>`
 ## Reload/sync a Single File from a Remote Branch (20191008)
 `git checkout <branch> -- <paths>`
+
+# 20191019
+## [Git States Control Flow](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
+## How to Check Local Changes of a `pull`ed File
+###`git diff` 
+`git diff` compares the *Unmodified* Files with *Modified* Files
+## `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
