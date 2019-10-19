@@ -94,5 +94,5 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 ![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
 ## Q: How to check local changes of a File, which is just downloaded from the remote repository 
 ### Answer: `git diff <path>`
-When a file is downloaded from the remote repository, the state is *Unmodified*, after modification locally, the state of the file is *Modified*, meaning before `commit`. `git diff <path>` compares the file (`<path>`) changes between *Unmodified* state and *Modified* state.
+When a file is downloaded from the remote repository, the state is *Unmodified*, after modification locally, the state of the file is *Modified*, meaning before `add`. `git diff <path>` compares the file (`<path>`) changes between *Unmodified* state and *Modified* state.
 ## `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
