@@ -66,10 +66,6 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 1. `git fetch origin`
 2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
 
-# 20190904
-## Question: How to recover the `stash`ed changes
-`git stash apply`
-
 # 20191006
 ## `git fetch` for Sync
 Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
@@ -96,3 +92,8 @@ Then stage, aka. `add`, and `commit` new files will go to the new branch
 ### Answer: `git diff <path>`
 When a file is downloaded from the remote repository, the state is *Unmodified*, after modification locally, the state of the file is *Modified*, meaning before `add`. `git diff <path>` compares the file (`<path>`) changes between *Unmodified* state and *Modified* state.
 ## `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
+
+# 20191028
+## `git stash` Stashes Only the **Local Changes on the Current Branch**
+## Recover the `stash`ed changes
+`git stash apply`
