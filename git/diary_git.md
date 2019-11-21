@@ -97,3 +97,17 @@ When a file is downloaded from the remote repository, the state is *Unmodified*,
 ## `git stash` Stashes Only the **Local Changes on the Current Branch**
 ## Recover the `stash`ed changes
 `git stash apply`
+
+# 20191121
+## Limit of Using Wildcard (\*) with `git add`
+Assuming there are the following files:
+  * `git/dir/a.java`
+  * `git/dir/b.java`
+  * `git/dir/c.java`
+  * `git/dir/a.swp`
+  * `git/dir/b.swp`
+  * `git/dir/subdir/d.java`
+  * `git/dir/subdir/e.java`
+
+`git add git/dir/*.java` does not work recursively, meaning the files in `git add git/dir/subdir` will not be successfully added. Whereas the `git add git/dir/*` will add all the files inside `git/dir` recursively, but the files with extension `.swp` are not planned to be added at all
+
