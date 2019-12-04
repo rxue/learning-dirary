@@ -66,10 +66,6 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 1. `git fetch origin`
 2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
 
-# 20191006
-## `git fetch` for Sync
-Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
-
 ## Show logs in graphs:
 `git log --pretty=format:'%h%d [%an/%ai] %s' --all --graph`
 
@@ -112,13 +108,31 @@ Assuming there are the following files:
 ## `git checkout`
 ### Command to Create new Branch
 `git checkout -b <new_branch>`
+
+> Create a new branch named <new_branch> and start it at <start_point>
+
 NOTE! This command also switches to the created branch automatically
 Then stage, aka. `add`, and `commit` new files will go to the new branch
+
+#### Meaning of *start it at <start_point>*
+
+The meaning of *<start_point>*:
+
+> The name of a commit at which to start the branch
+
+
 **Git in Practice**: The name of the branch should be descriptive, for instance, it can be the name of the task you are working on. Moreover, if you have multiple tasks, you can create multiple branches as per tasks  
-## Command to Go to Another Branch
+### Command to Go to Another Branch
 `git checkout <another_branch>`
-## Reload/sync a Single File from a Remote Branch (20191008)
+### Reload/sync a Single File from a Remote Branch (20191008)
 `git checkout <branch> -- <paths>`
-## Reload/sync a Single File from a commit
+### Reload/sync a Single File from a commit
 `git checkout <commit_hash> -- <paths>`
 
+# 20191204
+## `git branch`
+### `git fetch` for Sync
+Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
+## Remove Local branch
+* `git branch -d <branch_name>`
+* `git branch -D <branch_name>` - `-D` i.e. `git branch -d --force`
