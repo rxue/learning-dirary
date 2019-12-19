@@ -105,6 +105,16 @@ Assuming there are the following files:
 1. `git log` to get the commit history, remember the commit ID before my last commit
 2. `git checkout <commit_hash> -- <file>` will revert the committed file, of course your changes on this file will be lost 
 
+
+# 20191204
+## `git branch`
+### `git fetch` for Sync
+Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
+## Remove Local branch
+* `git branch -d <branch_name>`
+* `git branch -D <branch_name>` - `-D` i.e. `git branch -d --force`
+
+# 20191219
 ## `git checkout`
 ### Command to Create new Branch
 `git checkout -b <new_branch>`
@@ -128,11 +138,13 @@ The meaning of *<start_point>*:
 `git checkout <branch> -- <paths>`
 ### Reload/sync a Single File from a commit
 `git checkout <commit_hash> -- <paths>`
+### Revert One or More Files from *Modified* (`committed`) to *Unmodified*
+`git checkout -- <paths>`
 
-# 20191204
-## `git branch`
-### `git fetch` for Sync
-Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
-## Remove Local branch
-* `git branch -d <branch_name>`
-* `git branch -D <branch_name>` - `-D` i.e. `git branch -d --force`
+## Work Diary
+**Problem:** I am working on one story, and after commit there is need to `rebase` on base of another local branch. The first time `rebase` failed and thus was `rebase` for the second time => the `git log` output the last second and last third commit message as duplicate.
+
+**Question:** How to combine the last second and the last third commit into one
+
+**Solution:** *squash*: `git rebase -i HEAD~3`
+
