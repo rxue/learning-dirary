@@ -148,3 +148,7 @@ The meaning of *<start_point>*:
 
 **Solution:** *squash*: `git rebase -i HEAD~3`
 
+# 20200103
+## *Gerrit* in Practice
+When the code is not ready for review, push as DRAFT
+
