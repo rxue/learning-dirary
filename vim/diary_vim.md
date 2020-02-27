@@ -12,3 +12,6 @@ CTRL + WW - Press CTRL and then click W twice
 # 20200107: `vimdiff` two strings
 `vimdiff <(echo "hello a", echo "hello b")`
 
+# 20200227
+## delete/cut by line numbers
+Example: :`12,18d`
