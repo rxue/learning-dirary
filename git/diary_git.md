@@ -134,8 +134,12 @@ The meaning of *<start_point>*:
 **Git in Practice**: The name of the branch should be descriptive, for instance, it can be the name of the task you are working on. Moreover, if you have multiple tasks, you can create multiple branches as per tasks  
 ### Command to Go to Another Branch
 `git checkout <another_branch>`
-### Reload/sync a Single File from a Remote Branch (20191008)
+### Reload/sync a Single File from a Remote Branch (20191008, 20200227)
 `git checkout <branch> -- <paths>`
+
+Example:
+`git checkout origin/master -- abc.java`
+
 ### Reload/sync a Single File from a commit
 `git checkout <commit_hash> -- <paths>`
 ### Revert One or More Files from *Modified* (`committed`) to *Unmodified*
