@@ -43,8 +43,7 @@ Assuming the current branch is `dev`, `git rebase master` will make all the comm
 ## push a local branch to a remote `origin` branch with another name
 Example: `git push origin change_20190624:master` - push the local branch `change_20190624` to remote origin `master`
 
-## List remote
-`git ls-remote`
+
 
 ## Delete a remote *refspec* 
 `git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
@@ -156,3 +155,10 @@ Example:
 ## *Gerrit* in Practice
 When the code is not ready for review, push as DRAFT
 
+# 20200227
+## remote
+### `remote`
+`git remote -v` - show remote url after name
+
+### `ls-remote`
+`git ls-remote` - List *references* in a remote repository
