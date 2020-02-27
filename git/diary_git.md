@@ -144,6 +144,14 @@ Example:
 ### Revert One or More Files from *Modified* (`committed`) to *Unmodified*
 `git checkout -- <paths>`
 
+# 20200227
+## remote
+### `remote`
+`git remote -v` - show remote url after name
+
+### `ls-remote`
+`git ls-remote` - List *references* in a remote repository
+
 ## Work Diary
 **Problem:** I am working on one story, and after commit there is need to `rebase` on base of another local branch. The first time `rebase` failed and thus was `rebase` for the second time => the `git log` output the last second and last third commit message as duplicate.
 
@@ -154,11 +162,3 @@ Example:
 # 20200103
 ## *Gerrit* in Practice
 When the code is not ready for review, push as DRAFT
-
-# 20200227
-## remote
-### `remote`
-`git remote -v` - show remote url after name
-
-### `ls-remote`
-`git ls-remote` - List *references* in a remote repository
