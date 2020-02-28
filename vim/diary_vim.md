@@ -15,3 +15,5 @@ CTRL + WW - Press CTRL and then click W twice
 # 20200227
 ## delete/cut by line numbers
 Example: :`12,18d`
+
+# 20200228: [*registers*, *undolist* and *history* in `vim`](https://stackoverflow.com/questions/60431864/how-to-display-the-content-of-the-cache-in-vim/60432156#60432156)
