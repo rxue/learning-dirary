@@ -162,3 +162,15 @@ Example:
 # 20200103
 ## *Gerrit* in Practice
 When the code is not ready for review, push as DRAFT
+
+# 20200321
+## Operation on Remote Repository
+### I pushed a commit to my remote repository, but I want to *adandon* it
+Reference: http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
+
+Solution: `git pust origin <last_commit_hash>^:master`
+
+* `origin` is the remote repository, in case of other remote repository, change it
+* `master` is the remote branch, where the previous commit was pushed to
+
+
