@@ -174,4 +174,6 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 * `master` is the remote branch, where the previous commit was pushed to
 * remember the `+` sign there
 
+## Git Term: [*fast-forward*](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
 
