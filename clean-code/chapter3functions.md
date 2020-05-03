@@ -8,4 +8,6 @@ The reason we write functions is to decompose a larger concept into a set of ste
 ## One Level of Abstraction per Function
 
 Mixing levels of abstraction within a function is always confusing.
+
 ### Reading code from top to bottom: *The Stepdown Rule*
+> Functions should do one thing. They should do it well. They should do it only.
