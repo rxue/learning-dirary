@@ -46,3 +46,37 @@ How are the programmers in this project are supposed to know which of these func
 
 
 ## Use Searchable Names 
+
+Likewise, the word `e` is a poor choice for any variable for which a programmer might need to search. It is the most common letter in the English language and likely to show up in every program. In this regard, **longer names trump shorter names, and any searchable names trumps a constant in code**  
+
+My personal preference is that single-letter names can ONLY be used as local variables inside short methods. *The lenghth of a name should correspond to the size of its scope*
+
+## Avoid Encoding
+### Member Prefixes
+### Interfaces and Implementations
+
+## Avoid Mental Mappings
+> Clarity is king
+
+## Class Names
+A class name should not be a verb.
+
+## Method Names
+When constructors are overloaded, use static factory methods with names and describe the arguments. 
+
+## Pick One Word Per Concept
+
+Likewise, it is confusing to have a `controller` and a `manager` and a `driver` in the same code base.
+
+A consistent lexicon is a grate boon to the programmers who must use your code.
+
+## Don't Pun
+Our goal, as authors, is to make our code as easy as possible to understand.
+
+## Use Solution Domain Names
+## Use Problem Domain Names
+## Adding Meaningful Context
+## Don't Add Gratuitous Context
+Shorter names are generally better than longer names, so long as they are clear.
+
+The name `accountAddress` or `customerAddress` are fine names for instance of the class `Address` but could be poor names for classes. 
