@@ -43,3 +43,33 @@ For example, `assertEquals` might be better written as `assertExpectedEqualsActu
 Side effects create a temporal coupling. If you must have temporal coupling, you should make it clear in the name of the function. In this case, we might rename the function `checkPasswordAndInitializeSession`, though that certainly violates "do one thing".
 ### Output Arguments
 In general, output arguments should be avoided
+
+### Command Query Separation
+Clean code should either do something or answer something, but not both. Consider, for example, the following function: `public boolean set(String attribute, String value);`
+
+This function sets the value of a named attribute, and return `true` if it is successful and `false` if no such attributes exists. This leads to odd statements like this:
+
+`if (set("username","unclebob"))...`
+
+It is hard to infer the meaning from the call... We could try to resolve this by renaming the `set` function to `setAndCheckIfExists`, but that doesn't much help the readibility of the `if` statements. The real solution is to separate the command from the query so that the ambiguity cannot occur.
+
+```
+if (attributeExists("username")) {
+  setAttribute("username", "unclebob");
+  ...
+}
+```
+### Prefer Exceptions to Returning Error Codes
+#### Extract `try`/`catch` Blocks
+`try`/`catch` blocks are ugly in their own right. They confuse the structure of the code and mix error processing with normal processing. 
+#### Error Handling is One Thing
+Thus a function that handles errors should do nothing else. This implies that **if the keyword `try` exists in a function, it should be the very firt word in the function and that there should be nothing after the `catch`/`finally` blocks.**
+
+### Don't repeat yourself
+*Structured programming*, *aspect oriented programming*, *component oriented programming*, are all in part, strategies for eliminating duplication.
+
+### Structured Programming
+There should be only one `return` statement in a function, no `break` or `continue` statements in a loop, and never, ever, any `goto` statements.
+
+If you keep the function small, then the occasional multiple `return`, `break` or `continue` statement does not harm and can sometimes even be more expressive than the single-entry, single-exit rule.
+
