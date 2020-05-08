@@ -176,4 +176,12 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 
 ## Git Term: [*fast-forward*](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
+# 20200508
+## `git log`
+**Problem:** In my project, one specific file was suspected to be updated
 
+**Question:** How to list the update history of a specific file
+
+**Solution:** [`git log --follow -p -- <file>`](https://stackoverflow.com/questions/8048584/see-changes-to-a-specific-file-using-git)
+
+Listing the history of a file
