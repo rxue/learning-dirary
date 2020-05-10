@@ -14,3 +14,9 @@ In any complex systems, there are going to be times when we want to add new data
 
 ## The Law of Demeter
 
+# Chapter 7: Error Handling
+## Write Your `try-catch-finally` Stement First
+In a way, `try` blocks are like transactions. Your `catch` has to leave your program in a consistent state, no matter what happens in the `try`.
+
+## Use *Unchecked Exceptions*
+*C#* doesn't have checked exceptions, and despite valiant attempts, *C++* doesn't either. Neither do *Python* or *Ruby*.
