@@ -49,4 +49,13 @@ Java has `Collections.emptyList()`
       return Collections.emptyList();
   }
 ```
+If you code this way, you will minimize the chance of `NullPointerException`s and your code will be cleaner.
+
+## Don't Pass Null
+Returning `null` from methods is bad, but passing `null` into methods is worse. Unless you are working with an API which expects you to pass `null`, you should avoid passing `null` in your code whenever possible.
+
+In most programming languages there is no good way to deal with a `null` that is passed by a caller accidentally. Because this is the case, **the rational approach is to forbid passing `null` by default.**
+
+## Conclusion
+We can write robust clean code if we see error handling as a separate concern.
 
