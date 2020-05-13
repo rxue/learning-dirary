@@ -59,3 +59,9 @@ In most programming languages there is no good way to deal with a `null` that is
 ## Conclusion
 We can write robust clean code if we see error handling as a separate concern.
 
+# Chapter 8 Boundaries
+## Using Third-Party Code
+We are not suggesting that every use of `Map` be encapsulated in this form. Rather, we are advising you not to pass `Map`s (or any other interface at a boundary) around your system. If you use a *boundary interface* like `Map`, keep it inside the class, or close family of the classes, where it is used. Avoid returning it from, or accepting it as an argument to, public APIs.
+
+## Exploring and Learning Boundaries
+Instead of experimenting and trying out the new stuff in our production code, we could write some tests to explore our understanding the third-party code. Jim Newkirk calls such tests *learning tests*.
