@@ -11,3 +11,20 @@ Floor division  | `9/2`   | `9//2`    | 4
 
 ## If Condition
 
+## Boolean
+Java    | Python3
+--------|--------
+`true`  |`True`
+`false` |`False`
+
+## Operators
+### Comparison Operators
+Python3     |Java
+------------|-----------------
+`1 < a < 5` |`a > 1 && a < 5`
+
+### `+` for string concatention
+Python3                 |Java
+------------------------|-----------------
+`result = str(1) + "x"` |`result = 1 + "x"`
+
