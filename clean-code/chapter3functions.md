@@ -73,3 +73,5 @@ There should be only one `return` statement in a function, no `break` or `contin
 
 If you keep the function small, then the occasional multiple `return`, `break` or `continue` statement does not harm and can sometimes even be more expressive than the single-entry, single-exit rule.
 
+### Conclusion
+Never forget that your real goal is to tell the story of the system.

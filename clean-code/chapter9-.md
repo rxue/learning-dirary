@@ -45,8 +45,28 @@ Following the standard Java convention, a class should begin with a list of vari
 Public functions should follow the list of private variables. We would like to put the `private` utilities called by a `public` function right after the `public` function itself. This follows the *stepdown rule* and helps the program read like a newspaper article.
 
 ### Encapsulation
-We like to keep our variables and utility functions `private`, but we're not fanatic about it. **Sometimes we need to make a variable or utility functions `protected` so that it can be accessed by a test**. For us, **tests rule**.
+We like to keep our variables and utility functions `private`, but we're not fanatic about it. **Sometimes we need to make a variable or utility functions `protected` so that it can be accessed by a test**. For us, **tests rule**. If a test in the same package needs to call a function or access a variable, we'll make it `protected` or *package scope*. However, we'll first look for a way to maintain privacy. Loosening encapsulation is always the last resort.
 
+## Classes Should be Small
+### Cohesion
+Classes should have small number of instance variables. In general the more variables a method manipulates the more cohesive the method is to its class. A class in which each variable is used by the method is maximally cohesive.
+
+In general, it is neither advisable nor possible to create such maximally cohesive classes; on the other hand, we would like cohesion to be high. When cohesion is high, it means that the methods and variables of the classes are co-dependent and hang together as a logical whole.
+
+The strategy of keeping functions small and keeping parameter lists short can sometimes lead to a proliferation of instance variables that are used by a subset of methods. When this happens, it almost always means that there is at least one other class trying to get out of the larger class. You should try to separate the variables and methods into two or more classes such that the new classes are more cohesive.
+
+### Maintaining Cohesion Results in Many Small Classes
+When classes lose cohesion, split them!
+
+The change was made by writing a test suite that verified the precise behavior of the first program.
+
+## Organizing for Change
+In a clean system we organize our classes so as to reduce the risk of change.
+
+In an ideal system, we incorporate new features by extending the system, not by making modifications to existing code.
+
+### Isolating from Change
+Dependencies upon concrete details create challenges for testing our system.
 # Chapter 15 JUnit Internals
 ## The JUnit Framework
 Negatives are slightly harder to understand than positives [G29]
