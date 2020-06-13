@@ -28,3 +28,6 @@ Python3                 |Java
 ------------------------|-----------------
 `result = str(1) + "x"` |`result = 1 + "x"`
 
+# [Built-in Types](https://docs.python.org/3.7/library/stdtypes.html)
+## [True Value Testing](https://docs.python.org/3.7/library/stdtypes.html#truth-value-testing)
+Any Object can be tested for true value, for use in an `if` or `while` condition or as operand of the boolean operations below.
