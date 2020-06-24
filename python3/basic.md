@@ -19,15 +19,11 @@ Java    | Python3
 
 ## Operators
 ### Comparison Operators
-Operations                |Python3                  |Java
---------------------------|-------------------------|---------------------
-comparision               |`1 < a < 5`              |`a > 1 && a < 5`
-append a list to another  |`list1 = list1 + list2`  |`list1.addAll(list2)` 
-
-### `+` for string concatention
-Python3                 |Java
-------------------------|-----------------
-`result = str(1) + "x"` |`result = 1 + "x"`
+Operators |Operations                 |Python3                  |Java
+----------|---------------------------|-------------------------|---------------------
+`>` `<`   |comparision                |`1 < a < 5`              |`a > 1 && a < 5`
+`+`       |concatenate int to string  |`str(1) + "x"`           |`1 + "x"`
+`+`       |append a list to another   |`list1 = list1 + list2`  |`list1.addAll(list2)` 
 
 # [Built-in Types](https://docs.python.org/3.7/library/stdtypes.html)
 ## [True Value Testing](https://docs.python.org/3.7/library/stdtypes.html#truth-value-testing)
