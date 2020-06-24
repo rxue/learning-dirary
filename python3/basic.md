@@ -1,4 +1,4 @@
-# Java VS Python
+# Java 8 VS Python3.6+
 ## [Operators](https://docs.python.org/3.4/library/operator.html#module-operator)
 
 Operation       | Java    | Python3   | Result
@@ -19,9 +19,10 @@ Java    | Python3
 
 ## Operators
 ### Comparison Operators
-Python3     |Java
-------------|-----------------
-`1 < a < 5` |`a > 1 && a < 5`
+Operations      |Python3          |Java
+----------------|-----------------|---------------------
+comparision     |`1 < a < 5`      |`a > 1 && a < 5`
+Combine 2 lists |`list1 + list2`  |`list1.addAll(list2)` 
 
 ### `+` for string concatention
 Python3                 |Java
