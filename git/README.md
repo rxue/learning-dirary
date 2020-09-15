@@ -182,6 +182,8 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 **Solution:** [`git log --follow -p -- <file>`](https://stackoverflow.com/questions/8048584/see-changes-to-a-specific-file-using-git)
 
 Listing the history of a file
+### Show logs
+`git log --all --oneline --graph --decorator`
 
 ### Show logs in a pretty oneline graph with default colors:
 `git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
