@@ -183,7 +183,7 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 
 Listing the history of a file
 ### Show logs
-`git log --all --oneline --graph --decorator`
+`git log --all --oneline --graph --decorate`
 
 ### Show logs in a pretty oneline graph with default colors:
 `git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
