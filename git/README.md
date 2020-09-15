@@ -65,9 +65,6 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 1. `git fetch origin`
 2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
 
-## Show logs in graphs:
-`git log --pretty=format:'%h%d [%an/%ai] %s' --all --graph`
-
 # 20191019
 ## [Git States Control Flow](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 ![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
@@ -185,6 +182,9 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 **Solution:** [`git log --follow -p -- <file>`](https://stackoverflow.com/questions/8048584/see-changes-to-a-specific-file-using-git)
 
 Listing the history of a file
+
+### Show logs in a pretty oneline graph with default colors:
+`git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
 
 # 20200902
 ## [`git mergetool -t gvimdiff`](https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool)
