@@ -173,7 +173,12 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 
 ## Git Term: [*fast-forward*](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 
-# 20200508
+
+# 20200902
+## [`git mergetool -t gvimdiff`](https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool)
+## [`cherry-pick`] (https://www.youtube.com/watch?v=-ndmel-4wsk&t=632s)
+
+# 20201003
 ## `git log`
 **Problem:** In my project, one specific file was suspected to be updated
 
@@ -181,13 +186,19 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 
 **Solution:** [`git log --follow -p -- <file>`](https://stackoverflow.com/questions/8048584/see-changes-to-a-specific-file-using-git)
 
-Listing the history of a file
-### Show logs
+### Display log graph with `--graph` option
 `git log --all --oneline --graph --decorate`
 
-### Show logs in a pretty oneline graph with default colors:
+NOTE! If the `--all` is not given, the displayed graph is only of the current branch
+
+#### With different version of git, the top log is displayed differently
+ Git Version  | Result
+--------------|--------------------------------------------- 
+`1.8.x`       | `(HEAD, origin/master, origin/HEAD, master)`
+`2.7.x`+      | `(HEAD -> master, origin/master, origin/HEAD)`
+
+#### Show logs in a pretty oneline graph with default colors:
 `git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
 
-# 20200902
-## [`git mergetool -t gvimdiff`](https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool)
-## [`cherry-pick`] (https://www.youtube.com/watch?v=-ndmel-4wsk&t=632s)
+
+
