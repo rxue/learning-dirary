@@ -1,4 +1,5 @@
 # Java 8 VS Python3.6+
+
 ## [Operators](https://docs.python.org/3.4/library/operator.html#module-operator)
 
 Operation       | Java    | Python3   | Result
@@ -8,17 +9,7 @@ division        | `9.0/2` | `9/2`     | 4.5
 Floor division  | none    | `8.5//2`  | 4.0
 Floor division  | `9/2`   | `9//2`    | 4
 
-
-## If Condition
-
-## Boolean
-Java    | Python3
---------|--------
-`true`  |`True`
-`false` |`False`
-
-## Operators
-### Comparison Operators
+k### Comparison Operators
 Python3 Operators |Operations                                                                                                   |Python3 Example          |Java Equivalence
 ------------------|-------------------------------------------------------------------------------------------------------------|-------------------------|----------------
 `>` `<`           |comparision                                                                                                  |`1 < a < 5`              |`a > 1 && a < 5`
@@ -31,6 +22,21 @@ Reference: //python-s20.mooc.fi/osa-9/1-oliot-ja-viittaukset
 ## [True Value Testing](https://docs.python.org/3.7/library/stdtypes.html#truth-value-testing)
 Any Object can be tested for true value, for use in an `if` or `while` condition or as operand of the boolean operations below.
 
+## If Condition
+
+## Boolean
+Java    | Python3
+--------|--------
+`true`  |`True`
+`false` |`False`
+
 # Class
 ## Luokka on olion käsikirjoitus
 Materiaalissa on jo aiemmin vilahtanut (gleam 闪现) käsite.
+
+## Access modifier
+modifer   |Python           |Java
+----------|-----------------|-------------------------
+*private* |`self.__example` |`private Object example;`
+
+
