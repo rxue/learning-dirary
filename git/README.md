@@ -23,8 +23,6 @@ Reference: [Don't Mess With the Master Working with Branches in `git` and *githu
 Question:
 * what is `git reset --hard origin/master`
 
-`git fetch origin` does not sync local content from the remoate origin yet, will continue to research on how this is working
-
 `merge` a *conflict* does not generate an automatic *commit* message
 
 # 20190624: 
@@ -59,7 +57,13 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 * add only modified files, meaning untracked files will not be added: `git add -u`
 * add all files: `git add -A`
 
-### `git pull` is shorthand for `git fetch` followed by `git merge FETCH_HEAD`
+## `git fetch`
+### [`git fetch` and `git merge`](https://www.youtube.com/watch?v=Gg4bLk8cGNo&list=PLizL--84rE7T7l97deRGxZRRltRi9iQgA&t=657s)
+
+`git fetch origin` does not sync local content from the remoate origin yet, still need `git merge origin/<branch name>`. Typically, `git pull origin master` is shorthand for `git fetch origin` followed by `git merge origin/master`
+
+### List remote branches after `git fetch`
+Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
 
 ### How to discard all the changes on the current branch
 1. `git fetch origin`
@@ -104,8 +108,7 @@ Assuming there are the following files:
 
 # 20191204
 ## `git branch`
-### `git fetch` for Sync
-Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
+
 ## Remove Local branch
 * `git branch -d <branch_name>`
 * `git branch -D <branch_name>` - `-D` i.e. `git branch -d --force`
