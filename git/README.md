@@ -203,5 +203,11 @@ NOTE! If the `--all` is not given, the displayed graph is only of the current br
 #### Show logs in a pretty oneline graph with default colors:
 `git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
 
+# 20201204
+**Problem**: There are lots of unnecessary *untracked* files in my master branch, I would like to remove them all
+
+**Solution**: ``git clean -f`
+
+Reference: https://koukia.ca/how-to-remove-local-untracked-files-from-the-current-git-branch-571c6ce9b6b1
 
 
