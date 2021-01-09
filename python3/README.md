@@ -9,7 +9,7 @@ division        | `9.0/2` | `9/2`     | 4.5
 Floor division  | none    | `8.5//2`  | 4.0
 Floor division  | `9/2`   | `9//2`    | 4
 
-k### Comparison Operators
+### Comparison Operators
 Python3 Operators |Operations                                                                                                   |Python3 Example          |Java Equivalence
 ------------------|-------------------------------------------------------------------------------------------------------------|-------------------------|----------------
 `>` `<`           |comparision                                                                                                  |`1 < a < 5`              |`a > 1 && a < 5`
@@ -39,4 +39,6 @@ modifer   |Python           |Java
 ----------|-----------------|-------------------------
 *private* |`self.__example` |`private Object example;`
 
+# Functional Programming
+In `max`, `min`, the given sequence cannot be empty
 
