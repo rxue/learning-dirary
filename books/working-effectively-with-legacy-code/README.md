@@ -21,7 +21,9 @@ Key features of xUnit:
 # Part II
 ## Chapter 8: How Do I Add a Feature?
 
-### Self-Comment: Trick for *cut/copy/paste*
+### Comment: Trick for *cut/copy/paste*
 Often times when adding new features or fixing bugs in legacy code base, lots of coders prefer to adding one or more arguments to an existing method signature. This should be averted whenever possible because, adding more arguments also means the more reasons for changing the residing class, which is against the *Single Responsibility Principle*. However, when the last resort is adding one or more arguments to an existing method, *cut/copy/paste* would come into play. Particularly if the method is used many times in the code base (*Find usage* with IDE), directly adding more arguments would cause the changes everywhere the method is called, so do *cut/copy/paste* (*use method overloading*), then mark the previous method as `@Deprecated` if the new method is more handy to be used
     
-
+# Part III: Dependency-Breaking Techniques
+## Chapter 25: Dependency-Breaking Techniques
+### *Parameterize Constructor*
