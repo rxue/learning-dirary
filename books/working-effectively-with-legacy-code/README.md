@@ -1,3 +1,12 @@
+# Preface
+## *Legacy Code*
+
+> In the industry, *legacy code* is often used as a slang term for difficult-to-change code that we don't understand.
+
+But to the author, Michael Feathers
+
+> *legacy code* is simple code without tests.
+
 # Part I
 ## Chapter 2: Working with Feedback
 ### What is Unit Testing
