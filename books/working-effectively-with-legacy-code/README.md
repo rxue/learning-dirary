@@ -38,6 +38,8 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ### The Case of the Hidden Method
 > If we need to test a private method, we should make it `public`. If making it public bothers us, in most cases, it means that our class is doing too much and we ought to fix it.
 
+### The Case of the Undetacable Side Effect
+#### [*Query-Query Separation*](https://www.youtube.com/watch?v=eb3nbt4poic)
  
 
     
