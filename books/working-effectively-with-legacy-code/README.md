@@ -40,7 +40,9 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 
 ### The Case of the Undetacable Side Effect
 #### [*Query-Query Separation*](https://www.youtube.com/watch?v=eb3nbt4poic)
- 
+
+### Reasoning Forward
+> When you are sketching effects, make sure that you have found all of the clients of the class you are examining. If your class has a superclass or subclasses, there might ber other clients that you havn't considered.
 
     
 # Part III: Dependency-Breaking Techniques
