@@ -56,6 +56,9 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 
 > In general, programming gets easier as we narrow effects in a program. We need to know less to understand a piece of code. At the extreme, we end up with *funcitonal programming* in languages such as Scheme and Haskell.
 
+## Chapter 17 My Application Has No Structure
+### Telling the Story of the System
+
 # Part III: Dependency-Breaking Techniques
 ## Chapter 25: Dependency-Breaking Techniques
 ### *Parameterize Constructor*
