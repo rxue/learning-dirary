@@ -41,10 +41,18 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ### The Case of the Undetacable Side Effect
 #### [*Query-Query Separation*](https://www.youtube.com/watch?v=eb3nbt4poic)
 
+
+
+## Chapter 11: I Need to Make a Change. What Methods Should I Test?
+### Reasoning About Effects
 ### Reasoning Forward
 > When you are sketching effects, make sure that you have found all of the clients of the class you are examining. If your class has a superclass or subclasses, there might ber other clients that you havn't considered.
+### Effect Propagation
+### Learning from Effect Analysis
+> Try to analyze effects in code whenever you get a chance.
 
-    
+> In general, programming gets easier as we narrow effects in a program. We need to know less to understand a piece of code. At the extreme, we end up with *funcitonal programming* in languages such as Scheme and Haskell.
+
 # Part III: Dependency-Breaking Techniques
 ## Chapter 25: Dependency-Breaking Techniques
 ### *Parameterize Constructor*
