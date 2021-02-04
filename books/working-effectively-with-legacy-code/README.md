@@ -19,6 +19,9 @@ But to the author, Michael Feathers
 
 ### *Higher-Level Testing*
 > Unit tests are great, but there is a place for higher-level tests, tests that cover scenarios and interactions in an application. Higher-level tests can be used to pin down behavior for a set of classes at a time. When you are able to do that, often you can write tests for the individual classes more easily.
+
+## Chapter 2: The *Seam* Model
+
 ## Chapter 5: Tools
 ### Automated Refactoring Tools
 > refactoring (n.). A change made to the internal structure of software to make it easier to understand and **cheaper to modify without changing the existing behavior**.
