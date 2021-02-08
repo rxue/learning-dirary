@@ -59,6 +59,13 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ## Chapter 17 My Application Has No Structure
 ### Telling the Story of the System
 
+## Chapter 20 The Class is Too Big and I Don't Want It to Get Any Bigger
+### Moving Forward
+#### Strategy
+#### Tactics
+> 1. Identify a Responsibility that you want to separate into another class
+> 2. Figure out whether any instance variables will have to move to the new class. If so, move them to a separate part of the class declaration, away from the other instance variables.
+
 # Part III: Dependency-Breaking Techniques
 ## Chapter 25: Dependency-Breaking Techniques
 ### *Parameterize Constructor*
