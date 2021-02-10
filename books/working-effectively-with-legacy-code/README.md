@@ -36,6 +36,9 @@ Key features of xUnit:
 ### Comment: Trick for *cut/copy/paste*
 Often times when adding new features or fixing bugs in legacy code base, lots of coders prefer to adding one or more arguments to an existing method signature. This should be averted whenever possible because, adding more arguments also means the more reasons for changing the residing class, which is against the *Single Responsibility Principle*. However, when the last resort is adding one or more arguments to an existing method, *cut/copy/paste* would come into play. Particularly if the method is used many times in the code base (*Find usage* with IDE), directly adding more arguments would cause the changes everywhere the method is called, so do *cut/copy/paste* (*use method overloading*), then mark the previous method as `@Deprecated` if the new method is more handy to be used
 
+## Chapter 9: I Can't Get This Class into a Test Harness
+### The Case of the Irritating Parameter
+> The best way to see if you will have trouble  instantiating a class in a test harness is to just try to do it. Write a test case and attempt to create an object in it. The compiler will tell you what need to make it really work.
 
 ## Chapter 10: I Can't Run This Method in a Test Harness
 ### The Case of the Hidden Method
