@@ -21,6 +21,16 @@ But to the author, Michael Feathers
 > Unit tests are great, but there is a place for higher-level tests, tests that cover scenarios and interactions in an application. Higher-level tests can be used to pin down behavior for a set of classes at a time. When you are able to do that, often you can write tests for the individual classes more easily.
 
 ## Chapter 2: The *Seam* Model
+### Seams
+> A seam is a place where you can alter behavior in your program without editing in that place.
+
+### Seam Types
+#### ~~Preprocessing Seams~~
+##### Enabling Points
+> Every seam has an enabling point, a place where you can make the decision to use one behavior or another.
+
+#### ~~Link Seams~~
+#### Object Seams
 
 ## Chapter 5: Tools
 ### Automated Refactoring Tools
