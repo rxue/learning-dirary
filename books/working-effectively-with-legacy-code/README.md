@@ -48,7 +48,6 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 #### [*Query-Query Separation*](https://www.youtube.com/watch?v=eb3nbt4poic)
 
 
-
 ## Chapter 11: I Need to Make a Change. What Methods Should I Test?
 ### Reasoning About Effects
 ### Reasoning Forward
@@ -62,6 +61,9 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ## Chapter 17 My Application Has No Structure
 ### Telling the Story of the System
 
+## Chapter 19: ~~My Project Is Not Object Oriented. How Do I Make Safe Changes?~~
+
+
 ## Chapter 20 The Class is Too Big and I Don't Want It to Get Any Bigger
 ### Moving Forward
 #### Strategy
@@ -71,7 +73,13 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 
 # Part III: Dependency-Breaking Techniques
 ## Chapter 25: Dependency-Breaking Techniques
+### *Adapt Parameter*
+### *Break out Method Object*
+### ~~*Definition Complition*~~
+### *Encapsulate Global References*
+### ~~*Link Substitutions*~~
 ### *Parameterize Constructor*
+
 
 # My Own Comment
 The gist of this book is unit test, test, test... 
