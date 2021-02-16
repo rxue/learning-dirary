@@ -85,8 +85,11 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ## Chapter 25: Dependency-Breaking Techniques
 ### *Adapt Parameter*
 ### *Break out Method Object*
-### ~~*Definition Complition*~~
+### ~~*Definition Completion*~~
 ### *Encapsulate Global References*
+### *Expose Static Method*
+> If you a method that doesn't use instance data or methods, you can turn it into a static method. When it is static, you can get it under test without having to instantiate the class.
+
 ### ~~*Link Substitutions*~~
 ### *Parameterize Constructor*
 
