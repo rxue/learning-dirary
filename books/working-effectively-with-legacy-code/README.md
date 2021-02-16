@@ -87,6 +87,7 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ### *Break out Method Object*
 ### ~~*Definition Complition*~~
 ### *Encapsulate Global References*
+### ~~*Extract Implementor*~~
 ### ~~*Link Substitutions*~~
 ### *Parameterize Constructor*
 
