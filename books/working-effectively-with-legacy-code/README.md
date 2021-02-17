@@ -49,6 +49,7 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ## Chapter 9: I Can't Get This Class into a Test Harness
 ### The Case of the Irritating Parameter
 > The best way to see if you will have trouble  instantiating a class in a test harness is to just try to do it. Write a test case and attempt to create an object in it. The compiler will tell you what need to make it really work.
+### The Case of the Irritating Global Dependency
 
 ## Chapter 10: I Can't Run This Method in a Test Harness
 ### The Case of the Hidden Method
@@ -89,7 +90,7 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ### *Encapsulate Global References*
 ### *Expose Static Method*
 > If you a method that doesn't use instance data or methods, you can turn it into a static method. When it is static, you can get it under test without having to instantiate the class.
-
+### ~~*Extract Implementor*~~
 ### ~~*Link Substitutions*~~
 ### *Parameterize Constructor*
 
