@@ -50,7 +50,11 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ### The Case of the Irritating Parameter
 > The best way to see if you will have trouble  instantiating a class in a test harness is to just try to do it. Write a test case and attempt to create an object in it. The compiler will tell you what need to make it really work.
 ### The Case of the Irritating Global Dependency
+> In Java, the *singleton pattern* is one of the mechanisms people use to make *global variables*. In general, global variables are a bad idea for a couple of reasons. One of them is opacity. When we look at a piece of code, it is nice to be able to know what it can affect.
 
+> Often people create singleton property because they want to have a global variable. They feel that it would be too painful to pass the variable around to the places where it is needed.
+
+> If we have a singleton for the latter reason<sub>the need of global variable mentioned above</sub>, there really isn't any reason to keep the singleton property. We can make the constructor `protected`, `public` or *package scope* and still have a decent, testable system.
 ## Chapter 10: I Can't Run This Method in a Test Harness
 ### The Case of the Hidden Method
 > If we need to test a private method, we should make it `public`. If making it public bothers us, in most cases, it means that our class is doing too much and we ought to fix it.
