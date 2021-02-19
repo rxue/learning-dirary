@@ -93,6 +93,8 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ### ~~*Extract Implementor*~~
 ### ~~*Link Substitutions*~~
 ### *Parameterize Constructor*
+### *Supersede Instance Variable*
+> overridden methods can be called from constructors in Java, but I don't recommend doing it in production code.
 
 
 # My Own Comment
