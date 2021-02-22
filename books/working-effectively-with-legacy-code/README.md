@@ -97,7 +97,7 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 ### ~~*Extract Implementor*~~
 ### ~~*Link Substitutions*~~
 ### *Parameterize Constructor*
-
+### ~~*Replace Function with Function Pointer*~~
 
 # My Own Comment
 The gist of this book is unit test, test, test... 
