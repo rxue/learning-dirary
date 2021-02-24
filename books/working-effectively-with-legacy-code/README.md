@@ -69,7 +69,12 @@ Often times when adding new features or fixing bugs in legacy code base, lots of
 
 > In general, programming gets easier as we narrow effects in a program. We need to know less to understand a piece of code. At the extreme, we end up with *funcitonal programming* in languages such as Scheme and Haskell.
 
-## Chapter 17 My Application Has No Structure
+## Chapter 13: I Need to Make a Change, but I don't Know What Tests to Write
+### Characterization Tests
+> The tests that we need when we want to preserve behavior are what I cal *characterization tests* . A *characterization test* is a test that characterize the actual behavior of a piece of code.
+
+
+## Chapter 17: My Application Has No Structure
 ### Telling the Story of the System
 
 ## Chapter 19: ~~My Project Is Not Object Oriented. How Do I Make Safe Changes?~~
