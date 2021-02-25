@@ -9,6 +9,10 @@ But to the author, Michael Feathers
 
 # Part I
 ## Chapter 2: Working with Feedback
+### Working with Feedback
+> We can do "testing to detect change."
+> In traditional terms, this is called *regression testing*
+
 ### What is Unit Testing
 > The definition varies, ... In object-oriented code, the units are classes
 
@@ -20,7 +24,7 @@ But to the author, Michael Feathers
 ### *Higher-Level Testing*
 > Unit tests are great, but there is a place for higher-level tests, tests that cover scenarios and interactions in an application. Higher-level tests can be used to pin down behavior for a set of classes at a time. When you are able to do that, often you can write tests for the individual classes more easily.
 
-## Chapter 2: The *Seam* Model
+## Chapter 3: The *Seam* Model
 ### Seams
 > A seam is a place where you can alter behavior in your program without editing in that place.
 
