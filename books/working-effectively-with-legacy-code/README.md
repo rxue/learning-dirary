@@ -44,7 +44,11 @@ But to the author, Michael Feathers
 Key features of xUnit:
 
 * Tests can be grouped into *suites* so that they can be run and rerun on demand 
-# Part II
+# Part II: Changing Software
+## Chapter 7: It takes Forever to Make a Change
+### Understanding
+> Systems that are broken up into small, well-named understandable pieces enable faster work.
+
 ## Chapter 8: How Do I Add a Feature?
 
 ### Comment: Trick for *cut/copy/paste*
