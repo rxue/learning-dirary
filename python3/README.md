@@ -42,3 +42,4 @@ modifer   |Python           |Java
 # Functional Programming
 In `max`, `min`, the given sequence cannot be empty
 
+# [Command line and environment](https://docs.python.org/3/using/cmdline.html)
