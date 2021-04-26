@@ -13,6 +13,8 @@ But to the author, Michael Feathers
 > We can do "testing to detect change."
 > In traditional terms, this is called *regression testing*
 
+> We start to refactor the code a bit. We extract some methods and move some conditional logic. After every little change that we make, we run that little *suite* of unit tests.
+
 ### What is Unit Testing
 > The definition varies, ... In object-oriented code, the units are classes
 
@@ -43,7 +45,12 @@ But to the author, Michael Feathers
 ### Unit-Testing Harnesses
 Key features of xUnit:
 
-* Tests can be grouped into *suites* so that they can be run and rerun on demand 
+* It lets programmers write tests in the language they are developing in.
+
+* All tests run in isolation.
+
+* **Tests can be grouped into *suites* so that they can be run and rerun on demand**
+
 # Part II: Changing Software
 ## Chapter 7: It takes Forever to Make a Change
 ### Understanding
