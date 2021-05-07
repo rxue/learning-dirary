@@ -9,14 +9,17 @@
 ### What is Unit Testing
 > Common to most conceptions of unit tests is the idea that they are **tests in isolation of individual components of software.** What are components? The definition varies, but in unit testing, we are usually concerned with **the most atomic behavioral units** of a system. In procedural code, the units are often functions. **In object-oriented code, the units are classes**.
 
-> Unit tests run fast. If they don't run fast, they aren't unit tests.
-<br /> Other kinds of tests often masquerade as unit tests. A test is not a unit test if:
- <ol>
-	<li>It talks to a database.</li>
-	<li>It communicates across a network.</li>
-	<li>It touches the file system.</li>
-	<li>Ýou have to do special things to your environment (such as editing configuration files) to run it.</li>
- </ol>
+```
+Unit tests run fast. If they don't run fast, they aren't unit tests.
+
+
+Other kinds of tests often masquerade as unit tests. A test is not a unit test if:
+
+ 1. It talks to a database.
+ 2. It communicates across a network.
+ 3. It touches the file system.
+ 4. You have to do special things to your environment (such as editing configuration files) to run it.
+```
 
 ### *Higher-Level Testing*
 > Unit tests are great, but there is a place for higher-level tests, tests that cover scenarios and interactions in an application. Higher-level tests can be used to pin down behavior for a set of classes at a time. When you are able to do that, often you can write tests for the individual classes more easily.
