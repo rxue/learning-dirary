@@ -11,6 +11,10 @@
 
 > Unit tests run fast. If they don't run fast, they aren't unit tests.
 <br /> Other kinds of tests often masquerade as unit tests. A test is not a unit test if:
+<br /> 1. It talks to a database.
+<br /> 2. It communicates across a network.
+<br /> 3. It touches the file system.
+<br /> 4. Ýou have to do special things to your environment (such as editing configuration files) to run it.
 
 ### *Higher-Level Testing*
 > Unit tests are great, but there is a place for higher-level tests, tests that cover scenarios and interactions in an application. Higher-level tests can be used to pin down behavior for a set of classes at a time. When you are able to do that, often you can write tests for the individual classes more easily.
