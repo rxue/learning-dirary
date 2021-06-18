@@ -71,9 +71,6 @@ Before listing all branches on both local and *remote*, i.e. `git branch -a`/`gi
 ## 20191019
 ### [Git States Control Flow](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 ![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
-### Q: How to check local changes of a File, which is just downloaded from the remote repository 
-#### Answer: `git diff <path>`
-When a file is downloaded from the remote repository, the state is *Unmodified*, after modification locally, the state of the file is *Modified*, meaning before `add`. `git diff <path>` compares the file (`<path>`) changes between *Unmodified* state and *Modified* state.
 ### `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
 
 ## 20191028
@@ -219,3 +216,13 @@ Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-
 **Solution**: `git push origin :<branch name>`
 
 Reference: https://stackoverflow.com/questions/15150671/delete-branches-in-bitbucket
+
+## 20210617 `diff` and `difftool`
+### Q: How to check local changes of a File, which is just downloaded from the remote repository 
+#### Answer: `git diff <path>`
+When a file is downloaded from the remote repository, the state is *Unmodified*, after modification locally, the state of the file is *Modified*, meaning before `add`. `git diff <path>` compares the file (`<path>`) changes between *Unmodified* state and *Modified* state.
+### Scenario: I would like to compare a Java class file between the last commit and a commit from several months ago
+#### Answer: `git diff <commit> <commit> [--] [<path>...]` or `git difftool --tool=vimdiff <commit> <commit> [--] [<path>...]`
+The essence is the `diff` command, which is probably using the `diff` API from the Linux
+
+
