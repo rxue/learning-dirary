@@ -11,6 +11,12 @@
 ## Isolation and Immutability
 > You only get concurrency problems if the data you're sharing can be modified
 
+## Transactions
+### Reducing Transaction Isolation for Liveness
+> If you have full isolation, you get serializable transactions.
+
+> To be sure of correctness you should always use *serialiable* isolation level. The problem is that serializable really messes up the liveness of a system, so much so that you often have to reduce serializability in order to increase throughput. ...
+
 # Chapter 10: Data Source Architectural Patterns
 ## Data Mapper
 ### How It Works
