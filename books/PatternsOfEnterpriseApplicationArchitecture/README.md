@@ -17,6 +17,14 @@
 
 > To be sure of correctness you should always use *serialiable* isolation level. The problem is that serializable really messes up the liveness of a system, so much so that you often have to reduce serializability in order to increase throughput. ...
 
+#### Business and System Transactions
+
+> The obvious answer to supporting the ACID properties of a business transaction is to execute the entire business transaction within a single system transaction. Unfortunately **business transactions often take multiple requests to action**, so using a single system transaction to implement one results in a long system transaction. Most transaction systems don't work very efficiently with long transactions.
+> 
+> This doesn't mean that you should never use long transactions. ...Using a long transaction means you avoid a lot of awkward problems. However, the application won't be scalable because long transactions will turn the database into a major bottleneck. ...
+>
+> For this reason **many enterprise applications can't risk long transaction. In this case you have to break the business transaction down into a series of short transactions. This means that you are left to your own device to support the ACID properties of business transactions between system transactions - a problem we call *offline concurrency*.** ... 
+
 # Chapter 10: Data Source Architectural Patterns
 ## Data Mapper
 ### How It Works
