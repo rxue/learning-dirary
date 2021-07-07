@@ -17,3 +17,6 @@ CTRL + WW - Press CTRL and then click W twice
 Example: :`12,18d`
 
 # 20200228: [*registers*, *undolist* and *history* in `vim`](https://stackoverflow.com/questions/60431864/how-to-display-the-content-of-the-cache-in-vim/60432156#60432156)
+
+# 20210707: I would like to turn on the language check for US English
+i`:set spell spelllang=en_us`
