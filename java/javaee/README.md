@@ -9,4 +9,7 @@
 # Java EE 7
 ## CDI
 ### [Tutorial](https://www.youtube.com/watch?v=VNCMwQhWKOw)
+https://www.youtube.com/watch?v=VNCMwQhWKOw&t=309s 	Problem: where do we create this instance of the DAO
+https://www.youtube.com/watch?v=VNCMwQhWKOw&t=334s		problem: using `new` keyword is tight-coupling
+https://www.youtube.com/watch?v=VNCMwQhWKOw&t=386s			Java EE 5 solution to this problem - `@EJB`
 
