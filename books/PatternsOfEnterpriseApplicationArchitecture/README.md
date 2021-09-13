@@ -51,3 +51,13 @@ In a large system with many domain object types and many possible queries, *Repo
 > Optimistic concurrency management is appropriate when the chance of *conflict* between any two business transactions is low. ... *Pessimistic Offline Lock* is more appropriate when the chance of conflict is high or the expense of a conflict is unacceptable.
 i
 ## Pessimistic Offline Lock
+
+# Chapter 18: Base Patterns
+> A well-known object that other objects can use to find common objects and services
+
+A *Registry* is essentialy a global object.
+## How It Works
+> A common kind of *Registry* data is thread scoped. A good example is a database connection. In this case many environments give you some form of thread-specific storage, such as Java's thread local. Another technique is a dictionary keyd by thread whose value is an appropriate data object. A request for a connection results in a lookup in that dictionary by the current thread.
+
+## When to Use It
+> Basically, you should only use a *Registry* as a last resot.
