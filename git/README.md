@@ -211,3 +211,5 @@ When a file is downloaded from the remote repository, the state is *Unmodified*,
 #### Answer: `git diff <commit> <commit> [--] [<path>...]` or `git difftool --tool=vimdiff <commit> <commit> [--] [<path>...]`
 The essence is the `diff` command, which is probably using the `diff` API from the Linux
 
+## 20211103 Question: I would like to get the source code of a specific release from github
+Answer: https://stackoverflow.com/questions/791959/download-a-specific-tag-with-git
