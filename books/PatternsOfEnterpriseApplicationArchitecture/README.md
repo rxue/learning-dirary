@@ -32,9 +32,32 @@
 >
 > Using an empty object like this means you may need some setters for values that are truly immutable when the object is loaded. A combination of a naming convention and perhaps some status-checking guards can fix this. You can also use reflection for data loading.
 
+# Chapter 13: Object-Relational Metadata Mapping Patterns
+## Repository
+
+> Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects.
+
+* *domain objects* aren't typically stored directly in the *Repository* 
+* With a Repository, client code constructs the criteria and then passes them to the Repository, asking it to select those of its objects that match
+* The object source for the Repository may not be a relational database at all, which is fine as Repository lends itself quite readily to the replacement of the data-mapping component via specialized strategy objects.
+* Repository's interface shields the domain layer from awareness of the data source, we can refactor the implementation of the query code inside the repository without changing any calls from clients
+
+### When to Use It
+In a large system with many domain object types and many possible queries, *Repository* reduces the amount of code needed to deal with all the querying that goes on.
+
 # Chapter 16: Offline Concurrency Patterns
 ## Optimistic Offline Lock
 ### When to Use It
 > Optimistic concurrency management is appropriate when the chance of *conflict* between any two business transactions is low. ... *Pessimistic Offline Lock* is more appropriate when the chance of conflict is high or the expense of a conflict is unacceptable.
 i
 ## Pessimistic Offline Lock
+
+# Chapter 18: Base Patterns
+> A well-known object that other objects can use to find common objects and services
+
+A *Registry* is essentialy a global object.
+## How It Works
+> A common kind of *Registry* data is thread scoped. A good example is a database connection. In this case many environments give you some form of thread-specific storage, such as Java's thread local. Another technique is a dictionary keyd by thread whose value is an appropriate data object. A request for a connection results in a lookup in that dictionary by the current thread.
+
+## When to Use It
+> Basically, you should only use a *Registry* as a last resot.

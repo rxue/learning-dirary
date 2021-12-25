@@ -1,9 +1,4 @@
 # [`git`](https://git-scm.com/book/en/v2)
-### 20190612: `git pull --rebase` is equivalent to `git rebase`
-
-**Reasoning:** In `git pull --help`, the following sentence is found:
-
-> With `--rebase`, it runs `git rebase` instead of `git merge`
 
 ## 20190613: Git Basic Video Tutorial
 https://www.youtube.com/watch?v=HRR8xcTmpe4
@@ -29,9 +24,6 @@ Question:
 ## 20190624: 
 ### Display the current HEAD
 `git rev-parse HEAD`
-
-### Understanding on `rebase`
-Assuming the current branch is `dev`, `git rebase master` will make all the commits on the current branch be based on the master branch. As a result, all the commits of the `dev` will be after all the commits of master 
 
 ### **Practical Work Approach in a Development Team with multiple Developers Working on Merely One Branch - Master**: 
 1. work on a local branch created from master, commit on the local branch
@@ -148,12 +140,6 @@ Example:
 #### `ls-remote`
 `git ls-remote` - List *references* in a remote repository
 
-### Work Diary
-**Problem:** I am working on one story, and after commit there is need to `rebase` on base of another local branch. The first time `rebase` failed and thus was `rebase` for the second time => the `git log` output the last second and last third commit message as duplicate.
-
-**Question:** How to combine the last second and the last third commit into one
-
-**Solution:** *squash*: `git rebase -i HEAD~3`
 
 ## 20200103
 ### *Gerrit* in Practice
@@ -225,4 +211,5 @@ When a file is downloaded from the remote repository, the state is *Unmodified*,
 #### Answer: `git diff <commit> <commit> [--] [<path>...]` or `git difftool --tool=vimdiff <commit> <commit> [--] [<path>...]`
 The essence is the `diff` command, which is probably using the `diff` API from the Linux
 
-
+## 20211103 Question: I would like to get the source code of a specific release from github
+Answer: https://stackoverflow.com/questions/791959/download-a-specific-tag-with-git
