@@ -11,3 +11,5 @@ invitation: n. 招致
 ### High Stakes
 hose: vt. <美俚> 痛打
 stick to one's guns: 固执己见
+### The Cost of Saying Yes
+quest: the act of searching for sth
