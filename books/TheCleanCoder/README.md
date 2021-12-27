@@ -13,3 +13,7 @@ hose: vt. <美俚> 痛打
 stick to one's guns: 固执己见
 ### The Cost of Saying Yes
 quest: the act of searching for sth
+elusive: a. difficult to describe
+chime in: 插话； 与 ... 协调
+double whammy: 祸不单行
+lend oneself to ... : 帮助；同意参与
