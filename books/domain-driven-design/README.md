@@ -19,4 +19,10 @@ Reference: POSA 1.
 ### Value Objects
 #### Designing Associations That Involve *Value Objects*
 > while bidirectional associations between ENTITIES may be hard to maintain, bidirectional associations between two VALUE OBJECTS just make no sense.
+### Services
+> A good service has three characteristics.
+> 1. The operation relates to a domain concept that is not a natural part of an *ENTITY* or *VALUE OBJECT*.
+> 2. The interface is defined in terms of other elements of the domain model.
+> 3. The operation is *stateless*
 
+> Statelessness here means that any client can use any instance of a particular *SERVICE* without regard to the instance's individual history. The execution of a SERVICE will use information that is accessible globally, and may even change that global information (that is, it may have side effect). But the *SERVICE* doesnot hold state of its own that affect its own behavior, as most domain objects do.
