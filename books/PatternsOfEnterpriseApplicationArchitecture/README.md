@@ -45,6 +45,14 @@
 ### When to Use It
 In a large system with many domain object types and many possible queries, *Repository* reduces the amount of code needed to deal with all the querying that goes on.
 
+# Chapter 15: Distribution Patterns
+## Data Transfer Object
+> An object that carries data between processes in order to reduce the number of method calls
+
+### Example: Serializing Using XML (Java)
+* *marker interface*
+* *JAXB*
+
 # Chapter 16: Offline Concurrency Patterns
 ## Optimistic Offline Lock
 ### When to Use It

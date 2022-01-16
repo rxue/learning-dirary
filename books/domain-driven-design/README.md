@@ -26,3 +26,12 @@ Reference: POSA 1.
 > 3. The operation is *stateless*
 
 > Statelessness here means that any client can use any instance of a particular *SERVICE* without regard to the instance's individual history. The execution of a SERVICE will use information that is accessible globally, and may even change that global information (that is, it may have side effect). But the *SERVICE* doesnot hold state of its own that affect its own behavior, as most domain objects do.
+## Chapter Six: The Lifecycle of a Domain Object
+### Aggregates
+> An AGGREGATE is a cluster of associated objects that we treat as a unit for the purpose of data changes.
+### Repositories
+> A subset of persistent objects must be globally accessible through a search based on object attributes. Such access is needed for the roots of AGGREGATES that are not convenient to reach by traversal. They are usually ENTITIES, sometimes VALUE OBJECTS with complex internal structure, and sometimes enumerated VALUES. Providing access to other objects muddies important distinctions. Free database queries can actully brach the encapsulation of domain objects and AGGREGATEs. Exposure of technical infrastructure and database access mechanisms complicated the client and obscures the MODEL-DRIVEN DESIGN.
+
+> The REPOSITORY retrieves the requested object, encapsulating the machinery of database queries and metadata mapping.
+
+> Provide REPOSITORIES only for AGGREGATE roots that actually need direct access.
