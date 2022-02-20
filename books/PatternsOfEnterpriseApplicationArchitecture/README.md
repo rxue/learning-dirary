@@ -32,19 +32,6 @@
 >
 > Using an empty object like this means you may need some setters for values that are truly immutable when the object is loaded. A combination of a naming convention and perhaps some status-checking guards can fix this. You can also use reflection for data loading.
 
-# Chapter 13: Object-Relational Metadata Mapping Patterns
-## Repository
-
-> Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects.
-
-* *domain objects* aren't typically stored directly in the *Repository* 
-* With a Repository, client code constructs the criteria and then passes them to the Repository, asking it to select those of its objects that match
-* The object source for the Repository may not be a relational database at all, which is fine as Repository lends itself quite readily to the replacement of the data-mapping component via specialized strategy objects.
-* Repository's interface shields the domain layer from awareness of the data source, we can refactor the implementation of the query code inside the repository without changing any calls from clients
-
-### When to Use It
-In a large system with many domain object types and many possible queries, *Repository* reduces the amount of code needed to deal with all the querying that goes on.
-
 # Chapter 15: Distribution Patterns
 ## Data Transfer Object
 > An object that carries data between processes in order to reduce the number of method calls
