@@ -30,8 +30,12 @@ Reference: POSA 1.
 ### Aggregates
 > An AGGREGATE is a cluster of associated objects that we treat as a unit for the purpose of data changes.
 ### Repositories
+
 > A subset of persistent objects must be globally accessible through a search based on object attributes. Such access is needed for the roots of AGGREGATES that are not convenient to reach by traversal. They are usually ENTITIES, sometimes VALUE OBJECTS with complex internal structure, and sometimes enumerated VALUES. Providing access to other objects muddies important distinctions. Free database queries can actully brach the encapsulation of domain objects and AGGREGATEs. Exposure of technical infrastructure and database access mechanisms complicated the client and obscures the MODEL-DRIVEN DESIGN.
 
 > The REPOSITORY retrieves the requested object, encapsulating the machinery of database queries and metadata mapping.
 
 > Provide REPOSITORIES only for AGGREGATE roots that actually need direct access.
+
+Since this *repositories* along with the *aggregate root* appears in the this chapter, The Lifecycle of Domain Object => repositories query, add, or remove *domain objects* - anything inside the aggregates.
+
