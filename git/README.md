@@ -34,8 +34,6 @@ Question:
 ### push a local branch to a remote `origin` branch with another name
 Example: `git push origin change_20190624:master` - push the local branch `change_20190624` to remote origin `master`
 
-### Delete a remote *refspec* 
-`git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
 
 ## 20190626
 ### List *references*
@@ -199,9 +197,16 @@ Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-
 ### Delete a branch from upstream repository
 **Problem**: I created a remote branch in *Bitbucket* only on purpose of executing the regression tests, meaning there is no *pull request* on this branch. Eventually after the success of the regression tests execution, I want to remove this remote branch 
 
-**Solution**: `git push origin :<branch name>`
+**Solution 1**: `git push origin :<branch name>`
 
 Reference: https://stackoverflow.com/questions/15150671/delete-branches-in-bitbucket
+
+**Solution 2**: `git push origin --delete <branch name>`
+
+Reference: https://www.educative.io/edpresso/how-to-delete-remote-branches-in-git
+
+### Delete a remote *refspec* 
+`git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
 
 ## 20210617 `diff` and `difftool`
 ### Q: How to check local changes of a File, which is just downloaded from the remote repository 
