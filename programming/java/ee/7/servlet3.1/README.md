@@ -5,6 +5,8 @@
 
 > If the order, in which the *listeners*, *servlets* and *filters* are invoked is important to an application then a *deployment descriptor* must be used.
 
+Reference on filters with jsf: https://stackoverflow.com/questions/8480100/how-implement-a-login-filter-in-jsf
+
 ## Chapter 12: Mapping Requests to Servlets
 ### Specification of Mappings
 > In the Web application deployment descriptor, the following syntax is used to define mappings:
