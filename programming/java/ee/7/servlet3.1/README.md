@@ -1,4 +1,10 @@
 # Java Servlet Specification
+## Chapter 8: Annotations and Pluggability
+### 8.2 Pluggability
+#### 8.2.3 Assembling the Desciptor from the web.xml, web-fragment.xml and Annotations
+
+> If the order, in which the *listeners*, *servlets* and *filters* are invoked is important to an application then a *deployment descriptor* must be used.
+
 ## Chapter 12: Mapping Requests to Servlets
 ### Specification of Mappings
 > In the Web application deployment descriptor, the following syntax is used to define mappings:

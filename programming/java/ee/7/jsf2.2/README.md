@@ -1,3 +1,6 @@
+# [JSF 2.2 API Doc](https://docs.oracle.com/javaee/7/index.html)
+
+ * [Facelets Tag Library](https://docs.oracle.com/javaee/7/javaserver-faces-2-2/vdldocs-facelets/toc.htm)
 # Locale
 ## [`default-locale` and `supported-locale` Corresponds to the `Accept-Language` in the *Http Header*](https://docs.oracle.com/javaee/7/tutorial/jsf-configure005.htm)
 
