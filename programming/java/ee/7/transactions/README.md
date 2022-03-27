@@ -8,8 +8,8 @@ Reference: The official tutorial
 
 Reference: Java EE 7: The Big Picture > Chapter 10 Advanced Thinking with Enterprise Beans > Transactions and Enterprise Beans
 
-The statements above also implies that any type of Java objects, or *JavaBeans* other than *enterpise bean* cannot use *container-managed tranactions*. For instance, CDI beans annotated with only `@ApplicationScoped` or `@RequestScoped` etc. cannot use *Container-managed transactions*, this is why my issue [#11](https://github.com/rxue/REST-API/issues/11) encountered error: 
+The statements above also implies that any type of Java objects, or *JavaBeans* other than *enterpise bean* cannot use *container-managed tranactions*. For instance, CDI beans annotated with only `@ApplicationScoped` or `@RequestScoped` etc. cannot use *Container-managed transactions*, this is why my issue [#17](https://github.com/rxue/REST-API/issues/16) in the `masterdata` project encountered error: 
 
-`Exception handling request to /security-search-engine/rest/company: org.jboss.resteasy.spi.UnhandledException: javax.persistence.TransactionRequiredException: WFLYJPA0060: Transaction is required to perform this operation (either use a transaction or extended persistence context)` 
+    Caused by: javax.persistence.TransactionRequiredException: WFLYJPA0060: Transaction is required to perform this operation (either use a transaction or extended persistence context)
 
-since the resource class in JAX-RS is not an enterprise bean
+since the *Repository* class is not an *ejb* but a simple POJO
