@@ -1,3 +1,9 @@
+# `mvn` Command Arguments
+## `-U,--update-snapshots`
+> For a check for missing releases and updated snapshots on remote repositories
+
+Use case (`20220329`): Out project removed the previous Nexus mirror and moved all source code from *bitbucket* to *gitlab*, so the *local repository*, i.e. `~/.m2`, should be synced. In this case `-U` comes into play   
+
 # `mvn install`
 Install package to the *local repository*
 
