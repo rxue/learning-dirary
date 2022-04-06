@@ -1,8 +1,14 @@
 # CDI 1.1
-## Using Scopes
+## Context: Using Scopes
+In package `javax.enterprise.context`
+
 Scope		| Annotation	| Meaning
 ----------------|---------------|---------
 Dependent	| `@Dependent`	| The CDI runtime instantiates a default scope CDI bean instance every that it is injected into a consumer object. The bean instance **inherits the scope of the consume instance**. If a CDI bean does not declare a scope, it defaults to having dependent scope.
+
+## Dependency Injection
+### `@Inject`
+The target value of `@Inject`: `@Taget(value={METHOD,CONSTRUCTOR,FIELD})`. So it is worth nothing that `@Inject` cannot be used on method `PARAMETER`
 
 ## [Tutorial](https://www.youtube.com/watch?v=VNCMwQhWKOw)
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=309s 	Problem: where do we create this instance of the DAO
