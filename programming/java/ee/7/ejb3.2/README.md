@@ -6,5 +6,8 @@ session > `@Stateful`	| 2 					| 2 separate calls to this EJB	| 2
 session > `@Singleton`	| 2 					| 2 separate calls to this EJB	| 1
 `@MessageDriven`	| 2					| 2 separate calls to this EJB	| ????
 
+## [Handling Exceptions](https://docs.oracle.com/javaee/7/tutorial/ejb-basicexamples005.htm)
+> If a *system exception* occurs within a transaction, the EJB container rolls back the transaction. However, if an *application exception* is thrown within a transaction, the container does not roll back the transaction
+
 
 
