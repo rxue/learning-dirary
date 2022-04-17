@@ -40,10 +40,14 @@ Assume client C calls a method on B
 `@TransactionAttribute(value=TransactionAttributeType.NOT_SUPPORTED)` | `@Transactional(Transactional.TxType.NOT_SUPPORTED)`
 `@TransactionAttribute(value=TransactionAttributeType.NEVER)`         | `@Transactional(Transactional.TxType.NEVER)`
 
-### Default Automatic Transaction Demarcation in EJB and JTA
-#### EJB 
+### Default Container-Managed Transaction in EJB and JTA
+In the context of *EJB*
 > [By default, if no transaction demarcation is specified, enterprise beans use container-managed transaction demarcation.](https://docs.oracle.com/javaee/7/tutorial/transactions003.htm)
 
+whereas 
+> JTA 1.2 introduces the `@javax.transaction.Transactional` annotation. It enables an application to declaratively control transaction boundaries on CDI-managed beans, as well as classes defined as managed beans, such as *servlets*, *JAX-RS resource* classes, and *JAX-WS service endpoints*.
+
+Reference: Java EE 7 Essentials > Chapter 12 Java Transaction > Container-Managed Transactions
 
 
  
