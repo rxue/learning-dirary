@@ -40,7 +40,9 @@ Assume client C calls a method on B
 `@TransactionAttribute(value=TransactionAttributeType.NOT_SUPPORTED)` | `@Transactional(Transactional.TxType.NOT_SUPPORTED)`
 `@TransactionAttribute(value=TransactionAttributeType.NEVER)`         | `@Transactional(Transactional.TxType.NEVER)`
 
-
+### Default Automatic Transaction Demarcation in EJB and JTA
+#### EJB 
+> [By default, if no transaction demarcation is specified, enterprise beans use container-managed transaction demarcation.](https://docs.oracle.com/javaee/7/tutorial/transactions003.htm)
 
 
 
