@@ -49,6 +49,6 @@ whereas
 
 Reference: Java EE 7 Essentials > Chapter 12 Java Transaction > Container-Managed Transactions
 
-
+To sum up, JTA annotation `@Transactional` is equivalent to `@Transactional(TxType.REQUIRED)` and, its counterpart in EJB context is the EJB state annotation with or without `@TransactionAttribute(value=TransactionAttributeType.REQUIRED)`
  
 
