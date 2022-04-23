@@ -1,6 +1,15 @@
 # [JSF 2.2 API Doc](https://docs.oracle.com/javaee/7/index.html)
 
  * [Facelets Tag Library](https://docs.oracle.com/javaee/7/javaserver-faces-2-2/vdldocs-facelets/toc.htm)
+
+## Using Facelets Templates
+Tag           | Description
+--------------|----------------------------------------------------------------------------------------------------------------------------
+`ui:component`| Inserts a new UI component into the JSF component tree. **Any component or content fragment outside this tag is ignored.**
+`ui:fragment` | Similar to `ui:component`, but does not disregard content outside this tag.
+
+
+
 # Locale
 ## [`default-locale` and `supported-locale` Corresponds to the `Accept-Language` in the *Http Header*](https://docs.oracle.com/javaee/7/tutorial/jsf-configure005.htm)
 
