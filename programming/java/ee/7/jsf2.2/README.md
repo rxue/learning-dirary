@@ -17,6 +17,8 @@ Tag           | Description
 
 > The `supported-locale` and `default-locale` tags accept the lowercase, two-character codes defined by ISO 639-1 (http://www.loc.gov/standards/iso639-2/php/English_list.php)
 
+### [Supported Locale by JRE since Java 8](https://www.oracle.com/java/technologies/javase/jdk8-jre8-suported-locales.html)
+
 ### Comment 
 The precedence of the *locale* is `<f:view locale=..` in the jsf file > `<locale-config>`. So 
 
