@@ -47,6 +47,8 @@ When using *Wildfly*, the dependencies can be managed with *bom*, i.e. there are
         </dependencies>
     </dependencyManagement>
 
+The possible list of managed dependencies can be found from https://mvnrepository.com/artifact/org.jboss.spec/jboss-javaee-7.0/1.1.1.Final
+
 ### [Wildfly Document](https://docs.wildfly.org/) > [Latest JavaEE 7](https://docs.wildfly.org/13/) > Developer Guide > [Getting Started Developing Applications Guide](https://docs.wildfly.org/13/Getting_Started_Developing_Applications_Guide.html)
 ## Summary
 ### Container-Managed Transactions
