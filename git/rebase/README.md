@@ -10,11 +10,15 @@ Reasoning: In `git pull --help`, the following sentence is found:
 
 #### Problem: I am working on one story, and after commit there is need to `rebase` on base of another local branch. `rebase` failed because the `git log` output the last second and last third commit message as duplicate.
 
-##### Question: How to combine the last second and the last third commit into one
+## 20220524
+##### Question: How to combine the last few commits into one
 
 ##### Solution: `squash`: `git rebase -i HEAD~3`
 
 ###### Video Tutorial: https://www.youtube.com/watch?v=V5KrD7CmO4o&list=PLizL--84rE7T7l97deRGxZRRltRi9iQgA&index=24
 
-Note about the `squash`: You can only *squash* a later commit into an earlier one, but cannot the other way around, so in case of needing to remove a commit, there is a `drop` option in parallel with `squash`
+Note about `squash`: 
+	* the value of the optional `-i` could only accept *tilde* `~`
+	* When seeing the list of commits after the command, note that you have to keep the first few commits unchanged, then `squash` the commits after the first few ones
+
 
