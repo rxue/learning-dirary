@@ -2,16 +2,19 @@
 
  * [Facelets Tag Library](https://docs.oracle.com/javaee/7/javaserver-faces-2-2/vdldocs-facelets/toc.htm)
 
-## Using Facelets Templates
+## JavaServer Faces Technology
+### [The Lifecycle of a JavaServer Faces Application](https://docs.oracle.com/javaee/7/tutorial/jsf-intro006.htm)
+![lifecycle](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_016.png)
+
+## Introduction to Facelets
+### Using Facelets Templates
 Tag           | Description
 --------------|----------------------------------------------------------------------------------------------------------------------------
 `ui:component`| Inserts a new UI component into the JSF component tree. **Any component or content fragment outside this tag is ignored.**
 `ui:fragment` | Similar to `ui:component`, but does not disregard content outside this tag.
 
-
-
-# Locale
-## [`default-locale` and `supported-locale` Corresponds to the `Accept-Language` in the *Http Header*](https://docs.oracle.com/javaee/7/tutorial/jsf-configure005.htm)
+## Locale
+### [`default-locale` and `supported-locale` Corresponds to the `Accept-Language` in the *Http Header*](https://docs.oracle.com/javaee/7/tutorial/jsf-configure005.htm)
 
 > The `locale-config` element lists the default locale and the other supported locales. The `locale-config` element enables the system to find the correct locale based on the browser's language settings.
 
