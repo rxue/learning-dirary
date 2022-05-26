@@ -4,7 +4,13 @@
 
 ## JavaServer Faces Technology
 ### [The Lifecycle of a JavaServer Faces Application](https://docs.oracle.com/javaee/7/tutorial/jsf-intro006.htm)
-![lifecycle](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_016.png)
+![JSF Life-cycle](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_016.png)
+#### Practical Tip (20220526)
+Based on Oracle's official tutorial, during *Invoke Application* phase,
+
+> the JavaServer Faces implementation handles any application-level events, such as submitting a form or linking to another page
+
+Moreover, this is the last phase right before rendering response, say validation and module value update etc. happen all before *Invoke Application*. In my *dictionary* project, the update submission failure in the [bug](https://github.com/rxue/dictionary/issues/19) issue is exactly due to this reason. In order to keep the initially submitted value on the server side, `@RequestScoped` was replaced with `@ViewScoped`.
 
 ## Introduction to Facelets
 ### Using Facelets Templates
