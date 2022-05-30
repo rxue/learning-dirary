@@ -159,7 +159,7 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 
 ## 20200902
 ### [`git mergetool -t gvimdiff`](https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool)
-### [`cherry-pick`] (https://www.youtube.com/watch?v=-ndmel-4wsk&t=632s)
+### [`cherry-pick`](https://www.youtube.com/watch?v=-ndmel-4wsk&t=632s)
 
 ## 20201003
 ### `git log`
