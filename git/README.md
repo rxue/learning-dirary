@@ -190,24 +190,6 @@ NOTE! If the `--all` is not given, the displayed graph is only of the current br
 
 Reference: https://koukia.ca/how-to-remove-local-untracked-files-from-the-current-git-branch-571c6ce9b6b1
 
-## 20201211
-### List all files or file changes in a commit
-Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
-
-### Delete a branch from upstream repository
-**Problem**: I created a remote branch in *Bitbucket* only on purpose of executing the regression tests, meaning there is no *pull request* on this branch. Eventually after the success of the regression tests execution, I want to remove this remote branch 
-
-**Solution 1**: `git push origin :<branch name>`
-
-Reference: https://stackoverflow.com/questions/15150671/delete-branches-in-bitbucket
-
-**Solution 2**: `git push origin --delete <branch name>`
-
-Reference: https://www.educative.io/edpresso/how-to-delete-remote-branches-in-git
-
-### Delete a remote *refspec* 
-`git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
-
 ## 20210617 `diff` and `difftool`
 ### Q: How to check local changes of a File, which is just downloaded from the remote repository 
 #### Answer: `git diff <path>`
@@ -218,3 +200,21 @@ The essence is the `diff` command, which is probably using the `diff` API from t
 
 ## 20211103 Question: I would like to get the source code of a specific release from github
 Answer: https://stackoverflow.com/questions/791959/download-a-specific-tag-with-git
+
+## 20201211
+### List all files or file changes in a commit
+Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
+
+### Delete a branch from upstream (remote) repository
+**Problem**: I created a remote branch in *Bitbucket* only on purpose of executing the regression tests, meaning there is no *pull request* on this branch. Eventually after the success of the regression tests execution, I want to remove this remote branch 
+
+**Solution 1**: `git push origin :<branch name>`
+
+Reference: https://stackoverflow.com/questions/15150671/delete-branches-in-bitbucket
+
+**Solution 2**: `git push origin --delete <branch name>` (20220530)
+
+Reference: https://www.educative.io/edpresso/how-to-delete-remote-branches-in-git
+
+### Delete a remote *refspec* 
+`git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
