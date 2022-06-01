@@ -222,4 +222,8 @@ NOTE! If the `--all` is not given, the displayed graph is only of the current br
 ##### Show logs in a pretty oneline graph with default colors:
 `git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
 
+With Human-readable date format:
+
+`git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ch] %s'`
+
 Reference: https://git-scm.com/docs/pretty-formats
