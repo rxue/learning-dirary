@@ -219,11 +219,11 @@ NOTE! If the `--all` is not given, the displayed graph is only of the current br
 `1.8.x`       | `(HEAD, origin/master, origin/HEAD, master)`
 `2.7.x`+      | `(HEAD -> master, origin/master, origin/HEAD)`
 
-##### Show logs in a pretty oneline graph with default colors:
-`git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
+##### Show logs in a pretty oneline graph with default colors and local date:
+`git log --all --oneline --graph --date=local --pretty=format:'%C(auto) %h%d [%an/%cd] %s'`
 
 With Human-readable date format:
 
-`git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ch] %s'`
+`git log --all --oneline --graph --date=human --pretty=format:'%C(auto) %h%d [%an/%cd] %s'`
 
 Reference: https://git-scm.com/docs/pretty-formats
