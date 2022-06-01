@@ -161,28 +161,6 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 ### [`git mergetool -t gvimdiff`](https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool)
 ### [`cherry-pick`](https://www.youtube.com/watch?v=-ndmel-4wsk&t=632s)
 
-## 20201003
-### `git log`
-**Problem:** In my project, one specific file was suspected to be updated
-
-**Question:** How to list the update history of a specific file
-
-**Solution:** [`git log --follow -p -- <file>`](https://stackoverflow.com/questions/8048584/see-changes-to-a-specific-file-using-git)
-
-#### Display log graph with `--graph` option
-`git log --all --oneline --graph --decorate`
-
-NOTE! If the `--all` is not given, the displayed graph is only of the current branch
-
-##### With different version of git, the top log is displayed differently
- Git Version  | Result
---------------|--------------------------------------------- 
-`1.8.x`       | `(HEAD, origin/master, origin/HEAD, master)`
-`2.7.x`+      | `(HEAD -> master, origin/master, origin/HEAD)`
-
-##### Show logs in a pretty oneline graph with default colors:
-`git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
-
 ## 20201204
 **Problem**: There are lots of unnecessary *untracked* files in my master branch, I would like to remove them all
 
@@ -221,3 +199,27 @@ Reference: https://www.educative.io/edpresso/how-to-delete-remote-branches-in-gi
 
 ## 202200601
 Copy files from one branch to a different directory on the current branch 
+
+## 20220601,20201003
+### `git log`
+**Problem:** In my project, one specific file was suspected to be updated
+
+**Question:** How to list the update history of a specific file
+
+**Solution:** [`git log --follow -p -- <file>`](https://stackoverflow.com/questions/8048584/see-changes-to-a-specific-file-using-git)
+
+#### Display log graph with `--graph` option
+`git log --all --oneline --graph --decorate`
+
+NOTE! If the `--all` is not given, the displayed graph is only of the current branch
+
+##### With different version of git, the top log is displayed differently
+ Git Version  | Result
+--------------|--------------------------------------------- 
+`1.8.x`       | `(HEAD, origin/master, origin/HEAD, master)`
+`2.7.x`+      | `(HEAD -> master, origin/master, origin/HEAD)`
+
+##### Show logs in a pretty oneline graph with default colors:
+`git log --all --oneline --graph --pretty=format:'%C(auto) %h%d [%an/%ai] %s'`
+
+Reference: https://git-scm.com/docs/pretty-formats
