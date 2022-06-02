@@ -95,10 +95,6 @@ Assuming there are the following files:
 ## 20191204
 ### `git branch`
 
-### Remove Local branch
-* `git branch -d <branch_name>`
-* `git branch -D <branch_name>` - `-D` i.e. `git branch -d --force`
-
 ## 20191219
 ### `git checkout`
 #### Command to Create new Branch
@@ -219,10 +215,12 @@ NOTE! If the `--all` is not given, the displayed graph is only of the current br
 `1.8.x`       | `(HEAD, origin/master, origin/HEAD, master)`
 `2.7.x`+      | `(HEAD -> master, origin/master, origin/HEAD)`
 
-##### Show logs in a pretty oneline graph with default colors and local date:
+##### Show logs in a pretty oneline graph with default colors and a defined date format:
+``%cd` will get the date format from `--date`. For instance, the `--date=local` is very readable with year and local time: 
+
 `git log --all --oneline --graph --date=local --pretty=format:'%C(auto) %h%d [%an/%cd] %s'`
 
-With Human-readable date format:
+With Human-readable date format in the following:
 
 `git log --all --oneline --graph --date=human --pretty=format:'%C(auto) %h%d [%an/%cd] %s'`
 
