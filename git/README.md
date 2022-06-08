@@ -14,10 +14,15 @@ Reference:
 
 Reference: [Don't Mess With the Master Working with Branches in `git` and *github*](https://thenewstack.io/dont-mess-with-the-master-working-with-branches-in-git-and-github/)
 
-## 20190622
-[`git reset`](https://www.youtube.com/watch?v=QEuqlpMOL9E&list=PLXO45tsB95cKysjmSNln65YoUt9lwEl7-&index=6) (中文)
+## [`git reset`](https://www.youtube.com/watch?v=QEuqlpMOL9E&list=PLXO45tsB95cKysjmSNln65YoUt9lwEl7-&index=6) (中文)
+
 Question:
+
 * what is `git reset --hard origin/master`
+
+#### How to discard all the changes on the current branch
+1. `git fetch origin`
+2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
 
 `merge` a *conflict* does not generate an automatic *commit* message
 
@@ -54,9 +59,7 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 #### List remote branches after `git fetch`
 Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
 
-#### How to discard all the changes on the current branch
-1. `git fetch origin`
-2. `git reset --hard origin/master` or `git reset --hard HEAD` (revert to the last commit)
+
 
 ## 20191019
 ### [Git States Control Flow](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
