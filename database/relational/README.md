@@ -10,6 +10,8 @@ Reference: Database System Concepts 7th Ed > Chapter 17 Transactions > 17.8 Tran
 
  * non-repeatable read ([example demo](https://www.youtube.com/watch?v=Afw-zgJ9Wxc))
 
+These inconsistent problems happens only when there are multiple transactions running concurrently, i.e. *serialized*. In summary, it is about: transaction A reads data X for the first time, then another transaction other than transaction A updated data X and committed the update, then when transaction A reads data X for the second time, it is different from what was read fro the first time. This difference might be about update corresponding to *non-repeatable read* or more newly inserted rows corresponding to *phantom read* 
+
 #### Default Isolation Level for Different Databases
 
 Database                                                                                                                                                                      | Default Isolation Level
