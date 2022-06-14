@@ -1,12 +1,12 @@
 # Transaction
 ## Isolation & Consistency
-### Isolation Level
+### [ANSI/ISO Transaction Isolation Levels](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-7F2C6927-5482-4144-B43B-5E90EF4E055B)
 
 > *Serializability* is a useful concept because it allows programmers to ignore issues related to concurrency when they code transactions. ... **The use of weaker levels of consistency places additional burdens on programmers for ensuring database correctness**.
 
 Reference: Database System Concepts 7th Ed > Chapter 17 Transactions > 17.8 Transaction Isolation Levels
 
-### Inconsistent problems in isolation level other than *Serialized*
+### [Phenomenas that must be prevented between concurrently executing transactions](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-7F2C6927-5482-4144-B43B-5E90EF4E055B)
 
  * non-repeatable read ([example demo](https://www.youtube.com/watch?v=Afw-zgJ9Wxc))
 
