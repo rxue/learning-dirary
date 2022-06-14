@@ -6,6 +6,10 @@
 
 Reference: Database System Concepts 7th Ed > Chapter 17 Transactions > 17.8 Transaction Isolation Levels
 
+### Inconsistent problems in isolation level other than *Serialized*
+
+ * non-repeatable read ([example demo](https://www.youtube.com/watch?v=Afw-zgJ9Wxc))
+
 #### Default Isolation Level for Different Databases
 
 Database                                                                                                                                                                      | Default Isolation Level
