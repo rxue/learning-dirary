@@ -1,4 +1,5 @@
 # Wildfly
+## [Wildfly Document](https://docs.wildfly.org/) > [Latest JavaEE 7](https://docs.wildfly.org/13/) > Developer Guide > [Getting Started Developing Applications Guide](https://docs.wildfly.org/13/Getting_Started_Developing_Applications_Guide.html)
 ## Practical Tips
 ### Maven dependency management
 When using *Wildfly*, the dependencies can be managed with *bom*, i.e. there are usually the following dependencies in the `dependencyManagement` element:
@@ -32,10 +33,12 @@ When using *Wildfly*, the dependencies can be managed with *bom*, i.e. there are
 
 The possible list of managed dependencies can be found from https://mvnrepository.com/artifact/org.jboss.spec/jboss-javaee-7.0/1.1.1.Final
 
-### [Wildfly Document](https://docs.wildfly.org/) > [Latest JavaEE 7](https://docs.wildfly.org/13/) > Developer Guide > [Getting Started Developing Applications Guide](https://docs.wildfly.org/13/Getting_Started_Developing_Applications_Guide.html)
 ### Debug configuration on Wildfly
 #### Key References
 * https://medium.com/@nguyenchitam1993/how-to-remote-debug-java-application-in-wildfly-on-a-docker-container-using-eclipse-b93f673430ff
 * https://www.youtube.com/watch?v=2zUKDJNvhnI
 #### Practice
 https://github.com/rxue/dictionary/issues/25
+
+### Message Queue Configuration
+
