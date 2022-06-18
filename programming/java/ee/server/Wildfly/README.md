@@ -41,4 +41,11 @@ The possible list of managed dependencies can be found from https://mvnrepositor
 https://github.com/rxue/dictionary/issues/25
 
 ### Message Queue Configuration
+#### 2 default queues exist in `standalone-full.xml`
+There are 2 queues existing by default when starting the Wildfly server with full profile configuration, i.e. with `standalone-full.xml`. They are
 
+
+#### Add a new Message Queue through the Admin console
+![add message queue](https://user-images.githubusercontent.com/3033388/174456532-652f455a-cbe4-4914-8b5f-34c148636db1.png)
+
+ 
