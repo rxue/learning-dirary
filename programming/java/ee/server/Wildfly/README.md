@@ -1,4 +1,5 @@
 # Wildfly
+## [Wildfly Document](https://docs.wildfly.org/) > [Latest JavaEE 7](https://docs.wildfly.org/13/) > Developer Guide > [Getting Started Developing Applications Guide](https://docs.wildfly.org/13/Getting_Started_Developing_Applications_Guide.html)
 ## Practical Tips
 ### Maven dependency management
 When using *Wildfly*, the dependencies can be managed with *bom*, i.e. there are usually the following dependencies in the `dependencyManagement` element:
@@ -32,10 +33,35 @@ When using *Wildfly*, the dependencies can be managed with *bom*, i.e. there are
 
 The possible list of managed dependencies can be found from https://mvnrepository.com/artifact/org.jboss.spec/jboss-javaee-7.0/1.1.1.Final
 
-### [Wildfly Document](https://docs.wildfly.org/) > [Latest JavaEE 7](https://docs.wildfly.org/13/) > Developer Guide > [Getting Started Developing Applications Guide](https://docs.wildfly.org/13/Getting_Started_Developing_Applications_Guide.html)
 ### Debug configuration on Wildfly
 #### Key References
 * https://medium.com/@nguyenchitam1993/how-to-remote-debug-java-application-in-wildfly-on-a-docker-container-using-eclipse-b93f673430ff
 * https://www.youtube.com/watch?v=2zUKDJNvhnI
 #### Practice
 https://github.com/rxue/dictionary/issues/25
+
+### Message Queue Configuration
+#### 2 default queues exist in `standalone-full.xml`
+There are 2 queues existing by default when starting the Wildfly server with full profile configuration, i.e. with `standalone-full.xml`. They are
+
+```
+  <jms-queue name="ExpiryQueue" entries="java:/jms/queue/ExpiryQueue"/>
+  <jms-queue name="DLQ" entries="java:/jms/queue/DLQ"/>
+```
+
+This is visualized in the Admin console:
+
+![2 default queues](https://user-images.githubusercontent.com/3033388/174456874-0c0d403c-68e0-45a5-b6f7-7a339b4e162f.png)
+
+ * DLQ - *dead letter queue/channel*
+ * ExpiryQueue - *Expiration Message Queue*
+
+Reference: Enterprise Integration Patterns > 4. Message Channel > Dead Letter Channel
+
+
+#### Add a new Message Queue *destination* through the Admin console
+![add message queue](https://user-images.githubusercontent.com/3033388/174456532-652f455a-cbe4-4914-8b5f-34c148636db1.png)
+
+[Relevant Video Tutorial](https://www.youtube.com/watch?v=StqHcny4dGc)
+
+ 
