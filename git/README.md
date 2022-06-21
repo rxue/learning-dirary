@@ -178,16 +178,6 @@ Answer: https://stackoverflow.com/questions/791959/download-a-specific-tag-with-
 ### List all files or file changes in a commit
 Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
 
-### Delete a branch from upstream (remote) repository
-**Problem**: I created a remote branch in *Bitbucket* only on purpose of executing the regression tests, meaning there is no *pull request* on this branch. Eventually after the success of the regression tests execution, I want to remove this remote branch 
-
-**Solution 1**: `git push origin :<branch name>`
-
-Reference: https://stackoverflow.com/questions/15150671/delete-branches-in-bitbucket
-
-**Solution 2**: `git push origin --delete <branch name>` (20220530)
-
-Reference: https://www.educative.io/edpresso/how-to-delete-remote-branches-in-git
 
 ### Delete a remote *refspec* 
 `git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
