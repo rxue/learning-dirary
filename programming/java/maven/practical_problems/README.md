@@ -10,7 +10,26 @@ Java version: 11.0.15, vendor: Private Build, runtime: /usr/lib/jvm/java-11-open
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "5.13.0-51-generic", arch: "amd64", family: "unix"
 ```
+## Problem: When compiling a [legacy Java EE project (in Java SE 8)](https://github.com/javaee/tutorial-examples), there is compilation error
 
+## Change Request: In order to build the project successfully, Java 8 is needed
+
+## Solution and Analysis
+Reasoning: *Maven* builds project with the operating system's default Java in case *JAVA_HOME* environment is absent
+
+=>
+
+Solution: Set the `JAVA_HOME` environment variable to be that of legacy *Java 8* : `export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64`
+
+As a result, the output of `mvn --version` would become:
+
+```
+Apache Maven 3.6.3
+Maven home: /usr/share/maven
+Java version: 1.8.0_312, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.13.0-51-generic", arch: "amd64", family: "unix"
+```
 
 # Tests with *JUnit 5* are not executed with `mvn` command
 ## Description
