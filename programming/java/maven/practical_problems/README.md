@@ -1,3 +1,17 @@
+# How to use a different version of Java from the default version of the operating system (OS) with Maven (20220625)
+## Current OS' configuration description
+* Operating System: Ubuntu 20
+* Output of `mvn --version` :
+
+```
+Apache Maven 3.6.3
+Maven home: /usr/share/maven
+Java version: 11.0.15, vendor: Private Build, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "5.13.0-51-generic", arch: "amd64", family: "unix"
+```
+
+
 # Tests with *JUnit 5* are not executed with `mvn` command
 ## Description
 In my work project, after updating the unit tests code from JUnit 4 to *JUnit 5*, along with it there is also test dependency update, the tests are not executed with `mvn` command, e.g. `mvn clean package`
