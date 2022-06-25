@@ -1,5 +1,6 @@
 # How to use a different version of Java from the default version of the operating system (OS) with Maven (20220625)
-## Current OS' configuration description
+## Problem: When compiling a [legacy Java EE project (in Java SE 8)](https://github.com/javaee/tutorial-examples), there is compilation error
+### Current OS' configuration description
 * Operating System: Ubuntu 20
 * Output of `mvn --version` :
 
@@ -10,12 +11,11 @@ Java version: 11.0.15, vendor: Private Build, runtime: /usr/lib/jvm/java-11-open
 Default locale: en_US, platform encoding: UTF-8
 OS name: "linux", version: "5.13.0-51-generic", arch: "amd64", family: "unix"
 ```
-## Problem: When compiling a [legacy Java EE project (in Java SE 8)](https://github.com/javaee/tutorial-examples), there is compilation error
 
 ## Change Request: In order to build the project successfully, Java 8 is needed
 
 ## Solution and Analysis
-Reasoning: *Maven* builds project with the operating system's default Java in case *JAVA_HOME* environment is absent
+Reasoning: *Maven* builds project with the operating system's default Java (Java executable set in the `PATH` environment variable) in case *JAVA_HOME* environment is absent
 
 =>
 
