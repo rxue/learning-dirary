@@ -27,3 +27,25 @@ Reference: Enterprise Integration Patterns > 4. Message Channel > Dead Letter Ch
 ![add message queue](https://user-images.githubusercontent.com/3033388/174456532-652f455a-cbe4-4914-8b5f-34c148636db1.png)
 
 [Relevant Video Tutorial](https://www.youtube.com/watch?v=StqHcny4dGc)
+
+## Practical Trouble Shooting
+### `AMQ214016: Failed to create netty connection java.net.UnknownHostException` when sending message to `http-remoting://localhost:8081` (the port number depends on the configuration)
+#### Analysis
+This error probably comes along with a `WARN` log message during the Wildfly startup
+
+```
+WARN  [org.apache.activemq.artemis.jms.server] (ServerService Thread Pool -- 84) AMQ122005: Invalid "host" value "0.0.0.0" detected for "http-connector" connector. Switching to "b2f3fd82791e". If this new address is incorrect please manually configure the connector to use the proper one.
+```
+
+Based on `Invalid "host" value "0.0.0.0" detected for "http-connector" connector`, the Wildfly server's listening socket is bound to "0.0.0.0". More explanation can be found in the note from [Redhat documentation: 8.3 Connectors](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.1/html/configuring_messaging/acceptors_and_connectors#configuring_acceptors_and_connectors):
+
+> If the bind address for the public interface is set to 0.0.0.0, you will see the following warning in the log when you start the JBoss EAP server: 
+
+`AMQ121005: Invalid "host" value "0.0.0.0" detected for "connector" connector. Switching to <HOST_NAME>. If this new address is incorrect please manually configure the connector to use the proper one.`
+
+> This is because a remote connector cannot connect to a server using the 0.0.0.0 address and the messaging-activemq subsystem tries to replace it with the server’s host name. The administrator should configure the remote connector to use a different interface address for the socket binding.
+
+The quotation above is the direct reason for this error
+
+#### Solution: set `jboss.bind.address` to a static IP address
+
