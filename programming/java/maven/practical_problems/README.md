@@ -41,4 +41,10 @@ reference: https://stackoverflow.com/questions/36970384/surefire-is-not-picking-
 NOTE! The correct answer is not the checked one but from the second one Mikhail Kholodkov. Based on the reference link above, that is an [surefire plugin issue](https://issues.apache.org/jira/browse/SUREFIRE-1330) in the old version and, it was resolved in *surefire 2.22.0* , which is not the default version.
 
 Analysis helper Maven command: `mvn help:effective-pom`
-This helps find the default version of *surefire plugin*  
+This helps find the default version of *surefire plugin*
+
+# Want to list all the available dependencies in the `bom` in `dependencyManagement`
+
+## Solution
+reference: https://stackoverflow.com/questions/52731746/how-to-list-all-dependencymanagment-in-maven
+
