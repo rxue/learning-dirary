@@ -94,8 +94,10 @@ Assuming there are the following files:
 1. `git log` to get the commit history, remember the commit ID before my last commit
 2. `git checkout <commit_hash> -- <file>` will revert the committed file, of course your changes on this file will be lost 
 
-## 20191219
+## 20220704
 ### `git checkout`
+NOTE! ``git checkout` can also checkout remote branch directly
+
 #### Command to Create new Branch
 `git checkout -b <new_branch>`
 
