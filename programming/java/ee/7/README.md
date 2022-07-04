@@ -15,6 +15,8 @@
 ------------------------|-------------|---------|-------------------------------|-------------------------------------------------------------------------------|--------------------------
 Batch Applications	| ?	      | 352	| Batch processing		| https://github.com/jberet/jsr352/tree/1.0.2.Final/jberet-core (not sure)	| https://www.baeldung.com/java-ee-7-batch-processing
 
+### [Tutorial Examples](https://github.com/javaee/tutorial-examples)
+
 ## [Schema Resources](http://xmlns.jcp.org/xml/ns/javaee/#7)
 
 ## Summary
