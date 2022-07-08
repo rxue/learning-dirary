@@ -40,3 +40,5 @@ The possible list of managed dependencies can be found from https://mvnrepositor
 #### Practice
 https://github.com/rxue/dictionary/issues/25
 
+## Questions
+### 20220707 Is it possible at all to make use of `@EJB` annotation to inject a *remote ejb*?
