@@ -48,3 +48,8 @@ This helps find the default version of *surefire plugin*
 ## Solution
 reference: https://stackoverflow.com/questions/52731746/how-to-list-all-dependencymanagment-in-maven
 
+# How to build a single module in a multi-module project
+## Solution
+Use the `--projects` option
+
+Exmaple: `mvn --projects portfolio-old-data clean package` 
