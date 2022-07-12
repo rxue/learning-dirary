@@ -94,10 +94,6 @@ Assuming there are the following files:
 1. `git log` to get the commit history, remember the commit ID before my last commit
 2. `git checkout <commit_hash> -- <file>` will revert the committed file, of course your changes on this file will be lost 
 
-## 20220704
-### `git checkout`
-NOTE! ``git checkout` can also checkout remote branch directly
-
 #### Command to Create new Branch
 `git checkout -b <new_branch>`
 
@@ -116,11 +112,7 @@ The meaning of *<start_point>*:
 **Git in Practice**: The name of the branch should be descriptive, for instance, it can be the name of the task you are working on. Moreover, if you have multiple tasks, you can create multiple branches as per tasks  
 ### Command to Go to Another Branch
 `git checkout <another_branch>`
-### Reload/sync a Single File from a Remote Branch (20191008, 20200227)
-`git checkout <branch> -- <paths>`
 
-Example:
-`git checkout origin/master -- abc.java`
 
 ### Reload/sync a Single File from a commit
 `git checkout <commit_hash> -- <paths>`
