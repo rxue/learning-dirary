@@ -28,6 +28,14 @@ Reference: Enterprise Integration Patterns > 4. Message Channel > Dead Letter Ch
 
 [Relevant Video Tutorial](https://www.youtube.com/watch?v=StqHcny4dGc)
 
+## Consuming JMS Messages from Remote *Wildfly* Server
+
+Reference: http://www.mastertheboss.com/jbossas/jboss-jms/connecting-to-an-external-wildfly-jms-server/#remotejms
+
+### Configuration on the assumption that a queue already exists from the *Wildfly* Server
+
+#### My real practice code: https://github.com/rxue/dictionary/issues/32
+
 ## Practical Trouble Shooting
 ### `AMQ214016: Failed to create netty connection java.net.UnknownHostException` when sending message to `http-remoting://localhost:8081` (the port number depends on the configuration)
 #### Analysis
