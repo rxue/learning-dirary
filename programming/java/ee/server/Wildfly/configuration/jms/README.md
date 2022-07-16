@@ -30,11 +30,13 @@ Reference: Enterprise Integration Patterns > 4. Message Channel > Dead Letter Ch
 
 ## Consuming JMS Messages from Remote *Wildfly* Server
 
-Reference: http://www.mastertheboss.com/jbossas/jboss-jms/connecting-to-an-external-wildfly-jms-server/#remotejms
+Reference: The [*Creating a Remote Connector towards a Remote JMS Server*](http://www.mastertheboss.com/jbossas/jboss-jms/connecting-to-an-external-wildfly-jms-server/#remotejms) section in http://www.mastertheboss.com/jbossas/jboss-jms/connecting-to-an-external-wildfly-jms-server/#remotejms 
 
 ### Configuration on the assumption that a queue already exists from the *Wildfly* Server
-
 #### My real practice code: https://github.com/rxue/dictionary/issues/32
+NOTE that on the assumption of an existing JMS queue on the remote Wildfly server, there is still extra configuration on the same remote JMS queue Wildfly server, say **activating a Netty connector**. Refer to this code commit: https://github.com/rxue/dictionary/commit/32335137f44294b7a45ca6b0f5ed703ca0de2cd7
+
+NOTE also that as to the JMS **client side**, i.e. the other Wildfly server containing the *message-driven bean* JMS consumer, due to the evolution of the Wildfly, there is no need to configure any facade queue on the `standalone-full.xml`. Aside from this ignored configuration, other configurations are still needed
 
 ## Practical Trouble Shooting
 ### `AMQ214016: Failed to create netty connection java.net.UnknownHostException` when sending message to `http-remoting://localhost:8081` (the port number depends on the configuration)
