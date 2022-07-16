@@ -199,7 +199,7 @@ NOTE! If the `--all` is not given, the displayed graph is only of the current br
 `2.7.x`+      | `(HEAD -> master, origin/master, origin/HEAD)`
 
 ##### Show logs in a pretty oneline graph with default colors and a defined date format:
-``%cd` will get the date format from `--date`. For instance, the `--date=local` is very readable with year and local time: 
+`%cd` will get the date format from `--date`. For instance, the `--date=local` is very readable with year and local time: 
 
 `git log --all --oneline --graph --date=local --pretty=format:'%C(auto) %h%d [%an/%cd] %s'`
 
