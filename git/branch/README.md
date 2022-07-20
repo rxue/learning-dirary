@@ -1,4 +1,7 @@
 # `git branch`
+## List all the branches, i.e. both local and remote
+`git branch -a`
+
 ## Delete a branch
 ### Remove Local branch
 * `git branch -d <branch_name>`
