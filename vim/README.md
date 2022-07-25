@@ -20,3 +20,7 @@ Example: :`12,18d`
 
 # 20210707: I would like to turn on the language check for US English
 i`:set spell spelllang=en_us`
+
+# 20220725: how to display invisible chars such as *tab*, *end of line* etc.
+Solution: ``:set list`
+Reference: https://linuxhint.com/show-hidden-invisible-characters-vim/
