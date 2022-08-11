@@ -1,5 +1,6 @@
 from enum import Enum
 
+# Reference: https://www.youtube.com/watch?v=m1x0K8Rvy8k&list=PL-PfwerBPSrSMnKoeW_h0ixJptjfIoY5U&index=12
 class NetworkType(Enum):
     A = 1
     LOOPBACK = 2
