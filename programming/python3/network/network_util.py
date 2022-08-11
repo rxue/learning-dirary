@@ -5,7 +5,8 @@ class NetworkType(Enum):
     LOOPBACK = 2
     B = 3
     C = 4
-    OTHER = 5
+    OTHER = 6
+    CLASSLESS = 7
 
 def getByteInInt(ip:str, index:int)->int:
     firstByteStr = ip.split('.')[index]
