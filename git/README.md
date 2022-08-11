@@ -179,8 +179,8 @@ Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-
 ## 202200601
 Copy files from one branch to a different directory on the current branch 
 
-## 20220601,20201003
-### `git log`
+## `git log`
+### 20220601,20201003
 **Problem:** In my project, one specific file was suspected to be updated
 
 **Question:** How to list the update history of a specific file
@@ -208,3 +208,7 @@ With Human-readable date format in the following:
 `git log --all --oneline --graph --date=human --pretty=format:'%C(auto) %h%d [%an/%cd] %s'`
 
 Reference: https://git-scm.com/docs/pretty-formats
+### 20220808 display logs along with changes on files in commit
+Reference: https://www.deployhq.com/git/viewing-previous-commits
+
+
