@@ -32,7 +32,7 @@ This implication can be proved by the following experiment in *Linux* system:
 In order to compile a legacy Java project with a JDK version other than the system's default executable `javac` and `java`, open jdk 8 should be installed on the same system =>
 
  4. install a secondary JDK, e.g. *open jdk 8* in the same system, but it is not the executable with the `java` or `javac` command, meaning the `java --version` still output the same result as before
- 5. In one *terminal* session, `JAVA_HOME` could be set, e.g. with command `export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64`
+ 5. In one *terminal* session, `JAVA_HOME` could be set, e.g. with command `export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64`. reference code sample: https://github.com/rxue/dictionary/commit/96d9ae520242caba5aed9091d5deb81c26e97dce#diff-dab0fe4aa5535d091d5a8dcb213abcf28cb6e8a850536cbacbcdf03b43b2aebb
  6. As a result, the output of command `mvn --version` would contain line `Java version: 1.8.0_312, vendor: Private Build, runtime: /usr/lib/jvm/java-8-openjdk-amd64/jre` in the same terminal session, where the `export` command is executed
  7. `mvn package` in this legacy project root directory in this terminal session will succeed
 
