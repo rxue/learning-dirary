@@ -180,6 +180,9 @@ Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-
 Copy files from one branch to a different directory on the current branch 
 
 ## `git log`
+### Diplay the log along with the diffs between the previous version and current changed version
+`git log --patch` <=> `git log -p`
+
 ### 20220601,20201003
 **Problem:** In my project, one specific file was suspected to be updated
 
@@ -187,7 +190,7 @@ Copy files from one branch to a different directory on the current branch
 
 **Solution:** [`git log --follow -p -- <file>`](https://stackoverflow.com/questions/8048584/see-changes-to-a-specific-file-using-git)
 
-#### Display log graph with `--graph` option
+### Display log graph with `--graph` option
 `git log --all --oneline --graph --decorate`
 
 NOTE! If the `--all` is not given, the displayed graph is only of the current branch
