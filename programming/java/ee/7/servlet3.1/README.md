@@ -16,7 +16,7 @@ This is nothing but an example, and it is counter to practical code in the real 
 
 Reference on filters with jsf: https://stackoverflow.com/questions/8480100/how-implement-a-login-filter-in-jsf
 
-## Chapter 12: Mapping Requests to Servlets
+## Java Servlet Specification: Chapter 12 Mapping Requests to Servlets
 ### Specification of Mappings
 > In the Web application deployment descriptor, the following syntax is used to define mappings:
 
