@@ -17,3 +17,8 @@ elusive: a. difficult to describe
 chime in: 插话； 与 ... 协调
 double whammy: 祸不单行
 lend oneself to ... : 帮助；同意参与
+## Chapter 10: Classes
+### Classes Should Be Small!
+#### The Single Responsibility Principle
+> Classes should have one responsibility - one reason to change
+
