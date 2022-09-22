@@ -13,13 +13,12 @@ Reasoning: In `git pull --help`, the following sentence is found:
 ## `squash` (0220524,20220712)
 ### Video Tutorial: https://www.youtube.com/watch?v=V5KrD7CmO4o&list=PLizL--84rE7T7l97deRGxZRRltRi9iQgA&index=24
 
-NOTE in the video example that the earliest commit is 
+NOTE in the video example that **the earliest commit is `ee8ce13 Accessibility fix for frontpage bug` in the first line** and, this earliest commit is the one, which cannot be *squashed*
 
-`ee8ce13 Accessibility fix for frontpage bug`
-
-After `squash` the 2 later commits into this earliest commit, i.e. `ee8ce13`, the new combined commit hash has changed to `d775667`, which replaced the `ee8ce13`
+After `squash` the 2 later commits into this earliest commit, the new combined commit hash has changed from `ee8ce13` to `d775667`
 
 More note about `squash`: 
+ 	* the logic is that only later commits can be squashed to the earlier commit, not the other way around
 	* the value of the optional `-i` could only accept *tilde* `~`
 	* When seeing the list of commits after the command, note that you have to keep the first few commits unchanged, then `squash` the commits after the first few ones
 
