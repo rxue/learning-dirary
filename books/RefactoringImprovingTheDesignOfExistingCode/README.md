@@ -11,6 +11,10 @@ In my opinion, the sizes of the refactoring steps are in the following order:
 
 *inline function* < *nested function* (*Functional Interface* in Java) < *method*
 
+# Chapter 12: Dealing with Inheritance
+## Replace subclass with delegate
+> if I want to vary behavior of people by their age category and by their income level, I can either have subclasses for young and senior, or for well-off and poor - I can't have both
+
 
  
 

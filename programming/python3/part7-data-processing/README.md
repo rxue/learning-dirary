@@ -7,6 +7,10 @@ The `~` in Unix-based system cannot be recognized as the *home* directory in the
 ## [`random`](https://docs.python.org/3/library/random.html)
 ### `from random import choice`
 
-## `import json`
+## [`json` - JSON encoder and decoder](https://docs.python.org/3/library/json.html)
+Using `json.tool` from the shell to validate and pretty-print:
 
+`echo '{"json":"obj"}' | python -m json.tool`
+
+NOTE! a drawback of ``json.tool` is that the pretty-printed result does not reserve the order of the element in the origin json file
 
