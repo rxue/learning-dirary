@@ -12,5 +12,5 @@ Using `json.tool` from the shell to validate and pretty-print:
 
 `echo '{"json":"obj"}' | python -m json.tool`
 
-NOTE! a drawback of ``json.tool` is that the pretty-printed result does not reserve the order of the element in the origin json file
+NOTE! a drawback of `json.tool` is that the pretty-printed result does not reserve the order of the element in the origin json file
 
