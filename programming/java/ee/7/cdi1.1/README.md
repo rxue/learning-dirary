@@ -11,7 +11,7 @@ Dependent	| `@Dependent`	| The CDI runtime instantiates a default scope CDI bean
 The target value of `@Inject`: `@Taget(value={METHOD,CONSTRUCTOR,FIELD})`. So it is worth nothing that `@Inject` cannot be used on method `PARAMETER`
 
 ## [Tutorial](https://www.youtube.com/watch?v=VNCMwQhWKOw)
-* https://www.youtube.com/watch?v=VNCMwQhWKOw&t=309s 	Problem: where do we create this instance of the DAO
+* https://www.youtube.com/watch?v=VNCMwQhWKOw&t=309s	 Problem: where do we create this instance of the DAO
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=334s	-- problem: using `new` keyword is tight-coupling
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=386s	---- Java EE 5 solution to this problem - `@EJB` the *basic* form of dependency injection
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=400s	------ detail:
@@ -26,8 +26,8 @@ The target value of `@Inject`: `@Taget(value={METHOD,CONSTRUCTOR,FIELD})`. So it
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=774s	------ summary: *classic dependency injection* is limited and not well designed, kinda rushed into the spec
 
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=858s	-- **CDI**
-* https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1055s 	---- demo: note! none of the classes are EJB
-* https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1162s 	------ in order to make DI work, we need (CDI) container that is going to instantiate the object
+* https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1055s	---- demo: note! none of the classes are EJB
+* https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1162s	------ in order to make DI work, we need (CDI) container that is going to instantiate the object
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1181s	-------- possible to run a CDI outside an application server!
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1380s	------ **`@Inject` is the upgraded replacement of old-fashioned `@EJB`**
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1447s	------ CDI project configuration
@@ -39,3 +39,7 @@ The target value of `@Inject`: `@Taget(value={METHOD,CONSTRUCTOR,FIELD})`. So it
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=1984s	------------ `@Default` - the regularly used implementation of the interface
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=2009s	------------ `@Alternative`
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=2070s	------------ make `@Alternative` implementation used by means of `beans.xml`
+
+## Using Scopes
+### Upgrade in JSF 2.2
+~~`javax.faces.bean.ViewScoped`~~ -> `javax.faces.view.ViewScoped`
