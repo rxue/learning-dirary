@@ -40,6 +40,3 @@ The target value of `@Inject`: `@Taget(value={METHOD,CONSTRUCTOR,FIELD})`. So it
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=2009s	------------ `@Alternative`
 * https://www.youtube.com/watch?v=VNCMwQhWKOw&t=2070s	------------ make `@Alternative` implementation used by means of `beans.xml`
 
-## Using Scopes
-### Upgrade in JSF 2.2
-~~`javax.faces.bean.ViewScoped`~~ -> `javax.faces.view.ViewScoped`

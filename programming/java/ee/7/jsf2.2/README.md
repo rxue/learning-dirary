@@ -34,5 +34,9 @@ The precedence of the *locale* is `<f:view locale=..` in the jsf file > `<locale
 * If the locale is defined in `<f:view locale='...'`, the `<locale-config>` will be ignored.
 * Otherwise, the JSF backend will look at the `Accept-Language` http request header and then check the `default-locale` and `supported-locale` in the `<locale-config>` element
 
+## Upgrade in JSF
+### ~~`javax.faces.bean.ViewScoped`~~ -> `javax.faces.view.ViewScoped`
+> JSF 2.2 also introduces a new CDI scope: `javax.faces.view.ViewScoped`. Specifying this annotation on a bean binds it with the  [`javax.faces.bean.ViewScopes`](https://github.com/rxue/learning-diary/tree/master/programming/java/ee/jsf2.0#view-scope) is targeted for depreciation in a future version, so it is strongly recommended that you use the newly introduced scope.
 
+Reference: Java EE 7 Essentials > Chapter 3: JavaServer Faces > Facelets
 
