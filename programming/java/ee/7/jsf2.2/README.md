@@ -40,3 +40,7 @@ The precedence of the *locale* is `<f:view locale=..` in the jsf file > `<locale
 
 Reference: Java EE 7 Essentials > Chapter 3: JavaServer Faces > Facelets
 
+#### NOTE! `@ViewScoped` beans has to be `Serializable`
+> Use of this annotation requires that any beans stored in *view scope* must be `Serializable` and proxyable as defined in CDI specifications.
+
+Relevant practical issue: [the 2nd Ajax event listener on selecting the word cannot be invoked successfully](https://github.com/rxue/dictionary/issues/57)
