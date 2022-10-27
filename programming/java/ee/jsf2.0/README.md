@@ -12,6 +12,8 @@ Reference: The Core JavaServer Faces, 3rd Edition > Chapter 2 Managed Bean > Bea
 ### `action` VS `actionListener`
 > In a nutshell, *actions* are designed for business logic and participate in navigation handling, whereas *action listeners* typically perform user interface logic and do not participate in navigation handling.
 
+> Note that JSF implementation always invoke *action listeners* before *actions*.
+
 > NOTE! JSF insists that you separate user interface logic and business logic by refusing to give actions access to events or the components that fire them.
 
 Reference: The Core JavaServer Faces, 3rd Edition > Chapter 8 Event Handling > Action Events
