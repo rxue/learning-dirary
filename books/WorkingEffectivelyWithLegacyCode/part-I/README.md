@@ -1,4 +1,7 @@
 # Part I
+## Chapter 1: Changing Software
+> Behavior is the most important thing about software.
+
 ## Chapter 2: Working with Feedback
 ### Working with Feedback
 > We can do "testing to detect change."
