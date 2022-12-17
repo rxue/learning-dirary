@@ -1,5 +1,5 @@
 # `git branch`
-## List all the branches, i.e. both local and remote
+## List all the branches, i.e. both local and remote (20221218)
 `git branch -a`
 
 ## Delete a branch
