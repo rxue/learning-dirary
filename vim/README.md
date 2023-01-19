@@ -24,3 +24,8 @@ i`:set spell spelllang=en_us`
 # 20220725: how to display invisible chars such as *tab*, *end of line* etc.
 Solution: ``:set list`
 Reference: https://linuxhint.com/show-hidden-invisible-characters-vim/
+
+# substitute
+## `:s` - substitute in the currenct line
+## `:%s` - substitute in the entire file
+In addition, the `%` can be also the range of lines, e.g. `:1,5s` 
