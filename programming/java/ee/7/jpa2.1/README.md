@@ -15,6 +15,13 @@ Commit: https://github.com/rxue/dictionary/commit/a343cbb74ae52a37cf04db03f65a29
 
 Reference: Java EE 7 Essentials > Chapter 13: Java Persistene > Persistene Unit, Persistence Context and Entity Manager
 
+### Finding Entities Using the `EntityManager`
+Note! According to the [API doc of `EntityManager`](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html) on each `find` method,
+
+> If the entity instance is contained in the persistence context, it is returned from there
+
+=> usually the `find` method would return an *Entity* inside the *persistence context*, meaning the returned *Entity* is in *Managed* state. 
+
 ### Comment:
 So need to note that when using `EntityManager`, it is the responsibility of the client per se. to handle the big business transaction. 
 
@@ -24,4 +31,10 @@ So need to note that when using `EntityManager`, it is the responsibility of the
  Add      | `persist`
  Update   | `merge`
 
+# Querying Entities
+## Practical Tips
+Note! According to the [API doc of `EntityManager`](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html) on each `createQuery` method, `persistence context` is not mentioned at all, which indicates that those returned list of *entities* are in *Detached* state and, update the queried result *entities* or remove them, it is always compulsory to `merge` these entities into the *persistence context* in the first step.
 
+### *Entities* returned from `find` VS `createQuery`
+
+Take its implementation in *Hibernate* (4.3.11.Final) as an example, in the source code https://github.com/hibernate/hibernate-orm/blob/4.3.11.Final/hibernate-entitymanager/src/main/java/org/hibernate/jpa/spi/AbstractEntityManagerImpl.java , its implementation on `<A> A find(Class<A> entityClass, Object primaryKey, LockModeType lockModeType, Map<String, Object> properties)` returns result by `session.get`. Whereas in the implementation of `<T> TypedQuery<T> createQuery(String jpaqlString, Class<T> resultClass)`, it returns an instance of `org.hibernate.jpa.internal.QueryImpl`
