@@ -2,24 +2,24 @@
 ## Isolation & Consistency
 ### [ANSI/ISO Transaction Isolation Levels](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-7F2C6927-5482-4144-B43B-5E90EF4E055B)
 
-Isolation levels are defined by [phenomena that must be prevented between concurrently executing transactions](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-AD960556-7F7B-4242-8B91-6DA22AABA27D)
+Isolation levels are defined by 3 preventable phenomenas [phenomena that must be prevented between concurrently executing transactions](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-AD960556-7F7B-4242-8B91-6DA22AABA27D)
+ * dirty read
+ * non-repeatable read - the current transaction would not see the change of amount of rows but see the other transactions' committed `update`
+ * phatom read - the current transaction would see other transactions' committed `delete` or `insert` rows
 
-
-
-#### [Phenomenas that must be prevented between concurrently executing transactions](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-7F2C6927-5482-4144-B43B-5E90EF4E055B)
-
-
-#### dirty read
-#### non-repeatable read
 
  * [Example in Chinese video tutorial](https://www.youtube.com/watch?v=Afw-zgJ9Wxc)
  * Example in Oracle's Database Concepts: [Conflicting write and lost update in a *Read Committed* transaction](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-8A15F1B2-3F64-49E7-929D-4768B2DB7DD7)
 
-#### phantom read
 
-These phenomena happens only when there are multiple transactions running concurrently, i.e. *serialized*. In summary, it is about: transaction A in session 1 reads data X for the first time, then another transaction in session 2 updated data X and committed the update, in case when transaction A reads data X for the second time, it is different from what was read for the first time. **In order for session 1 to see session 2's update, session 1 has to commit transaction A and then will see the committed update in session 2**. This difference might be about update corresponding to *non-repeatable read* or more newly inserted rows corresponding to *phantom read* 
+#### 4 isolation levels defined by the aforementioned 3 phenomenas
 
-#### Isolation levels defined
+Isolation level   | dirty read  | non-repeatable read   | phantom read
+------------------|-------------|-----------------------|--------------
+Read uncommitted  | possible    | possible              | possible
+Read committed    | not possible| possible              | possible
+Repeatable Read   | not possible| not possible          | possible
+Serializable      | not possible| not possible          | not possible
 
 > *Serializability* is a useful concept because it allows programmers to ignore issues related to concurrency when they code transactions. ... **The use of weaker levels of consistency places additional burdens on programmers for ensuring database correctness**.
 
