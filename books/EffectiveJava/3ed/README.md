@@ -2,6 +2,9 @@
 ## Item 17: Minimize mutability (202302)
 
 * *functional* approach
+* `BitSet` as a better mutable alternative in some cases like multistep operations
+* *mutable companion*
+* static factory factory method along with private constructor as replacement of final class to achieve the immutability
 
 ## Item 20: Prefer Interfaces to Abstract Classes
 
