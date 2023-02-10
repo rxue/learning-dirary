@@ -1,4 +1,8 @@
 # Chapter 4 Classes and Interfaces
+## Item 17: Minimize mutability (202302)
+
+* *functional* approach
+
 ## Item 20: Prefer Interfaces to Abstract Classes
 
 # Lambda and Streams
