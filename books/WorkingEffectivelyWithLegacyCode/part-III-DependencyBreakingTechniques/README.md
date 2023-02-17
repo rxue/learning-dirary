@@ -10,6 +10,12 @@
 ### *Introduce Instance Delegator*
 This is solution of *static cling*
 
+References on *static cling* :
+
+* https://deviq.com/antipatterns/static-cling
+* https://www.codeproject.com/Articles/26716/Refactoring-Legacy-Code-Part-1-Dealing-with-Static 
+ 
+
 ### ~~*Link Substitutions*~~
 ### *Parameterize Constructor*
 ### *Supersede Instance Variable*
