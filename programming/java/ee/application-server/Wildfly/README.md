@@ -1,5 +1,7 @@
 # Wildfly
-## [Wildfly Document](https://docs.wildfly.org/) > [Latest JavaEE 7](https://docs.wildfly.org/13/) > Developer Guide > [Getting Started Developing Applications Guide](https://docs.wildfly.org/13/Getting_Started_Developing_Applications_Guide.html)
+## [Wildfly Documentation](https://docs.wildfly.org/) > [Latest JavaEE 7](https://docs.wildfly.org/13/) > Developer Guide > [Getting Started Developing Applications Guide](https://docs.wildfly.org/13/Getting_Started_Developing_Applications_Guide.html)
+NOTE! In the Wildfly Documentation page https://docs.wildfly.org/ , the Wildfly version with the Jakarta EE version correspondence is listed in a table
+
 ## Practical Tips
 ### Maven dependency management
 When using *Wildfly*, the dependencies can be managed with *bom*, i.e. there are usually the following dependencies in the `dependencyManagement` element:
