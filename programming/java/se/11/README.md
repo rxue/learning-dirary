@@ -1,3 +1,8 @@
+# pseudo-type: `var`
+* must be unambiguous
+* not permitted for *fields*
+
+
 # Replacement of old static factory with the new `of` method
 
 The `of` method introduced since Java 11 usually returns unmodifiable objects, i.e. *immutable*
