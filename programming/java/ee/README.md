@@ -1,3 +1,7 @@
+# Bean Validation (1.1)
+## Property to turn on/off validations
+`javax.persistence.validation.mode` with values `auto` (by default), 'callback', 'none'
+
 # Practical Questions
 ## How to keep a `@SessionScoped` CDI bean instance alive for a long time even when the browser is closed
 ### Analysis
