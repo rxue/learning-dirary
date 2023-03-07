@@ -4,6 +4,10 @@ NOTE! In the Wildfly Documentation page https://docs.wildfly.org/ , the Wildfly 
 
 Publicly maintained Wildly *Docker repository* : https://quay.io/repository/wildfly/wildfly
 
+## Wildfly `27.0.1.Final`
+### Version of Dependencies
+* `version.com.h2database` : `2.1.210`
+
 ## Practical Tips
 ### Maven dependency management
 When using *Wildfly*, the dependencies can be managed with *bom*, i.e. there are usually the following dependencies in the `dependencyManagement` element:
