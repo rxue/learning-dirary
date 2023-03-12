@@ -1,3 +1,9 @@
+# [Expression Language](https://docs.oracle.com/javaee/7/tutorial/jsf-el.htm)
+> EL allows page authors to use simple expression to dynamically access data from *JavaBeans* components.
+## Value and Method Expression
+### Value Expression
+*rvalue* vs *lvalue* expression
+
 # Bean Validation (1.1)
 ## Property to turn on/off validations
 `javax.persistence.validation.mode` with values `auto` (by default), 'callback', 'none'
