@@ -1,5 +1,8 @@
 # Chapter 4: Being a Servlet: request and response
 
+## Servlet Initialization and Threads
+![One servlet instance corresponds to multiple threads](https://user-images.githubusercontent.com/3033388/225286901-b545b01b-7762-4b13-9418-a5af11ed9da6.png)
+
 `ServletRequest.getInputStream` returns the *content of the http body*
 
 ## So that's the Requests... let's see the *Response*
@@ -33,6 +36,15 @@ On page 137:
 
 ## Review: Servlet lifecyle and API
 * The `init()` method gives servlet access to the `ServletConfig` and `ServletContext` objects, which the servlet needs to get information about the servlet configuration and the web app
+
+# Chapter 5: Being a webapp: attributes and listeners
+## *Init Parameters* and `ServletConfig` to the rescure
+> You can't use servlet init parameters until the servlet is initialized
+
+In another word, you can't call `ServletConfig.getInitParameter` inside a servlet constructor
+
+The only one `init` method of `HttpServlet` you need to *override* is the one with *no-arg*
+
 
 # Chapter 13: The Power of Filters: wrappers and filters
 ## Container's rule for ordering filters:
