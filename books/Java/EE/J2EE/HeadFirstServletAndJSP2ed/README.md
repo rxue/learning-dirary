@@ -1,3 +1,10 @@
+# Chapter 4: Being a Servlet: request and response
+
+`ServletRequest.getInputStream` returns the *content of the http body*
+
+## Review: Servlet lifecyle and API
+* The `init()` method gives servlet access to the `ServletConfig` and `ServletContext` objects, which the servlet needs to get information about the servlet configuration and the web app
+
 # Chapter 13: The Power of Filters: wrappers and filters
 ## Container's rule for ordering filters:
 
