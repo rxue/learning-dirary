@@ -45,6 +45,42 @@ In another word, you can't call `ServletConfig.getInitParameter` inside a servle
 
 The only one `init` method of `HttpServlet` you need to *override* is the one with *no-arg*
 
+## Servlet and Context Listeners
+
+> Think of init parameters as deploy-time constants!
+
+> You can get them at runtime, but you can't set them There is no setInitParameter().
+
+Reference above is on page 60
+
+## Context Parameter Limitations
+> You can put the DataSource lookup name in the in a context init parameter, and that's probably the most common use of the context parameters.
+
+Reference above is on page 164
+
+## Request attributes are *thread-safe*
+
+> only request variables and local variables are *thread-safe* !
+
+<blockquote>
+...Look at a well-writen servlet, and chances are you won't find any *instance variables*. Or at least any that are non-final. ...
+
+So just don't use instance variable if you need thread-safe state, because all threads for that servlet can step on instance variables.
+
+Q: Then what SHOULD you need if you need multiple instances of the servlet to share something?
+
+A: ... if you need all the threads to access a value, decide which attribute state makes the most sense, and store the value in an *attribute*. Chances are, you can solve your problems in one of two ways:
+
+1. declare the variable as local variable within the service method, rather than as instance variable.
+
+or
+
+2. Use an attribute in the most appropriate scope.
+
+</blockquote>
+Reference above is on page 204
+
+
 
 # Chapter 13: The Power of Filters: wrappers and filters
 ## Container's rule for ordering filters:
