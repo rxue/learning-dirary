@@ -58,6 +58,40 @@ Reference above is on page 60
 
 Reference above is on page 164
 
+sole purpose in life is to initialize the app (and possibly to uninitialize it) - listener on servlet context
+
+Reference on page 165
+
+## configuring a listener in the DD
+
+> this element (`<listener>`) is simple - it needs only the class name
+
+> the `<listener>` element does not go inside a `servlet` element
+
+Reference above is on page 174
+
+## other listeners
+> where there is a lifecyle moment, there is usually a *listener* to hear about it.
+
+Reference above is on page 180
+
+## Listener Chart
+### *Attribute Listeners*
+ * `ServletRequestAttributeListener`
+ * `ServletSessionAttributeListener`
+ * `ServletSessionAttributeListener`
+
+
+
+### *Lifecyle Listeners*
+ * `ServletRequestListener`
+ * `ServletContextListener`
+ * `HttpSessionListener`
+ * `HttpSessionBindingListener`
+ * `HttpSessionActivationListener`
+
+Reference on page 184 (answer found on page 208)
+
 ## Request attributes are *thread-safe*
 
 > only request variables and local variables are *thread-safe* !
@@ -80,7 +114,39 @@ or
 </blockquote>
 Reference above is on page 204
 
+## Request Attributes and Request Dispatching
 
+> You can't forward the request if you've committed a response
+
+`os.flush()` ...That's the line that causes the response to be sent to the client,
+
+#### Getting a `RequestDispatcher` from `ServletRequest`
+
+#### Getting a `RequestDispatcher` from `ServletContext`
+You cannot specify a path relative to the current resource => **you must start the path with a forward slash**
+
+Reference above is on page 206
+
+# Chapter 6: Conversational state: session managment
+
+> web servers have no short-term memory
+
+Reference above is on page 223
+
+## Session IDs, cookies and other session basics
+> on the client's first request, the Container generates a unique session ID and gives it back to the client with the response. **The client sends back the session ID with each subsequent request**  
+Reference above is on page 231
+### the joy of *Cookies*
+
+## URL rewriting: somthing to fall back on
+URL encoding is all about response
+
+Reference above is on page 239
+
+## When sessions get stale; getting rid of bad sessions
+> you specify timeouts in the DD using MINUTES, but if you set a timeout programmatically, you specify SECONDS
+
+Reference above is on page 245
 
 # Chapter 13: The Power of Filters: wrappers and filters
 ## Container's rule for ordering filters:
@@ -91,3 +157,4 @@ When more than one filters is mapped a given resource, the container uses the fo
 1. All filters with URL patterns are located first...Filters with matching URL patterns are placed in the chain in the order in which they are declared in the DD
 2. Once all filters with matching URLs in the chain, the container does the thing...
 </blockquote>
+
