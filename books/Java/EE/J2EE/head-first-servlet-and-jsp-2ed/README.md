@@ -148,6 +148,15 @@ Reference above is on page 239
 
 Reference above is on page 245
 
+## Listener examples
+
+Session counter in a *non-distributed system* as a typical use case of `HttpSessionListener`
+
+Reference above is on page 261
+
+
+
+
 # Chapter 13: The Power of Filters: wrappers and filters
 ## Container's rule for ordering filters:
 
