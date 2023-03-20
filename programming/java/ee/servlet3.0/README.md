@@ -10,3 +10,13 @@ reference: Murach's Java Servlets and JSP Programming > Chapter 5 How to Develop
 refernce: https://github.com/jakartaee/servlet/issues/269
 
 Disappearance of it in *jakartaee 10* is the proof
+
+# `HttpSession`
+## Implementation of `HttpSession.invalidate()`
+Take *Wildfly* as an example, a servlet invoking the `HttpSession.invalidate()` causes a *reponse* with `Set-Cookie` header something like
+
+`Set-Cookie: JSESSIONID=PcAmFyTumd4yOxAUeZRfOahnMv0DdmWVqyVyB1ph.4e8cf55aef28; path=/helloworld; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:00 GMT`
+
+Worth noting about the `Max-Age=0` and `Expires=Thu, 01-Jan-1970 00:00:00 GMT`. This practical exercise proves that zeroing of `Max-Age` terminates a *cookie* and, it corresponds the Java Doc of `Cookie.setMaxAge(int)`:
+ 
+> A zero value causes the cookie to be deleted
