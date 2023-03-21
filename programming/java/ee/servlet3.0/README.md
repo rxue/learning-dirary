@@ -22,7 +22,8 @@ Worth noting about the `Max-Age=0` and `Expires=Thu, 01-Jan-1970 00:00:00 GMT`. 
 > A zero value causes the cookie to be deleted
 
 ## Set value of `HttpSession.setMaxInactiveInterval` vs `Cookie.setMaxAge`
-value                                 | <0                                    | 0                       | >0
---------------------------------------|---------------------------------------|-------------------------|---------------------------------------
-`HttpSession.setMaxInactiveInterval`  | Session never timeout                 | Session never timeout   | Session closed after the given seconds
-`Cookie.setMaxAge`                    | Cookie deleted when the browser exits | Cookie deleted          | Cookie deleted after the given seconds
+value                                 | <0                                                    | 0                                                    | >0
+--------------------------------------|-------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------
+`HttpSession.setMaxInactiveInterval`  | NO VALID INACTIVE INTERVAL => Session never timeout   | NO VALID INACTIVE INTERVl => Session never timeout   | Session closed after the given seconds of INACTIVE INTERVAL
+`Cookie.setMaxAge`                    | Cookie deleted when the browser exits                 | Cookie deleted                                       | Cookie deleted after the given seconds
+

@@ -1,14 +1,22 @@
 # HTTP
 ## [HTTP/1.1](https://www.ietf.org/rfc/rfc2616.txt)
-### Idemptotent Methods
+### Request
+#### Idemptotent Methods
 > Methods can also have the property of "idempotent" in that (aside from error or expiration issues) the side-effects of `N > 0` identical requests is the same as for a single request. The methods `GET`, `HEAD`, `PUT` and `DELETE` share this property. Also, the methods `OPTIONS` and `TRACES SHOULD NOT` have side effects, and so are inherently idempotent.
 
-## [Response Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+#### Request Header
+* `Cookie`
+
+### Response
+#### [Response Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 * 300 - 399 Redirection messages
 
-## Response
-### Header
- * `Set-Cookie`
+#### Response Header
+##### `Set-Cookie`
+###### Abbtributes
+Name      | Value
+----------|----------
+`Max-Age` | <number>
 
 
 # [URI](https://www.ietf.org/rfc/rfc3986.html)
