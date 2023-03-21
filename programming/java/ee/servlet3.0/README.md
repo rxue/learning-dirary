@@ -22,8 +22,9 @@ Worth noting about the `Max-Age=0` and `Expires=Thu, 01-Jan-1970 00:00:00 GMT`. 
 > A zero value causes the cookie to be deleted
 
 ## Set value of `HttpSession.setMaxInactiveInterval` vs `Cookie.setMaxAge`
-value                                 | <0                                                    | 0                                                    | >0
---------------------------------------|-------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------
-`HttpSession.setMaxInactiveInterval`  | NO VALID INACTIVE INTERVAL => Session never timeout   | NO VALID INACTIVE INTERVl => Session never timeout   | Session closed after the given seconds of INACTIVE INTERVAL
-`Cookie.setMaxAge`                    | Cookie deleted when the browser exits                 | Cookie deleted                                       | Cookie deleted after the given seconds
+value                                 | <0                                                        | 0                                                    | >0
+--------------------------------------|-----------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------
+`HttpSession.setMaxInactiveInterval`  | NO VALID INACTIVE INTERVAL => Session never timeout       | NO VALID INACTIVE INTERVl => Session never timeout   | Session closed after the given seconds of INACTIVE INTERVAL
+`Cookie.setMaxAge`                    | Cookie deleted when browser exits, i.e. *session cookie*  | Cookie deleted                                       | Cookie deleted after the given seconds
 
+Cookie's `Max-Age` set to negative value makes the cookie on client side a [*session cookie*](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies). With Chrome's developer tool, we can see that sometimes the value of `Expires/Max-Age` is set to *Session*, which means a "browser's" *session cookie* and its life ends when browser is closed.
