@@ -20,3 +20,9 @@ Take *Wildfly* as an example, a servlet invoking the `HttpSession.invalidate()` 
 Worth noting about the `Max-Age=0` and `Expires=Thu, 01-Jan-1970 00:00:00 GMT`. This practical exercise proves that zeroing of `Max-Age` terminates a *cookie* and, it corresponds the Java Doc of `Cookie.setMaxAge(int)`:
  
 > A zero value causes the cookie to be deleted
+
+## Set value of `HttpSession.setMaxInactiveInterval` vs `Cookie.setMaxAge`
+value                                 | <0                                    | 0                       | >0
+--------------------------------------|---------------------------------------|-------------------------|---------------------------------------
+`HttpSession.setMaxInactiveInterval`  | Session never timeout                 | Session never timeout   | Session closed after the given seconds
+`Cookie.setMaxAge`                    | Cookie deleted when the browser exits | Cookie deleted          | Cookie deleted after the given seconds
