@@ -69,21 +69,28 @@ Reference on page 165
 > the `<listener>` element does not go inside a `servlet` element
 
 Reference above is on page 174
-
-## other listeners
+## Eight Listeners: they are not just for context events...
+### other listeners
 > where there is a lifecyle moment, there is usually a *listener* to hear about it.
 
 Reference above is on page 180
 
-## Listener Chart
-### *Attribute Listeners*
+### The `HttpBindingListener`
+> A plain old `HttpAttributeListener` is just a class that wants to know when any type of attribute has been added, removed or replaced in a Session. But the `HttpSessionBindingListener` exists so that the attribute itself can find out when it has been added to or removed from a *session*.
+
+
+
+Reference above is on page 183
+
+### Listener Chart
+#### *Attribute Listeners*
  * `ServletRequestAttributeListener`
  * `ServletSessionAttributeListener`
  * `ServletSessionAttributeListener`
 
 
 
-### *Lifecyle Listeners*
+#### *Lifecyle Listeners*
  * `ServletRequestListener`
  * `ServletContextListener`
  * `HttpSessionListener`
@@ -137,6 +144,18 @@ Reference above is on page 223
 > on the client's first request, the Container generates a unique session ID and gives it back to the client with the response. **The client sends back the session ID with each subsequent request**  
 Reference above is on page 231
 ### the joy of *Cookies*
+### The best part: the container does virtually all the cookie work!
+> ... the container takes care of generating the session ID, creating a new `Cookie` object, stuffing the session ID into the cookie ...
+<blockquote>
+...somewhere in your `service` method you ask for a session, and everything else happens **automatically**
+
+* You don't make the new `HttpSession` object yourself
+* You don't generate the unique session ID
+* You don't make the new `Cookie` object
+* You don't associate the session ID with the cookie
+* You don't set the Cookie into the response
+</blockquote>
+Reference above is on page 233
 
 ## URL rewriting: somthing to fall back on
 URL encoding is all about response
