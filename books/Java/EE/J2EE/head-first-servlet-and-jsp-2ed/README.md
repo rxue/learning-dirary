@@ -163,6 +163,13 @@ URL encoding is all about response
 Reference above is on page 239
 
 ## When sessions get stale; getting rid of bad sessions
+
+<blockquote>
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
+</blockquote>
+
 > you specify timeouts in the DD using MINUTES, but if you set a timeout programmatically, you specify SECONDS
 
 Reference above is on page 245
