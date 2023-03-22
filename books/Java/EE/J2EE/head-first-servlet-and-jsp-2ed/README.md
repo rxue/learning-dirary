@@ -172,6 +172,10 @@ Reference above is on page 239
 
 > you specify timeouts in the DD using MINUTES, but if you set a timeout programmatically, you specify SECONDS
 
+> ...when you add a *Cookie* to the response, you pass a Cookie object...
+
+> ...there is not a `setCookie()` method. There is only `addCookie()` method!
+
 Reference above is on page 245
 
 ## Listener examples
