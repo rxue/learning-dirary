@@ -197,9 +197,11 @@ page 611
 > EXACT match: must begin with a slash
 
 `<url-pattern>/beer/*</url-pattern>`
+
 > DIRECTORY match: must begin with a slash, always ends with an asterisk
 
 `<url-pattern>*.do</url-pattern>`
+
 > EXTENSION match: MUST begin with an asterisk (never a slash), after the asterisk, it must have a dot extension (.do, .jsp etc.)
 
 Reference above is on page 618
@@ -245,12 +247,50 @@ Reference above is on page 621
 Reference above is on page 628
 
 # Chapter 13: The Power of Filters: wrappers and filters
-## Container's rule for ordering filters:
+## Exam Objectives
+### Fun things to do with filters
+#### Request filters can
+* perform security checks
+* reformat request headers and bodies
+* audit or log requests
+
+#### Response filters can
+* compress the response stream
+* append or alter the response stream
+* create a different response altogether
+
+> There is no such thing as a `RequestFilter` or `ResponseFilter` interface - it's just `Filter`. When we talk about a request filter or a response filter, we are talking only about how you use the filter, not the actual `Filter` interface
+
+page 704
+
+### Filters are modular, and configurable in the DD
+
+> The DD controls the order in which the filters run
+
+page 705
+
+## A filter's lifecycle
+> ...someone needs to know the order, and that someone is the `FilterChain`, driven by the filter elements you specified in the DD.
+
+> ...`FilterChain` can invoke EITHER a Filter or a Servlet, depending on whether it's the end of the chain
+
+page 708
+## Declaring and ordering filters
+
+Rules for `<filter-mapping>`
+
+* The `<filter-name>` is mandatory and it is used to link to the correct `<filter>` element
+* Either the `<url-pattern>` or the `<servlet-name>` element is mandatory
+* the `<url-pattern>` element defines which web app resources will use this filter 
+* the `<servlet-name>` element defines which single web resource will use this filter 
+
+### Container's rule for ordering filters:
 
 <blockquote>
 When more than one filters is mapped a given resource, the container uses the following rules:  
 
 1. All filters with URL patterns are located first...Filters with matching URL patterns are placed in the chain in the order in which they are declared in the DD
-2. Once all filters with matching URLs in the chain, the container does the thing...
+2. Once all filters with matching URLs in the chain, the container does the thing with filters that have matching `<servlet-name>` in the DD
 </blockquote>
 
+page 710
