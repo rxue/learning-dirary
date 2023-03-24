@@ -1,4 +1,8 @@
 # [`git`](https://git-scm.com/book/en/v2)
+## `git stash`
+### `git stash` Stashes Only the **Local Changes on the Current Branch**
+### How to redo the `stash` i.e. turn the stashed code back
+`git stash apply`
 
 ## 20190613: Git Basic Video Tutorial
 https://www.youtube.com/watch?v=HRR8xcTmpe4
@@ -66,10 +70,7 @@ Before listing all branches on both local and *remote*, i.e. `git branch -a`/`gi
 ![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
 ### `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
 
-## 20191028
-### `git stash` Stashes Only the **Local Changes on the Current Branch**
-### Recover the `stash`ed changes
-`git stash apply`
+
 
 ## 20191121
 ### Limit of Using Wildcard (\*) with `git add`
