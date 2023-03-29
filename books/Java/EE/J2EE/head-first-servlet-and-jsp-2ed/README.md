@@ -134,7 +134,9 @@ You cannot specify a path relative to the current resource => **you must start t
 
 Reference above is on page 206
 
-# Chapter 6: Conversational state: session managment
+
+
+# Chapter 6. Conversational state: session managment
 
 > web servers have no short-term memory
 
@@ -183,6 +185,20 @@ Reference above is on page 245
 Session counter in a *non-distributed system* as a typical use case of `HttpSessionListener`
 
 page 261
+
+# Chapter 7. Being a JSP: using JSP
+## The Lifecycle and initialization of JSP
+### Attribute in a JSP
+Scope		| In a servlet						| In a JSP (using *implicit objects*)
+----------------|-------------------------------------------------------|------------------------------------------
+Application	| `getServletContext().setAttribute("foo", barObj)`	| `application.setAttribute("foo", barObj)`
+Request		| `request.setAttribute("foo", barObj)`			| `request.setAttribute("foo", barObj)`
+Session		| `getSession().setAttribute("foo", barObj)`		| `sesion.setAttribute("foo", barObj)`
+Page		| Does not apply					| `pageContext.setAttribute("foo", barObj)`
+
+> ...Remember, when you see "Context", think "application"
+
+page 311
 
 # Chapter 11: Deploying your web app: web app deploymet
 ## Key deployment task, what goes where
@@ -246,7 +262,7 @@ Reference above is on page 621
 
 Reference above is on page 628
 
-# Chapter 13: The Power of Filters: wrappers and filters
+# Chapter 13. The Power of Filters: wrappers and filters
 ## Exam Objectives
 ### Fun things to do with filters
 #### Request filters can
