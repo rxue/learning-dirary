@@ -1,13 +1,13 @@
 # HTTP
-## [HTTP/1.1](https://www.ietf.org/rfc/rfc2616.txt)
-### Request
+
+## Request
 #### Idemptotent Methods
 > Methods can also have the property of "idempotent" in that (aside from error or expiration issues) the side-effects of `N > 0` identical requests is the same as for a single request. The methods `GET`, `HEAD`, `PUT` and `DELETE` share this property. Also, the methods `OPTIONS` and `TRACES SHOULD NOT` have side effects, and so are inherently idempotent.
 
 #### Request Header
 * `Cookie`
 
-### Response
+## Response
 #### [Response Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 * 300 - 399 Redirection messages
 
@@ -17,6 +17,19 @@
 Name      | Value
 ----------|----------
 `Max-Age` | <number>
+
+## Http *Method* Definitions
+### [Http/1.0](https://www.rfc-editor.org/rfc/rfc1945#section-8)
+* `GET`
+* `POST`
+* `HEAD`
+
+### [HTTP/1.1](https://www.ietf.org/rfc/rfc2616.txt) 
+* `OPTIONS`
+* `PUT`
+* `DELETE`
+* `TRACE`
+* `CONNECT`
 
 ## [Cookie](https://www.rfc-editor.org/rfc/rfc6265#section-8.4)
 > If a cookie has neither the `Max-Age` nor the Expires attribute, the user agent will retain the cookie until "the current session is over" (as defined by the user agent) 

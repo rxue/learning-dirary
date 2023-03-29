@@ -6,6 +6,13 @@
 reference: Murach's Java Servlets and JSP Programming > Chapter 5 How to Develop Servlets > How to Create and Map a Servlet > How to map a servlet with an annotation
 
 # `javax.servlet`
+## `HttpServletResponse`
+### Status code constants
+ * `SC_ACCEPTED` - 202
+ * `SC_NOT_FOUND` - 404
+`
+
+
 ## `SingleThreadModel` is deprecated nowadays
 refernce: https://github.com/jakartaee/servlet/issues/269
 

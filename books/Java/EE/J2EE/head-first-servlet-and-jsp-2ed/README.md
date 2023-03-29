@@ -199,9 +199,38 @@ Page		| Does not apply					| `pageContext.setAttribute("foo", barObj)`
 > ...Remember, when you see "Context", think "application"
 
 page 311
+# Chapter 8: Script-free pages: scriptless JSP
+## *EL* functions and handling "null"
+### And a few other *EL* operators
+The following operators does not have correspondig literals:
+
+Arithmetic Operators
+* `+` : note that this cannot be used in string concatenation
+* `-`
+* `*`
+Arithematic Operators with corresponding literal:
+
+Operator  | Literal | Note
+----------|---------|------- 
+`/`       | `div`   | you can divide by ZERO, and get INFINITY
+`%`       | `mod`   | remainder operator against ZERO causes exception
+
+Logical Operators with corresponding literal
+
+Operator  | Literal | Note
+`&&`      | `and`   | ...
+`||`      | `or`    | ...
+`!`       | `not`   | ...
+
+
+One operator is not supported in EL, i.e. `&`
 
 # Chapter 11: Deploying your web app: web app deploymet
 ## Key deployment task, what goes where
+> Tag files (.tag) must be inside "WEB-INF/tags" or a sub-directory
+
+page 608
+
 > ...a WAR file, which stands for Web ARchive. And if that sounds suspiciously like a JAR, that's because a WAR is a JAR. A JAR with .war extension instead of .jar
 
 page 611
@@ -303,10 +332,26 @@ Rules for `<filter-mapping>`
 ### Container's rule for ordering filters:
 
 <blockquote>
-When more than one filters is mapped a given resource, the container uses the following rules:  
+
+When more than one filters is mapped a given resource, the container uses the following rules:
 
 1. All filters with URL patterns are located first...Filters with matching URL patterns are placed in the chain in the order in which they are declared in the DD
 2. Once all filters with matching URLs in the chain, the container does the thing with filters that have matching `<servlet-name>` in the DD
+
 </blockquote>
 
 page 710
+
+### As of version 2.4, filters can be applied to request dispatchers
+... what about resources requested from a *forward* or *include*, *requestdispatch* and/or the error handling? Servlet 2.4 comes to the rescue
+
+* you can have from 0 to 4 `dispatcher` elements
+* a `REQUEST` value activate the filter for client request. If no `dispatcher` element is present, `REQUEST` is the default
+
+page 711
+
+# Chapter 14: Enterpise Design Patterns: patterns and struts
+## YES! It's *Structs* (and *Front Controller*) in a nutshell
+> The basic idea of *Front Controller* is that a single component, usually a servlet but possibly a JSP, acts as a single control point for the *presentation* tier of a web application. With the Front Contoller pattern, all of the app's requests go through a single controller, which handles dispatching the request to the appropriate places. 
+
+page 769 
