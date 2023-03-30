@@ -22,6 +22,12 @@ Disappearance of it in *jakartaee 10* is the proof
 ### Design logic of `HttpServlet`
 the `protected` `do` methods on `HttpServlet` corresponds to all the *methods* of [http/1.1](https://www.ietf.org/rfc/rfc2616.txt) except for the *CONNECT*, which is typically used in connection with proxy server
 
+## `HttpServletRequest`
+### `HttpServletRequest.getSession()` is equivalent to `HttpServletRequest.getSession(true)`
+Meaning if the request does not have a session, a new session will be created and returned
+
+Guess on the design logic: avoid NPE (`NullPointerException`)
+
 ## `HttpSession`
 ### Implementation of `HttpSession.invalidate()`
 Take *Wildfly* as an example, a servlet invoking the `HttpSession.invalidate()` causes a *reponse* with `Set-Cookie` header something like

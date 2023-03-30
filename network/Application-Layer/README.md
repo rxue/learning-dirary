@@ -30,6 +30,10 @@ Name      | Value
 * `DELETE`
 * `TRACE`
 * `CONNECT`
+### Additional *Methods*
+* `PATCH`
+* `LINK`
+* `UNLINK`
 
 ## [Cookie](https://www.rfc-editor.org/rfc/rfc6265#section-8.4)
 > If a cookie has neither the `Max-Age` nor the Expires attribute, the user agent will retain the cookie until "the current session is over" (as defined by the user agent) 
