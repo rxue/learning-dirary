@@ -17,9 +17,13 @@ reference: Murach's Java Servlets and JSP Programming > Chapter 5 How to Develop
 refernce: https://github.com/jakartaee/servlet/issues/269
 
 Disappearance of it in *jakartaee 10* is the proof
+# `javax.servlet.http`
+## `HttpServlet`
+### Design logic of `HttpServlet`
+the `protected` `do` methods on `HttpServlet` corresponds to all the *methods* of [http/1.1](https://www.ietf.org/rfc/rfc2616.txt) except for the *CONNECT*, which is typically used in connection with proxy server
 
-# `HttpSession`
-## Implementation of `HttpSession.invalidate()`
+## `HttpSession`
+### Implementation of `HttpSession.invalidate()`
 Take *Wildfly* as an example, a servlet invoking the `HttpSession.invalidate()` causes a *reponse* with `Set-Cookie` header something like
 
 `Set-Cookie: JSESSIONID=PcAmFyTumd4yOxAUeZRfOahnMv0DdmWVqyVyB1ph.4e8cf55aef28; path=/helloworld; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:00 GMT`
@@ -28,7 +32,7 @@ Worth noting about the `Max-Age=0` and `Expires=Thu, 01-Jan-1970 00:00:00 GMT`. 
  
 > A zero value causes the cookie to be deleted
 
-## Set value of `HttpSession.setMaxInactiveInterval` vs `Cookie.setMaxAge`
+### Set value of `HttpSession.setMaxInactiveInterval` vs `Cookie.setMaxAge`
 value                                 | <0                                                        | 0                                                    | >0
 --------------------------------------|-----------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------
 `HttpSession.setMaxInactiveInterval`  | NO VALID INACTIVE INTERVAL => Session never timeout       | NO VALID INACTIVE INTERVl => Session never timeout   | Session closed after the given seconds of INACTIVE INTERVAL
