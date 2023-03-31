@@ -38,6 +38,19 @@ On page 137:
 * The `init()` method gives servlet access to the `ServletConfig` and `ServletContext` objects, which the servlet needs to get information about the servlet configuration and the web app
 
 # Chapter 7. Being a JSP: using JSP
+## Create a simple JSP using "out" and a page *directive*
+> The Container takes what you've written in your JSP, *translates* it into a servlet class source (.java) file, then *compiles* that into a Java servlet class. After that it's just servlets all the way down, ..In other words, the Container loads the servlet class, instantiates and initializes it, makes a separate thread for eash request, and calls the servlet's ``service()` method. 
+
+page 283
+
+> A *directive* is a way for you to give special instructions to the Container at page translation time. 
+
+example of *page directive*
+
+`<%@ page import="foo.*" %>`
+
+page 287
+
 ## The Lifecycle and initialization of JSP
 ### Attribute in a JSP
 Scope		| In a servlet						| In a JSP (using *implicit objects*)
