@@ -3,10 +3,17 @@
 In the DD file:
 ```
 <servlet>
+  	<servlet-name>BeerParamTests</servlet-name>
+  	<servlet-class>BeerInitParams</servlet-class>
 
+	<init-param>
+		<param-name>adminEmail</param-name>
+		<param-value>likewecare@wickedlysmart.com</param-value>
+	<init-param>
 </servlet>
 ```
 
+Page 150
 
 > You can't use servlet init parameters until the servlet is initialized
 
@@ -16,13 +23,28 @@ In another word, you can't call `ServletConfig.getInitParameter` inside a servle
 
 The only one `init` method of `HttpServlet` you need to *override* is the one with *no-arg*
 
+## Context init parameters to the rescue
+```
+<servlet>
+  	<servlet-name>BeerParamTests</servlet-name>
+  	<servlet-class>BeerInitParams</servlet-class>
+</servlet>
+
+<context-param>
+	<param-name>adminEmail</param-name>
+	<param-value>clientheaderror@wickedlysmart.com</param-value>
+</context-param>
+```
+
+Page 157
+
 ## Servlet and Context Listeners
 
 > Think of init parameters as deploy-time constants!
 
 > You can get them at runtime, but you can't set them There is no setInitParameter().
 
-Reference above is on page 60
+Page 160
 
 ## Context Parameter Limitations
 > You can put the DataSource lookup name in the in a context init parameter, and that's probably the most common use of the context parameters.

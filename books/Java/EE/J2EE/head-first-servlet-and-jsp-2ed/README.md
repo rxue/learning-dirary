@@ -37,58 +37,37 @@ On page 137:
 ## Review: Servlet lifecyle and API
 * The `init()` method gives servlet access to the `ServletConfig` and `ServletContext` objects, which the servlet needs to get information about the servlet configuration and the web app
 
-# Chapter 6. Conversational state: session managment
-
-> web servers have no short-term memory
-
-Reference above is on page 223
-
-## Session IDs, cookies and other session basics
-> on the client's first request, the Container generates a unique session ID and gives it back to the client with the response. **The client sends back the session ID with each subsequent request**  
-Reference above is on page 231
-### the joy of *Cookies*
-### The best part: the container does virtually all the cookie work!
-> ... the container takes care of generating the session ID, creating a new `Cookie` object, stuffing the session ID into the cookie ...
-<blockquote>
-...somewhere in your `service` method you ask for a session, and everything else happens **automatically**
-
-* You don't make the new `HttpSession` object yourself
-* You don't generate the unique session ID
-* You don't make the new `Cookie` object
-* You don't associate the session ID with the cookie
-* You don't set the Cookie into the response
-</blockquote>
-Reference above is on page 233
-
-## URL rewriting: somthing to fall back on
-URL encoding is all about response
-
-Reference above is on page 239
-
-## When sessions get stale; getting rid of bad sessions
-
-<blockquote>
-  <session-config>
-    <session-timeout>15</session-timeout>
-  </session-config>
-</blockquote>
-
-> you specify timeouts in the DD using MINUTES, but if you set a timeout programmatically, you specify SECONDS
-
-> ...when you add a *Cookie* to the response, you pass a Cookie object...
-
-> ...there is not a `setCookie()` method. There is only `addCookie()` method!
-
-Reference above is on page 245
-
-## Listener examples
-
-Session counter in a *non-distributed system* as a typical use case of `HttpSessionListener`
-
-page 261
-
 # Chapter 7. Being a JSP: using JSP
+## Create a simple JSP using "out" and a page *directive*
+> The Container takes what you've written in your JSP, *translates* it into a servlet class source (.java) file, then *compiles* that into a Java servlet class. After that it's just servlets all the way down, ..In other words, the Container loads the servlet class, instantiates and initializes it, makes a separate thread for eash request, and calls the servlet's ``service()` method. 
+
+page 283
+
+> A *directive* is a way for you to give special instructions to the Container at page translation time. 
+
+example of *page directive*
+
+`<%@ page import="foo.*" %>`
+
+page 287
+## Time to see a JSPgenerated servlet
+API			| *Implicit Object*
+------------------------|------------------------
+`JspWriter`		| `out`
+`HttpServletRequest`	| `request`
+`HttpServletResponse`	| `response`
+`HttpServletSession`	| `session`
+`ServletContext`	| `application`
+`ServletConfig`		| `config`
+`Throwable`		| `exception`
+`PageContext`		| `pageContext`
+`Object`		| `object`
+
+
+page 298
 ## The Lifecycle and initialization of JSP
+### Lifecyle of a JSP
+page 306
 ### Attribute in a JSP
 Scope		| In a servlet						| In a JSP (using *implicit objects*)
 ----------------|-------------------------------------------------------|------------------------------------------
@@ -125,6 +104,85 @@ Operator  | Literal | Note
 
 
 One operator is not supported in EL, i.e. `&`
+
+# Chapter 11: Deploying your web app: web app deploymet
+## Key deployment task, what goes where
+> Tag files (.tag) must be inside "WEB-INF/tags" or a sub-directory
+
+page 608
+
+> ...a WAR file, which stands for Web ARchive. And if that sounds suspiciously like a JAR, that's because a WAR is a JAR. A JAR with .war extension instead of .jar
+
+page 611
+
+## WAR files
+
+## How servlet mapping REALLY works
+### Servlet mapping can be "fake"
+> EXACT match: must begin with a slash
+
+`<url-pattern>/beer/*</url-pattern>`
+
+> DIRECTORY match: must begin with a slash, always ends with an asterisk
+
+`<url-pattern>*.do</url-pattern>`
+
+> EXTENSION match: MUST begin with an asterisk (never a slash), after the asterisk, it must have a dot extension (.do, .jsp etc.)
+
+Reference above is on page 618
+
+### Key rules about servlet mappings
+> 1) The Container looks for matches in the order shown on the opposite pages. In other words, it looks *first* for an *exact match*. If it can't find an exact match, it looks for a *directory match*. If it can't find a directory match, it looks for an extension match.
+
+> 2) If a request matches more than one directory `<url-pattern>`, the container choose the longest mapping. In other words, a request for `/foo/bar/myStuff.do` will map to the `<url-pattern>/foo/bar/*` even though it also matches `<url-pattern>/foo/*`. The most specific match always wins.
+
+Reference above is on page 619
+
+```
+<servlet>
+  <servlet-name>Two</servlet-name>
+  <servlet-class>foo.DeployTestTwo</servlet-class>
+</servlet> 
+<servlet-mapping>
+  <servlet-name>Two</servlet-name>
+  <url-pattern>fooStuff/bar</url-pattern>
+</servlet-mapping>
+<servlet>
+  <servlet-name>Four</servlet-name>
+  <servlet-class>foo.DeployTestFour</servlet-class>
+</servlet> 
+<servlet-mapping>
+  <servlet-name>Four</servlet-name>
+  <url-pattern>fooStuff/bar/*</url-pattern>
+</servlet-mapping>
+```
+`http://localhost:8080/test/fooStuff/bar/` maps to `Four`
+`http://localhost:8080/test/fooStuff/bar` maps to `Two`
+
+ 
+Reference above is on page 621
+
+## Configuring servlet initialization in the DD
+> If you have multiple servlets that you want preloaded, and you want to control the order in which they're initialized, the value of `<load-on-startup>` determines the order!
+
+> Any number (load-on-startup) greater than zero mean "initialize the servlet at deployment or server startup time rather than waiting for the first request"
+
+> ...what if there is more than one servlet with a load-on-startup of 4? The container loads the servlets with the same value in the order in which servlets are declared in the DD
+
+Reference above is on page 628
+
+# Chapter 12. Keep it secret, keep it safe: web app security
+## Authentication revisited
+> For a J2EE container, authentication comes down to this: ask for a user name and password, then verify that they match
+
+### The 4 authentication types
+#### use the browser's standard pop-up form for inputting the name and password
+* BASIC
+* DIGEST
+* CLIENT-CERT
+* FORM
+
+page 677
 
 # Chapter 13. The Power of Filters: wrappers and filters
 ## Exam Objectives
