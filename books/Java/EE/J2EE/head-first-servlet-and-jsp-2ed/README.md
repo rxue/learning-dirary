@@ -50,8 +50,24 @@ example of *page directive*
 `<%@ page import="foo.*" %>`
 
 page 287
+## Time to see a JSPgenerated servlet
+API			| *Implicit Object*
+------------------------|------------------------
+`JspWriter`		| `out`
+`HttpServletRequest`	| `request`
+`HttpServletResponse`	| `response`
+`HttpServletSession`	| `session`
+`ServletContext`	| `application`
+`ServletConfig`		| `config`
+`Throwable`		| `exception`
+`PageContext`		| `pageContext`
+`Object`		| `object`
 
+
+page 298
 ## The Lifecycle and initialization of JSP
+### Lifecyle of a JSP
+page 306
 ### Attribute in a JSP
 Scope		| In a servlet						| In a JSP (using *implicit objects*)
 ----------------|-------------------------------------------------------|------------------------------------------
