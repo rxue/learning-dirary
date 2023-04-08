@@ -1,4 +1,14 @@
 # HTTP
+## Protocol parameters
+### [Uniform Resource Identifiers](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2)
+#### General syntax
+> The HTTP protocol does not place any a priori limit on the length of a URI. Servers MUST be able to handle the URI of any resource they serve, and SHOULD be able to handle URIs of unbounded length if they provide GET-based forms that could generate such URIs. A server SHOULD return 414 (Request-URI Too Long) status if a URI is longer than the server can handle (see section 10.4.15).
+
+```
+      Note: Servers ought to be cautious about depending on URI lengths
+      above 255 bytes, because some older client or proxy
+      implementations might not properly support these lengths.
+```
 
 ## Request
 #### Idemptotent Methods
