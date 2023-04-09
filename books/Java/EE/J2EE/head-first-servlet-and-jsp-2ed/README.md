@@ -3,6 +3,19 @@
 ## Servlet Initialization and Threads
 ![One servlet instance corresponds to multiple threads](https://user-images.githubusercontent.com/3033388/225286901-b545b01b-7762-4b13-9418-a5af11ed9da6.png)
 
+> one servlet per request. The container doesn't care who makes the request - every incoming request means a new thread thread/stack
+
+page 101
+
+## A Servlet's REAL job is to handle *GET* and *POST* requests
+> CONNECT says to connect for the purpose of tunneling
+### The difference between *GET* and *POST*
+> *POST* has a body. That's the key. Both *GET* and *POST* can send parameters, but with *GET*, the parameter data is limited to what you can stuff into the request line.
+
+![GET VS POST](https://user-images.githubusercontent.com/3033388/230796557-4dbacca4-f481-45b0-91c5-ede970ac4687.png)
+
+page 110
+
 `ServletRequest.getInputStream` returns the *content of the http body*
 
 ## So that's the Requests... let's see the *Response*
