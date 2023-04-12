@@ -16,7 +16,17 @@ page 101
 
 page 110
 
-`ServletRequest.getInputStream` returns the *content of the http body*
+> Besides size, security and bookmarking, there is another crucial difference between the GET and POST - the way they are supposed to be used. GET is meant to be used for getting things. ... the point is - you are not making any changes on the server! *POST* is meant to be used for sending data to be processed. ... when you think of *POST*, think: update. Think: use the data from the *POST* body to *change something on the server*
+
+page 111
+
+## Sending and using parameter(s)
+> Q: Why would I ever want to get an `InputStream` from the request?
+
+> A: With a *GET* request, there is nothing but the request header info. In other words, there is no body to care about. BUT... with an HTTP POST, there is a *body* info. Most of the time, all you care about from the body is sucking out the parameter values using `request.getParameter()` but those values might be large. It is also possible to create a servlet that processes a computer-driven request in which the body of the request holds textual or binary content to be processed. In this case you can use `getReader` or `getInputStream` methods. These streams will only contain the *body* of the http request and not the header.
+
+page 123
+
 
 ## So that's the Requests... let's see the *Response*
 
@@ -43,8 +53,6 @@ On page 137:
 > if you look up `sendRedirect` in the API, you will see that it throws an `IllgelStateException` if you try to invoke it after the response has already been *committed*
 
 > you can't write to response and then send to redirect
-
-
 
 
 ## Review: Servlet lifecyle and API
