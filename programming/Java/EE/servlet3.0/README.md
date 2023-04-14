@@ -28,6 +28,16 @@ Meaning if the request does not have a session, a new session will be created an
 
 Guess on the design logic: avoid NPE (`NullPointerException`)
 
+### practical knowledge of `getParameter(String name)`
+On the bottom level:
+
+* in case of `GET` with default `enctype` (`application/x-www-form-urlencoded`), the `getParameter(String name)` fully corresponds to `getQueryString()`, say gets all parameters from URL
+* in case of `POST` with default `enctype` (`application/x-www-form-urlencoded`), the `getParameter(String name)` get data from the HTTP *body* and URL
+* NOTE! in case of `POST` with `enctype` (`multipart/form-data`), the `getParameter(String name)` get data from URL only just like the case of `GET` since the *body* data could only be retrieved from `ServletRequest.getInputStream`
+
+Code reference: https://github.com/rxue/full-stack-kata/blob/main/backend/Java/EE/Jakarta/10/helloworld/src/main/java/book/hfsj/ch04/BeerSelect.java
+
+
 ## `HttpSession`
 ### Implementation of `HttpSession.invalidate()`
 Take *Wildfly* as an example, a servlet invoking the `HttpSession.invalidate()` causes a *reponse* with `Set-Cookie` header something like
