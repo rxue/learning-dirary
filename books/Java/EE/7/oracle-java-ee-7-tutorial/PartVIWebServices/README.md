@@ -5,15 +5,16 @@
 
 Simple, lightweight and fast are based on the following principles:
 
-* Resource Identification through URI
-* Uniform interface
-* self-descriptive messages
+* Resource identification through URI
+* Uniform interface: ...`POST` transfers a new state onto a resource
+* Self-descriptive messages: resources are *decoupled* from their representation so that their content can be accessed in a variety of formats
 * ~~Stateful interactions through links~~: Every interaction with a resource is stateless; that is, **request messages are self-contained.** ... State can be embedded in response messages to point to valid future states of the interaction.
 
 Own Comment:
 
 ## Creating a RESTful Root Resource Class
-
+### Developing RESTful Web Services with JAX-RS
+> ... JAX-RS annotations are *runtime anntoations*; therefore, runtime reflection will generate the helper classes and artifacts for the resource.
 
 # 31 JAX-RS: Advanced Topics and an Example
 ## Annotations for Field and Bean Properties of Resource Classes
