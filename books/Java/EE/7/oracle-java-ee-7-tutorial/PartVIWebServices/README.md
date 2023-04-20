@@ -16,6 +16,31 @@ Own Comment:
 ### Developing RESTful Web Services with JAX-RS
 > ... JAX-RS annotations are *runtime anntoations*; therefore, runtime reflection will generate the helper classes and artifacts for the resource.
 
+#### Summary of *JAX-RS* Annotations
+##### retrieval of HTTP Methods
+* `@GET`
+* `@POST`
+* `@PUT`
+* `@DELETE`
+* `@HEAD`
+
+##### value from the URI:
+
+* `@ApplicationPath`
+* `@Path`
+* `@PathParam`
+* `QueryParam`
+
+##### Mime Type specification:
+
+* `@Produces`
+* `@Consumes`
+
+##### anything that is of interest to JAX-RS runtime
+
+* `@Provider`
+
+
 # 31 JAX-RS: Advanced Topics and an Example
 ## Annotations for Field and Bean Properties of Resource Classes
 ### Advanced JAX-RS Annotations
