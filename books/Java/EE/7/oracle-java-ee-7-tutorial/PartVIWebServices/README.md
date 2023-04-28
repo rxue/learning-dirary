@@ -6,7 +6,11 @@
 Simple, lightweight and fast are based on the following principles:
 
 * Resource identification through URI
-* Uniform interface: ...`POST` transfers a new state onto a resource
+* Uniform interface: resources are manipulated using a fixed set of operations (CRUD).
+  * `PUT` - create
+  * `GET` - read
+  * `POST` - update transfers a new state onto a resource
+  * `DELETE` - delete
 * Self-descriptive messages: resources are *decoupled* from their representation so that their content can be accessed in a variety of formats
 * ~~Stateful interactions through links~~: Every interaction with a resource is stateless; that is, **request messages are self-contained.** ... State can be embedded in response messages to point to valid future states of the interaction.
 
