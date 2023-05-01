@@ -26,3 +26,8 @@ CREATE TABLE takes (
 1. The word *natural* means join *automatically*, thus there should be columns(s) on both tables with the same name: Both the `student` and `takes` table above have column named `id`. In this case *natural join* will work through this `id` column. NOTE! In case there is no common column, e.g. in the 2 tables above, the `takes.id` column renamed to `takes.student_id`, the *natural join* would not work but *Cartesian product* would be the result instead
 
 2. Result of *natural join* includes only the rows (tuples) with the same value on the joined column(s): For example, if the `student` table has a row with an `id` not existing in the `takes` table, this row would not be in the *natural join* result and vice versa
+
+## 3.10. Summary
+> SQL supports basic set operations, including `union` , `intersect` and `except` , which corresponds to the mathematical set operations ...
+
+**Self comments** : *set operations* mean the result is also a set that there is no repeat element
