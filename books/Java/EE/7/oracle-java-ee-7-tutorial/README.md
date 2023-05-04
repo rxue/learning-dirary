@@ -1,4 +1,7 @@
 Sections indexed on base of Oracle's official Java EE 7 Tutorial
+# 1 Overivew
+## Distributed Multitiered Applications
+Enterprise information system (EIS)
 
 # 6 Getting Started with Web Applications
 ## [Web Applications](https://docs.oracle.com/javaee/7/tutorial/webapp001.htm)
