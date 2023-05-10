@@ -1,3 +1,7 @@
+# Chapter 1 Creating and Destroying Objects
+## Item 1: Consider static factory methods instead of constructors
+> A *service provider framework* is a system in which providers implement a service, and the system makes implementations available to clients, decoupling the clients from implementations.
+
 # Chapter 4 Classes and Interfaces
 ## Item 17: Minimize mutability (202302)
 
