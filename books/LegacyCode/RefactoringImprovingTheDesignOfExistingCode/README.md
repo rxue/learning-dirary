@@ -2,7 +2,7 @@
 ## Refactoring, Architecture and YAGNI
 # Chapter 6: A First Set of Refactorings
 ## Inline Function
-### Commentary
+### Self Comment
 NOTE! In this book, the *inline function* is not *nested function* but just a fairly simple and descriptive statement, which is not necessary to be extracted as a separate function. *Ternary operator* is typically used in *inline function* as demonstrated in the book.
 
 In chapter 1,
@@ -12,6 +12,10 @@ In chapter 1,
 In my opinion, the sizes of the refactoring steps are in the following order: 
 
 *inline function* < *nested function* (*Functional Interface* in Java) < *method*
+## Inline Variable
+### Self Comment
+In Java IDE IntelliJ, there is *invline variable* functionality
+
 
 # Chapter 12: Dealing with Inheritance
 ## Replace subclass with delegate
