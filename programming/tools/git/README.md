@@ -120,15 +120,6 @@ The meaning of *<start_point>*:
 ### Revert One or More Files from *Modified* (`committed`) to *Unmodified*
 `git checkout -- <paths>`
 
-## 20200227
-### remote
-#### `remote`
-`git remote -v` - show remote url after name
-
-#### `ls-remote`
-`git ls-remote` - List *references* in a remote repository
-
-
 ## 20200103
 ### *Gerrit* in Practice
 When the code is not ready for review, push as DRAFT

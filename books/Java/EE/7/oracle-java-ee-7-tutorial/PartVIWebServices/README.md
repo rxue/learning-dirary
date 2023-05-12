@@ -1,4 +1,4 @@
-# 29 Building RESTful Web Services with JAX-RS
+# 29. Building RESTful Web Services with JAX-RS
 ## [What are RESTful Web Services?](https://docs.oracle.com/javaee/7/tutorial/jaxrs001.htm)
 
 > REST is an *architectual style* of client-server application centered around the transfer of representations of resources through requests and responses. In the *REST* architectual style, data and *functionality* are considered *resources* and are accessed using Uniform Resource Identifiers (URIs), typically links on the web.

@@ -14,3 +14,4 @@ Reference: https://www.baeldung.com/java-map-new-entry
 `keytool -genkeypair -alias httpscert -keyalg RSA -keysize 2048 -validity 1 -keystore httpscert.p12 -storetype PKCS12 -storepass testme -keypass testme -dname "CN=Xue Rui, OU=RXUnit, O=RXOrg, L=Espoo, S=Uusimaa, C=FI" -noprompt`
 ### idempetently
 if [ -f httpscert.p12 ]; then rm httpscert.p12; fi && keytool -genkeypair -alias httpscert -keyalg RSA -keysize 2048 -validity 1 -keystore httpscert.p12 -storetype PKCS12 -storepass testme -keypass testme -dname "CN=Xue Rui, OU=RXUnit, O=RXOrg, L=Espoo, S=Uusimaa, C=FI" -noprompt
+
