@@ -1,3 +1,18 @@
+# 6. Getting Started with Web Applications
+## Configuring Web Applications
+### Declaring Resource References
+> there are some restrictions on using it in web applications. First, **you can inject resources only into container-managed objects**, because container must have control over the creation of a component so that it can perform the injection into a component.
+
+Web Components That Accepts Resource Injections
+
+Component         | Interface/Class
+------------------|------------------
+Servlets          | `javax.servlet.Servlet`
+Servlet filters   | `javax.servlet.ServletFilter`
+Servlet listeners | `javax.servlet.ServletContextListener` and all others
+Managed beans     | Plain Old Java Objects
+
+
 # 8. Introduction to Facelets
 ## What is Facelets
 *Facelets* feature includes the following:

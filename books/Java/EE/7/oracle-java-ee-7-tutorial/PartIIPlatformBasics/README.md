@@ -1,0 +1,3 @@
+# 4. Injection
+## Resource Injection
+> **Resource injection** enables you to inject any resource available in the *JNDI* namespace into any container-managed object, such as ...
