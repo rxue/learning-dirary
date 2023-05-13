@@ -21,6 +21,10 @@ Managed beans     | Plain Old Java Objects
 * Support for the expression language (EL)
 * Templating for components and pages
 
+# 9. Expression Language
+## Overview of the EL
+> In a JavaServer Faces page, an EL expression can be used either in static text or in the attribute of a custom tag or standard action.
+
 # 12. Developing with JavaServer Faces Technology
 ## [Writing Managed Bean Methods](https://docs.oracle.com/javaee/7/tutorial/jsf-develop003.htm)
 Mehtods of managed bean can perform several application-specific functions for components on the page. These functions include
