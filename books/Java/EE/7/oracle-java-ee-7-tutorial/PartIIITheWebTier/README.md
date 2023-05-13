@@ -33,3 +33,8 @@ Mehtods of managed bean can perform several application-specific functions for c
 * Handling action events
 * Performing validation on the components' value
 * Handling value-change events
+
+# 13. Using Ajax with JavaServer Faces Technology
+## Sending an Ajax Request
+> Behind the scenes, the `jsf.ajax.request()` method of the *JavaScript resource library* collects the data provided by `f:ajax` tag and posts the request to the JavaServer Faces lifecycle.
+
