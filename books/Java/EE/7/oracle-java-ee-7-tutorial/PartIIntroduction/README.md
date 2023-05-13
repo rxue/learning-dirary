@@ -1,5 +1,7 @@
 # 1. Overview
 ## Java EE 7 APIs
+### JavaServer Pages Technology
+JSP technology lets you put snippets of servlet code directly into a text-based document
 ### JavaServer Faces Technology
 In Java EE 7 platform, new features of JavaServer Faces technology include the following:
 
