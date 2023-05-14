@@ -35,6 +35,24 @@ Mehtods of managed bean can perform several application-specific functions for c
 * Handling value-change events
 
 # 13. Using Ajax with JavaServer Faces Technology
+## Using Ajax with Facelets
+> ... JavaServer Faces technology supports Ajax by using a built-in JavaScript resource library that provided as part of the JavaServer Faces core library. This built-in Ajax resource can used in JavaServer Faces web applications in one of the following ways:
+
+ * By using `f:ajax` tag along with another standard component in a Facelets application. This method adds Ajax functionality to any UI component *without additional coding and configuration*.
+ * By using the JavaServer API `jsf.ajax.request()` directly within the Facelets application. This method provides direct access to Ajax methods and allow customized control of component behavior.
+
 ## Sending an Ajax Request
 > Behind the scenes, the `jsf.ajax.request()` method of the *JavaScript resource library* collects the data provided by `f:ajax` tag and posts the request to the JavaServer Faces lifecycle.
 
+# 17. Java Servlet Technology
+## Sharing Information
+### Using Scope Objects
+
+lists of *scope objects*
+
+ Scope Object | Class                                     | Accessible From
+--------------|-------------------------------------------|------------------------------------------------------------
+ Web context  | `javax.servlet.ServletContext`            | Web components within a web context
+ Session      | `javax.servlet.http.HttpSession`          | Web components handling a request that belongs to the session
+ Request      | sub-type of `javax.servlet.ServletRequest`| Web components handling the requests
+ Page         | `javax.servlet.jsp.JspContext`            | The JSP page that creates the objects
