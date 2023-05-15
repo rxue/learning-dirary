@@ -44,6 +44,13 @@ Mehtods of managed bean can perform several application-specific functions for c
 ## Sending an Ajax Request
 > Behind the scenes, the `jsf.ajax.request()` method of the *JavaScript resource library* collects the data provided by `f:ajax` tag and posts the request to the JavaServer Faces lifecycle.
 
+# 16. Configuring JavaServer Faces Applications
+## 16.9. Configuring Navigation Rules
+> After the proper navigation rule is selected, the choice of which page to access next from the current page depends on two factors:
+
+ * The action method invoked when the component was clicked
+ * The logical outcome referenced by the component's tag or returned from the action method
+
 # 17. Java Servlet Technology
 ## Sharing Information
 ### Using Scope Objects
