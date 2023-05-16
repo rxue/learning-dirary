@@ -12,6 +12,28 @@ Servlet filters   | `javax.servlet.ServletFilter`
 Servlet listeners | `javax.servlet.ServletContextListener` and all others
 Managed beans     | Plain Old Java Objects
 
+# 7. JavaServer Faces Technology
+## Navigation Model
+User-defined navigation is handled as follows:
+
+ * Define the rules in the application configuration file
+ * Refer to an outcome `String` from the button or link component's action attribute. This outcome `String` is used by the JavaServer Faces implementation to select the navigation rule.
+
+Example:
+
+	<navigation-rule> 
+		<from-view-id>/greeting.xhtml</from-view-id> 
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/response.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+> This rule states that when a command component (such as an `h:commandButton` or an `h:commandLink`) on `greeting.xhtml` is activated, the application will navigate from the `greeting.xhtml` page to the `response.xhtml` page if the outcome referenced by the button component's tag is success.
+
+example ``h:commandButton` from ``greeting.xhtml` that would specify a logical outcome of `success``:
+
+	<h:commandButton id="submit" value="Submit" action="success"/> 
 
 # 8. Introduction to Facelets
 ## What is Facelets
