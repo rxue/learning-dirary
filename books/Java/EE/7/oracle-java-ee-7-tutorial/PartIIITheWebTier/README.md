@@ -14,10 +14,16 @@ Managed beans     | Plain Old Java Objects
 
 # 7. JavaServer Faces Technology
 ## Navigation Model
-User-defined navigation is handled as follows:
+> In *JavaServer Faces* technology, **navigation** is a set of rules for choosing the next page or view to be displayed after an *application action, such as when a button or link is clicked*
+
+When you add a component such as a `commandButton` to a *Facelets* page, and assign another page as the value for its `action` property, the default navigation handler will try to match a suitable page within the application *implicitly*. In the following example, the default navigation handler will try to locate a page named `response.xhtml` within the application and navigate to it:
+
+`<h:commandButton value="submit" action="response">`
+
+*User-defined navigation* is handled as follows:
 
  * Define the rules in the application configuration file
- * Refer to an outcome `String` from the button or link component's action attribute. This outcome `String` is used by the JavaServer Faces implementation to select the navigation rule.
+ * Refer to an outcome `String` from the button or link component's `action` attribute. This outcome `String` is used by the JavaServer Faces implementation to select the navigation rule.
 
 Example:
 
@@ -35,6 +41,10 @@ example ``h:commandButton` from ``greeting.xhtml` that would specify a logical o
 
 	<h:commandButton id="submit" value="Submit" action="success"/> 
 
+### Self-Comment
+
+Based on the documentation of *navigation* above, NOTE! *user-defined navigation* can work ONLY when there is `action` attribute on the component tag
+
 # 8. Introduction to Facelets
 ## What is Facelets
 *Facelets* feature includes the following:
@@ -46,6 +56,11 @@ example ``h:commandButton` from ``greeting.xhtml` that would specify a logical o
 # 9. Expression Language
 ## Overview of the EL
 > In a JavaServer Faces page, an EL expression can be used either in static text or in the attribute of a custom tag or standard action.
+
+# 10. Using JavaServer Faces Technology in Web Pages
+## 10.2 Adding Components to a Page Using HTML Tag Library
+### Creating Bookmarkable URLs with `h:button` and `h:link` Tags
+
 
 # 12. Developing with JavaServer Faces Technology
 ## [Writing Managed Bean Methods](https://docs.oracle.com/javaee/7/tutorial/jsf-develop003.htm)
