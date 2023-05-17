@@ -45,6 +45,8 @@ example ``h:commandButton` from ``greeting.xhtml` that would specify a logical o
 
 Based on the documentation above, NOTE! *user-defined navigation* can work ONLY when there is `action` attribute on the component tag and, to the `action` attribute, it is worth to note that `action` is the attribute of HTML `form`, meaning JSF tag containing the `action` attribute has to be inside the `h:form` tag
 
+Reference: https://www.w3.org/TR/html401/interact/forms.html
+
 # 8. Introduction to Facelets
 ## What is Facelets
 *Facelets* feature includes the following:
