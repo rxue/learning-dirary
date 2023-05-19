@@ -47,6 +47,17 @@ Based on the documentation above, NOTE! *user-defined navigation* can work ONLY 
 
 Reference: https://www.w3.org/TR/html401/interact/forms.html
 
+## A Simple JavaServer Faces Application
+The lifecyle (of a server response by means of JSF) consists of two main phases: Execute and Render:
+
+During the *Execute* phase, several actions can take place:
+
+ * The application view is built or restored
+ * The request parameter values are applied
+ * Conversions and validations are performed for component values
+ * Managed beans are updated with component values
+ * Application logic is invoked
+
 # 8. Introduction to Facelets
 ## What is Facelets
 *Facelets* feature includes the following:
