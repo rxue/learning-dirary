@@ -12,6 +12,8 @@ In chapter 1,
 In my opinion, the sizes of the refactoring steps are in the following order: 
 
 *inline function* < *nested function* (*Functional Interface* in Java) < *method*
+## Extract Variable
+
 ## Inline Variable
 ### Self Comment
 In Java IDE IntelliJ, there is *invline variable* functionality
