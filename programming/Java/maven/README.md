@@ -43,3 +43,6 @@ Some reasons to use a mirror are:
 
 # Multi-Module Project
 
+# [Maven Resources Plugin](https://maven.apache.org/plugins/maven-resources-plugin/)
+## 20230522 About `src/test/resources` directory
+The files in `src/test/resources` can be used in the unit test. When a unit test needs an input file from the ``src/test/resource` directory, the path defined in the test has to start from `src` 
