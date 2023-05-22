@@ -18,6 +18,11 @@ In my opinion, the sizes of the refactoring steps are in the following order:
 ### Self Comment
 In Java IDE IntelliJ, there is *invline variable* functionality
 
+# Chapter 8: Moving Features
+## Move Function
+### Mechanics
+> If I find a called function that should also move, I usually move it first. That way, moving a clusters of functions begins with the one that has the least dependency on the others in the group.
+
 
 # Chapter 12: Dealing with Inheritance
 ## Replace subclass with delegate
