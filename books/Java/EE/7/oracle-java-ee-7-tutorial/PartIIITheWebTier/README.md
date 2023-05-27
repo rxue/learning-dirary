@@ -13,6 +13,17 @@ Servlet listeners | `javax.servlet.ServletContextListener` and all others
 Managed beans     | Plain Old Java Objects
 
 # 7. JavaServer Faces Technology
+## A Simple JavaServer Faces Application
+The lifecyle (of a server response by means of JSF) consists of two main phases: Execute and Render:
+
+During the *Execute* phase, several actions can take place:
+
+ * The application view is built or restored
+ * The request parameter values are applied
+ * Conversions and validations are performed for component values
+ * Managed beans are updated with component values
+ * Application logic is invoked
+
 ## Navigation Model
 > In *JavaServer Faces* technology, **navigation** is a set of rules for choosing the next page or view to be displayed after an *application action, such as when a button or link is clicked*
 
@@ -47,16 +58,9 @@ Based on the documentation above, NOTE! *user-defined navigation* can work ONLY 
 
 Reference: https://www.w3.org/TR/html401/interact/forms.html
 
-## A Simple JavaServer Faces Application
-The lifecyle (of a server response by means of JSF) consists of two main phases: Execute and Render:
-
-During the *Execute* phase, several actions can take place:
-
- * The application view is built or restored
- * The request parameter values are applied
- * Conversions and validations are performed for component values
- * Managed beans are updated with component values
- * Application logic is invoked
+## The Lifecyle of a JavaServer Faces Application
+### Overview of the JavaServer Faces Lifecyle
+![JSF Life-cycle](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_016.png)
 
 # 8. Introduction to Facelets
 ## What is Facelets
@@ -83,6 +87,17 @@ Mehtods of managed bean can perform several application-specific functions for c
 * Handling action events
 * Performing validation on the components' value
 * Handling value-change events
+
+## Writing Bean Properties
+A managed bean property can be bound to one of the following items:
+
+ * A component value
+ * A component instanace
+ * A converter implementation
+ * A listener implementation
+ * A validator implementation
+
+> The component's tag binds the component's value to a managed bean property by using its `value` attribute and binds the component's instance to a managed bean property by using its `binding` attribute. Likewise, all the converter, listener, and validator tags use their `binding` attributes to bind their associated implementations to managed bean properties.
 
 # 13. Using Ajax with JavaServer Faces Technology
 ## Using Ajax with Facelets
