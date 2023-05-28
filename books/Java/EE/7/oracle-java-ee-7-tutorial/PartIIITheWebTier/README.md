@@ -62,6 +62,11 @@ Reference: https://www.w3.org/TR/html401/interact/forms.html
 ### Overview of the JavaServer Faces Lifecyle
 ![JSF Life-cycle](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_016.png)
 
+> ...when a component's `immediate` attribute is set to `true`, the validation, conversion and events associated with these components are processed during the *Apply Request Values Phase* rather than in a later phase
+
+### Apply Request Values Phase
+> If some components on the page have their `immediate` attributes set to `true`, then the validations, conversions, and events associated with these components will be processed during this phase.
+
 # 8. Introduction to Facelets
 ## What is Facelets
 *Facelets* feature includes the following:
