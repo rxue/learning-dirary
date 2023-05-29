@@ -48,7 +48,7 @@ Example:
 
 > This rule states that when a command component (such as an `h:commandButton` or an `h:commandLink`) on `greeting.xhtml` is activated, the application will navigate from the `greeting.xhtml` page to the `response.xhtml` page if the outcome referenced by the button component's tag is success.
 
-example ``h:commandButton` from ``greeting.xhtml` that would specify a logical outcome of `success``:
+example `h:commandButton` from `greeting.xhtml` that would specify a logical outcome of `success`:
 
 	<h:commandButton id="submit" value="Submit" action="success"/> 
 
@@ -115,6 +115,11 @@ A managed bean property can be bound to one of the following items:
 > Behind the scenes, the `jsf.ajax.request()` method of the *JavaScript resource library* collects the data provided by `f:ajax` tag and posts the request to the JavaServer Faces lifecycle.
 
 # 16. Configuring JavaServer Faces Applications
+## 16.1. Using Annoation to Configure Managed Beans
+> The `@Named` annotation in a class, along with a scope annotation, automatically registers that class as a resource with the JavaServer Faces implementation. A bean that uses these annotations is a *CDI managed bean*.
+### Self-comment
+言外之意, 这两个annotation都是必须的,缺一不可
+
 ## 16.9. Configuring Navigation Rules
 > After the proper navigation rule is selected, the choice of which page to access next from the current page depends on two factors:
 
