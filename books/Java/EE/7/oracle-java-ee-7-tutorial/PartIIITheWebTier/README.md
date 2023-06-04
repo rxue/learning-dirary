@@ -58,7 +58,7 @@ Based on the documentation above, NOTE! *user-defined navigation* can work ONLY 
 
 Reference: https://www.w3.org/TR/html401/interact/forms.html
 
-## The Lifecyle of a JavaServer Faces Application
+## 7.6. The Lifecyle of a JavaServer Faces Application
 ### Overview of the JavaServer Faces Lifecyle
 ![JSF Life-cycle](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_016.png)
 
