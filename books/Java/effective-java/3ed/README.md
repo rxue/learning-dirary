@@ -20,9 +20,38 @@
 
 ## Item 46: Prefer side-effect-free functions in streams (20230128)
 
-# General Programming
+# Chapter 8. Methods
+## Item 51: Design method signatures carefully
+* Choose method names carefully
+* Don't go overboard in providing convenience method
+> ...Too many methods make a class difficult to learn, use, document, test, and maintain.
+* Avoid long parameter lists
+* For parameter types, favor interfaces over classes
+* Prefer two-element `enum` types to `boolean` parameters
+
+## Item 55: Return optionals judiciously
+## Item 56: Write doc comments for all exposed API elements
+> **The doc comment for a method should describe succinctly the contract between the method and its client** ... Typically *preconditions* are described implicitly by the `@throws` tags for *unchecked exceptions*;
+> To describe a method's contract fully, the doc comment should have an `@param` tag for every parameter, and `@return` tag unless the method has a void return type, and an `@throws` for every exception thrown by the method, whether checked or unchecked.
+
+# Chapter 9. General Programming
 ## Item 61: Prefer primitive types to boxed primitives
 ### Takeaways
 * primitive are more time- and space-efficient than boxed primitives
 * When your program compares two *boxed primitives* with the `==` operator, it does an (object) identity comparison, which is almost certainly not what you want
 * when your program does unboxing, it can throw a ``NullPointerException`
+
+# Chapter 10. Exceptions
+## Item 70: Use checked exceptions for recoverable conditions and runtime exceptions for programming errors
+
+## Item 74: Document all exceptions thrown by each method
+> **Always declare checked exception individually, and document precisely the conditions under which each one is thrown** using the Javadoc `@throws` tag. Don’t take the shortcut of declaring that a method throws some superclass of multiple exception classes that it can throw. As an extreme example, don’t declare that a public method throws Exception or, worse, throws `Throwable`.
+
+> While the language does **not require** programmers to **declare the unchecked exceptions that a method is capable of throwing** , it is wise to document them as carefully as the checked exceptions.
+
+> **Use the Javadoc `@throws` tag to document each exception that a method can throw, but do not use the `throws` keyword on unchecked exceptions**
+
+> In summary, ... Declare each checked exception individually in a method's `throws` clause, but do not declare *unchecked exceptions*. ...
+
+### Takeaway
+NOTE that in Java language syntax uncheked exceptions can be declared in a method's `throws` clause, but that is probably merely due to the case of declaring any types of exceptions in the `main` method, and in all other methods it does not make sense to declare unchecked exceptions
