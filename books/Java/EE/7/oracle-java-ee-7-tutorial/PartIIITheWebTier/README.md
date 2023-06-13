@@ -78,6 +78,10 @@ Reference: https://www.w3.org/TR/html401/interact/forms.html
 # 9. Expression Language
 ## Overview of the EL
 > In a JavaServer Faces page, an EL expression can be used either in static text or in the attribute of a custom tag or standard action.
+
+### Self-comment
+EL is used to dynamically read/write data stored in JavaBean components.
+
 ## Value and Method Expressions
 2 expressions defined by EL:
  * Value Expression: yield a value
