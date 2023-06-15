@@ -14,17 +14,28 @@ page 611
 page 612
 
 ## How servlet mapping REALLY works (20230615)
-#### EXACT match: must begin with a slash
+### Servlet mappings (can be "fake")
+
+* EXACT match: must begin with a slash
 
 `<url-pattern>/beer/*</url-pattern>`
 
-####  DIRECTORY match: must begin with a slash, always ends with an asterisk
+* DIRECTORY match: must begin with a slash, always ends with an asterisk
 
 `<url-pattern>*.do</url-pattern>`
 
-#### EXTENSION match: MUST begin with an asterisk (never a slash), after the asterisk, it must have a dot extension (.do, .jsp etc.)
+* EXTENSION match: MUST begin with an asterisk (never a slash), after the asterisk, it must have a dot extension (.do, .jsp etc.)
 
 Reference above is on page 618
+
+#### Self-Comments, -Keynotes and -Takeaways
+This part is refined from the Java Servlet Specification, e.g. in Servlet 3.1 spec > Chapter 12 Mapping Requests to Servlets > 12.2 Specification of Mappings:
+
+* A string beginning with a `/` character and ending with a `/*` suffix is used for path mapping.
+* A string beginning with a `*.` prefix is used as an extension mapping.
+* The empty string ("") is a special URL pattern that exactly maps to the application's context root, i.e., requests of the form `http://host:port/<context-root>/`. In this case the path info is `/` and the servlet path and context path is empty string ("").
+* A string containing only the `/` character indicates the "default" servlet of the application. In this case the servlet path is the request URI minus the context path and the path info is null.
+* All other strings are used for exact matches only. 
 
 ### Key rules about servlet mappings
 > 1) The Container looks for matches in the order shown on the opposite pages. In other words, it looks *first* for an *exact match*. If it can't find an exact match, it looks for a *directory match*. If it can't find a directory match, it looks for an extension match.
