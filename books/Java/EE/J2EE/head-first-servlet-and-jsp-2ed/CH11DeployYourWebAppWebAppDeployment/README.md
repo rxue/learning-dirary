@@ -13,17 +13,16 @@ page 611
 
 page 612
 
-## How servlet mapping REALLY works
-### Servlet mapping can be "fake"
-> EXACT match: must begin with a slash
+## How servlet mapping REALLY works (20230615)
+#### EXACT match: must begin with a slash
 
 `<url-pattern>/beer/*</url-pattern>`
 
-> DIRECTORY match: must begin with a slash, always ends with an asterisk
+####  DIRECTORY match: must begin with a slash, always ends with an asterisk
 
 `<url-pattern>*.do</url-pattern>`
 
-> EXTENSION match: MUST begin with an asterisk (never a slash), after the asterisk, it must have a dot extension (.do, .jsp etc.)
+#### EXTENSION match: MUST begin with an asterisk (never a slash), after the asterisk, it must have a dot extension (.do, .jsp etc.)
 
 Reference above is on page 618
 
