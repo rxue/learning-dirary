@@ -37,7 +37,7 @@ This part is refined from the Java Servlet Specification, e.g. in Servlet 3.1 sp
 > * A string containing only the `/` character indicates the "default" servlet of the application. In this case the servlet path is the request URI minus the context path and the path info is null.
 > * All other strings are used for exact matches only.
 
-The EXACT match in HFJS corresponds to the last listed item in the spec. DIRECTORY match in HFJS corresponds to the 1st listed item, i.e. path mapping, in the spec. EXTENSION match corresponds to the second listed item, extension mapping, in the spec. Remember the list items in the spec makes more sense.
+The "EXACT match" in HFJS corresponds to the last listed item in the spec. "DIRECTORY match" in HFJS corresponds to the 1st listed item, i.e. *path mapping*, in the spec. "EXTENSION match" corresponds to the second listed item, *extension mapping*, in the spec. Remember the list items, esp. the first 2, in the spec rather than from this book makes more sense.
 
 ### Key rules about servlet mappings
 > 1) The Container looks for matches in the order shown on the opposite pages. In other words, it looks *first* for an *exact match*. If it can't find an exact match, it looks for a *directory match*. If it can't find a directory match, it looks for an extension match.
