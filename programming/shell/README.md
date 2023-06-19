@@ -9,6 +9,8 @@ Example: `grep --exclude-dir={python,debian_configuration} -r "mail" .`
 ## make use of `find` to truncate a directory
 `find <dir> -mindepth 1 -delete`
 # `tr` for string substitution (on multiple rows)
+
+# `eval` to execute output text as command
  
 
 
