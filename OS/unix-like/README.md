@@ -1,10 +1,16 @@
 # File System
 ## `/usr/local/bin`
+
+# Files
+files with `rc` *affix*
+
 # Linux VS macOS
-... 				| Linux | macOS	| proved by command
---------------------------------|-------|-------|-------------------
-case sensitive 			| YES	| **NO**| none
-Terminal's default support Shell| `zsh`	| `bash`| `echo $SHELL`
+... 				                    | Linux | Darwin  | proved by command
+--------------------------------|-------|---------|-------------------
+case sensitive                  | YES   | **NO**  | none
+Terminal's default support Shell| `zsh` | `bash`  | `echo $SHELL`
+`/etc/vim` dir for `vim`        | YES   | NO      | `ls /etc/vim`
+`/etc/vim/vimrc.local` for `vim`| YES   | NO      | `ls /etc/vim/vimrc.local`
 
 ### Relevant Problem
 When working with MacBook, I used *Homebrew* to install *Maven* and thus the `mvn` was installed to `/opt/homebrew/bin`. As a result, I was not able to directly `mvn` in terminal since the `mvn` is not in `/usr/bin`. In order to be able to `mvn` directly in terminal I tried to make a *symbolic link* in `/usr/bin`, but *MacOS* does not accept adding anything to `/usr/bin` through terminal.
