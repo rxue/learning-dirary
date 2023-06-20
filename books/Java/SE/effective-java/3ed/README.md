@@ -36,7 +36,7 @@
 
 # Chapter 9. General Programming
 ## Item 61: Prefer primitive types to boxed primitives
-### Takeaways
+### Key Notes for Myself
 * primitive are more time- and space-efficient than boxed primitives
 * When your program compares two *boxed primitives* with the `==` operator, it does an (object) identity comparison, which is almost certainly not what you want
 * when your program does unboxing, it can throw a ``NullPointerException`
@@ -46,6 +46,21 @@
 
 ## Item 74: Document all exceptions thrown by each method
 > **Always declare checked exception individually, and document precisely the conditions under which each one is thrown** using the Javadoc `@throws` tag. Don’t take the shortcut of declaring that a method throws some superclass of multiple exception classes that it can throw. As an extreme example, don’t declare that a public method throws Exception or, worse, throws `Throwable`.
+
+### Key Notes for Myself
+As to the following sentence:
+
+>  As an extreme example, don’t declare that a public method throws Exception or, worse, throws `Throwable`
+
+This is primarily a tip about the *concrete classes* in my opinion. `throws Exception` indeed appears for instance in Java SE API:
+
+ * `Autocloseable`: `void close() throws Exception`
+ * `Callable<V>` : `V call() throws Exception`
+
+In Java EE 7 API:
+ * `javax.batch.api.chunk.ItemReader` : `Object readItem() throws Exception`
+
+However, they are rare cases, and kinda last resort and on the other hand, 
 
 > While the language does **not require** programmers to **declare the unchecked exceptions that a method is capable of throwing** , it is wise to document them as carefully as the checked exceptions.
 
