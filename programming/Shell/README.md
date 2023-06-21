@@ -11,6 +11,9 @@ Example: `grep --exclude-dir={python,debian_configuration} -r "mail" .`
 # `tr` for string substitution (on multiple rows)
 
 # `eval` to execute output text as command
+
+# `sudo -s` in general VS `su` in Debian-based system (20230621)
+
  
 
 
