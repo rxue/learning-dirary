@@ -14,9 +14,17 @@ Simple, lightweight and fast are based on the following principles:
 * Self-descriptive messages: resources are *decoupled* from their representation so that their content can be accessed in a variety of formats
 * ~~Stateful interactions through links~~: Every interaction with a resource is stateless; that is, **request messages are self-contained.** ... State can be embedded in response messages to point to valid future states of the interaction.
 
-Own Comment:
-
 ## Creating a RESTful Root Resource Class
+3 important terms:
+
+* **root resource classes** :
+> "plain old Java objects" (*POJOs*) that are either annotated with `@Path` or have at least one method annotated with `@Path` or a *request method designator*, such as `@GET`, `@PUT`, `@POST`, or `@DELETE`.
+
+self-comment: The definition here is inconsistent with that from the official JAX-RS spec, A resource class annotated with `@Path`, which is the most accurate. => **In practice, probably (not super sure yet) `@Path` annotated on the *class level* of a root resource class is compulsory**.
+
+* **request method designator** 
+* **resource methods**
+
 ### Developing RESTful Web Services with JAX-RS
 > ... JAX-RS annotations are *runtime anntoations*; therefore, runtime reflection will generate the helper classes and artifacts for the resource.
 
@@ -43,6 +51,8 @@ Own Comment:
 ##### anything that is of interest to JAX-RS runtime
 
 * `@Provider`
+
+### The `@Path` Annotation and *URI Path Templates*
 
 
 # 31 JAX-RS: Advanced Topics and an Example
