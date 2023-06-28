@@ -17,3 +17,5 @@ Similar issue here: https://intellij-support.jetbrains.com/hc/en-us/community/po
 # Shell on macOS
 ## Show System Information
 `system_profiler`
+## Display processor architecture type
+`arch`
