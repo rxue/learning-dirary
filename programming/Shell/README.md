@@ -14,6 +14,8 @@ Example: `grep --exclude-dir={python,debian_configuration} -r "mail" .`
 
 # `sudo -s` in general VS `su` in Debian-based system (20230621)
 
- 
+# `rm`
+wildcard `*` can be used flexibly
+
 
 
