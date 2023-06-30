@@ -17,6 +17,6 @@ Example: `grep --exclude-dir={python,debian_configuration} -r "mail" .`
 # `rm`
 * it has the verbose option `-v` to display the deleted items or ...
 * wildcard `*` can be used flexibly. e.g. `rm /usr/local/*` to delete everything inside the directory `/usr/local`
-
+# [`set`](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
 
 
