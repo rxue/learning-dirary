@@ -1,4 +1,16 @@
 # 48. Getting Started Securing Web Applications
 ## Securing Web Applications
-### Specifying Security Constraints
-> ***Security constraint*** is used to define the access privileges to a collection of resources using their URL mapping.
+### Specifiying Security Constraints
+`security-constraint`
+
+ * `web-resource-collection`
+ - `web-resource-name`
+ - `url-pattern`
+ - `http-method` or `http-method-omission`
+ 
+ * `auth-constraint`
+ - `role-name`
+
+ * `user-data-constraint`
+ - `transport-guarantee`
+
