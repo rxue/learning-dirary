@@ -113,7 +113,7 @@ A managed bean property can be bound to one of the following items:
 > The component's tag binds the component's value to a managed bean property by using its `value` attribute and binds the component's instance to a managed bean property by using its `binding` attribute. Likewise, all the converter, listener, and validator tags use their `binding` attributes to bind their associated implementations to managed bean properties.
 
 # 13. Using Ajax with JavaServer Faces Technology
-## Using Ajax with Facelets
+## Using Ajax with Facelets (20230701)
 > ... JavaServer Faces technology supports Ajax by using a built-in JavaScript resource library that provided as part of the JavaServer Faces core library. This built-in Ajax resource can used in JavaServer Faces web applications in one of the following ways:
 
  * By using `f:ajax` tag along with another standard component in a Facelets application. This method adds Ajax functionality to any UI component *without additional coding and configuration*.

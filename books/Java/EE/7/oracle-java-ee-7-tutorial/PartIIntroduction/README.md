@@ -1,7 +1,5 @@
 # 1. Overview
 ## Java EE 7 APIsi
-### JavaServer Pages Technology
-JSP technology lets you put snippets of servlet code directly into a text-based document
 ### JavaServer Faces Technology
 In Java EE 7 platform, new features of JavaServer Faces technology include the following:
 
@@ -20,3 +18,10 @@ Java EE apps use JavaMail API to send email notifications. The JavaMail API has 
 * Authentication service providers implement the *authentication* mechanism on base of the SPI
 * the Java Authentication SPI may be integrated in client or server message-processing containers or runtimes
 
+## Java EE 7 APIs in the Java Platform, Standard Edition 7
+### Java Naming and Directory Interface API
+The naming environemtn provides 4 logical namespaces:
+ * `java:comp` - available to components
+ * `java:module` - available to modules
+ * `java:app` - available to application
+ * `java:global` - shared by all deployed applications
