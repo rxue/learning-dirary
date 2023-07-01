@@ -12,5 +12,8 @@
   - `role-name`
 
 - `user-data-constraint`
-  - `transport-guarantee`
+  - `transport-guarantee`: value can be `CONFIDENTIAL`, `INTEGRAL`, `NONE`
+
+#### Specifying a Secure Connection
+> The *user data constraint* is handy to use in conjunction with basic and form-based user authentication
 
