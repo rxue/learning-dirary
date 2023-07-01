@@ -146,3 +146,15 @@ lists of *scope objects*
  Session      | `javax.servlet.http.HttpSession`          | Web components handling a request that belongs to the session
  Request      | sub-type of `javax.servlet.ServletRequest`| Web components handling the requests
  Page         | `javax.servlet.jsp.JspContext`            | The JSP page that creates the objects
+
+## Filtering Requests and Responses
+Application of filters:
+
+ * authentication
+ * logging
+ * image conversion
+ * data compression
+ * encryption
+ * tokenizing streams
+ * XML transformations 
+
