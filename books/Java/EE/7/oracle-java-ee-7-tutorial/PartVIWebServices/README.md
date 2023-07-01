@@ -53,7 +53,8 @@ self-comment: The definition here is inconsistent with that from the official JA
 * `@Provider`
 
 ### The `@Path` Annotation and *URI Path Templates*
-
+### Extracting Request Parameters
+`@DefaultValue` annotation
 
 # 31 JAX-RS: Advanced Topics and an Example
 ## Annotations for Field and Bean Properties of Resource Classes
