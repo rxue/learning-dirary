@@ -68,7 +68,10 @@ Reference: https://www.w3.org/TR/html401/interact/forms.html
 > If some components on the page have their `immediate` attributes set to `true`, then the validations, conversions, and events associated with these components will be processed during this phase.
 
 # 8. Introduction to Facelets
+Facelets: the view declaration language for JavaServer Faces technology.
+
 ## What is Facelets
+
 *Facelets* feature includes the following: (20230702)
 * Use of XHTML for creating web pages
 * Support for *Facelets* tag libraries in addition to JavaServer Faces and JSTL tag libraries
