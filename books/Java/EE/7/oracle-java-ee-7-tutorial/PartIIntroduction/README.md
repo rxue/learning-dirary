@@ -7,6 +7,15 @@ In Java EE 7 platform, new features of JavaServer Faces technology include the f
 * Faces Flows
 * Resource library contracts
 
+### Java Message Service API
+(Original) features of JMS:
+ * allow Java EE  application components to create, send, receive and read messages.
+ * enables distributed communication that is loosely coupled, reliable and asynchronous.
+
+New Features in Java EE 7, i.e. *JMS API 2.0*
+ * A new simplified API offers a simpler alternative to the previous API. This API includes `JMSContext` object that combines the functions of a `Connection` and a `Session`
+ * ...(有争议)  
+
 
 ### [JavaMail API](https://docs.oracle.com/javaee/7/tutorial/overview007.htm#BNACJ)
 Java EE apps use JavaMail API to send email notifications. The JavaMail API has 2 parts:
