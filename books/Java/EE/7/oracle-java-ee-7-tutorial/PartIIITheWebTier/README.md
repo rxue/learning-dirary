@@ -69,7 +69,7 @@ Reference: https://www.w3.org/TR/html401/interact/forms.html
 
 # 8. Introduction to Facelets
 ## What is Facelets
-*Facelets* feature includes the following:
+*Facelets* feature includes the following: (20230702)
 * Use of XHTML for creating web pages
 * Support for *Facelets* tag libraries in addition to JavaServer Faces and JSTL tag libraries
 * Support for the expression language (EL)
