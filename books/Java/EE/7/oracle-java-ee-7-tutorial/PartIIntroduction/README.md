@@ -1,4 +1,4 @@
-# 1. Overview
+# Chapter 1. Overview
 ## Java EE 7 APIsi
 ### JavaServer Faces Technology
 In Java EE 7 platform, new features of JavaServer Faces technology include the following:
@@ -34,3 +34,9 @@ The naming environemtn provides 4 logical namespaces:
  * `java:module` - available to modules
  * `java:app` - available to application
  * `java:global` - shared by all deployed applications
+
+# Chapter 2. Using the Tutorial Examples
+## (Tutorial Example) Directory structure
+* `src/main/resources` : configuration files for the module, with the exception of web application
+* `src/main/webapp` : web pages, style sheets, tag files, and images (web application only)
+* `src/main/webapp/WEB-INF` : configuration files for web application (web application only)
