@@ -23,7 +23,11 @@ During the *Execute* phase, several actions can take place:
  * Conversions and validations are performed for component values
  * Managed beans are updated with component values
  * Application logic is invoked
-
+## User Interface Component Model
+### Validation Model
+2 ways to implement custom validation:
+ * Implement `Validator` interface
+ * Implement a managed bean method that performs the validation
 ## Navigation Model
 > In *JavaServer Faces* technology, **navigation** is a set of rules for choosing the next page or view to be displayed after an *application action, such as when a button or link is clicked*
 
@@ -77,6 +81,18 @@ Facelets: the view declaration language for JavaServer Faces technology.
 * Support for *Facelets* tag libraries in addition to JavaServer Faces and JSTL tag libraries
 * Support for the expression language (EL)
 * Templating for components and pages
+
+## HTML5-Friendly Markup
+### Using *pass-through element*
+pass-through (HTML5) element by using `http://htmlns.jcp.org/jsf` namespace on a single attribute (to JavaServer Faces)
+
+Example:
+```
+<html ... xmlns:jsf="http://xmlns.jcp.org/jsf"
+  ...
+  <input type="email" jsf:id="email" name="email" value="#{reservationBean.email}" required="required"/>
+```
+### Using *pass-through attributes*
 
 # 9. Expression Language
 ## Overview of the EL
