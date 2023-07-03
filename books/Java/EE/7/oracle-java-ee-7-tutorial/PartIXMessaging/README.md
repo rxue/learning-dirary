@@ -6,6 +6,12 @@ A JMS application is composed of the following parts:
  * JMS clients
  * Messages
  * Adinistered objects
+### Messaging style
+#### *Point-to-Point* Messaging Style
+PTP messaging has the following characteristics:
+ * Each  message has only one consumer
+ * The receiver can fetch the message whether or not it was running when the client sent the message
+
 ## 45.3. The JMS API Programming Model
 ### `JMSContext` Objects
 You use `JMSContext` to create the following objects:
