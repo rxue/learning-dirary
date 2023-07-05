@@ -13,7 +13,9 @@
 > Common to most conceptions of unit tests is the idea that they are **tests in isolation of individual components of software.** What are components? The definition varies, but in unit testing, we are usually concerned with **the most atomic behavioral units** of a system. In procedural code, the units are often functions. **In object-oriented code, the units are classes**.
 
 ```
-Unit tests run fast. If they don't run fast, they aren't unit tests.
+> In the industry, people often go back and forth about whether particular tests are unit tests...I go back to the two qualities: Does the test run fast? Can it help localize errors quickly? ...Some tests are larger, and they use several classes together. In fact, they may seem to be little integration tests. By themselves, they might seem to run fast, but what happens when you run them all together?
+
+> A unit test that takes 1/10th of a second to run is a slow unit test.
 
 
 Other kinds of tests often masquerade as unit tests. A test is not a unit test if:
