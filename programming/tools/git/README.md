@@ -4,6 +4,9 @@
 ### How to redo the `stash` i.e. turn the stashed code back
 `git stash apply`
 
+### `git stash push -m "message here"`
+stash with message so that it is more tractable with command `git stash list`
+
 ## 20190613: Git Basic Video Tutorial
 https://www.youtube.com/watch?v=HRR8xcTmpe4
 
