@@ -1,4 +1,6 @@
 # 23. Introduction to Context and Dependency Injection for Java EE
+**CDI** : a set of *services* that, used together, make it easy for developers to use enterprise beans along with JavaServer Faces technology in web applications.
+
 ## 23.8 Using Scopes
 Scope       | Annotation            | Duration
 ------------|-----------------------|----------
