@@ -1,4 +1,25 @@
 # 54. Using Java EE Interceptors
+## Overview of Interceptors
+An interceptor can be defined: 
+ * within a *target class* as an *interceptor method*
+ * in an associated class called *interceptor class*
+## Using Interceptors
+
+* interceptors for call-back events
+  * `@AroundConstruct` - interpose on the invocation fo *target class* 's constructor
+  * `@PostConstruct`
+  * `@Predestroy`
+* `AroundInvoke`
+* `AroundTimeout`
+
+### Intercepting Method Invocations
+Only one `@AroundInvoke` interceptor method per (interceptor) class is allowed with the boilerplate:
+
+```
+@AroundInvoke
+public void intercept(InvocationContext ctx) throws Exception { ... }
+```
+
 # 55. Batch Processing
 ## Simple Use Case
 ### Chunk Step
