@@ -1,3 +1,13 @@
+# Chapter 51. Transaction
+## Container-Managed Transactions
+### Transaction Attributes
+ * `Required`
+ * `RequiresNew`
+ * `Mandatory`
+ * `NotSupported`
+ * `Supports`
+ * `Never`
+
 # 54. Using Java EE Interceptors
 ## Overview of Interceptors
 An interceptor can be defined: 
@@ -19,6 +29,10 @@ Only one `@AroundInvoke` interceptor method per (interceptor) class is allowed w
 @AroundInvoke
 public void intercept(InvocationContext ctx) throws Exception { ... }
 ```
+### Intercepting Lifecyle Callback Events
+> portable Java EE applications should not assume the lifecyle event interceptor method has access to security or transaction context.
+#### Using AroundConstruct Interceptor Methods
+NOTE! You may not use `@AroundConstruct` methods within target class
 
 # 55. Batch Processing
 ## Simple Use Case
