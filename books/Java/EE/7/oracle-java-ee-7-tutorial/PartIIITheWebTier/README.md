@@ -169,6 +169,8 @@ A managed bean property can be bound to one of the following items:
  * The logical outcome referenced by the component's tag or returned from the action method
 
 # 17. Java Servlet Technology
+## Servlet Lifecycle
+event contains information appropriate to the event
 ## Sharing Information
 ### Using Scope Objects
 
