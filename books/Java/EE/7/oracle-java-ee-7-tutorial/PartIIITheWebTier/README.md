@@ -65,6 +65,9 @@ Reference: https://www.w3.org/TR/html401/interact/forms.html
 ## 7.6. The Lifecyle of a JavaServer Faces Application
 ### Overview of the JavaServer Faces Lifecyle
 ![JSF Life-cycle](https://docs.oracle.com/javaee/7/tutorial/img/jeett_dt_016.png)
+The *request-response lifecycle* supports 2 kinds of requests:
+ * *initial request* : when a user makes a request for the first time
+ * *postback request* : when a user *submits the form* contained on a page that was previously loaded in a browser as a result of executing an intial request
 
 > ...when a component's `immediate` attribute is set to `true`, the validation, conversion and events associated with these components are processed during the *Apply Request Values Phase* rather than in a later phase
 
@@ -177,3 +180,11 @@ Application of filters:
  * tokenizing streams
  * XML transformations 
 
+# Chapter 18. Java API for *WebSocket*
+## Sending and Receiving Message
+3 types of messages *WebSocket* in Java could send and receive:
+ * text : `String`
+ * binary : `ByteBuffer`
+ * ping/pong frame : `PongMessage`
+### Receiving Messages
+<=3 methods annotated with `@OnMessage` is allowed in one *endpoint*. One for each message type: `String`, `ByteBuffer`, `PongMessage`
