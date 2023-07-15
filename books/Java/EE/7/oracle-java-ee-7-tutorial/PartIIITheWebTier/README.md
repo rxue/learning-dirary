@@ -113,6 +113,18 @@ EL is used to dynamically read/write data stored in JavaBean components.
 ## 10.2 Adding Components to a Page Using HTML Tag Library
 ### Creating Bookmarkable URLs with `h:button` and `h:link` Tags
 
+# Chapter 11. Using Converters, Listeners and Validators
+## Using the Standard Converters
+### Using `DateTimeConverter`
+attributes in `f:convertDateTime`:
+ * `dateStyle`
+ * `timeStyle`
+ * `binding`
+ * `for`
+ * `locale`
+ * `pattern`
+ * `timeZone`
+ * `type`
 
 # 12. Developing with JavaServer Faces Technology
 ## [Writing Managed Bean Methods](https://docs.oracle.com/javaee/7/tutorial/jsf-develop003.htm)
@@ -188,3 +200,6 @@ Application of filters:
  * ping/pong frame : `PongMessage`
 ### Receiving Messages
 <=3 methods annotated with `@OnMessage` is allowed in one *endpoint*. One for each message type: `String`, `ByteBuffer`, `PongMessage`
+
+# Chapter 20. Internationalization and Localizing Web Applications
+*Localization* : process of adapting an internationalized application to support a specific region or locale. 
