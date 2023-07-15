@@ -203,5 +203,8 @@ Application of filters:
 ### Receiving Messages
 <=3 methods annotated with `@OnMessage` is allowed in one *endpoint*. One for each message type: `String`, `ByteBuffer`, `PongMessage`
 
+# Chapter 19: JSON processing
+## JSON Processing in the Java EE Platform
+
 # Chapter 20. Internationalization and Localizing Web Applications
 *Localization* : process of adapting an internationalized application to support a specific region or locale. 
