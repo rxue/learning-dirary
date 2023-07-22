@@ -156,6 +156,10 @@ A managed bean property can be bound to one of the following items:
 ## Sending an Ajax Request
 > Behind the scenes, the `jsf.ajax.request()` method of the *JavaScript resource library* collects the data provided by `f:ajax` tag and posts the request to the JavaServer Faces lifecycle.
 
+# Chapter 15. Creating Custom UI Components and Other Custom Objects
+## Determining Whether You Need a Custom Components or Renderer
+### When to Use a Custom Renderer
+
 # 16. Configuring JavaServer Faces Applications
 ## 16.1. Using Annoation to Configure Managed Beans
 > The `@Named` annotation in a class, along with a scope annotation, automatically registers that class as a resource with the JavaServer Faces implementation. A bean that uses these annotations is a *CDI managed bean*.

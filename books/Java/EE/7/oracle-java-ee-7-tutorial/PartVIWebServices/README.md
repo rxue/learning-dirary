@@ -6,7 +6,7 @@
 Simple, lightweight and fast are based on the following principles:
 
 * Resource identification through URI
-* Uniform interface: resources are manipulated using a fixed set of operations (CRUD).
+* Uniform interface: resources are manipulated using a fixed set of operations (CRUD). They are *request method designator* and corresponds to the similarly named HTTP method (`@HEAD` also)
   * `PUT` - create
   * `GET` - read
   * `POST` - update transfers a new state onto a resource
