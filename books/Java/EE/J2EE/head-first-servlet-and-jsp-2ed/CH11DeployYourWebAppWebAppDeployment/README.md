@@ -70,6 +70,10 @@ page 619
  
 Reference above is on page 621
 
+## Configuring error page in the DD
+
+Reference above is on page 650 in PDF search
+
 ## Configuring servlet initialization in the DD
 > If you have multiple servlets that you want preloaded, and you want to control the order in which they're initialized, the value of `<load-on-startup>` determines the order!
 
