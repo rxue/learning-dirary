@@ -1,6 +1,9 @@
 # Chapter 1. Overview
 ## Java EE 7 APIsi
-### JavaServer Faces Technology
+### 1.7.2 Java Servlet Technology
+*request-response programming model*
+
+### 1.7.3 JavaServer Faces Technology
 In Java EE 7 platform, new features of JavaServer Faces technology include the following:
 
 * HTML5-friendly markup
