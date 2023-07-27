@@ -7,6 +7,9 @@
  * `NotSupported`
  * `Supports`
  * `Never`
+### Bean-Managed Transactions
+#### JTA Transactions
+Note that this part is legacy, it was already introduced in Java EE 5 tutorial https://docs.oracle.com/cd/E19159-01/819-3669/bnciz/index.html The book Java EE 7 Essentials > Chapter 12 Java Transaction explains the new feature, `javax.transaction.Transactional` annotation added to JTA 2.1 in Java EE 7
 
 # 54. Using Java EE Interceptors
 ## Overview of Interceptors
