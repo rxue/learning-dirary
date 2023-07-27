@@ -17,5 +17,8 @@ Reference: `docker network` commands https://www.youtube.com/watch?v=OL5EDRkhiq4
 Reference: https://stackoverflow.com/questions/17157721/how-to-get-a-docker-containers-ip-address-from-the-host
 Solution: `docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container service name>`
 
+### 20230727: don't know why my docker command disappeared in my macOS even though the docktop version exists
+Solution from ChatGPT: docker's commands is originally in `/Applications/Docker.app/Contents/Resources/bin`
+
 # Docker commands
 ## `docker build`
