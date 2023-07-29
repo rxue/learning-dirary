@@ -1,5 +1,7 @@
 # Chapter 51. Transaction
 ## Container-Managed Transactions
+> By default, if no *transaction demarcation* is specified, *enterprise beans* use *container-managed transaction demarcation*
+
 ### Transaction Attributes
  * `Required`
  * `RequiresNew`
