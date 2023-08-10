@@ -19,4 +19,4 @@ Example: `grep --exclude-dir={python,debian_configuration} -r "mail" .`
 * wildcard `*` can be used flexibly. e.g. `rm /usr/local/*` to delete everything inside the directory `/usr/local`
 # [`set`](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
 
-
+# Difference between executing a script as executable and as a script with `source` command or `.` in one terminal session
