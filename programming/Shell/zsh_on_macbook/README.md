@@ -12,4 +12,4 @@ reference: ChatGPT
 lsof -i :8080
 
 ## `autoload` functions are in `/usr/share/zsh/5.9/functions/compinit`
-
+reference: https://stackoverflow.com/questions/30840651/what-does-autoload-do-in-zsh
