@@ -1,6 +1,10 @@
 [What’s the difference between up, run, and start?](https://docs.docker.com/compose/faq/)
 
 # Core Rationale of Docker
+Docker *registry* is remote and is composed of many *repositories*. One repository contains multiple images,each of which has a unique *tag*. When `pull` an image, if a tag is not given, the default is `latest`
+
+Reference: https://www.youtube.com/watch?v=8hCQ-sxfBIA
+
 
 ## layered architecture
 https://www.youtube.com/watch?v=B8c1ui1hDTw&list=PLmOn9nNkQxJFX0YVLDw5EMUL-4cVzXL33&index=17
