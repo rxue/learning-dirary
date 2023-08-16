@@ -5,3 +5,5 @@ Reference: https://www.rootusers.com/how-to-display-routing-table-in-linux/
 `netstat -rn`
 
 # [The WebSocket Protocol](https://www.rfc-editor.org/rfc/rfc6455#section-1.2)
+## Relationship to TCP and HTTP
+> The WebSocket Protocol is an independent TCP-based protocol. Its only relationship to HTTP is that its handshake is interpreted by HTTP servers as an Upgrade request.
