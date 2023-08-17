@@ -201,6 +201,9 @@ Application of filters:
 
 # Chapter 18. Java API for *WebSocket*
 ## Sending and Receiving Message
+### Sending Messages
+`RemoteEndpoint` is used to send messages
+
 3 types of messages *WebSocket* in Java could send and receive:
  * text : `String`
  * binary : `ByteBuffer`
