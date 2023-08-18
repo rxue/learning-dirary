@@ -4,6 +4,9 @@
 *full-duplex* : two processes can send messages to each other over the connection at the same time
 
 ## 2.2 The Web and HTTP
+### Overview of HTTP
+HTTP is a *stateless protocol* in that the server does not store any state information about the client
+
 ### HTTP Message Format
 > The greate majority of HTTP request messages use the *GET* method.
 
