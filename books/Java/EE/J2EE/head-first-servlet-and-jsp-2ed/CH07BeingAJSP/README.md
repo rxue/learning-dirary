@@ -21,6 +21,15 @@ example of *page directive*
 
 Reference: page 287 (pdf page 312)
 
+### using *expressions*
+*scriptlet* code* : `<% out.println(Counter.getCount()); %>`
+
+*expression* code : `<%= Counter.getCount() %>`
+
+Reference: page 288 (pdf page 313)
+
+
+
 ## Time to see a JSPgenerated servlet
 API			| *Implicit Object*
 ------------------------|------------------------
