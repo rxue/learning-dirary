@@ -20,6 +20,9 @@ Batch Applications	| ?	      | 352	| Batch processing		| https://github.com/jber
 ## [Schema Resources](http://xmlns.jcp.org/xml/ns/javaee/#7)
 
 ## Summary
+### POJO with *no-arg* constructor in Java EE
+WebSocket endpoint with `@ServerEndpoint`
+
 ### Container-Managed Transactions
 Assume client C calls a method on B
 
