@@ -6,7 +6,9 @@ page 283
 
 ### Using the *page directive* to import the packages (20230819)
 
-*directive* : a way for you to give special instructions to the Container at page translation time. 
+*directive* : 
+ * starts with `<%@ ` 
+ * a way for you to give special instructions to the Container at page translation time. 
 
 3 flavors of *directives* :
  * `<%@ page`
