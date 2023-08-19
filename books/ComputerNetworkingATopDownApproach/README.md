@@ -3,6 +3,10 @@
 ### Transport Services Provided by the Internet
 *full-duplex* : two processes can send messages to each other over the connection at the same time
 
+2 key points of *full-duplex* communication:
+ 1. bidirectional communication
+ 2. each message sending from one process is independent from any other processes' sending of message, meaning it is possible for two processes to send messages to each other at the same time 
+
 ## 2.2 The Web and HTTP
 ### Overview of HTTP
 HTTP is a *stateless protocol* in that the server does not store any state information about the client
