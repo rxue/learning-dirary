@@ -20,6 +20,12 @@ Batch Applications	| ?	      | 352	| Batch processing		| https://github.com/jber
 ## [Schema Resources](http://xmlns.jcp.org/xml/ns/javaee/#7)
 
 ## Summary
+### Java EE 7 *Web Profile*
+
+NOTE!
+ * *WebSocket* is part of the web profile
+ * *JMS* is not part of the web profile
+
 ### POJO with *no-arg* constructor in Java EE
 WebSocket endpoint with `@ServerEndpoint`
 
