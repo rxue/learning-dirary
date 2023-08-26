@@ -20,3 +20,4 @@ Based on the core rationale of WebSocket protocol, it is only fit for some speci
 
 I once designed a dictionary web app that the search page contains search history shared among all users. WebSocket is not practical in this scenario since the search is the core function and each search traditionally corresponds to an HTTP request, which corresponds to a handshake of websocket connection.
 
+Reference: https://github.com/rxue/dictionary/issues/105
