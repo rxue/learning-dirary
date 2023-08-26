@@ -12,3 +12,8 @@ Based on list of specification in Java EE 6, https://www.oracle.com/java/technol
 ------------------|-----------------|-------------------------------|----------------------------------
  Java EE 7        | JTA 1.2         | Container-Managed transaction | `javax.transaction.Transactional`
 
+# Chapter 16. Build an End-to-End Appication
+## Chat Room (Java API for WebSocket)
+Note in the Chat Room app that the peers's sessions as synrhonized:
+
+`private static final Set<Session> peers = Collections.synchronizedSet(new HashSet<>())`
