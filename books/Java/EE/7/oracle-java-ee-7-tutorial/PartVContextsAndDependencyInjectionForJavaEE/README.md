@@ -7,6 +7,10 @@ CDI provides the following services:
 * decorate injected components
 * associate interceptors with components - `@Transactional` from `javax.transaction` (new feature in Java EE 7 > JTA 2.1) as a typical use case
 
+## 23.5 Beans as Inject Objects
+*Resource injection* came since Java EE 5, and thus works merely into *container-managed* objects. Whereas CDI came since Java EE 6, and it works not limited to *container-managed* objects
+
+
 ## 23.8 Using Scopes
 Scope       | Annotation            | Duration
 ------------|-----------------------|----------
