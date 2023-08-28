@@ -200,6 +200,11 @@ Application of filters:
  * XML transformations 
 
 # Chapter 18. Java API for *WebSocket*
+## 18.2 Creating *WebSocket* Applications in the JavaEE Platform
+> Note: As opposed to servlets, WebSocket endpoints are instantiated multiple times. **The container creates an instance of an endpoint per connection to its deployment URI. Each instance is associated with one and only one connection. This facilitates keeping user state for each connection and makes development easier, because there is only one thread executing the code of an endpoint instance at any given time.**
+
+reference of an anti-pattern: https://github.com/rxue/javaee-investment/issues/2
+
 ## Sending and Receiving Message
 ### Sending Messages
 `RemoteEndpoint` is used to send messages
