@@ -1,3 +1,7 @@
+# Chapter 2. Servlets
+## WebServlet
+> The values defined in the deployment descriptor override the values defined using annotations
+
 # Chapter 7. *WebSocket*
 
 
