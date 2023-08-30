@@ -205,7 +205,7 @@ Application of filters:
 
 reference of an anti-pattern: https://github.com/rxue/javaee-investment/issues/2
 
-## Sending and Receiving Message
+## 18.5 Sending and Receiving Message
 ### Sending Messages
 `RemoteEndpoint` is used to send messages
 
@@ -215,6 +215,10 @@ reference of an anti-pattern: https://github.com/rxue/javaee-investment/issues/2
  * ping/pong frame : `PongMessage`
 ### Receiving Messages
 <=3 methods annotated with `@OnMessage` is allowed in one *endpoint*. One for each message type: `String`, `ByteBuffer`, `PongMessage`
+
+## 18.12 The Websocketbot Example Application
+### 18.12.1 Architecture of Websocketbot Example Application
+> The Java API for *WebSocket* specification requires that Java EE implementations **instantiate endpoint classes once per connection**. This facilitates the development of WebSocket endpoints, because you are guaranteed that only one thread is executing the code in a WebSocket endpoint class at any given time. When you introduce a new thread in an endpoint. as in this example, you must ensure that variables and methods accessed by more than one thread are *thread safe*...
 
 # Chapter 19: JSON processing
 ## JSON Processing in the Java EE Platform
