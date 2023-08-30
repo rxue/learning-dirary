@@ -47,3 +47,8 @@ Reference above is on page 245
 Session counter in a *non-distributed system* as a typical use case of `HttpSessionListener`
 
 page 261
+
+## Using Cookies with Servlet API
+Setting max age to `-1` makes the cookie disappear when the browser exits
+
+pdf page 277
