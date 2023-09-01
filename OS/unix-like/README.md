@@ -19,4 +19,6 @@ In the case above, `/usr/local/bin` comes into play
 
 REASONING: based on ChatGPT's answer, `/usr/local/bin/` is included in the default system `$PATH`. I checked with my home Ubuntu and work MacBook. Both are like this
 
-
+# 25 The Basic Program/System Interface
+## [Envrionment Variables](https://www.gnu.org/software/libc/manual/html_node/Environment-Variables.html)
+> ...Programs executed from the shell inherit all fo the environment variables from the shell
