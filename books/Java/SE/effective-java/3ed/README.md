@@ -10,11 +10,13 @@
 * *mutable companion*
 * static factory factory method along with private constructor as replacement of final class to achieve the immutability
 
-## Item 20: Prefer Interfaces to Abstract Classes (20230704)
+## Item 20: Prefer Interfaces to Abstract Classes (20230704, 20230905)
 **Takeaways**:
 
 * Java's *single inheritance* on *abstract classes* severely constraints their use as *type definitions*.
 * Interfaces are ideal for defining mixins (a type that a class can implement in addition to its "primary type"). NOTE! *Abstract classes* can't be used to define mixins for because they can't be retrofitted onto existing classes in that a class cannot have more than one parent
+* *skeletal implementation class* - *Abstract Interface* : application in *collections framework* in Java SE: `AbstractCollection` , `AbstractSet` , `AbstractList` , `AbstractMap`
+ * *simulated multiple inheritance*
 
 # Lambda and Streams
 ## Item 45: Use Streams Judiciously (202301)
