@@ -13,7 +13,7 @@ Servlet listeners | `javax.servlet.ServletContextListener` and all others
 Managed beans     | Plain Old Java Objects
 
 # 7. JavaServer Faces Technology
-## A Simple JavaServer Faces Application
+## 7.3 A Simple JavaServer Faces Application
 The lifecyle (of a server response by means of JSF) consists of two main phases: Execute and Render:
 
 During the *Execute* phase, several actions can take place:
@@ -23,12 +23,23 @@ During the *Execute* phase, several actions can take place:
  * Conversions and validations are performed for component values
  * Managed beans are updated with component values
  * Application logic is invoked
-## User Interface Component Model
+
+
+## 7.4 User Interface Component Model
+### 7.4.4 Event and Listener Model
+*Action event* is processed in phase:
+ * `immediate=true` : Apply Request Value
+ * `immediate=false` : Invoke Application
+*Value-Change event* is processed in phase:
+ * `immediate=true` : Apply Request Value
+ * `immediate=false` : Process Validations
+
+
 ### Validation Model
 2 ways to implement custom validation:
  * Implement `Validator` interface
  * Implement a managed bean method that performs the validation
-## Navigation Model
+## 7.5 Navigation Model
 > In *JavaServer Faces* technology, **navigation** is a set of rules for choosing the next page or view to be displayed after an *application action, such as when a button or link is clicked*
 
 When you add a component such as a `commandButton` to a *Facelets* page, and assign another page as the value for its `action` property, the default navigation handler will try to match a suitable page within the application *implicitly*. In the following example, the default navigation handler will try to locate a page named `response.xhtml` within the application and navigate to it:

@@ -29,10 +29,10 @@ Name      | Value
 `Max-Age` | <number>
 
 ## Http *Method* Definitions
-### [Http/1.0](https://www.rfc-editor.org/rfc/rfc1945#section-8)
+### [Http/1.0](https://www.rfc-editor.org/rfc/rfc1945#section-8) (20230909)
 * `GET`
 * `POST`
-* `HEAD`
+* `HEAD` - identical to `GET` except that the server must not return *entity-body* in the response 
 
 ### [HTTP/1.1](https://www.ietf.org/rfc/rfc2616.txt) 
 * `OPTIONS`
