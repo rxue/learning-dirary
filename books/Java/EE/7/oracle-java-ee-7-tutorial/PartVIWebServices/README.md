@@ -14,7 +14,7 @@ Simple, lightweight and fast are based on the following principles:
 * Self-descriptive messages: resources are *decoupled* from their representation so that their content can be accessed in a variety of formats
 * ~~Stateful interactions through links~~: Every interaction with a resource is stateless; that is, **request messages are self-contained.** ... State can be embedded in response messages to point to valid future states of the interaction.
 
-## Creating a RESTful Root Resource Class
+## 29.2 Creating a RESTful Root Resource Class
 3 important terms:
 
 * **root resource classes** :
@@ -53,6 +53,13 @@ self-comment: The definition here is inconsistent with that from the official JA
 * `@Provider`
 
 ### The `@Path` Annotation and *URI Path Templates*
+### 29.2.4 Respondings to HTTP Methods and Requests
+#### The Request Method Designator Annotations
+> By default, the *JAX-RS* runtime will automatically support the method *HEAD* and *OPTIONS* if not explicitly implemented. 
+
+* *HEAD* : the runtime will invoke the implemented *GET* without response body
+* *OPTIONS* : the `Allow` response header will be set to the set of HTTP methods supported by the resource
+
 ### Extracting Request Parameters
 `@DefaultValue` annotation
 
