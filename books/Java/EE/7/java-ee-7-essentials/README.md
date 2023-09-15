@@ -4,6 +4,9 @@
 
 # Chapter 7. *WebSocket*
 
+# Chapter 8. Enterprise Java Beans
+## Stateful Session Beans
+`@Stateful(passivationCapable=false)` : ejb with this annotation will not be passivated. and note that the default value of `passivationCapable` is `true` (check the API doc)
 
 # Chapter 12. Java Transaction
 ## User-Managed Transactions

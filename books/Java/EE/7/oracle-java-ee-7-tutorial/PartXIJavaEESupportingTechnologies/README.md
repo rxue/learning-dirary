@@ -72,4 +72,11 @@ public class MyReader implements javax.batch.api.chunk.ItemReader {
 ^	  return line;
 ^	}
 }
-``` 
+```
+# Chapter 55: Batch Processing
+## 55.1 Introduction to Batch Processing
+### 55.1.1 Steps in Batch Jobs
+2 types of steps:
+* chunk-oriented steps
+* task-oriented steps
+
