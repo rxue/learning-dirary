@@ -1,3 +1,12 @@
+# Chapter 8: Scripting, Compiling, and Annotation Processing
+## 8.5 Standard Annotations
+### Meta-Annotations
+Element types of target annotation
+
+Element Type  | Annotation Applies to
+--------------|--------------------------
+`PARAMETER`   | Method or constructor parameters
+
 # Chapter 9: The Java Platform Module System
 ## The Module Concept
 2 advatanges of using the Java Platform Module System:
