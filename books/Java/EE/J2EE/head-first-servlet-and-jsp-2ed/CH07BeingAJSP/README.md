@@ -21,7 +21,12 @@ example of *page directive*
 
 Reference: page 287 (pdf page 312)
 
-**SELF-COMMENT AND ANALYSIS** : Comparing these *directives* with those in C: https://cplusplus.com/doc/tutorial/preprocessor/ . A typical *directive* in C is the `#include` e.g. `#include <iostream>`
+**SELF-COMMENT AND ANALYSIS**
+
+Typical *directives*:
+* in Java: `import` is directive (refer to Core Java book)
+* in C: https://cplusplus.com/doc/tutorial/preprocessor/ is the `#include` e.g. `#include <iostream>`
+
 
 ### using *expressions*
 *scriptlet* code* : `<% out.println(Counter.getCount()); %>`
