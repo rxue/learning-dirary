@@ -19,6 +19,12 @@
 
 ## Response
 #### [Response Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+ code | description
+------|-------------------
+204   | No content
+500   | Internal server error
+
+
 * 300 - 399 Redirection messages
 
 #### Response Header
