@@ -18,6 +18,12 @@ Reference: Java EE 7 Essentials > Chapter 13: Java Persistene > Persistene Unit,
 ### Entity States
 ![Entity States](https://user-images.githubusercontent.com/3033388/270134754-9807cc3a-3c04-4cf2-8b8e-d52e3b66afbe.png)
 
+The picture implies practical tips:
+* `persist` is used to add entity into database
+* `merge` is used to update entity inside database
+
+NOTE also that `EntityManager.perisit` is `void`, whereas `EntityManager.merge` returns generic type `T`
+
 ### Finding Entities Using the `EntityManager`
 Note! According to the [API doc of `EntityManager`](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html) on each `find` method,
 
