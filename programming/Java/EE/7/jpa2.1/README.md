@@ -15,6 +15,9 @@ Commit: https://github.com/rxue/dictionary/commit/a343cbb74ae52a37cf04db03f65a29
 
 Reference: Java EE 7 Essentials > Chapter 13: Java Persistene > Persistene Unit, Persistence Context and Entity Manager
 
+### Entity States
+![Entity States](https://user-images.githubusercontent.com/3033388/270134754-9807cc3a-3c04-4cf2-8b8e-d52e3b66afbe.png)
+
 ### Finding Entities Using the `EntityManager`
 Note! According to the [API doc of `EntityManager`](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html) on each `find` method,
 

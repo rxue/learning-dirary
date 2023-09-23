@@ -21,6 +21,7 @@
 #### [Response Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
  code | description
 ------|-------------------
+200   | OK
 204   | No content
 500   | Internal server error
 
