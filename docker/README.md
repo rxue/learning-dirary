@@ -26,3 +26,6 @@ Solution from ChatGPT: docker's commands is originally in `/Applications/Docker.
 
 # Docker commands
 ## `docker build`
+
+### 20230924: remove all images by force
+`docker rmi -f $(docker images -q)`
