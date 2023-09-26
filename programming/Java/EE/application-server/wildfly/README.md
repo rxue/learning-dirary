@@ -53,4 +53,6 @@ The possible list of managed dependencies can be found from https://mvnrepositor
 ### 20220707 Is it possible at all to make use of `@EJB` annotation to inject a *remote ejb*?
 
 ## How to configure JDBC our own datasource
-https://docs.wildfly.org/28/Getting_Started_Guide.html#modifying-the-example-datasource
+Datasource could be configured in `*-ds.xml` in `META-INF` or `WEB-INF`. But this is deprecated. Refer to this warning message during deployment: `20:26:05,538 WARN  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0091: -ds.xml file deployments are deprecated. Support may be removed in a future version.`
+ 
+Practical up-to-date reference: https://docs.wildfly.org/28/Getting_Started_Guide.html#modifying-the-example-datasource
