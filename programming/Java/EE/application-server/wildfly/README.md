@@ -51,3 +51,6 @@ The possible list of managed dependencies can be found from https://mvnrepositor
 
 ## Questions
 ### 20220707 Is it possible at all to make use of `@EJB` annotation to inject a *remote ejb*?
+
+## How to configure JDBC our own datasource
+https://docs.wildfly.org/28/Getting_Started_Guide.html#modifying-the-example-datasource
