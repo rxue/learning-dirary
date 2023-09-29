@@ -31,3 +31,21 @@ CREATE TABLE takes (
 > SQL supports basic set operations, including `union` , `intersect` and `except` , which corresponds to the mathematical set operations ...
 
 **Self comments** : *set operations* mean the result is also a set that there is no repeat element
+
+# Chapter 17: Transactions
+## 17.8 Transaction Isolation Levels
+*Isolation levels* specified by SQL standard:
+
+* serializable
+* repeatable read
+* read committed
+* read uncommitted
+
+*dirty read* is never possible!
+
+> Many database systems run, by default, at the read-committed isolation level. In SQL , it is possible to set the isolation level explicitly, rather than accepting the system’s default setting.
+
+Oracle's syntax: `alter session set isolation level = serializable` 
+
+**Practical tips**: this is set inside the session. There is a global default setting for it as well
+ 
