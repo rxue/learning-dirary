@@ -80,3 +80,4 @@ public class MyReader implements javax.batch.api.chunk.ItemReader {
 * chunk-oriented steps
 * task-oriented steps
 
+ 
