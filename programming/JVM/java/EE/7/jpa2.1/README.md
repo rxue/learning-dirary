@@ -40,7 +40,14 @@ So need to note that when using `EntityManager`, it is the responsibility of the
  Add      | `persist`
  Update   | `merge`
 
-# Querying Entities
+# Chapter 40: Using the *Criteria API* to Create Queries
+## 40.3 Using the *Criteria API* and *Metamodel API* to Create Basic Typesafe Queries
+### Executing Queries
+#### *Single-Valued Query Result*
+
+**Practical Tips about TypedQuery.getSingleResult**
+This method call is assumed to get a single result, say in case of no result there will be `NoResultException`
+ 
 ## Practical Tips
 Note! According to the [API doc of `EntityManager`](https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html) on each `createQuery` method, `persistence context` is not mentioned at all, which indicates that those returned list of *entities* are in *Detached* state and, update the queried result *entities* or remove them, it is always compulsory to `merge` these entities into the *persistence context* in the first step.
 
