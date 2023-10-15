@@ -1,6 +1,0 @@
-# Part I: The Mouthpiece of Java EE: The Web Tier
-## Chapter 4. Assembling Dynamic Web Pages: JavaServer Faces
-### Java EE Managed Beans
-#### `@ConversationScoped`
-> ... developer may control when it ends, which may be before the session ends. So a managed bean that is in conversation scope is instantiated once for every new `HtppSession`. It is active across several HTTP interactions with the web application in which it is used from a JavaServer page or pages, and it is destroyed only either when the developer explicitly ends the conversation scope, or when the HTTP session with which it is associated times out or is invalidated. ...useful...if you want to operate with a predefined set of interactions with a web application, perhaps the sequence of chat interactions on a social neworkin website, or a particular sequence of browsing for purchases on an online store. To end a conversation scope from a managed bean, we need access to the `javax.enterprise.context.Conversation` instance that allows us to manage the conversation scope. To do this, we use a technique called *dependency injection*, a topic to which we will return many times in this book, to *inject the conversation instance as an instance variable into our JavaBean*
-
