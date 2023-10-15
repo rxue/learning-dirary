@@ -1,0 +1,82 @@
+# Chapter 1 Creating and Destroying Objects
+## Item 1: Consider static factory methods instead of constructors
+> A *service provider framework* is a system in which providers implement a service, and the system makes implementations available to clients, decoupling the clients from implementations.
+
+
+# Chapter 4 Classes and Interfaces
+## Item 15: Minimize the accessibility of classes and members
+*stray class*
+
+## Item 17: Minimize mutability (202302)
+
+* *functional* approach
+* `BitSet` as a better mutable alternative in some cases like multistep operations
+* *mutable companion*
+* static factory factory method along with private constructor as replacement of final class to achieve the immutability
+
+## Item 20: Prefer Interfaces to Abstract Classes (20230704, 20230905)
+**Takeaways**:
+
+* Java's *single inheritance* on *abstract classes* severely constraints their use as *type definitions*.
+* Interfaces are ideal for defining mixins (a type that a class can implement in addition to its "primary type"). NOTE! *Abstract classes* can't be used to define mixins for because they can't be retrofitted onto existing classes in that a class cannot have more than one parent
+* *skeletal implementation class* - *Abstract Interface* : application in *collections framework* in Java SE: `AbstractCollection` , `AbstractSet` , `AbstractList` , `AbstractMap`
+ * *simulated multiple inheritance*
+
+# Lambda and Streams
+## Item 45: Use Streams Judiciously (202301)
+
+* `computeIfAbsent` in `Map` since Java 8
+* `sort` in `Arrays` in legacy Java
+
+## Item 46: Prefer side-effect-free functions in streams (20230128)
+
+# Chapter 8. Methods
+## Item 51: Design method signatures carefully
+* Choose method names carefully
+* Don't go overboard in providing convenience method
+> ...Too many methods make a class difficult to learn, use, document, test, and maintain.
+* Avoid long parameter lists
+* For parameter types, favor interfaces over classes
+* Prefer two-element `enum` types to `boolean` parameters
+
+## Item 55: Return optionals judiciously
+## Item 56: Write doc comments for all exposed API elements
+> **The doc comment for a method should describe succinctly the contract between the method and its client** ... Typically *preconditions* are described implicitly by the `@throws` tags for *unchecked exceptions*;
+> To describe a method's contract fully, the doc comment should have an `@param` tag for every parameter, and `@return` tag unless the method has a void return type, and an `@throws` for every exception thrown by the method, whether checked or unchecked.
+
+# Chapter 9. General Programming
+## Item 61: Prefer primitive types to boxed primitives
+### Key Notes for Myself
+* primitive are more time- and space-efficient than boxed primitives
+* When your program compares two *boxed primitives* with the `==` operator, it does an (object) identity comparison, which is almost certainly not what you want
+* when your program does unboxing, it can throw a ``NullPointerException`
+
+# Chapter 10. Exceptions
+## Item 70: Use checked exceptions for recoverable conditions and runtime exceptions for programming errors
+
+## Item 74: Document all exceptions thrown by each method
+> **Always declare checked exception individually, and document precisely the conditions under which each one is thrown** using the Javadoc `@throws` tag. Don’t take the shortcut of declaring that a method throws some superclass of multiple exception classes that it can throw. As an extreme example, don’t declare that a public method throws Exception or, worse, throws `Throwable`.
+
+### Key Notes for Myself
+As to the following sentence:
+
+>  As an extreme example, don’t declare that a public method throws Exception or, worse, throws `Throwable`
+
+This is primarily a tip about the *concrete classes* in my opinion. `throws Exception` indeed appears for instance in Java SE API:
+
+ * `Autocloseable`: `void close() throws Exception`
+ * `Callable<V>` : `V call() throws Exception`
+
+In Java EE 7 API:
+ * `javax.batch.api.chunk.ItemReader` : `Object readItem() throws Exception`
+
+However, they are rare cases, and kinda last resort and on the other hand, 
+
+> While the language does **not require** programmers to **declare the unchecked exceptions that a method is capable of throwing** , it is wise to document them as carefully as the checked exceptions.
+
+> **Use the Javadoc `@throws` tag to document each exception that a method can throw, but do not use the `throws` keyword on unchecked exceptions**
+
+> In summary, ... Declare each checked exception individually in a method's `throws` clause, but do not declare *unchecked exceptions*. ...
+
+### Takeaway
+NOTE that in Java language syntax uncheked exceptions can be declared in a method's `throws` clause, but that is probably merely due to the case of declaring any types of exceptions in the `main` method, and in all other methods it does not make sense to declare unchecked exceptions
