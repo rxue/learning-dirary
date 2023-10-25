@@ -22,7 +22,11 @@
 * *skeletal implementation class* - *Abstract Interface* : application in *collections framework* in Java SE: `AbstractCollection` , `AbstractSet` , `AbstractList` , `AbstractMap`
  * *simulated multiple inheritance*
 
-# Lambda and Streams
+# Chapter 6: `enum`s and *Annotations*
+## Item 34: Use `enum`s instead of `int` constants
+a way to associate different behavior with different constants: declare *abstract methods* in the `enum` and implement them in each `enum` element - *constant-specific method implementations*
+
+# Chapter 7: Lambda and Streams
 ## Item 45: Use Streams Judiciously (202301)
 
 * `computeIfAbsent` in `Map` since Java 8
