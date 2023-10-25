@@ -25,6 +25,9 @@ i`:set spell spelllang=en_us`
 Solution: ``:set list`
 Reference: https://linuxhint.com/show-hidden-invisible-characters-vim/
 
+# 20231025: how to search in vim with case-insensitive
+## Answer (with example): `/word\c`
+
 # substitute
 ## `:s` - substitute in the currenct line
 ## `:%s` - substitute in the entire file
