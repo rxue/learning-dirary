@@ -7,6 +7,11 @@
 ## Item 15: Minimize the accessibility of classes and members
 *stray class*
 
+## Item 16: In public classes, use accessor methods, not public fields
+*degenerate class*
+
+> If a class is *package-private* or is a private *nested class*, there is nothing inherently wrong with exposing its data fields
+
 ## Item 17: Minimize mutability (202302)
 
 * *functional* approach
@@ -25,6 +30,8 @@
 # Chapter 6: `enum`s and *Annotations*
 ## Item 34: Use `enum`s instead of `int` constants
 a way to associate different behavior with different constants: declare *abstract methods* in the `enum` and implement them in each `enum` element - *constant-specific method implementations*
+## Item 35: Use instance fields instead of ordinals
+> never derive a value associated with its ordinal; store it in an instance field instead
 
 # Chapter 7: Lambda and Streams
 ## Item 45: Use Streams Judiciously (202301)
