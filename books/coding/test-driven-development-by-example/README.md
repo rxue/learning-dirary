@@ -22,4 +22,13 @@ tip: Divide and Conquer: 1st solve the "that work" part of the problem, then we 
 ### What's Next?
 *Lingering duplication* ' : a symptom of latent design - duplication that is difficult to eliminate given the design 
 
+### Process
+TDD process
+
+ 1. Add a little test
+ 2. Run all tests and fail
+ 3. Make a change
+ 4. Run the tests and succeed
+ 5. Refactor to remove duplication
+
 # Part II: 
