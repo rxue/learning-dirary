@@ -7,3 +7,6 @@
 
 *Python* as a *scripting language*, *global reference* is implied and referring to `self``is explicit
 
+*Test coupling* should be avoided
+
+

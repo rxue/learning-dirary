@@ -10,8 +10,15 @@ TDD is not about teeny-tiny steps, it's about being able to take teeny-tiny step
 
 tip: Divide and Conquer: 1st solve the "that work" part of the problem, then we will solve the "clean code" part
 
-*Obvious Implementation*
+3 strategies for quickly getting to green:
+
+* fake: return a constant and gradually replace constants with variables until you have the real code.
+* *Obvious Impleentation* : type in the real implementation
+* triangulation
+
+## Chapter 3: Equality for All
 *aliasing*
+
 
 ## Chapter 6. Equality for All, Redux
 > Before we change the code, we'll write the tests that should have been there in the first time
