@@ -61,6 +61,8 @@ a way to associate different behavior with different constants: declare *abstrac
 * primitive are more time- and space-efficient than boxed primitives
 * When your program compares two *boxed primitives* with the `==` operator, it does an (object) identity comparison, which is almost certainly not what you want
 * when your program does unboxing, it can throw a ``NullPointerException`
+## Item 67: Optimize judiciously
+> pervasive architectual flaw that limit performance can be impossible to fix without rewriting the system
 
 ## Item 67: Optimize judiciously
 
