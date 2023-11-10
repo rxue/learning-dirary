@@ -38,3 +38,5 @@ TDD process
  4. Run the tests and succeed
  5. Refactor to remove duplication
 
+### Test Quality
+*Defect Insertion*
