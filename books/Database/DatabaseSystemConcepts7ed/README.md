@@ -3,6 +3,10 @@
 ### 3.2.1. Basic Data Types
 * `char(n)`: A fixed-length character string with user-specific length `n`
 * `varchar(n)`: A variable length character string with user-specific maximum length `n`
+## 3.10. Summary
+> SQL supports basic set operations, including `union` , `intersect` and `except` , which corresponds to the mathematical set operations ...
+
+**Self comments** : *set operations* mean the result is also a set that there is no repeat element
 # Chapter 4: Intermediate SQL
 ## 4.1. Join Expressions
 ### 4.1.1. Natural Join
@@ -27,10 +31,13 @@ CREATE TABLE takes (
 
 2. Result of *natural join* includes only the rows (tuples) with the same value on the joined column(s): For example, if the `student` table has a row with an `id` not existing in the `takes` table, this row would not be in the *natural join* result and vice versa
 
-## 3.10. Summary
-> SQL supports basic set operations, including `union` , `intersect` and `except` , which corresponds to the mathematical set operations ...
+## 4.3 Transactions
 
-**Self comments** : *set operations* mean the result is also a set that there is no repeat element
+> In many SQL implementations, including *MySQL* and *PostgreSQL*, **by default each SQL statement is taken to be a transaction on its own**, and it gets committed as soon as it is executed. 
+
+The mentioned above is called *automatic commit*
+
+Turn off *automatic commit* : `set autocommit off`
 
 # Chapter 17: Transactions
 ## 17.8 Transaction Isolation Levels
