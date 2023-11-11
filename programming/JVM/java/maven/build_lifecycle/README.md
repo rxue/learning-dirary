@@ -12,3 +12,6 @@ Install package to the *local repository*
 
 ## [*Plugin* bindings for default lifecycle reference](https://maven.apache.org/ref/3.8.6/maven-core/default-bindings.html)
 The xml code for the binding configuration on the link page above explains why unit tests with JUnit can work out-of-the-box, whereas the integration test does not work out-of-the-box
+
+## 20231111
+NOTE! `package` phase is before `verify`
