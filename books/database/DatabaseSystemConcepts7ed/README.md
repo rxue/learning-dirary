@@ -39,6 +39,13 @@ The mentioned above is called *automatic commit*
 
 Turn off *automatic commit* : `set autocommit off`
 
+## 4.5 SQL Data Types and Schemas
+### 4.5.6 Generating Unique Key Values
+* each call to get the next value increments the *sequence counter*
+* Using sequences, we can generate identifiers that are unique across multiple relations
+
+=> core purose of sequence: generate unique identifier on either one or multiple table(s)
+
 # Chapter 17: Transactions
 ## 17.8 Transaction Isolation Levels
 *Isolation levels* specified by SQL standard:
