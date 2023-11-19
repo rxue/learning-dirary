@@ -39,6 +39,20 @@ So need to note that when using `EntityManager`, it is the responsibility of the
 ----------|--------------------------------------
  Add      | `persist`
  Update   | `merge`
+# Chapter 11: Metadata for Object/Relational Mapping (spec)
+## 11.1 Annotations for Object/Relational Mapping
+### 11.1.48 `SequenceGenerator` Annotation
+`allocationSize` : amount to increment by when allocating sequence numbers from the sequence. default: 50
+
+**Practical tips in *Hibernate* implementation**
+
+My previous misunderstanding: each insert will trigger the *sequence* 's `increment by`. But in the same time I also wonder why the ids of inserted rows are still incremented by 1 even though the default value of `allocationSize` is 50. Shouldn't it be so that the id of the inserted current row should be 50 more than the last that of the last inserted row?
+
+Rectification: the purpose of using `allocationSize` is to avoid the trigger of *sequence* to get the next value during each insert since using sequence has performance impact. Assum `allocationSize` is the default 50, right after the JPA framework start and before the 1st row is inserted, the next value of the sequence, assume it as `a` is retrived once, and then the ids of the next 50 rows are all calculated by using the same value, `a`; then before inserting the 51th row, the next value of the sequence is retrieved for the second time, and then repeast this loop
+
+Practical reference: https://github.com/rxue/dictionary/issues/124
+
+Another practical tip on using the `allocationSize` is that in distributed system `allocationSize` is better off large such as 1000 since it then could be allocated for a single node
 
 # Chapter 40: Using the *Criteria API* to Create Queries
 ## 40.3 Using the *Criteria API* and *Metamodel API* to Create Basic Typesafe Queries
