@@ -1,6 +1,9 @@
 # Chapter 8: Scripting, Compiling, and Annotation Processing
 ## 8.5 Standard Annotations
-### Meta-Annotations
+### 8.5.1 Annotations for Compilation
+Practical tips about `@Deprecated` : since Java 9, this annotation has 2 optional elements `forRemoval` and `since`
+
+### 8.5.2 Meta-Annotations
 Element types of target annotation
 
 Element Type  | Annotation Applies to
