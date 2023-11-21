@@ -54,6 +54,10 @@ Practical reference: https://github.com/rxue/dictionary/issues/124
 
 Another practical tip on using the `allocationSize` is that in distributed system `allocationSize` is better off large such as 1000 since it then could be allocated for a single node
 
+### 11.1.52 *Transient* Annotation
+**Practical tips in *Hibernate* implementation**
+*Hibernate* recognize the `@Transient` only on the getter, i.e. in case `@Transaction` is annotated on the *instance field* level, it would not be recognized
+
 # Chapter 40: Using the *Criteria API* to Create Queries
 ## 40.3 Using the *Criteria API* and *Metamodel API* to Create Basic Typesafe Queries
 ### Executing Queries
