@@ -40,6 +40,17 @@ a way to associate different behavior with different constants: declare *abstrac
 * `sort` in `Arrays` in legacy Java
 
 ## Item 46: Prefer side-effect-free functions in streams (20230128)
+## Item 47: Prefer `Collection` to `Stream` as a return type
+
+ `Stream` <-> `Iterable`
+
+ `Stream.of` accept array data
+
+> do not store a large sequence in memory just to return it as a `Collection`
+
+> In order to write a `Collection` implementation atop `AbstractCollection`, you need to implement only two methods beyond the one required for `Iterable`:  `contains` and `size`
+
+`Stream.concat`
 
 # Chapter 8. Methods
 ## Item 51: Design method signatures carefully
