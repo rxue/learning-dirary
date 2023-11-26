@@ -21,3 +21,7 @@ last 1970s - early 1980s : *code-and-fix*
 ## Drop Column
 ### Access Program Update Mechanics
 > generally it is not a good idea to `select *` from any table
+## Drop View
+*Views* are often used to 
+* obtain data for reports
+* implement *security access control* (SAC) to data values in database

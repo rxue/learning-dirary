@@ -1,3 +1,7 @@
+# Basic concept
+## *Surrogate key*:
+reference: https://mariadb.com/kb/en/relational-databases-table-keys/#:~:text=A%20surrogate%20key%20is%20a,common%20type%20of%20primary%20key.
+
 # Transaction
 ## Isolation & Consistency
 ### [ANSI/ISO Transaction Isolation Levels](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-7F2C6927-5482-4144-B43B-5E90EF4E055B)
@@ -32,7 +36,5 @@ Database                                                                        
  [Oracle](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/SET-TRANSACTION.html#GUID-F11E1E30-5871-48D1-8266-F80A1DF126A1)                                 | *Read Committed*
  [Postgres](https://www.postgresql.org/docs/current/transaction-iso.html#:~:text=Read%20Committed%20is%20the%20default,query%20execution%20by%20concurrent%20transactions.)   | *Read Committed*
  [MySQL](https://dev.mysql.com/doc/refman/5.6/en/set-transaction.html#:~:text=The%20default%20isolation%20level%20is,%2C%20READ%20UNCOMMITTED%20%2C%20and%20SERIALIZABLE%20.) | *Repeatable Read*
-
-
 
 
