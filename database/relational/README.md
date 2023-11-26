@@ -2,6 +2,8 @@
 ## *Surrogate key*:
 reference: https://mariadb.com/kb/en/relational-databases-table-keys/#:~:text=A%20surrogate%20key%20is%20a,common%20type%20of%20primary%20key.
 
+Practical tip: *surrogate key* is *primary key*
+
 # Transaction
 ## Isolation & Consistency
 ### [ANSI/ISO Transaction Isolation Levels](https://docs.oracle.com/en/database/oracle/oracle-database/19/cncpt/data-concurrency-and-consistency.html#GUID-7F2C6927-5482-4144-B43B-5E90EF4E055B)
