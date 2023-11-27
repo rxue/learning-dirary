@@ -25,7 +25,16 @@ The pure form of TDD, wherein you are never more than one change away from a gre
 the more stress you have, the less likely you are to test enough
 
 ### Test Data
-trick: try never to use the same constant to mean more than one thing
+Use data that makes the tests easy to read and follow
+
+> If there isn't a conceptual difference between 1 and 2, use 1
+> don't use have a list of then items as the input data if a list of three items will lead you to the same design and implementation decisions.
+> try never to use the same constant to mean more than one thing
+
+*Realistic data* is useful when:
+
+...
+
 ### Evident Data
 When we've written the expression in the assertion, we know what we need to program.
 
