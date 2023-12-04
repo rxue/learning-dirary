@@ -31,3 +31,17 @@ regression test should be side-effect free
 * obtain data for reports
 * implement *security access control* (SAC) to data values in database
 
+## Introduce *Surrogate Key*
+Surrogate key 
+* has no business meaning
+* is typically implemented as a collection of meaningless characters or numbers
+
+=> end users cannot use it for searches => still need to identify data via natural identifiers.
+
+Example: `InventoryItem` has surrogate key, `POID` - *persistence object identifier* and *natural alternate key* , `InventoryID`. Individual items are identified uniquely within the system by the surrogate key but identified by users via the natural key.
+
+Value of applying surrogate key: 
+* simply key strategy within your database
+* reduce coupling between database schema and business domain
+### Schema Update Mechanics
+`ADD COLUMN`
