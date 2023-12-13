@@ -30,6 +30,20 @@ regression test should be side-effect free
 *Views* are often used to 
 * obtain data for reports
 * implement *security access control* (SAC) to data values in database
+## Introduce *Surrogate Key*
+* large composite natural key might degrade database performance
+### Potential Tradeoffs
+A surrogate key has no business meaning => end user cannot use it for search
+POID : persistent object identifier
+
+> Individual items are identified uniquely within the system by the *surrogate key* but identified by uers via the *natural key*
+
+
+
+## Move Column
+Practical tip: *denomalization* can reduce common joins => to improve performance
+
+
 
 ## Introduce *Surrogate Key*
 Surrogate key 
