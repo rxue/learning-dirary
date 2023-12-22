@@ -1,11 +1,23 @@
 # Chapter 4: Being a Servlet: request and response
 
-## Servlet initialization and threads
+## The Three Big Lifecycle Moments
+
+> You should NOT override the `service()` method. Your job is to override the `doGet()` and/or `doPost()` methods and let the `service()` implementation from `HTTPServlet` worry about calling the right one.
+
+Book page 99
+
+> ... the *Container* calls my servlet's `init()` method, but if I don't override `init()`, the one from `GenericServlet` runs. Then when a request comes in, the Container starts or allocates a thread and calls the `service()` method. from `HttpServlet` runs. The `HttpServlet` `service()` method then calls my overridden `doGet()``or `doPost()`. So each time my `doGet()` or `doPost()` runs, it's in a separate thread.
+
+> The `service()` method figures out which *HTTP method* (`GET`, `POST` etc.) is in the request, and invokes the matching `doGet()` or `doPost()` method. The `doGet()` and `doPost()` inside `HttpServlet` don't do anything, so you have to override one or both. This thread dies (or is put back in a *Container-managed pool*) when service completes.
+
+Book page 100
+
+## Each request runs in a separate thread!
 ![One servlet instance corresponds to multiple threads](https://user-images.githubusercontent.com/3033388/225286901-b545b01b-7762-4b13-9418-a5af11ed9da6.png)
 
 > one servlet per request. The container doesn't care who makes the request - every incoming request means a new thread thread/stack
 
-page 101
+Book page 101
 
 ### `ServletConfig` and `ServletContext`
 * one `ServletConfig` object per `Servlet`
