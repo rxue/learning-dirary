@@ -15,8 +15,8 @@
 > Methods can also have the property of "idempotent" in that (aside from error or expiration issues) the side-effects of `N > 0` identical requests is the same as for a single request. The methods `GET`, `HEAD`, `PUT` and `DELETE` share this property. Also, the methods `OPTIONS` and `TRACES SHOULD NOT` have side effects, and so are inherently idempotent.
 
 #### Request Header
-* `Cookie`
-
+* [`Cookie`](https://www.rfc-editor.org/rfc/rfc6265#section-5.4)
+> If the user agent does attach a Cookie header field to an HTTP request, the user agent MUST send the cookie-string (defined below) as the value of the header field.
 ## Response
 #### [Response Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
  code | description
@@ -29,7 +29,8 @@
 * 300 - 399 Redirection messages
 
 #### Response Header
-##### `Set-Cookie`
+##### [`Set-Cookie`](https://www.rfc-editor.org/rfc/rfc6265#section-4.1)
+
 ###### Abbtributes
 Name      | Value
 ----------|----------
