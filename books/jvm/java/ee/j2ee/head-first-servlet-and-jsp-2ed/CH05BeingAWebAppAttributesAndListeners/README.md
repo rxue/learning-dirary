@@ -38,13 +38,15 @@ The only one `init` method of `HttpServlet` you need to *override* is the one wi
 
 Page 157
 
-## Servlet and Context Listeners
+## Servlet and Context Init Parameters (page 160/pdf page 185)
+
+The most use case of `context parameter` : storing the database lookup name
 
 > Think of init parameters as deploy-time constants!
 
-> You can get them at runtime, but you can't set them There is no setInitParameter().
+> You can get them at runtime, but you can't set them There is no `setInitParameter().`
 
-Page 160
+=> if the init parameter, either servlet or context, changes in the *DD*, only redeployment could reflect the change
 
 ## Context Parameter Limitations
 > You can put the DataSource lookup name in the in a context init parameter, and that's probably the most common use of the context parameters.
