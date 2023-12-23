@@ -12,6 +12,9 @@ Example: `grep --exclude-dir={python,debian_configuration} -r "mail" .`
 
 # `eval` to execute output text as command
 
+# `mkdir`
+no error if existing: `-p` option
+
 # `sudo -s` in general VS `su` in Debian-based system (20230621)
 
 # `rm`

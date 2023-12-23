@@ -59,3 +59,7 @@ Value of applying surrogate key:
 * reduce coupling between database schema and business domain
 ### Schema Update Mechanics
 `ADD COLUMN`
+
+## Move Column
+
+
