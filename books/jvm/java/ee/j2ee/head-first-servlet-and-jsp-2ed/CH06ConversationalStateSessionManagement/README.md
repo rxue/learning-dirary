@@ -16,9 +16,8 @@ Http protocol is *stateless*, meaning *Http protocol* use *stateless connection*
 
 NOTE! the header `Cookie` in the requests after the initial one and the `Set-Cookie` in the response are according to the standard [Http State Management Mechanism](https://www.rfc-editor.org/rfc/rfc6265)
 
-### the joy of *Cookies*
-### The best part: the container does virtually all the cookie work!
-> ... the container takes care of generating the session ID, creating a new `Cookie` object, stuffing the session ID into the cookie ...
+### The best part: the container does virtually all the cookie work! (page 215/pdf 258)
+> ... the **container takes care of generating the session ID**, creating a new `Cookie` object, stuffing the session ID into the cookie ...
 <blockquote>
 ...somewhere in your `service` method you ask for a session, and everything else happens **automatically**
 
