@@ -62,6 +62,10 @@ Reference above is on page 245
 ## Can I use cookies for other things, or are they only for sessions? (page 250/pdf 275)
 > By default, a cookie lives only as long as a session; once the client quits his browser, the cookie disappears. That's how the `JSESSIONID` cookie works. **But you can tell a cookie to stay alive even AFTER the browser shuts down**
 
+example use case: 
+
+> Kim wants to display the user's name each time he returns to the beer site => he sets the cookie the first time he receives the client's name, and if he gets the cookie back with a request, he knows not to ask for the name again. *And it doesn't matter if the user restarted his browser and hasn't been on the site for a week*
+
 ## Listener examples
 
 Session counter in a *non-distributed system* as a typical use case of `HttpSessionListener`
