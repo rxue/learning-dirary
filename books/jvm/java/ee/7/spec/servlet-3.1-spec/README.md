@@ -2,6 +2,12 @@
 ## 7.1 Session Tracking Mechanisms
 ### 7.1.2 SSL Sessions
 > Secure Sockets Layer, the encryption technology used in the HTTPS protocol, has a built-in mechanism allowing multiple requests from a client to be unambiguously identified as being part of a session. A servlet container can easily use this data to define a session.
+## Chapter 12 Mapping Requests to Servlet
+### 12.2 Specification of Mappings
+
+Comparing with the previous version, the improvement is:
+> If the effective `web.xml` (after merging information from fragments and annotations) contains any url-patterns that are **mapped to multiple servlets** then the **deployment must fail**. 
+
 # Chapter 14 Deployment Descriptor
 ## 14.4 Deployment Descriptor Digram
 
