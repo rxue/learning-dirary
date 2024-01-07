@@ -1,8 +1,25 @@
-# Chapter 11: Transactions and Concurrency
+# Chapter 6. Mapping Inheritance
+## 6.8 *Polymorphic associations*
+### 6.8.1 Polymorphic *many-to-one* associations
+### 6.8.2 Polymorphic collections
+# Chapter 7. Managing collections and entity associations
+Heart of ORM : manage associations between classes and relationships between tables
+**Major new features in JPA 2**
+## 7.1. Sets, bags, lists and maps of value types
+### Selecting a collection interface
+`java.util.Collection` - *bag* semantics
+### 7.1.5. Mapping an identifier *bag*
+*Bag* : an *unordered collection* that allows duplicate elements
+
+
+# Chapter 8. Advanced entity association mappings
+## 8.2 one-to-many associations
+
+# Chapter 11. Transactions and Concurrency
 ## 11.2 Controlling Concurrent Access
 ### 11.2.2 Optimistic Concurrency Control
 *Versioning* is turned off by default. 
-It is a *first win*
+It is a *first commit win*
 #### ENABLE VERSIONING
 Versioning is enabled with `@Version`
 
