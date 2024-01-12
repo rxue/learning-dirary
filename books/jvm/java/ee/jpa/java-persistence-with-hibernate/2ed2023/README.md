@@ -11,6 +11,13 @@ Heart of ORM : manage associations between classes and relationships between tab
 ### 7.1.5. Mapping an identifier *bag*
 *Bag* : an *unordered collection* that allows duplicate elements
 
+## 7.2. Collections of components
+### 7.2.2. Set of components
+
+## 7.3. Mapping entity associations
+> The term *parent/child* implies some kind of *life cycle dependencies*
+
+*Association* between entity classes don't have a dependent life cycle: An instance can be saved, updated, and removed without affecting any other
 
 # Chapter 8. Advanced entity association mappings
 ## 8.2 one-to-many associations
@@ -35,12 +42,8 @@ Heart of ORM : manage associations between classes and relationships between tab
 
 ### 11.2.2 Optimistic Concurrency Control
 *Versioning* is turned off by default. 
-<<<<<<< Updated upstream
 It is a *first commit win*
-=======
->>>>>>> Stashed changes
 It results in *first commit win*
-#### ENABLE VERSIONING
 Versioning is enabled with `@Version`
 
 You shouldn't have setter method `setVersion`
@@ -56,4 +59,7 @@ The failed transaction will encounter `javax.persistence.OptimisticLockException
 
 ### Explicit Pessimistic Locking
 
+# Chapter 12. Fetch plans, strategies and profiles
+## 12.1. Lazy and eager loading
+### 12.1.1. Understanding entity proxies
 
