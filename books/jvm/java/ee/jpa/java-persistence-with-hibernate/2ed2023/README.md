@@ -35,7 +35,10 @@ Heart of ORM : manage associations between classes and relationships between tab
 
 ### 11.2.2 Optimistic Concurrency Control
 *Versioning* is turned off by default. 
+<<<<<<< Updated upstream
 It is a *first commit win*
+=======
+>>>>>>> Stashed changes
 It results in *first commit win*
 #### ENABLE VERSIONING
 Versioning is enabled with `@Version`
