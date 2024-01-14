@@ -38,6 +38,16 @@ Heart of ORM : manage associations between classes and relationships between tab
 
 #### Character Types
 
+# Chapter 7. Mapping collections and entity associations
+## 7.3. Mapping entity associations
+### 7.3.1. The simplest possible association
+> when you see a *foreign key* column and two entity classes involved, you should probably map it with `@ManyToOne` and nothing else
+
+**My own practice of unidirectional `@OneToMany`:** https://github.com/rxue/dictionary/issues/129
+
+### 7.3.2. Making it bidirectional
+primary benifit of `@OneToMany` : *navigational access* to data
+
 # Chapter 11. Transactions and Concurrency
 
 ### 11.2.2 Optimistic Concurrency Control
