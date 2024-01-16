@@ -18,4 +18,9 @@ Result: not work when trying to access the started docker container at least wit
 
 => eventually found https://support.atlassian.com/bitbucket-cloud/docs/databases-and-service-containers/ and works as expected. But still I am not able to  *port mapping*
 
+# 20240116
+Question: Where is the image defined in the pipeline yml file from
+Answer: Docker Hub
+
+
 
