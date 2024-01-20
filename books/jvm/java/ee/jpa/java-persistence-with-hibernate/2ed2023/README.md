@@ -1,3 +1,10 @@
+# Chapter 1. Understanding object/relational persistence
+## 1.3 ORM and JPA
+JPA specification:
+ * ORM
+ * `EntityManager`
+ * JPQL
+ * peristence engine does: *dirty checking*, association, fetch, etc.
 # Chapter 6. Mapping Inheritance
 ## 6.8 *Polymorphic associations*
 ### 6.8.1 Polymorphic *many-to-one* associations
