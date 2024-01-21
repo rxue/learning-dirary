@@ -1,3 +1,7 @@
+# Delete - `d`
+## 20240121: delete lines from a line number e.g. 10 to the end of file 
+`:10,$d` - end of file is `$`
+
 # 20190622: 
 * Insert a new line below the current line in normal mode: o
 
@@ -12,17 +16,13 @@ CTRL + WW - Press CTRL and then click W twice
 # 20200107: `vimdiff` two strings
 `vimdiff <(echo "hello a", echo "hello b")`
 
-# 20200227
-## delete/cut by line numbers
-Example: :`12,18d`
-
 # 20200228: [*registers*, *undolist* and *history* in `vim`](https://stackoverflow.com/questions/60431864/how-to-display-the-content-of-the-cache-in-vim/60432156#60432156)
 
 # 20210707: I would like to turn on the language check for US English
 i`:set spell spelllang=en_us`
 
 # 20220725: how to display invisible chars such as *tab*, *end of line* etc.
-Solution: ``:set list`
+Solution: `:set list`
 Reference: https://linuxhint.com/show-hidden-invisible-characters-vim/
 
 # 20231025: how to search in vim with case-insensitive
