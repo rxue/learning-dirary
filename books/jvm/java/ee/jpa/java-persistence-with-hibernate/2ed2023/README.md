@@ -25,6 +25,20 @@ The persistence-capable classes
 
 *dirty checking* : Hibernate automatically detect state changes in order to synchronize the updated state with database
 
+# Chapter 5. Mapping Value Types
+## 5.3. Mapping Java and SQL types with converters
+*Java-to-SQL type conversion*
+### 5.3.1. built-in types
+#### Primitives and Numeric Types
+
+### 5.3.2. Creating Custom JPA Converters
+*value-typed class* 
+ * *immutable* 
+ * should `implements Serializable` when Hibernate stores entity instance data in the shared second-level cache
+#### CONVERTING BASIC PROPERTY VALUES
+
+#### Character Types
+
 # Chapter 6. Mapping Inheritance
 ## 6.8 *Polymorphic associations*
 ### 6.8.1 Polymorphic *many-to-one* associations
@@ -46,27 +60,6 @@ Heart of ORM : manage associations between classes and relationships between tab
 
 *Association* between entity classes don't have a dependent life cycle: An instance can be saved, updated, and removed without affecting any other
 
-# Chapter 8. Advanced entity association mappings
-## 8.2 one-to-many associations
-
-# Chapter 11. Transactions and Concurrency
-## 11.2 Controlling Concurrent Access
-# Chapter 5. Mapping Value Types
-## 5.3. Mapping Java and SQL types with converters
-*Java-to-SQL type conversion*
-### 5.3.1. built-in types
-#### Primitives and Numeric Types
-
-### 5.3.2. Creating Custom JPA Converters
-*value-typed class* 
- * *immutable* 
- * should `implements Serializable` when Hibernate stores entity instance data in the shared second-level cache
-#### CONVERTING BASIC PROPERTY VALUES
-
-#### Character Types
-
-# Chapter 7. Mapping collections and entity associations
-## 7.3. Mapping entity associations
 ### 7.3.1. The simplest possible association
 > when you see a *foreign key* column and two entity classes involved, you should probably map it with `@ManyToOne` and nothing else
 
@@ -75,7 +68,11 @@ Heart of ORM : manage associations between classes and relationships between tab
 ### 7.3.2. Making it bidirectional
 primary benifit of `@OneToMany` : *navigational access* to data
 
+# Chapter 8. Advanced entity association mappings
+## 8.2 one-to-many associations
+
 # Chapter 11. Transactions and Concurrency
+## 11.2 Controlling Concurrent Access
 
 ### 11.2.2 Optimistic Concurrency Control
 *Versioning* is turned off by default. 
