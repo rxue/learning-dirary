@@ -1,4 +1,22 @@
 # Part 2. Mapping strategies
+## Chapter 4. Mapping persistent classes
+### 4.1. Understanding *entities* and *value types*
+#### 4.1.1. Fine-grained domain models
+design tip: when designing an `EmailAddress` *value* class, it may provide a `prepareEmail()` method (but not `sendEmail()` because it is a bad idea to make this `EmailAddress` class have dependency on the email sub-system)
+#### 4.1.2. Defining application concepts
+design tip: 
+ * since you want to have CRUD operation on `User` => `User` is an entity
+ * take `Address` as an example, if there exists `Address` being shared among multiple `User` then the `Address` is an `Entity` - think about it, when removing a `User` you cannot remove the `Address` if it is shared by other users
+
+> An instance of *value type* has no persistence identifier property, it belongs to an entity instance. Its lifespan is bound to the owning entity instance. => A value type doesn't support shared references. 
+
+#### 4.1.3. Distinguishing entities and value types
+design tip: 
+ * use stereotype in UML to differentiate between *entity* and *value type*
+ * relationship between an entity and its *value types* is *composition* especially from the lifecycle aspect
+ * prefer always *value type* to *entity* (this kinda corresponds to the OO design principle - favor composition over inheritance)
+ * strive for simplicity: persistent collections, e.g., frequently add complexity without any benifit. For instance, instead of mapping `Item#bids` and `User#bids`, query all `bids` for `Item`/`User`
+
 ## Chapter 5. Mapping Value Types
 ### 5.3. Mapping Java and SQL types with converters
 *Java-to-SQL type conversion*
