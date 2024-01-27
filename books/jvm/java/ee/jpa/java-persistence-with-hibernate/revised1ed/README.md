@@ -1,5 +1,17 @@
 # Chapter 8. Legacy database and custom SQL
 ## 8.1. Integrating legacy databases
+design tip: when you application inherits an existing legacy database schema, make as few changes to the existing schema as possible
+### 8.1.1. Handling primary keys
+design tip: many legacy schemas use (natural) composite primary keys, but this is discouraged
+#### Mapping a composite natural key
+design tip: critical to implement `hashCode` and `equals` methods of *ID class*
+#### Composite keys with annotations
+With JPA, composite keys are always encapsulated in a separate class, and the composite keys can be expressed in:
+* annotation ID class with `@Embeddable` => this annotated ID class can be referenced as a field in the entity class 
+* ID class without annotation:
+ * ID class can be referenced as a field with `@EmbeddedId` annotation
+ * duplicate all the fields of ID class in the entity class, but the entity class has to be annotated with `@IdClass(ClassName.class)`
+
 
 # Chapter 9: Working with objects
 ## 9.4 Java Persistence API
