@@ -1,3 +1,6 @@
+# Chapter 8. Legacy database and custom SQL
+## 8.1. Integrating legacy databases
+
 # Chapter 9: Working with objects
 ## 9.4 Java Persistence API
 ### 9.4.1 Storing and loading objects
