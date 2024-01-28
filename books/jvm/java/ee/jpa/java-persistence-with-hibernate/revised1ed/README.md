@@ -7,10 +7,11 @@ design tip: many legacy schemas use (natural) composite primary keys, but this i
 design tip: critical to implement `hashCode` and `equals` methods of *ID class*
 #### Composite keys with annotations
 With JPA, composite keys are always encapsulated in a separate class, and the composite keys can be expressed in:
-* `@Embeddable` + `@Id` - annotation ID class with `@Embeddable` => this annotated ID class can be referenced as a field annotated with `@Id` in the entity class 
-* ID class without annotation:
- * `@EmbeddedId` - ID class can be referenced as a field with `@EmbeddedId` annotation
- * `@IdClass(ClassName.class)` on the class level - duplicate all the fields of ID class in the entity class, but the entity class has to be annotated with `@IdClass(ClassName.class)`
+
+1. `@Embeddable` + `@Id` - `@GeneratedValue` : annotation ID class with `@Embeddable` => this annotated ID class can be referenced as a field annotated with `@Id` in the entity class and `@GeneratedValue` has to be ommitted 
+2. annotation on the owning entity only without annotation on ID class:
+ - `@EmbeddedId` : ID class can be referenced as a field with `@EmbeddedId` annotation
+ - `@IdClass(ClassName.class)` + `@Id` : the owning entity class has to be annotated with `@IdClass(ClassName.class)` and all the properties of *ID class* has to be added to the owning entity class with `@Id` annotation (**NOTE! this strategy was added to JPA spec to support some legacy behavior**)
 
 
 # Chapter 9: Working with objects
