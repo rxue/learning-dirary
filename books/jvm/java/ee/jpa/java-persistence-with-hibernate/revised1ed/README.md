@@ -31,4 +31,9 @@ If the input *entity* does not exist in the *persistence context*, meaning the g
 
  * case 1: identifier, i.e. `@Id` field, of the *entity* exists in the corresponding persitent database table, a new *persistent instance* is copied from the database and, this new instance is updated on base of the given detached entity and it is the returned instance of this `merge`
  * case 2: identifier, i.e. `@Id` field, of the *entity* does not exists in the corresponding persistent database table, a new *persistence instance* is created and its values are updated on base of the given detached entity and it is the returned instance of this `merge`
+# Part 3 Conversational object processing
+## Chapter 14 Querying with HQL and JPA QL
+### 14.1 Creating and running queries
+#### 14.1.1 Preparing a query
+##### Paging the result
 
