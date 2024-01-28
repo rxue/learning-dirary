@@ -102,7 +102,6 @@ an *embedded component* has a dependent lifecycle (dependent on its owning entit
 #### 5.2.2. Making classes embeddable 
 `@Embeddable` class has no identifier property
 
-
 ### 5.3. Mapping Java and SQL types with converters
 *Java-to-SQL type conversion*
 #### 5.3.1. built-in types
@@ -113,6 +112,11 @@ an *embedded component* has a dependent lifecycle (dependent on its owning entit
  * *immutable* 
  * should `implements Serializable` when Hibernate stores entity instance data in the shared second-level cache
 ##### CONVERTING BASIC PROPERTY VALUES
+A *converter* must 
+ * `implements AttributeConverter`
+ * annotate with `@Converter`: `autoPlay` comes into play typically when an type class is used as an attribute in many different entities inside the same *persitance unit* and, we might want to convert it differently as to different entities
+
+NOTE! use of `@Convert` onto the field of entity is optional. It comes into use typically when there are multiple `AttributeConverter` implementions on the same field class type, then it is necessary to define the `converter` element of the `@Convert` annotation. The other element `disabled` is trivial to understand
 
 ##### Character Types
 
