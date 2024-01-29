@@ -51,6 +51,10 @@ Example: `git push origin change_20190624:master` - push the local branch `chang
 ### List *references*
 #### List references available in a remote repository
 `git ls-remote`
+##### list all remote tags (20240129)
+`git ls-remote --tags`
+This command can be remembered together with `git branch`, where `git branch -r` list all remote branches
+
 #### List references available in a local repository 
 `git show-ref`
 
