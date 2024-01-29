@@ -1,4 +1,6 @@
 # Chapter 5: Concurrency
+Concept of *offline concurrency* : concurrency control for data that is manipulated during **multiple database transactions**.
+
 ## Concurrency Problems
 ```
  concurrency.locking - 7 classes
