@@ -57,5 +57,7 @@ Moreover, according to the [EJB 3.2 specification](https://jcp.org/aboutJava/com
 
 => design tip: `@Singleton` session bean can be used easily e.g. with `EntityManager` instance embedded inside without any extra synchronization code
 
+Additional practical reference on difference of singleton between that of EJB and CDI: https://www.baeldung.com/jee-cdi-vs-ejb-singleton
+
 NOTE! Before this version, JPA was part of EJB spec
 Important reference: https://developer.jboss.org/thread/280437
