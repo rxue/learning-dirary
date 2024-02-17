@@ -37,4 +37,7 @@ The failed transaction will encounter `javax.persistence.OptimisticLockException
 ## Chapter 12. Fetch plans, strategies and profiles
 ### 12.1. Lazy and eager loading
 #### 12.1.1. Understanding entity proxies
+### 12.2. Selecting a fetch strategy
+#### 12.2.1. The *n+1 selects* problem
+#### 12.2.2. The *Cartesian product* problem
 
