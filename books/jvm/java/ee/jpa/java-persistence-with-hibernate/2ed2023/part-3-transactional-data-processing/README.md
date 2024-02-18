@@ -16,6 +16,8 @@ versioning switches to *first commit win*
 *Versioning* is turned off by default. 
 It is a *first commit win*
 It results in *first commit win*
+
+##### ENABLE VERSIONING
 Versioning is enabled with `@Version`
 
 You shouldn't have setter method `setVersion`
@@ -26,10 +28,21 @@ version field can be `int`, `short`, `long` along with their auto-boxing types. 
 
 The failed transaction will encounter `javax.persistence.OptimisticLockException`
 
+##### VERSIONING WITH TIMESTAMPS
+* JPA only considers `java.sql.Timestamp` portable
+* in theory versioning with timestamp is unsafe since there is tiny possbility that 2 operations happens during the same milliseconds, which is the Java's timestamps' minimum accuracy
+
+##### VERSIONING WITHOUT VERSION NUMBERS OR TIMESTAMPS
+*Hibernate* specific feature
+
 ##### MANUAL VERSION CHECKING
+`setLockMode(LockModeType.OPTIMISTIC)` to achieve *repeatable read* : check the entity version at flush time
 
+no batch support : if you update 100 entities (e.g. `Item` in the example), you get 100 additional SQL query on the version at flush time
+##### FORCING A VERSION INCREMENT
+`LockModeType.OPTIMISTIC_FORCE_INCREMENT`
 
-#### Explicit Pessimistic Locking
+#### 11.2.3. Explicit Pessimistic Locking
 
 ### 11.3. *Non-transactional data access*
 #### 11.3.1. Reading data in *auto-commit mode*
