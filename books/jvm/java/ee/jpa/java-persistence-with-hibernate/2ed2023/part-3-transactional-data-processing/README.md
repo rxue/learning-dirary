@@ -44,6 +44,12 @@ no batch support : if you update 100 entities (e.g. `Item` in the example), you 
 
 #### 11.2.3. Explicit Pessimistic Locking
 
+##### What about lock modes `READ` and `WRITE`
+They are legacy from JPA 1.0 and not preferred for new applications
+
+`LockModeType.READ` = ``LockModeType.OPTIMISTIC`
+`LockModeType.WRITE` = ``LockModeType.OPTIMISTIC_FORCE_INCREMENT`
+
 ### 11.3. *Non-transactional data access*
 #### 11.3.1. Reading data in *auto-commit mode*
 
