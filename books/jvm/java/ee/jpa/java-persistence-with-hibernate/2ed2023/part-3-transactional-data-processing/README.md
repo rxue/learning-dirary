@@ -38,6 +38,10 @@ The failed transaction will encounter `javax.persistence.OptimisticLockException
 ##### MANUAL VERSION CHECKING
 `setLockMode(LockModeType.OPTIMISTIC)` to achieve *repeatable read* : check the entity version at flush time
 
+example use case: in a `@ManyToOne` releationship - `item#category`, if we want to sum up the price of each category in a read-committed transaction, there is possibility of *unrepeatable read* that item in one category are moved to another category. In this case price of that moved item might be added to 2 different categories => manual version checking is needed
+
+NOTE! The core of the example is that the item is not to be updated in the transaction using the `OPTIMISTIC` lock
+
 no batch support : if you update 100 entities (e.g. `Item` in the example), you get 100 additional SQL query on the version at flush time
 ##### FORCING A VERSION INCREMENT
 `LockModeType.OPTIMISTIC_FORCE_INCREMENT`
