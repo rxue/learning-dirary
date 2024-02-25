@@ -66,6 +66,14 @@ example use case:
 
 > Kim wants to display the user's name each time he returns to the beer site => he sets the cookie the first time he receives the client's name, and if he gets the cookie back with a request, he knows not to ask for the name again. *And it doesn't matter if the user restarted his browser and hasn't been on the site for a week*
 
+Takeaway: *session cookies* vanish when the client's browser quits, but you can tell a cookie to persist on the client even after the browser shuts down
+
+## Using cookies with Servlet API (page 251/pdf 276)
+There is no `String getCookie(String name)` method
+
+new added `Cookie` needs to be added the the HTTP response through `HttpResponse.addCookie(cookie)`
+
+
 ## Listener examples
 
 Session counter in a *non-distributed system* as a typical use case of `HttpSessionListener`

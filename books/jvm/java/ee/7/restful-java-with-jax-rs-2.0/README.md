@@ -46,7 +46,19 @@ Practical tip: use either `PathSegment` or `@MatrixParam`, but not both
 Practical tip: 
 * Cookies can be used to remember identity and user preferences between requests
 
+# Chapter 6: JAX-RS Content Handlers
+## JAXB
+### JAXB JAX-RS Handlers
+Often times you need to configure your own `JAXBContext` instances to get the output you desired => `javax.ws.rs.ext.ContextResolver` with generic type is used to override the default `JAXBContext` creation
+
+**My own practical comment:** In practice, `ContextResolver` can be used not only to configure `JAXBContext` but also `Jsonb` (new feature of Java EE 8) for instance to convert some special type of attributes in *json* input
+example use case: https://github.com/rxue/dictionary/issues/141
+- example code as the solution: https://github.com/rxue/dictionary/tree/129-unidirectional-one-lexical-item-to-many-explanations/web/java/app/src/main/java/rx/dictionary/rest/config/jsonb
 
 # Chapter 7: Server Responses and Exception Handling
 ## Exception Handling
 ### `javax.ws.rs.WebApplicationException`
+
+# Securing JAX-RS
+## Authentication and Authorization in JAX-RS
+> To enforce authentication, you must specify a URL pattern you want to secure.
