@@ -3,6 +3,7 @@
 > The values defined in the deployment descriptor override the values defined using annotations
 
 # Chapter 7. *WebSocket*
+*Web Socket* is a [full-duplex](https://github.com/rxue/daybook/tree/master/books/ComputerNetworkingATopDownApproach) and bidirectional communication protocol over a single TCP connection.
 
 # Chapter 8. Enterprise Java Beans
 ## Stateful Session Beans
