@@ -3,7 +3,9 @@
 > The values defined in the deployment descriptor override the values defined using annotations
 
 # Chapter 7. *WebSocket*
-*Web Socket* is a [full-duplex](https://github.com/rxue/daybook/tree/master/books/ComputerNetworkingATopDownApproach) and bidirectional communication protocol over a single TCP connection.
+*Web Socket* is a [full-duplex](https://github.com/rxue/daybook/tree/master/books/ComputerNetworkingATopDownApproach) and bidirectional communication protocol over a single *TCP* connection. It is a combination of the [*WebSocket protocol*](https://datatracker.ietf.org/doc/html/rfc6455) and [JavaScript WebSocket API](https://datatracker.ietf.org/doc/html/rfc6455)
+
+Web Socket is different from HTTP in that with *Web Socket* prototocal there is no need to create a new TCP connection and exchange message with chock-full of headers between server and client every time. Intial *handshake* happens via HTTP Upgrade (section [14.42](https://www.ietf.org/rfc/rfc2616.txt)) only ONCE, then messages exchange without all the http headers independent of each other.
 
 # Chapter 8. Enterprise Java Beans
 ## Stateful Session Beans
