@@ -147,7 +147,6 @@ Solution: `git pust origin +<last_commit_hash>^:master`
 
 ## 20200902
 ### [`git mergetool -t gvimdiff`](https://vim.fandom.com/wiki/A_better_Vimdiff_Git_mergetool)
-### [`cherry-pick`](https://www.youtube.com/watch?v=-ndmel-4wsk&t=632s)
 
 ## 20201204
 **Problem**: There are lots of unnecessary *untracked* files in my master branch, I would like to remove them all
