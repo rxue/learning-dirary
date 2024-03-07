@@ -11,6 +11,22 @@ Web Socket is different from HTTP in that with *Web Socket* prototocal there is 
 ## Stateful Session Beans
 `@Stateful(passivationCapable=false)` : ejb with this annotation will not be passivated. and note that the default value of `passivationCapable` is `true` (check the API doc)
 
+# Chapter 10. Concurrency Utilities
+## Asynchronous Tasks
+core interface: `javax.enterprise.concurrent.ManagedExecutorService`
+
+> `ManagedExecutorService` supports at most one quality of service => ensures that the task will execute at most one time
+**OWN COMMENT**
+This is on base of the [Concurrent Utilities for Java EE 1.0 spec](#) > 3. Managed Objects > 3.1. ManagedExecutorService > 3.1.7 Quality of Service
+
+> `ManagedExecutorService` implementations must support **at-most-once** *quality of service*
+
+This *at-most-once* quality of service requirement guarantees that a task will **run at most one time**
+
+A *task* can implement `ManagedTask` so that `ManagedTaskListener` can be used to receive life-cycle event notifications
+
+
+
 # Chapter 12. Java Transaction
 ## User-Managed Transactions
 ## Container-Managed Transactions
