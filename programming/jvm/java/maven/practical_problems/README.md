@@ -134,3 +134,5 @@ error message:
 	[ERROR] 
 
 Solution: https://stackoverflow.com/questions/17043037/ant-malformed-uxxxx-encoding-in-propertyfile-task/71408534#71408534
+
+More resource about the `resolver-status.properties` from ChatGPT: It is part of Maven dependency mechanism, used internally by Maven to keep track of the state of artifact resolution and caching
