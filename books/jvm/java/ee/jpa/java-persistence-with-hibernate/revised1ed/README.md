@@ -8,10 +8,17 @@ design tip: critical to implement `hashCode` and `equals` methods of *ID class*
 #### Composite keys with annotations
 With JPA, composite keys are always encapsulated in a separate class, and the composite keys can be expressed in:
 
-1. `@Embeddable` + `@Id` - `@GeneratedValue` : annotation ID class with `@Embeddable` => this annotated ID class can be referenced as a field annotated with `@Id` in the entity class and `@GeneratedValue` has to be ommitted 
+Annoations on
+composite key object| `@Entity` using the composite             | description
+--------------------|-------------------------------------------|-----------------------
+`@Embeddable`       | `@Id` on the composite key field          |..
+nothing             | `@EmbeddedId` on the composite key field  |..
+nothing             | `@IdClass` on class level and `@Id` on each member of the composite key field |...
+
+1. `@Embeddable` on composite key entity + `@Id` - `@GeneratedValue` : annotation ID class with `@Embeddable` => this annotated ID class can be referenced as a field annotated with `@Id` in the entity class and `@GeneratedValue` has to be ommitted 
 2. annotation on the owning entity only without annotation on ID class:
- - `@EmbeddedId` : ID class can be referenced as a field with `@EmbeddedId` annotation
- - `@IdClass(ClassName.class)` + `@Id` : the owning entity class has to be annotated with `@IdClass(ClassName.class)` and all the properties of *ID class* has to be added to the owning entity class with `@Id` annotation (**NOTE! this strategy was added to JPA spec to support some legacy behavior**)
+ - nothing on `@EmbeddedId` : ID class can be referenced as a field with `@EmbeddedId` annotation
+ - `@IdClass(ClassName.class)` + `@Id` + `+ `@Id` + ... : the owning entity class has to be annotated with `@IdClass(ClassName.class)` and all the properties of *ID class* has to be added to the owning entity class with `@Id` annotation (**NOTE! this strategy was added to JPA spec to support some legacy behavior**)
 
 
 # Chapter 9: Working with objects
