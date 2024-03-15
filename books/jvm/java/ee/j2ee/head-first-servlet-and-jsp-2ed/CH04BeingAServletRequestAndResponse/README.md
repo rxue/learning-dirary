@@ -20,7 +20,7 @@ Book page 100
 Book page 101
 
 ### `ServletConfig` and `ServletContext`
-* one `ServletConfig` object per `Servlet`
+* one `ServletConfig` object per `Servlet` and `ServletConfig` is used to access the `ServletContext`
 * one `ServletContext` per web app
 
 page 104 (pdf page 129)
