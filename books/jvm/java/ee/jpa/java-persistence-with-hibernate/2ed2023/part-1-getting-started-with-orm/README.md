@@ -41,5 +41,8 @@ With Hibernate, You can make some accessor methods non-public or completely remo
 ### 5.3. Mapping Java and SQL types with converters
 #### 5.3.2. Creating custom JPA converters
 ##### Converting basic property values (1Z0-900)
-* `@Converter` is compulsory to the converter class, which `implements AttributeConverter`
-* `@Convert` is optional on the field of an entity, whose type is defined on a certain concrete `AttributeConverter`. Typically when the concrete `AttributeConverter` is annotated with `@Converter(autoPlay = true)`, it will be applied to any entity with field(s) having the corresponding type, but the field can be configured to use other converter with the help of `@Convert` with `convert` elements or be disabled with `disableConversion=true`
+* `@Converter` is *compulsory* to the converter class, which is also compulsory to `implements AttributeConverter`
+sample code: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/converter/MonetaryAmountConverter.java
+
+* `@Convert` is optional on the field of an entity when its corresponding converter annotated with `@Converter` has `autoApply = true`.
+sample code: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/model/advanced/Item.java 
