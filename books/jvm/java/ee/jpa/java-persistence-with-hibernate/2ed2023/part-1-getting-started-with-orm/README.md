@@ -44,5 +44,6 @@ With Hibernate, You can make some accessor methods non-public or completely remo
 * `@Converter` is *compulsory* to the converter class, which is also compulsory to `implements AttributeConverter`
 sample code: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/converter/MonetaryAmountConverter.java
 
-* `@Convert` is optional on the field of an entity when its corresponding converter annotated with `@Converter` has `autoApply = true`.
-sample code: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/model/advanced/Item.java 
+* `@Convert` is optional on the field of an entity when its corresponding converter annotated with `@Converter` has `autoApply = true`
+sample code: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/model/advanced/Item.java
+Note: the `@Convert` does not have `value` attribute, the converter is assigned through `converter` attribute and name is assigned through `attributeName`
