@@ -124,6 +124,10 @@ NOTE! use of `@Convert` onto the field of entity is optional. It comes into use 
 ### 6.8 *Polymorphic associations*
 #### 6.8.1 Polymorphic *many-to-one* associations
 #### 6.8.2 Polymorphic collections
+example of `abstract class` entity with `@Entity` annotation: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/model/inheritance/associations/onetomany/BillingDetails.java
+
+label: `1Z0-900`
+
 ## Chapter 7. Managing collections and entity associations
 Heart of ORM : manage associations between classes and relationships between tables
 **Major new features in JPA 2**
