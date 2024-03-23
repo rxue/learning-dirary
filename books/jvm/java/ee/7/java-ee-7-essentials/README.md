@@ -8,8 +8,16 @@
 Web Socket is different from HTTP in that with *Web Socket* prototocal there is no need to create a new TCP connection and exchange message with chock-full of headers between server and client every time. Intial *handshake* happens via HTTP Upgrade (section [14.42](https://www.ietf.org/rfc/rfc2616.txt)) only ONCE, then messages exchange without all the http headers independent of each other.
 
 # Chapter 8. Enterprise Java Beans
-## Stateful Session Beans
+## Stateful Session Beans (20240323)
 `@Stateful(passivationCapable=false)` : ejb with this annotation will not be passivated. and note that the default value of `passivationCapable` is `true` (check the API doc)
+
+label: `1Z0-900`
+
+# Chapter 9. Contexts and Dependency Injection
+## Events
+NOTE! `@Observes` is allowed to be annotated merely to the method parameter. Refer to the API documentation: https://docs.oracle.com/javaee/6/api/javax/enterprise/event/Observes.html
+
+label: `1Z0-900`
 
 # Chapter 10. Concurrency Utilities
 ## Asynchronous Tasks
