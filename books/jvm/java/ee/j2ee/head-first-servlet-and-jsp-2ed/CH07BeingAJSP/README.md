@@ -4,7 +4,7 @@
 
 page 283
 
-### Using the *page directive* to import the packages (20230819)
+### Using the *page directive* to import the packages (20230819, 20240323)
 
 *directive* : 
  * starts with `<%@ ` 
@@ -14,6 +14,8 @@ page 283
  * `<%@ page`
  * `<%@ include`
  * `<%@ taglib`
+
+label: `1Z0-900`
 
 example of *page directive*
 
