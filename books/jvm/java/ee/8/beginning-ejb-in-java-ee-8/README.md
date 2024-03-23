@@ -30,4 +30,27 @@ DAO classes don't need to be session beans because they will be used in the EJB 
 If `@Lock` is not explicitly on a singleton session class, the default is `@Lock(LockType.WRITE)`
 
 
+# Chapter 8: TRANSACTION MANAGEMENT
+## Transaction Support in EJB
+### EJB Transaction Services
+Operations in transactional context:
+* CRUD on JPA entities
+* JDBC operations
+* sending JMS messages to queue
+* executing MDBs
+* firing e-mail requests
+* invoking Web services
+* others
 
+
+## Session Bean Transactional Behavior in the Service Model
+### Container-Managed Transaction (CMT) Demarcation
+Available by default to
+ * *session beans*
+ * *MDBs*
+#### The `EJBContext.setRollbackOnly`and `getRollbackOnly` Methods
+In case of CMT, `MessageDrivenContext` (sub-class of `EJBContext`) methods can be used in the following ways:
+* `setRollbackOnly` - used for *error handling* to **ensure that the container will not commit the transaction.**
+* `getRollbackOnly`
+
+label: `1Z0-900`
