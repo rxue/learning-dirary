@@ -19,6 +19,23 @@ label: `1Z0-900`
 
 Web Socket is different from HTTP in that with *Web Socket* prototocal there is no need to create a new TCP connection and exchange message with chock-full of headers between server and client every time. Intial *handshake* happens via HTTP Upgrade (section [14.42](https://www.ietf.org/rfc/rfc2616.txt)) only ONCE, then messages exchange without all the http headers independent of each other.
 
+## Annotated Server Endpoint
+Types of message passed through `@OnMessage` method corresponds to those in the next section
+
+## Programmatic Server Endpoint
+`T` method parameter in `MessageHandler.Whole<T>` can process messages with the following types:
+
+ * text - `String`, `Reader`, primitive data types, others using `Decoder.Text` or `Decoder.TextStream`
+ * binary - `ByteBuffer`, `InputStream`
+ * pong  - `PongMessage`
+
+
+reference: https://docs.oracle.com/javaee%2F7%2Fapi%2F%2F/javax/websocket/MessageHandler.Whole.html
+
+
+
+label: `1Z0-900`
+
 # Chapter 8. Enterprise Java Beans
 ## Stateful Session Beans (20240323)
 `@Stateful(passivationCapable=false)` : ejb with this annotation will not be passivated. and note that the default value of `passivationCapable` is `true` (check the API doc)
