@@ -25,6 +25,9 @@ Web Socket is different from HTTP in that with *Web Socket* prototocal there is 
 
 label: `1Z0-900`
 
+## EJB Lite
+label: `1Z0-900`
+
 # Chapter 9. Contexts and Dependency Injection
 ## Events
 NOTE! `@Observes` is allowed to be annotated merely to the method parameter. Refer to the API documentation: https://docs.oracle.com/javaee/6/api/javax/enterprise/event/Observes.html
