@@ -1,3 +1,15 @@
+# Chapter 1. Java Platform, Enterprise Edition
+## Deliverables
+JCA allows connection to legacy system
+
+JCA - Java Connector Architecture
+
+In practice, configuration of JCA is not through `.war` but through the application server. Take *Wildfly* as an example, jca configuration is in `standard.xml` > `subsystem`
+
+referece: Java EE 7 The Big Picture
+
+label: `1Z0-900`
+
 # Chapter 2. Servlets
 ## WebServlet
 > The values defined in the deployment descriptor override the values defined using annotations
