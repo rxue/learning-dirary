@@ -4,7 +4,17 @@
 
 Reference page: 223/pdf 248
 
+## Session management
+### How can he track the client's answer?
+3 options
 
+* stateful session EJB
+* database
+* `HttpSession`
+
+label: `1Z0-900`
+
+Reference page: 227/pdf 252
 
 ## recognizing the client (page 230/pdf 255)
 Http protocol is *stateless*, meaning *Http protocol* use *stateless connection* => it is like each request is from a new client
