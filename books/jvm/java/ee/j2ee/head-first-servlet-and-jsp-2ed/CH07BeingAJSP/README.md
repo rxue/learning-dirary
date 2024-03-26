@@ -33,13 +33,20 @@ Typical *directives*:
 ### using *expressions*
 *scriptlet* code* : `<% out.println(Counter.getCount()); %>`
 
+<=>
+
 *expression* code : `<%= Counter.getCount() %>`
+ - no semi-colon
+ - avoid use of `out` implicit object
 
 Reference: page 288 (pdf page 313)
 
 
 
 ## Time to see a JSPgenerated servlet
+
+*implicit objects* are initialized when a JSP is translated into a servlet
+
 API			| *Implicit Object*
 ------------------------|------------------------
 `JspWriter`		| `out`
@@ -48,12 +55,13 @@ API			| *Implicit Object*
 `HttpServletSession`	| `session`
 `ServletContext`	| `application`
 `ServletConfig`		| `config`
-`Throwable`		| `exception`
+`Throwable`		| `exception` (only available when `isErrorPage="true"`)
 `PageContext`		| `pageContext`
 `Object`		| `object`
 
 
-page 298
+page 298 / pdf 323
+
 ## The Lifecycle and initialization of JSP
 ### Lifecyle of a JSP
 page 306
@@ -67,4 +75,17 @@ Page		| Does not apply					| `pageContext.setAttribute("foo", barObj)`
 
 > ...Remember, when you see "Context", think "application"
 
-page 311
+(page 311/pdf 336)
+
+#### three directives
+(page 314/pdf 339)
+
+##### attributes to the *page directive*
+
+`isErrorPage` - 
+ * defines whether the current page represents another JSP's error page. 
+ * default value: `false`
+ * if `isErrorPage="true"`, 
+
+
+
