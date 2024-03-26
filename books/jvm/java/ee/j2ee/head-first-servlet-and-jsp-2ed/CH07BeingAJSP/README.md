@@ -62,6 +62,9 @@ API			| *Implicit Object*
 
 page 298 / pdf 323
 
+label: `1Z0-900`
+
+
 ## The Lifecycle and initialization of JSP
 ### Lifecyle of a JSP
 page 306
