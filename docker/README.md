@@ -32,3 +32,9 @@ Solution from ChatGPT: docker's commands is originally in `/Applications/Docker.
 
 ### 20230924: remove all images by force
 `docker rmi -f $(docker images -q)`
+
+## 20240327
+### list all the docker processes regardless of the status
+`docker ps -a`
+### remove an EXITED container
+`docker container rm <container-name>`
