@@ -24,6 +24,8 @@ In another word, you can't call `ServletConfig.getInitParameter` inside a servle
 The only one `init` method of `HttpServlet` you need to *override* is the one with *no-arg*
 
 ## Context init parameters to the rescue
+context parameters are **available to the entire webapp**, not just a single servlet
+
 ```
 <servlet>
   	<servlet-name>BeerParamTests</servlet-name>
@@ -35,8 +37,9 @@ The only one `init` method of `HttpServlet` you need to *override* is the one wi
 	<param-value>clientheaderror@wickedlysmart.com</param-value>
 </context-param>
 ```
+NOTE! `<sevlet>` and `<context-param>` elements are on the same level - `<context-param>` is not nested inside `<servlet>`
 
-Page 157
+Page 157 / pdf 187
 
 ## Servlet and Context Init Parameters (page 160/pdf page 185)
 
