@@ -51,14 +51,15 @@ The most use case of `context parameter` : storing the database lookup name
 
 => if the init parameter, either servlet or context, changes in the *DD*, only redeployment could reflect the change
 
-## Context Parameter Limitations
-> You can put the DataSource lookup name in the in a context init parameter, and that's probably the most common use of the context parameters.
+on page 187(pdf page 163), *implicit objects* of JSP was mentioned
 
-Reference above is on page 164
+
+## Context Parameter Limitations (page 164/pdf page 189)
+Limit of *init parameters* : value is only `String`
 
 sole purpose in life is to initialize the app (and possibly to uninitialize it) - listener on servlet context
 
-Reference on page 165
+
 
 ## configuring a listener in the DD
 
