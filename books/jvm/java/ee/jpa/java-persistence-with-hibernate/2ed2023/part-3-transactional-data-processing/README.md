@@ -1,5 +1,8 @@
 # Part 3. Transactional data processing
 ## Chapter 10. Managing data
+### 10.2 `EntityManager` interface
+#### 10.2.9. *Flushing* the *persistence context*
+> By default, Hibernate flushes the persistence context of an `EntityManager` and synchronizes change with the database whenever the *joined transaction* is *committed*
 
 ## Chapter 11. Transactions and Concurrency
 ### 11.2 Controlling Concurrent Access
