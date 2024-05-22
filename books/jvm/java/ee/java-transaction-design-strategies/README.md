@@ -8,5 +8,7 @@ It is used to manages *transactions*, not *connections* in local transaction mod
 * `begin()`
 * `commit()`
 * `rollback()`
+## The Programmatic Transactional Model
+### Programmatic Transaction Coding Traps
 
 label: `1Z0-900`
