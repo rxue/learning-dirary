@@ -19,4 +19,5 @@ Base on official `git checkout --help`, the part `<remote>/<branch>` is coined a
 
 Example: `git checkout origin/master -- abc.java`
 
-
+## Checkout a remote tag
+example: `git checkout -b 3.22.5 tags/3.22.5`
