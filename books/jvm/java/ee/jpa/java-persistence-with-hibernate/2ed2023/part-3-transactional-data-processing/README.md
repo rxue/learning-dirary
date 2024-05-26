@@ -1,6 +1,19 @@
 # Part 3. Transactional data processing
 ## Chapter 10. Managing data
 ### 10.2 `EntityManager` interface
+#### 10.2.2. Making data persistent
+NOTE! When using *Hibernate*, `PersistenceUnitUtil#getIdentifier(e)` never returns `null` your identity is a *primitive*. This is also a key reason for using auto-boxed object type instead of *primitive*
+
+**MY OWN**
+The states correspondence in this book against that in JPA spec
+This book's state | state in JPA spec | state of id | in *persistence context* or not i.e. `EntityManager#contains(e)`| explanation
+------------------|-------------------|-------------|-----------------------------------------------------------------|---------------------
+ transient        | *new*             | unassigned  | `false`                                                         | ?
+ persistent       | *managed*         | assigend    | `true`                                                          | when `persist()` is called, *id* of the entity is assigned and the entity is managed by the *persistence context*
+ detached         | *detached*        | assigned    | `false`                                                         | detached from *persistence context*
+ ??               | removed           | assigned    | `true`                                                          | `EntityManager#remove()` - scheduled for being removed from the database
+
+
 #### 10.2.9. *Flushing* the *persistence context*
 > By default, Hibernate flushes the persistence context of an `EntityManager` and synchronizes change with the database whenever the *joined transaction* is *committed*
 
