@@ -6,16 +6,40 @@ NOTE! When using *Hibernate*, `PersistenceUnitUtil#getIdentifier(e)` never retur
 
 **MY OWN**
 The states correspondence in this book against that in JPA spec
-This book's state | state in JPA spec | state of id | in *persistence context* or not i.e. `EntityManager#contains(e)`| explanation
-------------------|-------------------|-------------|-----------------------------------------------------------------|---------------------
- transient        | *new*             | unassigned  | `false`                                                         | ?
- persistent       | *managed*         | assigend    | `true`                                                          | when `persist()` is called, *id* of the entity is assigned and the entity is managed by the *persistence context*
- detached         | *detached*        | assigned    | `false`                                                         | detached from *persistence context*
- ??               | removed           | assigned    | `true`                                                          | `EntityManager#remove()` - scheduled for being removed from the database
+This book's state | state in JPA spec | state of id | in *persistence context* or not(`EntityManager#contains(e)`)  | explanation
+------------------|-------------------|-------------|---------------------------------------------------------------|---------------------
+ transient        | *new*             | unassigned  | `false`                                                       | ?
+ persistent       | *managed*         | assigend    | `true`                                                        | when `persist()` is called, *id* of the entity is assigned and the entity is managed by the *persistence context*
+ detached         | *detached*        | assigned    | `false`                                                       | detached from *persistence context*
+ removed          | *removed*         | assigned    | `false`                                                       | `EntityManager#remove()` - scheduled for being removed from the database
 
+#### 10.2.3 Retrieving and modifying persistent data
+
+**Key takeaways**
+ 
+* *Hibernate* propagate state change to the database as late as possible, towards the end of the transaction
+* DML statements usually create locks in the database that are held until transaction completes 
+* If one wants to include only modified columns in the Hibernate's generated SQL statement, *dynamic SQL generation* should be enabled, refer to section 4.3.2
+* *persistence context* enables *repeatable read*
+
+#### 10.2.4. Getting a reference
+managed entity becomes *detached* when its residing persistence context is closed
+
+#### 10.2.5. Making data transient
+
+#### 10.2.6. Refreshing data
+In practice, most applications don't have to mannually refresh in-memory state; concurrent modifications are typically resolved at transaction commit time
 
 #### 10.2.9. *Flushing* the *persistence context*
 > By default, Hibernate flushes the persistence context of an `EntityManager` and synchronizes change with the database whenever the *joined transaction* is *committed*
+
+### 10.3. Working with *detached* state
+#### 10.3.2. implementing equality methods
+**Key takeaways**
+It is a bad practice to use the `id` field only to implement `equals`
+main reason: identifier values aren't assigned by Hibernate until instance becomes persistent. *hashCode* value changes before and after the entity becomes *managed* with id value generated. 
+
+Think about an entity `Person` including a `Set` of `Child` with `@OneToMany(cascade = CascadeType.ALL)` associations, meaning a *new* `Person` entity with a `Set` of `Child`  is expected to be persisted to the *persistence context* in cascade. In this case if the `Child.equals` is implemented by using `id`, it is possible to add only one new `Child` (without id yet) to the `Person`'s `Set<Children>`
 
 ## Chapter 11. Transactions and Concurrency
 ### 11.2 Controlling Concurrent Access
