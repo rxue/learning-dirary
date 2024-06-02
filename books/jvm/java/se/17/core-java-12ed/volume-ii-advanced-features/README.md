@@ -1,3 +1,11 @@
+# Chapter 5: Database Programming
+## 5.10. Connection Management in Web and Enterprise Applications
+`DataSource` is related to
+
+ * `jndi`
+ * application server
+ * *connection pool*
+
 # Chapter 8: Scripting, Compiling, and Annotation Processing
 ## 8.5 Standard Annotations
 ### 8.5.1 Annotations for Compilation
