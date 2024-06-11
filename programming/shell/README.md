@@ -28,4 +28,7 @@ no error if existing: `-p` option
 ## 20231204: how to replace text in a file
 with `-i` option: `sed -i`
 Based on the *manual* of `sed`, `-i` is the same as `--in-place`
-
+# `xargs`
+## Use Case: there is a list of `git` branches with the same prefix, e.g. `FF-123`, I would like to remove all those branches in one go
+`git branch |grep "FF-123" |xargs -n 1 git branch -D`
+In the command above, the `-n 1` ensures that each branch name is processed as a separate argument based on *ChatGPT*
