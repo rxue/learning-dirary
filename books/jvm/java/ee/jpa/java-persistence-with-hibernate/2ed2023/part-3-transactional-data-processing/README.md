@@ -31,7 +31,11 @@ managed entity becomes *detached* when its residing persistence context is close
 In practice, most applications don't have to mannually refresh in-memory state; concurrent modifications are typically resolved at transaction commit time
 
 #### 10.2.9. *Flushing* the *persistence context*
-> By default, Hibernate flushes the persistence context of an `EntityManager` and synchronizes change with the database whenever the *joined transaction* is *committed*
+*Hibernate*, as a JPA implementation, synchronizes at the following time:
+* when a joined JTA system transaction is *committed*
+* Before a query is executed - not `find()` but when using API such as `javax.persistence.Query` etc.
+* explicit `flush()`
+
 
 ### 10.3. Working with *detached* state
 #### 10.3.2. implementing equality methods
@@ -40,6 +44,10 @@ It is a bad practice to use the `id` field only to implement `equals`
 main reason: identifier values aren't assigned by Hibernate until instance becomes persistent. *hashCode* value changes before and after the entity becomes *managed* with id value generated. 
 
 Think about an entity `Person` including a `Set` of `Child` with `@OneToMany(cascade = CascadeType.ALL)` associations, meaning a *new* `Person` entity with a `Set` of `Child`  is expected to be persisted to the *persistence context* in cascade. In this case if the `Child.equals` is implemented by using `id`, it is possible to add only one new `Child` (without id yet) to the `Person`'s `Set<Children>`
+
+#### 10.3.3. Detaching entity instances
+**Key takeaways**
+modifying the loaded entity after the *persistence context* is closed will not be persisted to database
 
 ## Chapter 11. Transactions and Concurrency
 ### 11.2 Controlling Concurrent Access
@@ -102,6 +110,9 @@ They are legacy from JPA 1.0 and not preferred for new applications
 ## Chapter 12. Fetch plans, strategies and profiles
 ### 12.1. Lazy and eager loading
 #### 12.1.1. Understanding entity proxies
+#### 12.1.4. Eager loading of associations and collections
+in `@OneToMany` association, the *default* value of its `fetch` attribute is `FetchType.LAZY`. This indicates that `FetchType.EAGER` is not recommended in practice
+ 
 ### 12.2. Selecting a fetch strategy
 #### 12.2.1. The *n+1 selects* problem
 #### 12.2.2. The *Cartesian product* problem
