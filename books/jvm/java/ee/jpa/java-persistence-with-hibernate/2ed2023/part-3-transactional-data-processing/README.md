@@ -51,7 +51,6 @@ modifying the loaded entity after the *persistence context* is closed will not b
 
 ## Chapter 11. Transactions and Concurrency
 ### 11.2 Controlling Concurrent Access
-
 #### 11.2.1 Understanding database-level concurrency
 ##### Choosing an isolation level
 * eliminate *read uncommitted*
@@ -59,6 +58,8 @@ modifying the loaded entity after the *persistence context* is closed will not b
 
 JPA spec's assumption of the default level: *read committed* => developers using JPA have to deal with *unrepeatable read*, *phantom read* and the *last commit wins* problems
 versioning switches to *first commit win*
+
+In a *JPA* application using *Hibernation* implementation, *JDBC* `Connection` can be obtained from native `org.hibernate.Session` API
 
 #### 11.2.2 Optimistic Concurrency Control
 use case: when concurrent modifications are rare

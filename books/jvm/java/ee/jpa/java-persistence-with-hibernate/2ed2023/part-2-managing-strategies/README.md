@@ -151,7 +151,19 @@ Heart of ORM : manage associations between classes and relationships between tab
 **My own practice of unidirectional `@OneToMany`:** https://github.com/rxue/dictionary/issues/129
 
 #### 7.3.2. Making it bidirectional
-primary benifit of `@OneToMany` : *navigational access* to data
+Mapping collection in `@OneToMany` association has the following 2 features:
+* *lazy load* on the collection, in the example the `Bid` collection is loaded only when `item.getBids()` is called => primary benifit of `@OneToMany`: *navigational access* to data - access data data by calling only methods of Java *domain model*
+* *cascade* state change: typically on *delete* and *save* operation (configurable)
+
+
+primary benifit of `@OneToMany`: *navigational access* to data - access data data by calling only methods of Java *domain model*
+
+But in practice, ask yourself do you always need all of the *many* side of `@OneToMany`, i.e. the `Bid` collections in the example? If you usually need only a *subset* of the collection or need sorting, the extra Java code brings about significant complexity! This is the mentioned *maintenance baggage*. The author mentioned:
+
+> In our experience, this is frequent source of problems and bugs, especially for ORM beginners
+
+`mappedBy` element is compulsory on the *one* side of the `@OneToMany` association
+
 
 ## Chapter 8. Advanced entity association mappings
 ### 8.2 one-to-many associations

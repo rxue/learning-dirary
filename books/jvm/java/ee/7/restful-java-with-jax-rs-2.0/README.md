@@ -17,6 +17,10 @@ Header:
 ## Communicate Statelessly
 * no client session data stored on the server. If there is need to be session-specific data, it should be held and maintained by the client and transferred to the server with eash request as needed
 
+# Chapter 2: Designing RESTful Services
+## Model the URIs
+`LineItem`s are aggregated within `Order` => `LineItem` is a sub-resource
+
 # Chapter 3: Your First JAX-RS Service
 ## Developing a JAX-RS RESTful Service
 ### CustomerResource: Our JAX-RS Service
