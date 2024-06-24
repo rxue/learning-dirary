@@ -158,7 +158,7 @@ Mapping collection in `@OneToMany` association has the following 2 features:
 
 primary benifit of `@OneToMany`: *navigational access* to data - access data data by calling only methods of Java *domain model*
 
-But in practice, ask yourself do you always need all of the *many* side of `@OneToMany`, i.e. the `Bid` collections in the example? If you usually need only a *subset* of the collection or need sorting, the extra Java code brings about significant complexity! This is the mentioned *maintenance baggage*. The author mentioned:
+But in practice, ask yourself do you always need all of the *many* side of `@OneToMany`, i.e. the `Bid` collections in the example? **If you usually need only a *subset* of the collection or need sorting, the extra Java code brings about significant complexity! This is the mentioned *maintenance baggage*** As to such case, the author mentioned:
 
 > In our experience, this is frequent source of problems and bugs, especially for ORM beginners
 
