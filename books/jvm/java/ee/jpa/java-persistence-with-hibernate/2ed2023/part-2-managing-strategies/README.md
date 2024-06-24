@@ -164,6 +164,8 @@ But in practice, ask yourself do you always need all of the *many* side of `@One
 
 `mappedBy` element is compulsory on the *one* side of the `@OneToMany` association
 
+#### 7.3.3. Cascading state
+demo code: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/examples/src/test/java/org/jpwh/test/associations/OneToManyBidirectional.java
 
 ## Chapter 8. Advanced entity association mappings
 ### 8.2 one-to-many associations
