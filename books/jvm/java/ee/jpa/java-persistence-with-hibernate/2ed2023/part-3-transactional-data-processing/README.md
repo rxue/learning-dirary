@@ -119,7 +119,10 @@ in `@OneToMany` association, the *default* value of its `fetch` attribute is `Fe
 #### 12.2.2. The *Cartesian product* problem
 demo code for Entity causing *cartesian product* : [`org.jpwh.model.fetching.cartesianproduct.Item`](http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/model/fetching/cartesianproduct/Item.java)
 
-question: why *cartesian product* happens when eager fetching more than one collection at one? what about only one collection is eagerly fetch?
+> Eager fetching more than one collection at once with SQL `join` operator is the fundamental issue, no matter what the collection content is
+
+NOTE! The *cartesian product* in the given example is as per that one `Item` entity instance. At the end of this section it was mentioned that solution for such cartesian product is to use 3 separate queries
+
 #### 12.3. Using fetch profiles
 ##### 12.3.2. Working with entity graphs
 *enity graph* is used to change the *default lazy fetch* of entities to *eager fetch*
