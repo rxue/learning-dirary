@@ -117,4 +117,10 @@ in `@OneToMany` association, the *default* value of its `fetch` attribute is `Fe
 ### 12.2. Selecting a fetch strategy
 #### 12.2.1. The *n+1 selects* problem
 #### 12.2.2. The *Cartesian product* problem
+demo code for Entity causing *cartesian product* : [`org.jpwh.model.fetching.cartesianproduct.Item`](http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/model/fetching/cartesianproduct/Item.java)
+
+question: why *cartesian product* happens when eager fetching more than one collection at one? what about only one collection is eagerly fetch?
+#### 12.3. Using fetch profiles
+##### 12.3.2. Working with entity graphs
+*enity graph* is used to change the *default lazy fetch* of entities to *eager fetch*
 
