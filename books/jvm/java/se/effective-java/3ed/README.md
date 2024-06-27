@@ -2,7 +2,6 @@
 ## Item 1: Consider static factory methods instead of constructors
 > A *service provider framework* is a system in which providers implement a service, and the system makes implementations available to clients, decoupling the clients from implementations.
 
-
 # Chapter 4 Classes and Interfaces
 ## Item 15: Minimize the accessibility of classes and members
 *stray class*
@@ -38,6 +37,16 @@ a way to associate different behavior with different constants: declare *abstrac
 
 * `computeIfAbsent` in `Map` since Java 8
 * `sort` in `Arrays` in legacy Java
+
+**practical takeaways**
+benefit of using traditional code blocks over *lambda*:
+
+ * read or modify any local variable in scope VS from a *lambda* you can **only** read `final` or *effectively final* variables => no way to modify any local variables
+ * `return` value from encloding method
+ * `break`/`continue` enclosing loop
+ * `throw` *checked exception*
+
+None of the above are possible in *lambda*
 
 ## Item 46: Prefer side-effect-free functions in streams (20230128)
 ## Item 47: Prefer `Collection` to `Stream` as a return type
