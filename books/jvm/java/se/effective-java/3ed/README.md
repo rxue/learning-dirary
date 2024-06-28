@@ -34,6 +34,11 @@ a way to associate different behavior with different constants: declare *abstrac
 
 # Chapter 7: Lambda and Streams
 ## Item 45: Use Streams Judiciously (202301)
+stream operations:
+
+ * *intermediate*
+ * *terminal*
+
 
 * `computeIfAbsent` in `Map` since Java 8
 * `sort` in `Arrays` in legacy Java
@@ -48,7 +53,12 @@ benefit of using traditional code blocks over *lambda*:
 
 None of the above are possible in *lambda*
 
-## Item 46: Prefer side-effect-free functions in streams (20230128)
+## Item 46: Prefer side-effect-free functions in streams (20230128, 20240628)
+`forEach` is among the least powerful of the *terminal operations* and the least stream-friendly
+
+> The `forEach` operation should be used only to report the result of a *stream* computation, not to perform the computation.
+
+
 ## Item 47: Prefer `Collection` to `Stream` as a return type
 
  `Stream` <-> `Iterable`
