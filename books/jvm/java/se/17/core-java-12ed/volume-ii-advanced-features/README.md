@@ -1,4 +1,41 @@
 # Chapter 5: Database Programming
+## 5.4. Working with JDBC Statements
+### 5.4.1. Executing SQL Statements
+#### `java.sql.Statement`
+**Takeaway on `ResultSet getResultSet()` method**
+`getResultSet()` should be **called only once per executed statement**
+
+Typical use case is when `execute(String sqlStatement)` is called beforehands and returns `true`, which means `ResultSet` is generated under the hood. `getResultSet()` comes into play to get the generated `ResultSet()`
+
+**Practical mistake** I made:
+
+```
+executeTransaction("select * from explanation", preparedStatement -> {
+            try (ResultSet resultSet = preparedStatement.getResultSet()) {
+                int rowCount = 0;
+                while (resultSet.next())
+                    rowCount++;
+                assertEquals(2, rowCount);
+            }
+        });
+```
+In the code above, the `prepatedStatement` is retrieved through `connection.prepareStatement("select * from explanation")`, and then the `getResultSet()` is **called without execution** , thus returned `null`, which is not expected.
+
+Correct way should be to use `preparedStatement.executeQuery()` instead to get the `ResultSet`:
+
+```
+executeTransaction("select * from explanation", preparedStatement -> {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                int rowCount = 0;
+                while (resultSet.next())
+                    rowCount++;
+                assertEquals(2, rowCount);
+            }
+        });
+```
+
+My own comment: This might be the early design flaw of the `Statement` interface
+
 ## 5.10. Connection Management in Web and Enterprise Applications
 `DataSource` is related to
 
