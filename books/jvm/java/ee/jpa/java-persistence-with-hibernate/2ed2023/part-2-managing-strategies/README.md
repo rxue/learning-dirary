@@ -151,6 +151,8 @@ Heart of ORM : manage associations between classes and relationships between tab
 **My own practice of unidirectional `@OneToMany`:** https://github.com/rxue/dictionary/issues/129
 
 #### 7.3.2. Making it bidirectional
+demo code reference: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/model/src/main/java/org/jpwh/model/associations/onetomany/bidirectional/Bid.java
+
 Mapping collection in `@OneToMany` association has the following 2 features:
 * *lazy load* on the collection, in the example the `Bid` collection is loaded only when `item.getBids()` is called => primary benifit of `@OneToMany`: *navigational access* to data - access data data by calling only methods of Java *domain model*
 * *cascade* state change: typically on *delete* and *save* operation (configurable)
