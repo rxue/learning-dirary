@@ -34,6 +34,8 @@ Based on the *manual* of `sed`, `-i` is the same as `--in-place`
 In the command above, the `-n 1` ensures that each branch name is processed as a separate argument based on *ChatGPT*
 
 # `lsof`
-## Problem: Port ``8080` is already in use
-## Solution: `lsof -i :8080`
+## network releated option `-i`
+`lsof -i` to list all the opening ports
+### Problem: Port ``8080` is already in use
+Solution: `lsof -i :8080`
 
