@@ -1,8 +1,9 @@
 # [Mode](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes) of vim
-## Ex mode
+## Ex mode is not the 4 main modes
 
-
-
+# Motion
+ * `k` up
+ * `j` (jump) down 
 
 # Delete - `d`
 ## 20240121: delete lines from a line number e.g. 10 to the end of file 
