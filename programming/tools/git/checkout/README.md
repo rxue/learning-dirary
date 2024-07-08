@@ -21,3 +21,9 @@ Example: `git checkout origin/master -- abc.java`
 
 ## Checkout a remote tag
 example: `git checkout -b 3.22.5 tags/3.22.5`
+
+## 20240708 Question: I have all code in branch A, I would like to replace all contents in master with all contents in branch A
+### Answer
+1. checkout to master
+2. command: `git checkout A -f .`
+
