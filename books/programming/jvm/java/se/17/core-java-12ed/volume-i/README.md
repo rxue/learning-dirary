@@ -1,3 +1,11 @@
+# Chapter 4: Objects and Classes
+## 4.7. Records
+### 4.7.1 The Record Concept
+#### NOTE:
+`toString()`, `equals()`, `hashCode()` are automatically implemented in `record`
+
+MY OWN TAKEAWAY: the automatic implementations of these 3 methods can be used in any other non-performance-critical classes, i.e. initialize private `record` inside the class and implements those methods by using the sames methods of the `record`
+
 # Chapter 5: Inheritance
 ## 5.2. The `equals` Method
 Recall from Chapter 4, 
