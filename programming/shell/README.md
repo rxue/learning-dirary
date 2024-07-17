@@ -41,3 +41,6 @@ In the command above, the `-n 1` ensures that each branch name is processed as a
 ### Problem: Port ``8080` is already in use
 Solution: `lsof -i :8080`
 
+# `xargs`
+## Bad Use Cases
+`export $(cat var.env|xargs)`
