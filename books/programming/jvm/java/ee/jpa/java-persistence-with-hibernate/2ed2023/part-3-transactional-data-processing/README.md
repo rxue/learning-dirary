@@ -1,5 +1,8 @@
 # Part 3. Transactional data processing
 ## Chapter 10. Managing data
+**New features in JPA 2***
+`EntityManager#unwrap()` to get *vendor-specific* API
+
 ### 10.2 `EntityManager` interface
 #### 10.2.2. Making data persistent
 NOTE! When using *Hibernate*, `PersistenceUnitUtil#getIdentifier(e)` never returns `null` your identity is a *primitive*. This is also a key reason for using auto-boxed object type instead of *primitive*
