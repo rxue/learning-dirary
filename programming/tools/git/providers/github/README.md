@@ -14,19 +14,19 @@ send REST API request to create the new repository in github
 curl -L \
   -X POST \
   -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer <YOUR-TOKEN>" \
+  -H "Authorization: Bearer <token_placeholder>" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   https://api.github.com/user/repos \
-  -d '{"name":"Hello-World","description":"This is your first repo!","homepage":"https://github.com","private":false,"is_template":true}'
+  -d '{"name":"dictionary-ci-cd","description":"CI/CD pipelines for dictionary project","homepage":"https://github.com","private":false,"is_template":true}'
 ```
 then cd to the local directory, where you consider as the root of the remote repository and execute the following commands in sequence
 
 ```
 git init
-git remote add origin git@github.com:rxue/dictionary-jpa.git 
 git add .
 git commit -m "message"
 git branch -m main
+git remote add origin git@github.com:rxue/dictionary-jpa.git 
 git push --set-upstream origin main
-git push origin
 ```
+NOTE that the last statement push added files directly to remote origin
