@@ -34,10 +34,10 @@ managed entity becomes *detached* when its residing persistence context is close
 In practice, most applications don't have to mannually refresh in-memory state; concurrent modifications are typically resolved at transaction commit time
 
 #### 10.2.9. *Flushing* the *persistence context*
-*Hibernate*, as a JPA implementation, synchronizes at the following time:
-* when a joined JTA system transaction is *committed*
+*Hibernate*, as a JPA implementation, synchronizes, i.e. `update`/`ìnsert`/`delete` statement is executed in the database, at the following time:
+* when a joined JTA system transaction is *committed* (by default)
 * Before a query is executed - not `find()` but when using API such as `javax.persistence.Query` etc.
-* explicit `flush()`
+* explicit invocation of `flush()` method
 
 
 ### 10.3. Working with *detached* state
