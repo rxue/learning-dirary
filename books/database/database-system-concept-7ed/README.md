@@ -3,6 +3,9 @@
 ### 2.3 Keys
 *superkey* > *candidate key* > *primary key*
 
+*superKey* can identify a unique tuple in the relation*
+
+
 ## Chapter 3: Introduction to SQL
 ### 3.2. SQL Data Definition
 #### 3.2.1. Basic Data Types
