@@ -26,9 +26,6 @@ no error if existing: `-p` option
 
 # Difference between executing a script as executable and as a script with `source` command or `.` in one terminal sessioni
 
-# `sed`
-## 20231204: how to replace text in a file
-with `-i` option: `sed -i`
 Based on the *manual* of `sed`, `-i` is the same as `--in-place`
 # `xargs`
 ## Use Case: there is a list of `git` branches with the same prefix, e.g. `FF-123`, I would like to remove all those branches in one go
@@ -43,6 +40,3 @@ In the command above, the `-n 1` ensures that each branch name is processed as a
 ### Problem: Port `8080` is already in use
 Solution: `lsof -i :8080`
 
-# `sed`
-## get content from a specific line number
-`sed -n '<line_number>p' <file>`
