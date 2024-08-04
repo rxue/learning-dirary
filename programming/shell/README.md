@@ -34,13 +34,15 @@ Based on the *manual* of `sed`, `-i` is the same as `--in-place`
 ## Use Case: there is a list of `git` branches with the same prefix, e.g. `FF-123`, I would like to remove all those branches in one go
 `git branch |grep "FF-123" |xargs -n 1 git branch -D`
 In the command above, the `-n 1` ensures that each branch name is processed as a separate argument based on *ChatGPT*
+## Bad Use Cases
+`export $(cat var.env|xargs)`
 
 # `lsof`
 ## network releated option `-i`
 `lsof -i` to list all the opening ports
-### Problem: Port ``8080` is already in use
+### Problem: Port `8080` is already in use
 Solution: `lsof -i :8080`
 
-# `xargs`
-## Bad Use Cases
-`export $(cat var.env|xargs)`
+# `sed`
+## get content from a specific line number
+`sed -n '<line_number>p' <file>`
