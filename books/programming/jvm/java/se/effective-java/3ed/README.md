@@ -25,6 +25,9 @@
 * Interfaces are ideal for defining mixins (a type that a class can implement in addition to its "primary type"). NOTE! *Abstract classes* can't be used to define mixins for because they can't be retrofitted onto existing classes in that a class cannot have more than one parent
 * *skeletal implementation class* - *Abstract Interface* : application in *collections framework* in Java SE: `AbstractCollection` , `AbstractSet` , `AbstractList` , `AbstractMap`
  * *simulated multiple inheritance*
+# Chapter 5 Generics
+## Item 28: Prefer lists to arrays
+`List.of(...)` introduced, and note that there is `List.of()` without any parameters to initialize an empty list
 
 # Chapter 6: `enum`s and *Annotations*
 ## Item 34: Use `enum`s instead of `int` constants
