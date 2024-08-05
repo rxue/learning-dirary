@@ -19,6 +19,10 @@ bad names examples:
 * `DealWithOutput()`
 
 ## 7.5 How to Use Reoutine Parameters
+
+*Put parameters in input-modify-output order*
+ *input-only* first, *input-and-output* second, *output-only* third
+
  * limit the number of routine's parameter to about 7
  * Use named parameters - scenario to use it: when you have longer-than-average lists of identically typed arguments that there is higher probability to insert a parameter mismatch and compiler would not detect it!
 ## 7.6 Considerations in the use Use of Functions
