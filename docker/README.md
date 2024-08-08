@@ -41,5 +41,8 @@ NOTE that remove image by force does not kill the corresponding running containe
 ## 20240327
 ### list all the docker processes regardless of the status
 `docker ps -a`
+
+This can be compared with `docker ps`, which list only running container
+
 ### remove an EXITED container
 `docker container rm <container-name>` or `docker rm -f <container-name>`
