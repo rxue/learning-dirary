@@ -27,14 +27,19 @@ Solution: `docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{
 ### 20230727: don't know why my docker command disappeared in my macOS even though the docktop version exists
 Solution from ChatGPT: docker's commands is originally in `/Applications/Docker.app/Contents/Resources/bin`
 
+## Docker Image
+docker image cannot be removed while a container built on base of it is running
+
 # Docker commands
 ## `docker build`
 
-### 20230924: remove all images by force
+## 20230924: remove all images by force
 `docker rmi -f $(docker images -q)`
+
+NOTE that remove image by force does not kill the corresponding running container
 
 ## 20240327
 ### list all the docker processes regardless of the status
 `docker ps -a`
 ### remove an EXITED container
-`docker container rm <container-name>`
+`docker container rm <container-name>` or `docker rm -f <container-name>`
