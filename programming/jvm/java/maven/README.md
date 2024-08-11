@@ -2,10 +2,13 @@
 ## `-U,--update-snapshots`
 > For a check for missing releases and updated snapshots on remote repositories
 
-Use case (`20220329`): Out project removed the previous Nexus mirror and moved all source code from *bitbucket* to *gitlab*, so the *local repository*, i.e. `~/.m2`, should be synced. In this case `-U` comes into play   
+Use case (`20220329`): Out project removed the previous Nexus mirror and moved all source code from *bitbucket* to *gitlab*, so the *local repository*, i.e. `~/.m2`, should be synced. In this case `-U` comes into play
 
-# Configuration
-## MUST: [Have a JDK installation on your system. Either set the `JAVA_HOME` environment variable pointing to your JDK installation or have the `java` executable on your `PATH`](https://maven.apache.org/install.html) (20220625)
+# [Installation](https://maven.apache.org/install.html)
+## Configuration
+### MUST: [Have a JDK installation on your system. Either set the `JAVA_HOME` environment variable pointing to your JDK installation or have the `java` executable on your `PATH`](https://maven.apache.org/install.html) (20220625, 20240811)
+
+> Have a JDK installation on your system. Either set the `JAVA_HOME` environment variable pointing to your JDK installation or have the java executable on your `PATH`
 
 This statement is from the [Maven install documentation](https://maven.apache.org/install.html). It implies that *Maven* still makes use of the Java compiler from its residing operating system, say it finds the Java compiler on base of the `JAVA_HOME` environment variable and, in case the `JAVA_HOME` is absent Maven will fallback to get the `java` executable like any other program from the operating system.
 
