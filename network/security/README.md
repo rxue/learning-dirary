@@ -22,5 +22,6 @@ TODO:
 * `keytool` - first go to check is the `keytool` already embedded in the *openJDK* as it is already in the Oracle JDK 
 * man in the middle attack
 
-
+# 20240811
+Important thing about using two-factor authentication in github: when you want to add github account to an authenticator on a new phone, the two-factor authentication in github settings has to be disabled and then added again so that the QR code can be generated!
 
