@@ -9,6 +9,8 @@ NOTE that the *namespace* `io.github.rxue` is ready for use by default when logi
 There are the following errors after the first deployment with the minimum configuration
 
 > * Javadocs must be provided but not found in entries
+Reference: https://central.sonatype.org/publish/publish-maven/#javadoc-and-sources-attachments
+
 > * Missing signature for file: dictionary-jpa-1.0-SNAPSHOT.jar
 > * Missing signature for file: dictionary-jpa-1.0-SNAPSHOT.pom
 > * Sources must be provided but not found in entries
