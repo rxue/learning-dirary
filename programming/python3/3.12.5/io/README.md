@@ -3,6 +3,6 @@
 Note that after a file is opened, the initialized `as f` is a list of string directly!
 
 * list
- * sub-list
-  * sub-sublist
+  * sub-list
+    * sub-sublist
 * list 2
