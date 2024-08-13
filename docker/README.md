@@ -44,5 +44,15 @@ NOTE that remove image by force does not kill the corresponding running containe
 
 This can be compared with `docker ps`, which list only running container
 
-### remove an EXITED container
+## remove an EXITED container
 `docker container rm <container-name>` or `docker rm -f <container-name>`
+
+## `docker system`
+### Remove all unused containers, networks, images (both dangling and unused), and optionally, volumes
+`docker system prune --all --volumes --force`
+
+*NOTE!*
+* this command does not kill and remove running containers, and if there is running container, the image of it will not be removed either
+* `--volumes` option removes volumes
+### Check docker disk usage in human-readable format on the system level
+``docker system df -v`
