@@ -10,4 +10,8 @@ company can shorten a development schedule by:
 # Chapter 22: Developer Testing
 ## 22.4 Typical Errors
 
+# Chapter 23: Debugging
+## 23.2 Tips for finding a Defect
+### Tips for Finding Defects
+> If you're having a hard time finding a defect, it might be because the code isn't well written.
 
