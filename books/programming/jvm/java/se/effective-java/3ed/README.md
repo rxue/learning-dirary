@@ -84,6 +84,35 @@ None of the above are possible in *lambda*
 * Prefer two-element `enum` types to `boolean` parameters
 
 ## Item 55: Return optionals judiciously
+
+Motivation of using optional
+
+ * throwing Exception is expensive, entire stack trace is captured when an exception is created
+ * `NullPointerException` caused by returning `null`
+
+* `Optional.orElse()` is used to specify default value
+* `Òptional.orElseThrow()` is an *exception factory
+
+New features in Java SE 9
+
+* `Optional.or()`
+* `Optional.ifPresentOrElse()`
+
+> Many uses of `ìsPresent()` can profitabily be replaced by one of the methods mentioned above
+
+=> Use `isPresent()` as the last resort
+
+> Never return a null value from an Optional-returning method
+
+> Container types, including *collections*, `Map`, `Stream`, *arrays* and `Optional` should not be wrapped in optionals
+
+> Never return an optional of a boxed primitive type
+
+> Never use `Optional` as map values
+
+Storing `Optional` in an *instance field* is a "bad" code smell
+
+
 ## Item 56: Write doc comments for all exposed API elements
 > **The doc comment for a method should describe succinctly the contract between the method and its client** ... Typically *preconditions* are described implicitly by the `@throws` tags for *unchecked exceptions*;
 > To describe a method's contract fully, the doc comment should have an `@param` tag for every parameter, and `@return` tag unless the method has a void return type, and an `@throws` for every exception thrown by the method, whether checked or unchecked.
