@@ -8,7 +8,16 @@ JPA specification:
  * peristence engine does: *dirty checking*, association, fetch, etc.
 ## Chapter 2. Starting a project
 ### 2.2. "Hello World" with JPA
-#### 2.2.1. Configuring a persistence unit
+#### 2.2.1. Configuring a *persistence unit*
+*Persistence unit* is configured in `META-INF/persistence.xml`
+
+**NOTE!** The statement above is an *invariant* from the JPA spec: 
+
+> A persistence unit is defined by a `persistence.xml` file
+
+The statement rectifies my previous misunderstanding on the `Persistence.createEntityManagerFactory(String persistenceUnitName, Map properties)` and `Persistence.generateSchema(String persistenceUnitName, Map properties)`: these 2 methods might work regardless the existence of `persistence.xml` (THIS IS WRONG)
+
+
 Value of `jta-data-source` element of the `persistence.xml` is the *JNDI* lookup name. So NOTE that `jta-data-source` is compulsory when the `transaction-type` of `persistence-unit` is `JTA`, in this case the JPA application will  `javax.naming.InitialContext`, from inside which it executes *JNDI* lookup by the value of `jta-data-source` to initialize `DataSource`
 ## Chapter 3. Domain models and metadata
 new feature in JPA 2
