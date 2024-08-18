@@ -15,3 +15,12 @@ company can shorten a development schedule by:
 ### Tips for Finding Defects
 > If you're having a hard time finding a defect, it might be because the code isn't well written.
 
+#### Narrow the suspicious region of the code
+*binary search* technique
+
+#### Integrate incrementally
+> Debugging is easy if you add pieces to a system one at a time. If you add a piece to a system and encounter a new error, remove the piece and test it separately
+
+#### Take a break from the problem
+> The onset of anxiety is a clear sign that it's time to take a break
+
