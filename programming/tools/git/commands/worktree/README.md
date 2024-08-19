@@ -6,7 +6,7 @@ An important and good feature of worktree is that in one `worktree` client can `
 ## `worktree add`
 ### Keep in mind that `git worktree add branch_name` will get cloned on base of the based project
 
-### A good practice: add a worktree with a new branch on base of the remote branch other than the current branch
+### Typical practice: add a worktree with a new branch on base of the remote branch other than the current branch (20240819)
 example: `git worktree add ../../release/fa -b release/2024.1 origin/release/2024.1`
 
 
