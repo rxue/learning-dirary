@@ -5,6 +5,12 @@
 `toString()`, `equals()`, `hashCode()` are automatically implemented in `record`
 
 MY OWN TAKEAWAY: the automatic implementations of these 3 methods can be used in any other non-performance-critical classes, i.e. initialize private `record` inside the class and implements those methods by using the sames methods of the `record`
+## 4.9. JAR Files
+### 4.9.2 The Manifest
+`META-INF/MANIFEST.MF`
+
+### 4.9.3 Executable JAR Files
+*main class* can be specified in the *manifest* including statement of the form: `Main-Class: com.mycompany.mypkg.MainAppClass`
 
 # Chapter 5: Inheritance
 ## 5.2. The `equals` Method
