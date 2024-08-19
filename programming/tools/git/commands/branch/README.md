@@ -1,8 +1,11 @@
 # `git branch`
-## List remote branches
+## List Branches
+### List remote branches
 `git branch -r`
-## List all the branches, i.e. both local and remote (20221218, 20230130, 20230525)
+### List all the branches, i.e. both local and remote (20221218, 20230130, 20230525)
 `git branch -a`
+### List branches along with its relationship with upstream branch
+`git branch -vv`
 
 ## Delete a branch
 ### Remove Local branch
