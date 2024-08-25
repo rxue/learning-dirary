@@ -31,6 +31,16 @@
 
 # Chapter 6: `enum`s and *Annotations*
 ## Item 34: Use `enum`s instead of `int` constants
+
+**String enum pattern** - variant of *int enum pattern* (20240825)
+
+> You may encounter a variant of this pattern in which `String` constants are used in place of `int` constants. This variant, known as the *String enum pattern*, is even less desirable. 
+
+Problem of *String enum pattern*
+* While it does provide printable string for its constants, it can lead naive users to hard-code string constants into client code instead of using field names.
+* If such hard-coded string constant contains a typographical error, it will escape detection at compile time and result in bugs at runtime
+* performance problems due to string comparison
+
 a way to associate different behavior with different constants: declare *abstract methods* in the `enum` and implement them in each `enum` element - *constant-specific method implementations*
 ## Item 35: Use instance fields instead of ordinals
 > never derive a value associated with its ordinal; store it in an instance field instead
