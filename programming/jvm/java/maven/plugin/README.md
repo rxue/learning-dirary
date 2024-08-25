@@ -17,3 +17,5 @@ Threfore, for instance, we want to include a `main` method or some configuration
 
 ## [`maven-assemly-plugin`](https://maven.apache.org/plugins/maven-assembly-plugin/) 
 Can Invoke *goal* directly from command line: NO
+
+`maven-assembly-plugin` is configured with *xml* whose location is defined in element `configuration.descriptors.descriptor`
