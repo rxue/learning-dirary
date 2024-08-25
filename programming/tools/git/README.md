@@ -1,4 +1,10 @@
 # [`git`](https://git-scm.com/book/en/v2)
+## *Tag* operations
+### create tag
+`git tag <tag_name> <commit_hash> -m "tag message"`
+#### Push the tag after having been created
+`git push origin <tag_name>`
+
 ## `git stash`
 ### `git stash` Stashes Only the **Local Changes on the Current Branch**
 ### How to redo the `stash` i.e. turn the stashed code back
