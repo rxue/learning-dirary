@@ -5,6 +5,8 @@
 **GSTRINGS**
 placeholders are allowed only inside **double-quoted** string
 
+## Chapter 3: Simple Groovy datatypes
+### 3.3. Overriding operators
 #
 ## Chapter 6: Groovy and Structures
 ### Conditional execution structures
