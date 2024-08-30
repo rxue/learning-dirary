@@ -1,3 +1,12 @@
+# Generate a key and use it in Github Pipeline for publishing jar to Maven central repository
+`gpg --generate-key`
+
+## Export secret key to an `.asc` file
+`gpg --export-secret-keys --armor -o private_key.asc dictionary`
+
+After the private key is exported to the `private_key.asc`, copy it and paste to the corresponding variable in Github Settings
+
+
 # Remove a key
 command: `gpg --delete-keys CAF255EAB0A71CC214A32449CC713E9B0CEC0C17`
 
@@ -16,6 +25,8 @@ NOTE
 ## Directly remove a public key from a key server is impossible, the only possible way is to generate a *revocation certificate*
 Requirement on generating a *revocation certificate* : key has to keep integrity, i.e. both private and public key in *keyring* exists yet
 Command to generate a *revocation certificate* : `gpg --generate-revocation dictionary` where `dictionary` is the *user-id*
+
+
 
 
 
