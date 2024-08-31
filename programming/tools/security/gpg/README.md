@@ -5,7 +5,6 @@ Default *key server* for querying public key is [keyserver.ubuntu.com](http://ke
 * *public key* verify signature
 * verifier can extract the GPG *key ID* from the signature file and then search for *public key* from key server with the extracted key ID (this is how Maven central repository verify the jar signature)
 
-
 # Generate a key and use it in Github Pipeline for publishing jar to Maven central repository
 `gpg --generate-key`
 
@@ -34,6 +33,18 @@ NOTE
 Requirement on generating a *revocation certificate* : key has to keep integrity, i.e. both private and public key in *keyring* exists yet
 Command to generate a *revocation certificate* : `gpg --generate-revocation dictionary` where `dictionary` is the *user-id*
 
+# `gpg --verify <signaure.asc> <file_to_verify>`
+NOTE! `gpg --verify` assumes that you have the *public key* in your local. So in case you don't have a public key there will be error message output like this
+
+```
+gpg: Signature made pe  2. elokuuta 2024 00.57.33 EEST
+gpg:                using EDDSA key 894F14D98D7F20D5E82645E3DFE102108BF9381F
+gpg: Can't check signature: No public key
+```
+Then the next action is to get the *public key* from *key server* in the next section
+
+# `gpg --keyserver keyserver.ubuntu.com --recv-keys <key_id_from_verify_err_msg>`
+NOTE! This commnd can ignore `--keyserver` option, and thus the *public key* will be searched from default *key server* keyserver.ubuntu.com
 
 
 
