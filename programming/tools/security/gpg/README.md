@@ -1,10 +1,18 @@
+# Lower level research
+Default *key server* for querying public key is [keyserver.ubuntu.com](http://keyserver.ubuntu.com). Proof: https://github.com/gpg/gnupg/blob/master/configure.ac
+
+* *private key* creates signature
+* *public key* verify signature
+* verifier can extract the GPG *key ID* from the signature file and then search for *public key* from key server with the extracted key ID (this is how Maven central repository verify the jar signature)
+
+
 # Generate a key and use it in Github Pipeline for publishing jar to Maven central repository
 `gpg --generate-key`
 
 ## Export secret key to an `.asc` file
 `gpg --export-secret-keys --armor -o private_key.asc dictionary`
 
-After the private key is exported to the `private_key.asc`, copy it and paste to the corresponding variable in Github Settings
+After the private key is exported to the `private_key.asc`, copy and paste it to the corresponding variable in Github Settings > *Secrets and variables* > *Actions*
 
 
 # Remove a key
