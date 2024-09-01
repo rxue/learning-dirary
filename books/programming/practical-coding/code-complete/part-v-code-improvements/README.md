@@ -24,3 +24,8 @@ company can shorten a development schedule by:
 #### Take a break from the problem
 > The onset of anxiety is a clear sign that it's time to take a break
 
+# Chapter 24: Refactoring
+## Specific Refactorings
+### Statement-Level Refactorings
+> Return as soon as you know the answer instead of assigning a return value within nested *if-then-else* statements
+
