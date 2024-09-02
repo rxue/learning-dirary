@@ -144,9 +144,14 @@ Rule of thumb
 * sentences after `@throws` usually starts with "if"
 * first sentence is the summary description, and there should not be duplicate between each other
 * in practice documents on a method usually starts with *verb* and uses third person declarative tense
+
+Convention:
+* summary description is seldom a complete sentence
+* *methods* and *constructor* summary desc should be a verb phrase describing action performed by the method with third person declarative tense
 * For classes, interfaces, and fields, the summary description should be a noun phrase describing the thing represented by an instance of the class or interface or by the field itself
 
 `package-info.java` places package-level doc comments
+`module-info.java` places comments on module
 
 # Chapter 9. General Programming
 ## Item 61: Prefer primitive types to boxed primitives
