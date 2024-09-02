@@ -101,7 +101,7 @@ Motivation of using optional
  * `NullPointerException` caused by returning `null`
 
 * `Optional.orElse()` is used to specify default value
-* `Òptional.orElseThrow()` is an *exception factory
+* `Òptional.orElseThrow()` is an *exception factory*
 
 New features in Java SE 9
 
@@ -124,7 +124,18 @@ Storing `Optional` in an *instance field* is a "bad" code smell
 
 
 ## Item 56: Write doc comments for all exposed API elements
-> **The doc comment for a method should describe succinctly the contract between the method and its client** ... Typically *preconditions* are described implicitly by the `@throws` tags for *unchecked exceptions*;
+*Javadoc* utility to generate *doc comments*
+
+Doc tags:
+* `{@index}` since Java 9
+* `{@implSpec}` since Java 8
+* `{@literal}` since Java 5
+* `@{codes}` since Java 5
+
+> Public classes should not use default constructors because there is no way to provide doc comments for them. 
+
+> **The doc comment for a method should describe succinctly the contract between the method and its client** ... Typically *preconditions* are described implicitly by the `@throws` tags for *unchecked exceptions*; each *unchecked exception* corresponds to a precondition violation.
+
 > To describe a method's contract fully, the doc comment should have an `@param` tag for every parameter, and `@return` tag unless the method has a void return type, and an `@throws` for every exception thrown by the method, whether checked or unchecked.
 
 # Chapter 9. General Programming
