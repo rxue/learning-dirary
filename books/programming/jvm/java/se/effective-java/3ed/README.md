@@ -128,15 +128,25 @@ Storing `Optional` in an *instance field* is a "bad" code smell
 
 Doc tags:
 * `{@index}` since Java 9
-* `{@implSpec}` since Java 8
+* `@implSpec` since Java 8
 * `{@literal}` since Java 5
 * `@{codes}` since Java 5
 
 > Public classes should not use default constructors because there is no way to provide doc comments for them. 
 
-> **The doc comment for a method should describe succinctly the contract between the method and its client** ... Typically *preconditions* are described implicitly by the `@throws` tags for *unchecked exceptions*; each *unchecked exception* corresponds to a precondition violation.
+> **The doc comment for a method should describe succinctly the contract between the method and its client** 
+
+> ... Typically *preconditions* are described implicitly by the `@throws` tags for *unchecked exceptions*; each *unchecked exception* corresponds to a precondition violation.
 
 > To describe a method's contract fully, the doc comment should have an `@param` tag for every parameter, and `@return` tag unless the method has a void return type, and an `@throws` for every exception thrown by the method, whether checked or unchecked.
+
+Rule of thumb
+* sentences after `@throws` usually starts with "if"
+* first sentence is the summary description, and there should not be duplicate between each other
+* in practice documents on a method usually starts with *verb* and uses third person declarative tense
+* For classes, interfaces, and fields, the summary description should be a noun phrase describing the thing represented by an instance of the class or interface or by the field itself
+
+`package-info.java` places package-level doc comments
 
 # Chapter 9. General Programming
 ## Item 61: Prefer primitive types to boxed primitives
