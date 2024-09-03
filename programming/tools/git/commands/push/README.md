@@ -1,4 +1,8 @@
 # [`git push`](https://git-scm.com/docs/git-push) 
+Git can push both *branch* and *tag*, e.g.
+* `git push origin branch_name`
+* `git push origin tag_name`
+
 ## `--delete` option
 
 > All listed refs are deleted from the remote repository. This is the same as prefixing all refs with a colon.
