@@ -2,6 +2,13 @@
 ## `rm --cached`
 unstage file, i.e. remove file from index
 
+# `git tag` VS ``git branch`
+operations              | `tag`             | `branch`
+------------------------|-------------------|--------------
+list all local objects  | `git tag`         | `git branch`
+remove a local object   | `git tag -d <tag>`| `git branch -D <branch>`
+
+
 # `submodule`
 ## List submodules
 There is no command such `ls` under `submodule` => `git submodule status`
