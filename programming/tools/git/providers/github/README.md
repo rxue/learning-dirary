@@ -1,5 +1,5 @@
 # REST API
-## Access token for sending REST API request to github
+## Send REST API request to github with access token
 references:
 * https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-a-repository-for-the-authenticated-user
 * https://medium.com/@shivapatel1102001/how-to-generate-bearer-token-in-github-3d2acadaf543
@@ -30,3 +30,11 @@ git remote add origin git@github.com:rxue/dictionary-jpa.git
 git push --set-upstream origin main
 ```
 NOTE that the last statement push added files directly to remote origin
+
+### Add content a Git repository
+```
+curl -H "Authorization: token <access-token>" \
+     -H "Content-Type: application/json" \
+     -d '{"message": "Add new file", "content": "base64 encoded content of your file"}' \
+     https://api.github.com/repos/<your-username>/<your-repository-name>/contents/<file-path>
+```
