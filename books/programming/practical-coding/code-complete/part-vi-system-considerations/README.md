@@ -18,4 +18,8 @@ If you fall behind, ... drop the ones that are the least important.
 > Short of dropping a feature altogether, you can provide a cheaper version of the same functionality.
 
 ## 28.4 Measurement
+> If data is to be used in a scientific experiment, it must be quantified.
 
+> To evaluate software-development methods, you must measure them.
+
+> *To argue againest measurement is to argue that it's better not to know what's really happening on your project* 
