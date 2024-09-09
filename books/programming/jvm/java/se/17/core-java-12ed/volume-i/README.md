@@ -1,3 +1,10 @@
+# Chapter 3: Fundamental Programming Structures in Java
+## 3.3. Data Types
+### 3.3.2 Floating Point Types
+`if (x == Double.NaN) // is never used`
+
+use `Double.isNaN(x)` instead
+ 
 # Chapter 4: Objects and Classes
 ## 4.7. Records
 ### 4.7.1 The Record Concept
