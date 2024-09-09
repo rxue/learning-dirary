@@ -25,7 +25,32 @@ company can shorten a development schedule by:
 > The onset of anxiety is a clear sign that it's time to take a break
 
 # Chapter 24: Refactoring
-## Specific Refactorings
+## 24.3 Specific Refactorings
 ### Statement-Level Refactorings
 > Return as soon as you know the answer instead of assigning a return value within nested *if-then-else* statements
+## 24.4 Refactoring Safely
+* Keep refactorings small
+* Do refactorings one at time
+* Make a list of steps you intend to take
+* Review the changes
+> if programmers work with a substrantial portion of the code, rather than just a few lines, the change of making a correct modification improves
+> as the number of lines changed increases from one to five lines, the chance of making a bad change increases.
 
+### Bad Times to Refactor
+* Don't use refactoring as a cover for code and fix
+* Avoid refactoring instead of rewriting - sometimes redesign and reimplement might be better than refactor
+### Refactoring Strategies
+Refactor when you
+* add a routine
+* add a class
+* fix a defect
+
+Target
+* error-prone modules
+* high-complexity modules - program quality improved dramatically when maintenance programmers focused their improvement efforts on the modules that had the highest complexity
+
+> Code that is never modified doesn't need to be refactored. But when you do touch a section of code, be sure you leave it better than you found it.
+
+> **Define an interface between clean code and ugly code, and then move code across the interface** 
+* designate some code as being in the messy real world, some code as being in an idealized new world, and some code as being the interface between the two.
+* anytime you touch a section of messy code, you are required to bring it up to current coding standards - give clear variable names, ...

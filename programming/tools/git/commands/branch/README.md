@@ -1,6 +1,6 @@
 # `git branch`
 ## List Branches
-### List remote branches
+### List remote branches (20240909)
 `git branch -r`
 ### List all the branches, i.e. both local and remote (20221218, 20230130, 20230525)
 `git branch -a`

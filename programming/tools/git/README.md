@@ -1,9 +1,10 @@
 # [`git`](https://git-scm.com/book/en/v2)
-## *Tag* operations
-### create tag
-`git tag <tag_name> <commit_hash> -m "tag message"`
-#### Push the tag after having been created
-`git push origin <tag_name>`
+## Tags
+### 20211103 Question: I would like to get the source code of a specific release from github
+Answer: https://stackoverflow.com/questions/791959/download-a-specific-tag-with-git
+### list all remote tags (20240129)
+`git ls-remote --tags`
+This command can be remembered together with `git branch`, where `git branch -r` list all remote branches
 
 ## `git stash`
 ### `git stash` Stashes Only the **Local Changes on the Current Branch**
@@ -68,13 +69,6 @@ This command can be remembered together with `git branch`, where `git branch -r`
 * add only modified files, meaning untracked files will not be added: `git add -u`
 * add all files: `git add -A`
 
-### `git fetch`
-#### [`git fetch` and `git merge`](https://www.youtube.com/watch?v=Gg4bLk8cGNo&list=PLizL--84rE7T7l97deRGxZRRltRi9iQgA&t=657s)
-
-`git fetch origin` does not sync local content from the remoate origin yet, still need `git merge origin/<branch name>`. Typically, **`git pull origin master` is shorthand for `git fetch origin` followed by `git merge origin/master`**
-
-#### List remote branches after `git fetch`
-Before listing all branches on both local and *remote*, i.e. `git branch -a`/`git branch --all`, always remember `git fetch` to for sync beforehands
 
 
 
@@ -169,13 +163,9 @@ When a file is downloaded from the remote repository, the state is *Unmodified*,
 #### Answer: `git diff <commit> <commit> [--] [<path>...]` or `git difftool --tool=vimdiff <commit> <commit> [--] [<path>...]`
 The essence is the `diff` command, which is probably using the `diff` API from the Linux
 
-## 20211103 Question: I would like to get the source code of a specific release from github
-Answer: https://stackoverflow.com/questions/791959/download-a-specific-tag-with-git
-
 ## 20201211
 ### List all files or file changes in a commit
 Reference: https://stackoverflow.com/questions/424071/how-to-list-all-the-files-in-a-commit
-
 
 ### Delete a remote *refspec* 
 `git push origin :<refspec>` e.g. `git push origin :refs/heads/master`
