@@ -67,8 +67,11 @@ self-comment: The definition here is inconsistent with that from the official JA
 ## Annotations for Field and Bean Properties of Resource Classes
 ### Advanced JAX-RS Annotations
 
-## Validating Resource Data with Bean Validation
-### Validation Exception Handling and Response Codes
+## 31.2 Validating Resource Data with Bean Validation
+### 31.2.2. Validating Entity Data
+Use `@Valid` to method parameter, i.e. *entity data*, of method to ensure that the *entity data* is validated at runtime
+
+### 31.2.3 Validation Exception Handling and Response Codes
 * `ValidationException` - `500`
   * `ConstraintValidationException`
     * `500` if exception was thrown while validating a method return type

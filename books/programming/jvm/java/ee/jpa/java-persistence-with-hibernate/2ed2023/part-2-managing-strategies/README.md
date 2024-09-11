@@ -340,3 +340,7 @@ demo code: http://jpwh.org/examples/jpwh2/jpwh-2e-examples-20151103/examples/src
 ## Chapter 8. Advanced entity association mappings
 ### 8.2 one-to-many associations
 
+## Chapter 9. Complex and legacy schemas
+### 9.1. Improving the database schema
+#### 9.1.2. SQL Constraints
+> Systems that ensure data integrity only in application code are prone to data corruption and often degrade the quality of the database over time. If the data store doesn’t enforce rules, a trivial undetected application bug can cause unrecoverable problems such as incorrect or lost data.
