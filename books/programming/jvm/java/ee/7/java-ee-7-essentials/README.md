@@ -72,7 +72,15 @@ A *task* can implement `ManagedTask` so that `ManagedTaskListener` can be used t
 ## Container-Managed Transactions
 Based on list of specification in Java EE 6, https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee6 , *Java EE 6* supports *JTA 1.1*, whereas according to this chapter, `@javax.transaction.Transactional` is a new feature in *JTA 1.2* => `@Transactional` annotation is a new feature in Java EE
 
-> It (`@Transactional` annotation) enables application to *declaratively* control *transaction boundaries* on *CDI beans* , as well as classes defined as *managed beans* such as servlets, JAX-RS resource classes, and JAX-WS service endpoints. 
+> JTA 1.2 introduces the @javax.transaction.Transactional annotation. It enables application to *declaratively* control *transaction boundaries* on *CDI beans* , as well as classes defined as *managed beans* such as servlets, JAX-RS resource classes, and JAX-WS service endpoints.
+
+**NOTE** about the quotes above
+The statement above also indicates that even in a Java EE app, a random class without any annotation, which does not belong to any of the mentioned types:
+* *CDI bean*
+* *managed beans* : *servlet* , *JAX-RS* resource class, *JAX-WS* service endpoint
+
+would not interprete the `@Transactional` annotation to transaction demarcation. In order to make such random class understand the `@Transactional` annotation, it should be annotated with *CDI bean* annotations, such as `@RequestScoped`
+
 
  Java EE version  | Spec Version    | New Feature                   | New Feature in detail
 ------------------|-----------------|-------------------------------|----------------------------------
