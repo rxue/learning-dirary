@@ -46,6 +46,9 @@ label: `1Z0-900`
 label: `1Z0-900`
 
 # Chapter 9. Contexts and Dependency Injection
+## Discovery of Beans
+*implicit bean archive* : a *bean archive* that does not contain `beans.xml` but contains one or more bean classes with a bean-defining annotation, or one or more *session beans*
+
 ## Events
 NOTE! `@Observes` is allowed to be annotated merely to the method parameter. Refer to the API documentation: https://docs.oracle.com/javaee/6/api/javax/enterprise/event/Observes.html
 
@@ -75,12 +78,11 @@ Based on list of specification in Java EE 6, https://www.oracle.com/java/technol
 > JTA 1.2 introduces the @javax.transaction.Transactional annotation. It enables application to *declaratively* control *transaction boundaries* on *CDI beans* , as well as classes defined as *managed beans* such as servlets, JAX-RS resource classes, and JAX-WS service endpoints.
 
 **NOTE** about the quotes above
-The statement above also indicates that even in a Java EE app, a random class without any annotation, which does not belong to any of the mentioned types:
+The statement above also indicates that in normal Java EE app without `beans.xml`, i.e. an *implicit bean archive* , a random class without any annotation, which does not belong to any of the mentioned types:
 * *CDI bean*
 * *managed beans* : *servlet* , *JAX-RS* resource class, *JAX-WS* service endpoint
 
 would not interprete the `@Transactional` annotation to transaction demarcation. In order to make such random class understand the `@Transactional` annotation, it should be annotated with *CDI bean* annotations, such as `@RequestScoped`
-
 
  Java EE version  | Spec Version    | New Feature                   | New Feature in detail
 ------------------|-----------------|-------------------------------|----------------------------------
