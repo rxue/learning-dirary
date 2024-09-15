@@ -49,6 +49,24 @@ label: `1Z0-900`
 ## Discovery of Beans
 *implicit bean archive* : a *bean archive* that does not contain `beans.xml` but contains one or more bean classes with a bean-defining annotation, or one or more *session beans*
 
+**PRACTICAL NOTE** about the *implicit bean archive*
+This is againest the definition in CDI 4.0 spec > 2.11 Packaging and deployment > 2.11.1 Bean archives when taking *portable* and *build compatible* extension into consideration:
+An archive which:
+
+> contains a *portable extension* or a *build compatible extension* and no beans.xml file
+
+is not a bean archive
+
+However, in the following part of he section in CDI 4.0 spec,
+
+<quote>
+To ensure portability between CDI Lite and CDI Full, applications are encouraged to:
+* always add a beans.xml file to an archive which contains classes with bean defining annotations;
+* never add classes with bean defining annotations to an archive without beans.xml.
+</quote>
+
+Rule of thumb in my own word: whenever using CDI beans with relevant annotations, always add at least an empty `beans.xml`
+
 ## Events
 NOTE! `@Observes` is allowed to be annotated merely to the method parameter. Refer to the API documentation: https://docs.oracle.com/javaee/6/api/javax/enterprise/event/Observes.html
 
