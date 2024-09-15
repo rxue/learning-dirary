@@ -22,4 +22,28 @@ If you fall behind, ... drop the ones that are the least important.
 
 > To evaluate software-development methods, you must measure them.
 
-> *To argue againest measurement is to argue that it's better not to know what's really happening on your project* 
+> *To argue againest measurement is to argue that it's better not to know what's really happening on your project*
+
+## 28.5 Treating Programers as People
+### Religious Issues
+> Use "suggestions" or "guidelines" with respect to area
+Avoid setting rigid "rules" or "standards"
+
+Details of a specific standard is often less important than the fact that some standard exists. Don't set standard for your programmers, but do insist they standardize in the areas that are important to you
+
+**Practical tips** :
+
+format code automatically, i.e. by means of IDE
+
+# Chapter 29: Integration
+## Incremental Integratin Strategy
+### Bottom-Up Integration
+**requirement for applying**
+complete design of the whole before you start integration
+
+> Letting low-level details drive the design of higher-level classes contradict principles of information hiding and object-oriented design
+
+
+
+
+
