@@ -29,4 +29,15 @@ bad names examples:
 ### Setting the Function's Return Value
 practical tip: 
  * initialize return value at the beginning of the function to a default value
- * Don't return *references* or *pointers* to *local data*  
+ * Don't return *references* or *pointers* to *local data*
+
+# Chapter 9: The Pseudocode Programming Process
+## 9.3 Constructing Routines by PPP
+### Check the Code
+**Test the code**
+*scaffolding* : code used to support your test cases - code that support routines while they are tested and that isn't included in the final product
+*scaffolidng* can be
+* *test-harness* routine that calls your routine with test data
+* *stubs* called by your routine
+
+
