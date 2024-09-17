@@ -35,9 +35,5 @@ practical tip:
 ## 9.3 Constructing Routines by PPP
 ### Check the Code
 **Test the code**
-*scaffolding* : code used to support your test cases - code that support routines while they are tested and that isn't included in the final product
-*scaffolidng* can be
-* *test-harness* routine that calls your routine with test data
-* *stubs* called by your routine
 
 

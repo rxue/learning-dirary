@@ -8,7 +8,25 @@ company can shorten a development schedule by:
 
 > Reducing debugging by preventing errors improves productivity.
 # Chapter 22: Developer Testing
+
+ * *unit testing*
+ * *component testing*
+ * *integration testing*
+ * *regression testing*
+ * *system testing*
+
 ## 22.4 Typical Errors
+## 22.5 Test-Support Tools
+### Building Scaffolding to Test Individual Classes
+*scaffolding* can be:
+* *mock object*
+* *stub object*
+* *driver* / *test harness*: fake routine that calls real routine being tested
+* (small) dummy file - content is **easy** to understand, errors in using it should be conspicuous
+
+Typical example of scaffolding: 
+* *JUnit*
+* write your own scaffolding code in `main`
 
 # Chapter 23: Debugging
 ## 23.2 Tips for finding a Defect
