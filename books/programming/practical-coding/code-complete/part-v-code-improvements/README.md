@@ -15,6 +15,15 @@ company can shorten a development schedule by:
  * *regression testing*
  * *system testing*
 
+## 22.1 Role of Developer Testing in Software Quality
+
+> Individual testin steps (unit test, component test, and integration test) typically find **less than 50 percent of errors** present each
+
+Goal of testing: find errors
+
+### Testing During Construction
+Tip: add one routine at a time to a previously tested routine
+
 ## 22.4 Typical Errors
 ## 22.5 Test-Support Tools
 ### Building Scaffolding to Test Individual Classes
