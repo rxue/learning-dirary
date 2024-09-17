@@ -35,15 +35,20 @@ Details of a specific standard is often less important than the fact that some s
 
 format code automatically, i.e. by means of IDE
 
+> *To argue againest measurement is to argue that it's better not to know what's really happening on your project* 
+
 # Chapter 29: Integration
-## Incremental Integratin Strategy
+## 29.2 Integration Frequency - Phased or Incremental?
+### Benefits of Incremental Integration
+> An accounting of errors for one project revealed that 39 pcercent were inter-module interface errors. Because developers on many projects spend up to 50 percent of their time debugging, maximizing debugging effectiveness by making errors easy to locate provide benefits in quality and productivity.
+
+## 29.3 Incremental Integration Strategies
+### Top-Down Integration
+*top* : the main window, the applications control loop, the object that contains `main()` in Java
+
+import aspect of top-down integration: interfaces between classes must be carefully specified
 ### Bottom-Up Integration
 **requirement for applying**
 complete design of the whole before you start integration
 
 > Letting low-level details drive the design of higher-level classes contradict principles of information hiding and object-oriented design
-
-
-
-
-
