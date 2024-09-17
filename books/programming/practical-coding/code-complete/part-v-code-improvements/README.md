@@ -24,6 +24,19 @@ Goal of testing: find errors
 ### Testing During Construction
 Tip: add one routine at a time to a previously tested routine
 
+## 22.2 Recommended Approach to Developer Testing
+> Plan to test and find defects as early as possible because it's cheaper to fix defects early.
+
+### Limitation of Developer Testing
+*Developer testing tends to skip more sophisticated kinds of test coverage*
+
+* "100% statement coverage" is not adequate
+* better coverage standard - "100% branch coverage"
+
+
+## 22.3 Bag of Testing Tricks
+
+
 ## 22.4 Typical Errors
 ## 22.5 Test-Support Tools
 ### Building Scaffolding to Test Individual Classes
