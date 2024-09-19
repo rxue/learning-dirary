@@ -8,4 +8,9 @@
 
 *Walrus Operator*
 
-## Tuples are Not Just Immutable Lists 
+## Tuples are Not Just Immutable Lists
+
+# Chapter 3. Unicode Text Versus Bytes
+## Normalizing Unicode for Reliable Comparisons
+### Extreme "Normalization": Taking Out Diacritics
+use of `''.join`
