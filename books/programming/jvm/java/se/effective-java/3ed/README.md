@@ -193,3 +193,17 @@ However, they are rare cases, and kinda last resort and on the other hand,
 
 ### Takeaway
 NOTE that in Java language syntax uncheked exceptions can be declared in a method's `throws` clause, but that is probably merely due to the case of declaring any types of exceptions in the `main` method, and in all other methods it does not make sense to declare unchecked exceptions
+
+## Item 75: Include *failure-capture* information in detail message
+> it is critically important that the `Exception` `toString` method return as much information as possible concerning the cause of the failure.
+
+> To capture a failure, the detail message of an exception should contain the values of all parameters and fields that contributed to the exception.
+
+intention of the *stack trace* : be analyzed in conjunction with the documentation and, if necessary, source code.
+
+*stack trace* contains
+* exact file (path)
+* line number in the exact file
+* other method invocation in the stack
+
+detail message is different from *user-level error message*: detail message is for programmers, site-reliability engineer to analyze failure => no need to be *localized*
