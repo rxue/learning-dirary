@@ -5,3 +5,5 @@
 
 ## 20230824: I would like to change the JDK path of my project
 Solution: File > Project structure, there is an SDK field
+## Live Template
+

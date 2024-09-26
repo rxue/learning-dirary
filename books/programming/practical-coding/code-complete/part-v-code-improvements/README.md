@@ -38,6 +38,11 @@ Tip: add one routine at a time to a previously tested routine
 
 
 ## 22.4 Typical Errors
+### How Many Erros Should You Expect to Find
+TSP - team software process
+
+> It's cheaper to build high-quality software than it is to build and fix low-quality software
+
 ## 22.5 Test-Support Tools
 ### Building Scaffolding to Test Individual Classes
 *scaffolding* can be:
