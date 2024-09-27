@@ -52,3 +52,8 @@ import aspect of top-down integration: interfaces between classes must be carefu
 complete design of the whole before you start integration
 
 > Letting low-level details drive the design of higher-level classes contradict principles of information hiding and object-oriented design
+
+## 29.4 Daily Build and Smoke Test
+*Smoke test* 
+* no need to be exhaustive
+* should be capable of exposing major problems
