@@ -35,7 +35,16 @@ Tip: add one routine at a time to a previously tested routine
 
 
 ## 22.3 Bag of Testing Tricks
+### Structured Basis Testing
+### Data-Flow Testing
+> Ease of testing is another good reason to keep your routines short and your boolean expressions simple.
 
+key to writing data-flow test cases: exercise all possible defined-used path
+
+### Equivalence Partitioning
+### Classes of Good Data
+**normal data testing**
+ * old data for regression test
 
 ## 22.4 Typical Errors
 ### How Many Erros Should You Expect to Find

@@ -2,7 +2,11 @@
 ## IDE for Java Project Development
 ### Java SE project
 IntelliJ Community Version
-### Java EE Project
-Eclipse still as IntelliJ needs enterprise version for better Java EE support
 
 #### [(Remote) Debugging with Eclipse](https://www.eclipse.org/jetty/documentation/current/debugging-with-eclipse.html)
+
+# Practical FAQ
+## Python with VSCode
+### Problem: Debugger has problem
+#### Solution: remove `.vscode` directory from project and try again
+
