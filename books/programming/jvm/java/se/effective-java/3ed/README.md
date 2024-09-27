@@ -2,6 +2,24 @@
 ## Item 1: Consider static factory methods instead of constructors
 > A *service provider framework* is a system in which providers implement a service, and the system makes implementations available to clients, decoupling the clients from implementations.
 
+# Chapter 3 Methods Common to All Objects
+## Item 14: Consider implementing `Comparable`
+**Key takeaways**
+
+* *natural ordering* - the object `implements Comparable`
+* `Collections.addAll(Collection<? super T> c, T... elements)`
+
+Classes with *natural ordering* in Core Java
+
+* `String`
+* `enum`
+
+Classes that depend on `Comparable` in Core Java
+* `TreeSet`
+* `TreeMap`
+* methods in `Collections`, which contains search and sort algorithms
+* method in `Arrays`, which contains search and sort algorithms
+
 # Chapter 4 Classes and Interfaces
 ## Item 15: Minimize the accessibility of classes and members
 *stray class*
