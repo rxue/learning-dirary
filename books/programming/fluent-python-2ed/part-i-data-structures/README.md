@@ -31,3 +31,7 @@ use of `''.join`
 ## Type Hints 101
 ### Variable Annotation Syntax
 
+**Acceptable type hints**
+
+* `typing.Optional`, for example, `Optional[str]` - a field/parameter can be `str` or `None`
+
