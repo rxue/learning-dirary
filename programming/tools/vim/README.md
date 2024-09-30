@@ -34,8 +34,8 @@ Reference: https://linuxhint.com/show-hidden-invisible-characters-vim/
 
 # 20231025: how to search in vim with case-insensitive
 ## Answer (with example): `/word\c`
-
-# substitute
-## `:s` - substitute in the currenct line
-## `:%s` - substitute in the entire file
+## command-line (mode) 
+### substitute (20240930)
+#### `:s` - substitute in the currenct line
+#### `:%s` - substitute in the entire file
 In addition, the `%` can be also the range of lines, e.g. `:1,5s` 
