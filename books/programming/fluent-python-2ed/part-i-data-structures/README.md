@@ -27,3 +27,7 @@
 ## Normalizing Unicode for Reliable Comparisons
 ### Extreme "Normalization": Taking Out Diacritics
 use of `''.join`
+# Chapter 5. Data Class Builders
+## Type Hints 101
+### Variable Annotation Syntax
+
