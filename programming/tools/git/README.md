@@ -1,4 +1,9 @@
 # [`git`](https://git-scm.com/book/en/v2)
+## `git config`
+### [Config variables](https://git-scm.com/docs/git-config#_variables)
+#### `core.pager`
+`less` is the default *pager*
+
 ## Tags
 ### 20211103 Question: I would like to get the source code of a specific release from github
 Answer: https://stackoverflow.com/questions/791959/download-a-specific-tag-with-git
