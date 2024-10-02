@@ -2,7 +2,7 @@
 ## `git config`
 ### [Config variables](https://git-scm.com/docs/git-config#_variables)
 #### `core.pager`
-`less` is the default *pager*
+`less` is the default *pager* => the search function when using, e.g. `git log -p`, in interactive mode is the search function of `less`
 
 ## Tags
 ### 20211103 Question: I would like to get the source code of a specific release from github
