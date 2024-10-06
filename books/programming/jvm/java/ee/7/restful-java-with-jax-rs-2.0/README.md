@@ -21,6 +21,8 @@ Header:
 **OWN COMMENT**
 So it doesn't mean the server is fully stateless. The server can have state and should have usually, but the state is about whole data resources regardless of any individual request. For instance, frequently requested data can be cached so that retrieval of it is fast. But the cache is to the whole data resource. The purpose of such architecture is the *horizontal salability*
 
+reference: https://stackoverflow.com/questions/63722192/how-come-server-is-supposed-to-cache-information-in-rest-apis
+
 # Chapter 2: Designing RESTful Services
 ## Model the URIs
 `LineItem`s are aggregated within `Order` => `LineItem` is a sub-resource
