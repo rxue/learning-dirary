@@ -14,8 +14,12 @@ Header:
 * with `Accept` a client can list its preferred response format
 * `MIME` type can `version`
 
-## Communicate Statelessly
-* no client session data stored on the server. If there is need to be session-specific data, it should be held and maintained by the client and transferred to the server with eash request as needed
+## Communicate Statelessly (20241006)
+ 
+ * no client session data stored on the server. If there is need to be session-specific data, it should be held and maintained by the client and transferred to the server with eash request as needed
+
+**OWN COMMENT**
+So it doesn't mean the server is fully stateless. The server can have state and should have usually, but the state is about whole data resources regardless of any individual request. For instance, frequently requested data can be cached so that retrieval of it is fast. But the cache is to the whole data resource. The purpose of such architecture is the *horizontal salability*
 
 # Chapter 2: Designing RESTful Services
 ## Model the URIs
