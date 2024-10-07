@@ -13,6 +13,10 @@
  `list`       | `tuple`         | Description
 --------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 `s.pop([p])`  | not supported   | remove and return last item or item at optional position `p` . MY OWN PRACTICAL COMMENTS: `list.pop(0)` can be considered as dequeue operation when using `list` as a *queue*
+`s.remove(e)` | not supported   | remove the *first occurrence* of element `e` by value
+
+**PRACTICAL TIPS**
+The use of `[]` in this book in based on the tools documentation in *Unix-like* systems. Thumb up!
 
 
 
@@ -34,4 +38,9 @@ use of `''.join`
 **Acceptable type hints**
 
 * `typing.Optional`, for example, `Optional[str]` - a field/parameter can be `str` or `None`
+
+# Chapter 3. Dictionaries and Sets
+## What's New in This Chapter
+> The underlying implementation of `dict` and `set` still relies on *hash tables*
+
 
