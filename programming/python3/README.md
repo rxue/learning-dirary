@@ -1,4 +1,8 @@
-# Java 8 VS Python3.6+
+# Python3.6+ cheatsheet on base of Java 8+
+
+## *String* operations
+
+`''.join(listOfChars)` <=> `String.join(delimiter, chars)` in Java 8
 
 ## `*args` and `**kargs` VS `vargs` in Java
 
@@ -22,8 +26,8 @@ Python3 Operators |Operations                                                   
 
 Reference: //python-s20.mooc.fi/osa-9/1-oliot-ja-viittaukset 
 
-# [Built-in Types](https://docs.python.org/3.7/library/stdtypes.html)
-## [True Value Testing](https://docs.python.org/3.7/library/stdtypes.html#truth-value-testing)
+## [Built-in Types](https://docs.python.org/3.7/library/stdtypes.html)
+### [True Value Testing](https://docs.python.org/3.7/library/stdtypes.html#truth-value-testing)
 Any Object can be tested for true value, for use in an `if` or `while` condition or as operand of the boolean operations below.
 
 ## If Condition
@@ -34,16 +38,16 @@ Java    | Python3
 `true`  |`True`
 `false` |`False`
 
-# Class
-## Luokka on olion käsikirjoitus
+## Class
+### Luokka on olion käsikirjoitus
 Materiaalissa on jo aiemmin vilahtanut (gleam 闪现) käsite.
 
-## Access modifier
+### Access modifier
 modifer   |Python           |Java
 ----------|-----------------|-------------------------
 *private* |`self.__example` |`private Object example;`
 
-# Functional Programming
+## Functional Programming
 In `max`, `min`, the given sequence cannot be empty
 
-# [Command line and environment](https://docs.python.org/3/using/cmdline.html)
+## [Command line and environment](https://docs.python.org/3/using/cmdline.html)
