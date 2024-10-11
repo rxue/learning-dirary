@@ -26,6 +26,14 @@ The use of `[]` in this book in based on the tools documentation in *Unix-like* 
 
 *Tuple* is an immutable version of `list`, so only update operations on `list` is not supported in *tuple*
 
+## When a List is Not the Answer
+### *Deques* and Other *Queues*
+`from collections import deque`
+
+Operations on `deque`
+
+* `append(e)`
+* ``pop()`
 
 # Chapter 3. Unicode Text Versus Bytes
 ## Normalizing Unicode for Reliable Comparisons
