@@ -51,6 +51,11 @@ use of `''.join`
 ## What's New in This Chapter
 > The underlying implementation of `dict` and `set` still relies on *hash tables*
 
+# Chapter 5. Data Class Builders
+## *Type Hints* 101
+### No Runtime Effect
+
+
 # Chapter 6: Object References, Mutability, and Recycling
 ## Further Reading
 ### SOAPBOX
