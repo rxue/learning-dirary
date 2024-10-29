@@ -8,7 +8,7 @@ in_expression ::=
 ```
 **KEY TAKEAWAY**
 
-Note about the `single_valued_input_parameter`. There is no bracket and the value can be assigned with .e.g. `setParameter(list)`
+Note about the `single_valued_input_parameter`. There is no bracket and the value can be assigned with .e.g. `setParameter(list)`. This feature is way different from the `IN` expression in *SQL* in that *SQL* 's `IN` has to look sth like `IN (1,2,3,4)` with brackets
 
 # Chapter 8 Entity Packaging
 ## 8.2. Persistence Unit Packaging
