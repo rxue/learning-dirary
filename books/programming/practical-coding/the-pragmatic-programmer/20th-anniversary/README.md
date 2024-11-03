@@ -1,3 +1,11 @@
+# From the Preface to the First Edition
+## Individual Pragmatists, Large Teams
+Book's quote
+
+> We who cut merestones must always be envisioning cathedrals
+
+> One hundred years from now, our engineering may seem as archaic as the techniques used by medieval cathedral builders seem to today’s civil engineers, while our craftsmanship will still be honored. 
+
 # Chapter 3: The Basic Tools
 ## Topic 17. Shell Games
 ### Tip 16: Use the Power of Command Shells
