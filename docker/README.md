@@ -31,7 +31,9 @@ Solution from ChatGPT: docker's commands is originally in `/Applications/Docker.
 docker image cannot be removed while a container built on base of it is running
 
 # Docker commands
-## `docker build`
+## [`docker buildx build`](https://docs.docker.com/reference/cli/docker/buildx/build/) (20241107)
+`docker build` is its alias
+
 
 ## 20230924: remove all images by force
 `docker rmi -f $(docker images -q)`
@@ -55,4 +57,4 @@ This can be compared with `docker ps`, which list only running container
 * this command does not kill and remove running containers, and if there is running container, the image of it will not be removed either
 * `--volumes` option removes volumes
 ### Check docker disk usage in human-readable format on the system level
-``docker system df -v`
+`docker system df -v`
