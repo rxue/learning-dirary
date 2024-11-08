@@ -2,6 +2,8 @@
 Advanced use case of `&&` in combination with `&`
 `branch=test && (git branch -D $branch & git push origin --delete $branch)` # brackets can be used in this case
 
+# `date` (20241108)
+
 # `grep`
 ## `--invert-match` aka. `-v`
 ## `--exclude-dir=subdir`
