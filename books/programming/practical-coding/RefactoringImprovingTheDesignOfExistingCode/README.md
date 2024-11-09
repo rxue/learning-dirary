@@ -23,6 +23,11 @@ In Java IDE IntelliJ, there is *invline variable* functionality
 ### Mechanics
 > If I find a called function that should also move, I usually move it first. That way, moving a clusters of functions begins with the one that has the least dependency on the others in the group.
 
+# Chapter 10: Simplifying Conditional Logic
+## Replace nested conditional with guard clauses
+An important core of guard clause is to return as early as possible to reduce time of thinking by developers
+
+Simple but important tip: Leaving *not* (`!`) in a conditional twists coder's mind around at a painful angle
 
 # Chapter 12: Dealing with Inheritance
 ## Replace subclass with delegate
