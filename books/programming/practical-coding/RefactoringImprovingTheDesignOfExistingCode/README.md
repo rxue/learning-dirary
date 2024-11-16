@@ -16,7 +16,7 @@ In my opinion, the sizes of the refactoring steps are in the following order:
 
 ## Inline Variable
 ### Self Comment
-In Java IDE IntelliJ, there is *invline variable* functionality
+In Java IDE IntelliJ, there is *inline variable* functionality
 
 # Chapter 8: Moving Features
 ## Move Function
@@ -24,6 +24,8 @@ In Java IDE IntelliJ, there is *invline variable* functionality
 > If I find a called function that should also move, I usually move it first. That way, moving a clusters of functions begins with the one that has the least dependency on the others in the group.
 
 # Chapter 10: Simplifying Conditional Logic
+## Consolidate Conditional Expression
+
 ## Replace nested conditional with guard clauses
 An important core of guard clause is to return as early as possible to reduce time of thinking by developers
 
