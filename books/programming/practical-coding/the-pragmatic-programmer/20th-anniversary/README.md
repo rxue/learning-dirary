@@ -22,7 +22,10 @@ Practical application of *Command completion*:
 * *tab* key in terminal in Linux/MacBook
 * `git` can be configured to support command completion with *tab* in terminal
 * *postfix completion* in IntelliJ
- 
+
+Chapter 7: While You Are Coding
+*pattern language*
+
 
 
 
