@@ -10,7 +10,7 @@ Reasoning: In `git pull --help`, the following sentence is found:
 
 #### Problem: I am working on one story, and after commit there is need to `rebase` on base of another local branch. `rebase` failed because the `git log` output the last second and last third commit message as duplicate.
 
-## `squash` (0220524,20220712, 20241021) - command: `git rebase -i HEAD~3` and then use `squash`
+## *squash* (0220524,20220712,20241021,20241203) - command: `git rebase -i HEAD~3` and then use `squash`
 in the command, the number after tild means how many commits are going to be listed in the interactive output. NOTE! if `git rebase -i` is used without any commits, interactive ouput will contains no list of commit hash
 
 ### Video Tutorial: https://www.youtube.com/watch?v=V5KrD7CmO4o&list=PLizL--84rE7T7l97deRGxZRRltRi9iQgA&index=24
@@ -27,6 +27,12 @@ More note about `squash`:
 ### Question: How to combine the last 3 commits into one
 #### Solution: `squash`: `git rebase -i HEAD~3`
 
+### Question (20241203) : in case the *Merged* message is the last *commit hash*, after *rebase* the top *Merged commit hash* disappeared
+### Answer: this is the default, refer to the manual of `--rebase-merges`
+
+> By default, a rebase will simply drop merge commits from the todo list, and put the rebased commits into a single, linear branch
+
+=> in order to rebase the *Merged commit hash*, use this option. Moreover, similarly there is `--preserve-merges`
 
 
 
