@@ -34,7 +34,7 @@ More note about `squash`:
 
 => in order to rebase the *Merged commit hash*, use this option. Moreover, similarly there is `--preserve-merges`
 
-
+reference: https://stackoverflow.com/questions/24786404/merge-commits-dont-appear-in-git-rebase-interactive
 
 
 

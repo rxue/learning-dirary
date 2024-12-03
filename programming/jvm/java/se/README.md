@@ -1,6 +1,10 @@
 # Core Java Classes met at work
 ## Utility
-### `java.util.Collections`
+### `java.util`
+#### `Date`
+`new Date()`
+
+#### `Collections`
 * `public static <T> List<T> singletonList(T o)`
 * `public static List ÈMPTY_LIST`
 

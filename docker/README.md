@@ -30,6 +30,8 @@ Solution from ChatGPT: docker's commands is originally in `/Applications/Docker.
 ## Docker Image
 docker image cannot be removed while a container built on base of it is running
 
+Command Tutorial: https://www.youtube.com/watch?v=r6OOZrIH9RI&list=PLmOn9nNkQxJFtOGw9fsoLHgtCxcki7TtK&index=16
+
 # Docker commands
 ## [`docker buildx build`](https://docs.docker.com/reference/cli/docker/buildx/build/) (20241107)
 `docker build` is its alias
