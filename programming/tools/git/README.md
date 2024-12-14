@@ -213,4 +213,10 @@ Reference: https://git-scm.com/docs/pretty-formats
 ### 20220808 display logs along with changes on files in commit
 Reference: https://www.deployhq.com/git/viewing-previous-commits
 
+## 20241214 Question:
+Scenario: In a large project with tens of developers, the work practice is that all developers are working on their own feature branch and, eventually all the works are merged into the `master` branch on the cloud
+Problem: some developer `git push origin --delete master` by mistake
+
+Question: how to avoid this from occuring
+
 
