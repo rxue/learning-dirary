@@ -18,16 +18,16 @@
 **PRACTICAL TIPS**
 The use of `[]` in this book in based on the tools documentation in *Unix-like* systems. Thumb up!
 
-
-
-
-
 **Key Takeaway**
 
 *Tuple* is an immutable version of `list`, so only update operations on `list` is not supported in *tuple*
 
 ## When a List is Not the Answer
 ### *Deques* and Other *Queues*
+> The `.append` and `.pop` methods make a *list* usable as a *stack* or a *queue* (if you use `.append()` and `.pop(0)` you get FIFO behavior) ...
+
+=> use `list` as *FIFO* is OK in simple cases, but performance is costly!
+
 `from collections import deque`
 
 Operations on `deque`
@@ -35,11 +35,19 @@ Operations on `deque`
 * `append(e)`
 * ``pop()`
 
-# Chapter 3. Unicode Text Versus Bytes
+# Chapter 3. Dictionaries and Sets
+## What's New in This Chapter
+> The underlying implementation of `dict` and `set` still relies on *hash tables*
+
+# Chapter 4. Unicode Text Versus Bytes
 ## Normalizing Unicode for Reliable Comparisons
 ### Extreme "Normalization": Taking Out Diacritics
 use of `''.join`
 # Chapter 5. Data Class Builders
+> Data classes are like children. They are OK as a starting point, but to participate as a grownup object, they need to take some responsibility.
+
+`@dataclasses.dataclass` since Python 3.7
+
 ## Type Hints 101
 ### Variable Annotation Syntax
 
@@ -47,9 +55,6 @@ use of `''.join`
 
 * `typing.Optional`, for example, `Optional[str]` - a field/parameter can be `str` or `None`
 
-# Chapter 3. Dictionaries and Sets
-## What's New in This Chapter
-> The underlying implementation of `dict` and `set` still relies on *hash tables*
 
 # Chapter 5. Data Class Builders
 ## *Type Hints* 101
