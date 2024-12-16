@@ -1,8 +1,11 @@
 # `history`
 ## display history with timestamp
-`history -f`
+`history -f` : reference: https://ostechnix.com/enable-timestamp-for-history-command-in-zsh-in-linux/
 
-reference: https://ostechnix.com/enable-timestamp-for-history-command-in-zsh-in-linux/
+or
+
+`history -E` : reference: https://askubuntu.com/questions/391082/how-to-see-time-stamps-in-bash-history
+
 
 # Operation on Port
 ## Display Listening Port with `netstat`
