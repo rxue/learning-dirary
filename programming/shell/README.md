@@ -2,6 +2,10 @@
 
 Built-in commands are executed without invoking another program
 
+Each shell has its own built-in commands. But for instance, between Bash and Zsh, most built-in commands are the same, but options might still differ. 
+
+For instance, the options of `history` commands in Bash are different from those in Zsh
+
 # boolean operation
 Advanced use case of `&&` in combination with `&`
 `branch=test && (git branch -D $branch & git push origin --delete $branch)` # brackets can be used in this case
