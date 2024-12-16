@@ -1,3 +1,7 @@
+# [Shell *built-in* commands](https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html)
+
+Built-in commands are executed without invoking another program
+
 # boolean operation
 Advanced use case of `&&` in combination with `&`
 `branch=test && (git branch -D $branch & git push origin --delete $branch)` # brackets can be used in this case
