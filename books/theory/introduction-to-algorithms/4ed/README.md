@@ -12,3 +12,10 @@ Important explanation on the peudo-code
 
 Similar video tutorial: https://www.youtube.com/watch?v=c_0J8v5wPzg
 
+### 20.3 Depth-first search
+**DFS VS BFS**
+
+ method | coloring  | recursive | timestamp | result
+--------|-----------|-----------|-----------|------------
+ BFS    | YES       | NO        | NO        | tree of shortest path
+ DFS    | YES       | YES       | YES       | forest
