@@ -20,4 +20,6 @@ Similar video tutorial: https://www.youtube.com/watch?v=c_0J8v5wPzg
  BFS    | YES       | NO        | NO        | tree of shortest path
  DFS    | YES       | YES       | YES       | forest, several trees
 
-Execution of DFS does not need *source vertex* like that of BFS
+Execution of DFS does not need *source vertex* like that of BFS, because
+
+>  the search may repeat from multiple sources
