@@ -1,6 +1,10 @@
 # Chapter 6: Working Classes
 ## 6.4. Reasons to Create a Class
 
+**Streamline parameter passing**
+
+OWN COMMENT: Same thing as in Refactoring: Improving the Design of Existing Code > Introduce Parameter Object
+
 **Facilitate reusable code**
 
 *gold-plating* : creating of functionality that isn't required and that unnecessarily adds complexity
