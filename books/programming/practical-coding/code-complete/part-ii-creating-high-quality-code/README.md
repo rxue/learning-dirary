@@ -1,5 +1,10 @@
 # Chapter 6: Working Classes
 ## 6.4. Reasons to Create a Class
+
+*gold-plating* : creating of functionality that isn't required and that unnecessarily adds complexity
+
+**OWN COMMENT** : mentioned also in the book, Growing Object-Oriented Software, Guided by Tests
+
 ### Classes to Avoid
  * *god class*
  * Eleminate irrelevant class - pure data without behavior
