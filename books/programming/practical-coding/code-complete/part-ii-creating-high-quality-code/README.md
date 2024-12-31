@@ -1,6 +1,8 @@
 # Chapter 6: Working Classes
 ## 6.4. Reasons to Create a Class
 
+**Facilitate reusable code**
+
 *gold-plating* : creating of functionality that isn't required and that unnecessarily adds complexity
 
 **OWN COMMENT** : mentioned also in the book, Growing Object-Oriented Software, Guided by Tests
