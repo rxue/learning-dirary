@@ -19,21 +19,23 @@ This command can be remembered together with `git branch`, where `git branch -r`
 ### `git stash push -m "message here"`
 stash with message so that it is more tractable with command `git stash list`
 
-## 20190613: Git Basic Video Tutorial
+
+## Cheat Sheet
+### 20190613: Git Basic Video Tutorial
 https://www.youtube.com/watch?v=HRR8xcTmpe4
 
-## 20190614: Revert the Last Commit
+### 20190614: Revert the Last Commit
 
 Reference: 
 * [How to delete a git commit from log like it had never existed](https://stackoverflow.com/questions/8901542/how-to-delete-a-git-commit-from-log-like-it-had-never-existed)
 * [Deleting a git commit](https://www.clock.co.uk/insight/deleting-a-git-commit)
 
-## 20190618:
-### HEADs Indicates a Local Branch You are Currently on
+### 20190618:
+#### HEADs Indicates a Local Branch You are Currently on
 
 Reference: [Don't Mess With the Master Working with Branches in `git` and *github*](https://thenewstack.io/dont-mess-with-the-master-working-with-branches-in-git-and-github/)
 
-## [`git reset`](https://www.youtube.com/watch?v=QEuqlpMOL9E&list=PLXO45tsB95cKysjmSNln65YoUt9lwEl7-&index=6) (中文)
+### [`git reset`](https://www.youtube.com/watch?v=QEuqlpMOL9E&list=PLXO45tsB95cKysjmSNln65YoUt9lwEl7-&index=6) (中文)
 
 Question:
 
@@ -45,47 +47,47 @@ Question:
 
 `merge` a *conflict* does not generate an automatic *commit* message
 
-## 20190624: 
-### Display the current HEAD
+### 20190624: 
+#### Display the current HEAD
 `git rev-parse HEAD`
 
-### **Practical Work Approach in a Development Team with multiple Developers Working on Merely One Branch - Master**: 
+#### **Practical Work Approach in a Development Team with multiple Developers Working on Merely One Branch - Master**: 
 1. work on a local branch created from master, commit on the local branch
 2. switch to the local master branch to *sync* it from the *remote*
 3. switch back to the local branch and `git rebase master`
 4. `git push origin master` or with *refspec* `git push origin HEAD:refs/heads/master` on the current branch
 
-### push a local branch to a remote `origin` branch with another name
+#### push a local branch to a remote `origin` branch with another name
 Example: `git push origin change_20190624:master` - push the local branch `change_20190624` to remote origin `master`
 
 
-## 20190626
-### List *references*
-#### List references available in a remote repository
+### 20190626
+#### List *references*
+##### List references available in a remote repository
 `git ls-remote`
-##### list all remote tags (20240129)
+###### list all remote tags (20240129)
 `git ls-remote --tags`
 This command can be remembered together with `git branch`, where `git branch -r` list all remote branches
 
-#### List references available in a local repository 
+##### List references available in a local repository 
 `git show-ref`
 
-## 20190627
+### 20190627
 * add only modified files, meaning untracked files will not be added: `git add -u`
 * add all files: `git add -A`
 
 
 
 
-## 20191019
-### [Git States Control Flow](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+### 20191019
+#### [Git States Control Flow](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 ![Git States Control Flow](https://git-scm.com/book/en/v2/images/lifecycle.png)
-### `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
+#### `git diff --cached` Compares the *Unmodified* Files with *Staged* Files
 
 
 
-## 20191121
-### Limit of Using Wildcard (\*) with `git add`
+### 20191121
+#### Limit of Using Wildcard (\*) with `git add`
 Assuming there are the following files:
   * `git/dir/a.java`
   * `git/dir/b.java`
@@ -97,7 +99,7 @@ Assuming there are the following files:
 
 `git add git/dir/*.java` does not work recursively, meaning the files in `git add git/dir/subdir` will not be successfully added. Whereas the `git add git/dir/*` will add all the files inside `git/dir` recursively, but the files with extension `.swp` are not planned to be added at all
 
-## 20191126
+### 20191126
 **Problem:** I committed 3 files and pushed them to Gerrit, one of which should not be pushed, meaning that file was pushed by mistake
 
 **Question:** How to revert the commit and push only the two files
@@ -210,10 +212,10 @@ With Human-readable date format in the following:
 `git log --all --oneline --graph --date=human --pretty=format:'%C(auto) %h%d [%an/%cd] %s'`
 
 Reference: https://git-scm.com/docs/pretty-formats
-### 20220808 display logs along with changes on files in commit
+#### 20220808 display logs along with changes on files in commit
 Reference: https://www.deployhq.com/git/viewing-previous-commits
 
-## 20241214 Question:
+### 20241214 Question:
 Scenario: In a large project with tens of developers, the work practice is that all developers are working on their own feature branch and, eventually all the works are merged into the `master` branch on the cloud
 Problem: some developer `git push origin --delete master` by mistake
 
