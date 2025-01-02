@@ -13,3 +13,4 @@ entry-point of *end-to-end tests*
 * parse report
 * ...
 
+> end-to-end build cycle is an ideal candidate for automation
