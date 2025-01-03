@@ -3,6 +3,11 @@
 > A *service provider framework* is a system in which providers implement a service, and the system makes implementations available to clients, decoupling the clients from implementations.
 
 # Chapter 3 Methods Common to All Objects
+## Item 10: Obey the general contract when overriding equals
+When is it appropriate to *override* `equals` ? *value classes* such as `Integer`, `String`
+
+
+
 ## Item 14: Consider implementing `Comparable`
 **Key takeaways**
 
@@ -35,6 +40,18 @@ Classes that depend on `Comparable` in Core Java
 * `BitSet` as a better mutable alternative in some cases like multistep operations
 * *mutable companion*
 * static factory factory method along with private constructor as replacement of final class to achieve the immutability
+
+> always make *value objects* such as `PhoneNumber` and `Complex`, *immutable*.
+
+**OWN COMMENT**
+
+During the course of the evolution of Java language, some objects in Java SE have the design flaw that *value objects* are not immutable, examples:
+
+* `java.util.Date`
+* `java.awt.Point`
+
+Typically as the `java.util.Date`, the Java 8 introduced new date and time library `java.time` probably on the purpose of replacing `java.util.date`. Moreover, since Java 11 most methods in `java.util.Date` are annotated with `Deprecated`
+
 
 ## Item 20: Prefer Interfaces to Abstract Classes (20230704, 20230905)
 **Takeaways**:
