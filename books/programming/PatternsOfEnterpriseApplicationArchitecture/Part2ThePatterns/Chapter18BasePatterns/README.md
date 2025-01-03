@@ -21,3 +21,5 @@ Key difference between *reference object* and *value object*
 
 NOTE! But *immutability* is not the key to define *value object*, so *immutability* is not  hard and fast constraint on *value objects*
 
+### When to Use It
+Equality is based on something other than *identity* (since value objects have no identity)
