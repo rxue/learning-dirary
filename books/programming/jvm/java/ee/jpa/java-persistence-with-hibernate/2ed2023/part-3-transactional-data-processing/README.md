@@ -44,9 +44,13 @@ In practice, most applications don't have to mannually refresh in-memory state; 
 #### 10.3.2. implementing equality methods
 **Key takeaways**
 It is a bad practice to use the `id` field only to implement `equals`
-main reason: identifier values aren't assigned by Hibernate until instance becomes persistent. *hashCode* value changes before and after the entity becomes *managed* with id value generated. 
+main reason: identifier values aren't assigned by Hibernate until instance becomes persistent. *hashCode* value changes before and after the entity becomes *managed* with id value generated. Moreover, think about an entity `Person` including a `Set` of `Child` with `@OneToMany(cascade = CascadeType.ALL)` associations, meaning a *new* `Person` entity with a `Set` of `Child`  is expected to be persisted to the *persistence context* in cascade. In this case if the `Child.equals` is implemented by using `id`, it is possible to add only one new `Child` (without id yet) to the `Person`'s `Set<Children>`. Root reason is the *hash function* does not allow `null`
 
-Think about an entity `Person` including a `Set` of `Child` with `@OneToMany(cascade = CascadeType.ALL)` associations, meaning a *new* `Person` entity with a `Set` of `Child`  is expected to be persisted to the *persistence context* in cascade. In this case if the `Child.equals` is implemented by using `id`, it is possible to add only one new `Child` (without id yet) to the `Person`'s `Set<Children>`
+=> instead of using database `@Id`, use *business key* as the identifier for implementing `equals`
+
+*business key* : one or more properties that is unique for each instance with the same database identity
+
+*business key* mostly has `UNIQUE` constraint in database schema
 
 #### 10.3.3. Detaching entity instances
 **Key takeaways**
