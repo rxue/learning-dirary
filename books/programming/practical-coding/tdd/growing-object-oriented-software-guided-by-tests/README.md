@@ -26,3 +26,12 @@ Requirement change should need the existing acceptance tests be moved out of the
 ### Start Testing with the Simplest Success Case
 
 > the simplest thing that could possibly work [Beck02]
+
+=> start by testing the simplest **success** case
+
+### Write the Test That You'd Want to Read
+Error message should clearly describe what needs to be done
+
+### Develop from the Inputs to the Outputs
+### Unit-Test Behavior, Not Methods
+
