@@ -34,4 +34,10 @@ Error message should clearly describe what needs to be done
 
 ### Develop from the Inputs to the Outputs
 ### Unit-Test Behavior, Not Methods
+### Tuning the Cycle
+**tips**
+more integration tests needed in case
+
+* unhandled exception
+* unexpected system failure
 
