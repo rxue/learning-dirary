@@ -41,6 +41,8 @@ Classes that depend on `Comparable` in Core Java
 * *mutable companion*
 * static factory factory method along with private constructor as replacement of final class to achieve the immutability
 
+> To summarize, resist the urge to write a *setter* for every getter. **Classes should be immutable unless there’s a very good reason to make them mutable.**
+
 > always make *value objects* such as `PhoneNumber` and `Complex`, *immutable*.
 
 **OWN COMMENT**
