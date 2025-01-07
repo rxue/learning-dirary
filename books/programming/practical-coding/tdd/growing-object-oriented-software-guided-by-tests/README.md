@@ -33,6 +33,8 @@ Requirement change should need the existing acceptance tests be moved out of the
 Error message should clearly describe what needs to be done
 
 ### Develop from the Inputs to the Outputs
+> from the objects that receive external events, through the intermediate layers, to the central domain model, and then on to other boundary objects that generate an externally visible response.
+
 ### Unit-Test Behavior, Not Methods
 > Many developers who adopt TDD find their early tests hard to understand when they revisit them later, and one common mistake is thinking about testing methods. A test called testBidAccepted() tells us what it does, but not what it’s for.
 
