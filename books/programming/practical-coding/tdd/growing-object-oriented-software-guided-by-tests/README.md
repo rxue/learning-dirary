@@ -34,10 +34,17 @@ Error message should clearly describe what needs to be done
 
 ### Develop from the Inputs to the Outputs
 ### Unit-Test Behavior, Not Methods
+> Many developers who adopt TDD find their early tests hard to understand when they revisit them later, and one common mistake is thinking about testing methods. A test called testBidAccepted() tells us what it does, but not what it’s for.
+
+Tests should be driven by the behavior other than the concrete implementation!!!
+
 ### Tuning the Cycle
 **tips**
 more integration tests needed in case
 
 * unhandled exception
 * unexpected system failure
-
+## Chapter 6: Object-Oriented Style
+### Desiging for Maintainability
+#### High levels of abstraction
+> We can get more done if we program by combining components of useful functionality rather than manipulating variables and control flow

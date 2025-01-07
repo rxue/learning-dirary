@@ -28,6 +28,10 @@ Limit of `cut` when used to get delimited columns is that the delimiter has to b
 # Practical Tip: In case of Bash with debug option `-x`, use `bash -x <script>.sh` instead of `source <script>.sh` with `set` inside the script
 ## Failure story on 20230131 when running `source <script>.sh` with MacBook's terminal
 # `find`
+## find a file by name
+**example** 
+find file named with `.json` as the extension in the current diretory: `find . -type f -name *.json`
+
 ## make use of `find` to truncate a directory
 `find <dir> -mindepth 1 -delete`
 # `tr` for string substitution (on multiple rows)
