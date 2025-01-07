@@ -54,6 +54,8 @@ During the course of the evolution of Java language, some objects in Java SE hav
 
 Typically as the `java.util.Date`, the Java 8 introduced new date and time library `java.time` probably on the purpose of replacing `java.util.date`. Moreover, since Java 11 most methods in `java.util.Date` are annotated with `Deprecated`
 
+## Item 19: Design and document for inheritance or else prohibit it
+real example of `@implSpec`: [AbstractCollection.remove](https://docs.oracle.com/javase/9/docs/api//java/util/AbstractCollection.html#remove-java.lang.Object-)
 
 ## Item 20: Prefer Interfaces to Abstract Classes (20230704, 20230905)
 **Takeaways**:
