@@ -1,5 +1,8 @@
 # Chapter 2: Principles in Refactoring
 ## Refactoring, Architecture and YAGNI
+# Chapter 3: Bad Smells in Code
+## Mysterious Name
+
 # Chapter 6: A First Set of Refactorings
 ## Inline Function
 ### Self Comment
