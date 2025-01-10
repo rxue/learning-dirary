@@ -50,3 +50,9 @@ more integration tests needed in case
 ### Desiging for Maintainability
 #### High levels of abstraction
 > We can get more done if we program by combining components of useful functionality rather than manipulating variables and control flow
+## Chapter 7: Achieving Object-Oriented Design
+### Building Up to Higher-Level Programming
+*implementation layer* : how
+*declarative layer* : what - a small *domain-specific language* embedded
+
+
