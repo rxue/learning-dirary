@@ -11,3 +11,8 @@ https://medium.com/decathlondigital/minimal-graphql-client-request-with-spring-b
 > By default, the framework creates and rolls back a transaction for each test... if a test method deletes the contents of selected tables while running within the transaction managed for the test, the transaction rolls back by default, and the database returns to its state prior to execution of the test.
 
 > If you want a transaction to commit (unusual, but occasionally useful when you want a particular test to populate or modify the database), you can tell the TestContext framework to cause the transaction to commit instead of roll back by using the `@Commit` annotation.
+
+# Spring Test Context Framework
+## [Transaction Management](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html)
+### [Enabling and Disabling Transactions](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html#testcontext-tx-enabling-transactions)
+

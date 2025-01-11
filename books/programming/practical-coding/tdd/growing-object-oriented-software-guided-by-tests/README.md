@@ -55,4 +55,9 @@ more integration tests needed in case
 *implementation layer* : how
 *declarative layer* : what - a small *domain-specific language* embedded
 
+## Chapter 8: Building on Third-Party Code
+### Only Mock Types That You Own
 
+Do not mock third-party object!
+
+#### Write an *Adapter Layer*

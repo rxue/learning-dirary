@@ -89,8 +89,7 @@ default `AccessType` is `FIELD` in `@Access` (how instance is accessed). `Access
 #### 5.1.4. Transforming column values (Hibernate features)
 #### 5.1.5. Generated and default property values (Hibernate features)
 #### 5.1.6. *Temporal* properties
-`@Temporal`
-design tip: timestamp property is saved once by never updated
+`@Temporal` - **accuracy** of SQL data type
 #### 5.1.7. Mapping annotations
 design tip: `EnumType.STRING` is a better choice
 ### 5.2. Mapping embeddable components
