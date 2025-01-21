@@ -51,6 +51,16 @@ With Hibernate, You can make some accessor methods non-public or completely remo
 ### 3.2.4. Implementing associations
 
 ## Chapter 5. Mapping value types
+### 5.1. Mapping basic properties
+#### 5.1.1. Overriding basic property defaults
+´@Column´ over `@Basic`
+#### 5.1.2. Customizing property access
+* if `@Id` annotation is declared on a *field* other than the *getter* method, all other *mapping annotations* for the same entity are expected on fields
+* **annotations are never on the setter methods**
+* `@Access(AccessType.PROPERTY)` forces JPA provider to access through *setter* and *getter* methods
+
+> Annotations are never on the setter methods
+
 ### 5.3. Mapping Java and SQL types with converters
 #### 5.3.2. Creating custom JPA converters
 ##### Converting basic property values (1Z0-900)
