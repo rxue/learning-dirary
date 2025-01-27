@@ -19,8 +19,9 @@ entry-point of *end-to-end tests*
 **OWN TAKEAWAY**
 *jMock2* vs *mockito*`(equivalence table)
 
-*jMock2*  | *mockito*
-`oneOf`   | ``verify`
+*jMock2*  | *mockito* | description
+----------|-----------|-------------
+`oneOf`   | ``verify` | expect a method to be called how many times, in case of `oneOf` the expected times is once
 
 
 # Part II: The Process of Test-Driven Development
