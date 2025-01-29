@@ -7,3 +7,4 @@
 Solution: File > Project structure, there is an SDK field
 ## Live Template
 
+## 20250129 Q: What meaning of the star symbol in the git blame commit on the sidebar of an opened Java code view 
