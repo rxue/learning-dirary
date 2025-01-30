@@ -1,5 +1,12 @@
 # Part I: Intoduction
 ## Chapter 1: What is the Point of Test-Driven Development?
+### Test-Driven Development in a Nutshell
+**Golden rule: Never write new functionality without a failing test**
+
+**Refactoring. Think Local, Act Local**
+OWN TAKEAWAY: refactor is not the same activity as *redesign* in that refactoring is *small-scale change* whereas *redesign* is large-scale structural change
+ 
+
 ### The Bigger Picture
 ### Testing End-to-End
 *acceptance test* should excercise the system end-to-end instead of invoking the internal code directly
@@ -21,7 +28,7 @@ entry-point of *end-to-end tests*
 
 *jMock2*  | *mockito* | description
 ----------|-----------|-------------
-`oneOf`   | ``verify` | expect a method to be called how many times, in case of `oneOf` the expected times is once
+`oneOf`   | `verify` | expect a method to be called how many times, in case of `oneOf` the expected times is once
 
 
 # Part II: The Process of Test-Driven Development
