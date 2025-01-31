@@ -79,7 +79,4 @@ more integration tests needed in case
 Do not mock third-party object!
 
 #### Write an *Adapter Layer*
-# Part IV: Sustainable Test-Drive Development
-## Chapter 24: Test Flexibility
-### "Guinea Pig" Objects
 
