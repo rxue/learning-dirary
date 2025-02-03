@@ -14,6 +14,9 @@ NOTE! all executables installed by *HomeBrew* are in `/opt/homebrew/bin` other t
 
 Similar issue here: https://intellij-support.jetbrains.com/hc/en-us/community/posts/360007751379-Why-does-IntelliJ-not-accept-usr-local-opt-openjdk-installed-by-Brew-as-a-JDK-
 
+# User Guide
+## [Remove Login Items](https://support.apple.com/guide/mac-help/remove-login-items-resolve-startup-problems-mh21210/mac)
+
 # Shell on macOS
 ## Show System Information
 `system_profiler`
