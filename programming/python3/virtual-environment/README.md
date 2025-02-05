@@ -11,3 +11,8 @@ How to use
 
 `diff` these 2 files results in no output => they are exactly the same
 
+## `pip`
+### install
+`pip install -r requirement.txt`
+NOTE! `-r` specifies the requirement file name, without this option installation will FAIL
+
